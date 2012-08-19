@@ -1,0 +1,12 @@
+
+.DS_Store
+
+*.xcuserstate
+
+*.xcsettings
+
+*.xcbkptlist
+
+MoreArt.xcodeproj/xcuserdata/Thunder.xcuserdatad/xcschemes/xcschememanagement.plist
+
+*.xcscheme
