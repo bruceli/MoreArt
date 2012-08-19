@@ -23,6 +23,16 @@
 		591FCD5215CFC1FC004FE480 /* MaSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 591FCD5115CFC1FC004FE480 /* MaSettingViewController.m */; };
 		59235C0915E0C695003C4708 /* libTapkuLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 59235C0415E0C381003C4708 /* libTapkuLibrary.a */; };
 		59235C0B15E0C71D003C4708 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59235C0A15E0C71D003C4708 /* QuartzCore.framework */; };
+		59235C1615E0C8D5003C4708 /* cover_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 59235C0D15E0C8D5003C4708 /* cover_1.jpg */; };
+		59235C1715E0C8D5003C4708 /* cover_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 59235C0E15E0C8D5003C4708 /* cover_2.jpg */; };
+		59235C1815E0C8D5003C4708 /* cover_3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 59235C0F15E0C8D5003C4708 /* cover_3.jpg */; };
+		59235C1915E0C8D5003C4708 /* cover_4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 59235C1015E0C8D5003C4708 /* cover_4.jpg */; };
+		59235C1A15E0C8D5003C4708 /* cover_5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 59235C1115E0C8D5003C4708 /* cover_5.jpg */; };
+		59235C1B15E0C8D5003C4708 /* cover_6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 59235C1215E0C8D5003C4708 /* cover_6.jpg */; };
+		59235C1C15E0C8D5003C4708 /* cover_7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 59235C1315E0C8D5003C4708 /* cover_7.jpg */; };
+		59235C1D15E0C8D5003C4708 /* cover_8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 59235C1415E0C8D5003C4708 /* cover_8.jpg */; };
+		59235C1E15E0C8D5003C4708 /* cover_9.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 59235C1515E0C8D5003C4708 /* cover_9.jpeg */; };
+		59235C2115E0CB3F003C4708 /* MaArtistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59235C2015E0CB3F003C4708 /* MaArtistViewController.m */; };
 		5939079C15E0B85200A09C51 /* MaCoverflowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5939079B15E0B85200A09C51 /* MaCoverflowViewController.m */; };
 		5939084915E0C0C400A09C51 /* BarBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 5939083915E0C0C400A09C51 /* BarBackground.png */; };
 		5939084A15E0C0C400A09C51 /* BarBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5939083A15E0C0C400A09C51 /* BarBackground@2x.png */; };
@@ -95,6 +105,17 @@
 		591FCD5115CFC1FC004FE480 /* MaSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MaSettingViewController.m; path = src/MaSettingViewController.m; sourceTree = "<group>"; };
 		59235BFB15E0C381003C4708 /* TapkuLibrary.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TapkuLibrary.xcodeproj; path = src/3rd/TapkuLibrary/TapkuLibrary.xcodeproj; sourceTree = "<group>"; };
 		59235C0A15E0C71D003C4708 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		59235C0D15E0C8D5003C4708 /* cover_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = cover_1.jpg; path = Resources/coverflow_iphone/cover_1.jpg; sourceTree = "<group>"; };
+		59235C0E15E0C8D5003C4708 /* cover_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = cover_2.jpg; path = Resources/coverflow_iphone/cover_2.jpg; sourceTree = "<group>"; };
+		59235C0F15E0C8D5003C4708 /* cover_3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = cover_3.jpg; path = Resources/coverflow_iphone/cover_3.jpg; sourceTree = "<group>"; };
+		59235C1015E0C8D5003C4708 /* cover_4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = cover_4.jpg; path = Resources/coverflow_iphone/cover_4.jpg; sourceTree = "<group>"; };
+		59235C1115E0C8D5003C4708 /* cover_5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = cover_5.jpg; path = Resources/coverflow_iphone/cover_5.jpg; sourceTree = "<group>"; };
+		59235C1215E0C8D5003C4708 /* cover_6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = cover_6.jpg; path = Resources/coverflow_iphone/cover_6.jpg; sourceTree = "<group>"; };
+		59235C1315E0C8D5003C4708 /* cover_7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = cover_7.jpg; path = Resources/coverflow_iphone/cover_7.jpg; sourceTree = "<group>"; };
+		59235C1415E0C8D5003C4708 /* cover_8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = cover_8.jpg; path = Resources/coverflow_iphone/cover_8.jpg; sourceTree = "<group>"; };
+		59235C1515E0C8D5003C4708 /* cover_9.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = cover_9.jpeg; path = Resources/coverflow_iphone/cover_9.jpeg; sourceTree = "<group>"; };
+		59235C1F15E0CB3F003C4708 /* MaArtistViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MaArtistViewController.h; path = src/MaArtistViewController.h; sourceTree = "<group>"; };
+		59235C2015E0CB3F003C4708 /* MaArtistViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MaArtistViewController.m; path = src/MaArtistViewController.m; sourceTree = "<group>"; };
 		5939079A15E0B85200A09C51 /* MaCoverflowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MaCoverflowViewController.h; path = src/MaCoverflowViewController.h; sourceTree = "<group>"; };
 		5939079B15E0B85200A09C51 /* MaCoverflowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MaCoverflowViewController.m; path = src/MaCoverflowViewController.m; sourceTree = "<group>"; };
 		5939083915E0C0C400A09C51 /* BarBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = BarBackground.png; path = Resources/BarBackground.png; sourceTree = "<group>"; };
@@ -177,6 +198,8 @@
 				591FCCF915CFBD9E004FE480 /* MaScheduleViewController.m */,
 				591FCCFA15CFBD9E004FE480 /* MaTableViewController.h */,
 				591FCCFB15CFBD9E004FE480 /* MaTableViewController.m */,
+				59235C1F15E0CB3F003C4708 /* MaArtistViewController.h */,
+				59235C2015E0CB3F003C4708 /* MaArtistViewController.m */,
 				591FCD2415CFBE3E004FE480 /* MoreArtAppDelegate.h */,
 				591FCD2515CFBE3E004FE480 /* MoreArtAppDelegate.m */,
 				591FCD5015CFC1FB004FE480 /* MaSettingViewController.h */,
@@ -203,6 +226,7 @@
 		591FCD0515CFBDA8004FE480 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				59235C0C15E0C8A7003C4708 /* TEST */,
 				5939083915E0C0C400A09C51 /* BarBackground.png */,
 				5939083A15E0C0C400A09C51 /* BarBackground@2x.png */,
 				5939083B15E0C0C400A09C51 /* clock.png */,
@@ -240,6 +264,22 @@
 				59235C0615E0C381003C4708 /* LogicTests.octest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		59235C0C15E0C8A7003C4708 /* TEST */ = {
+			isa = PBXGroup;
+			children = (
+				59235C0D15E0C8D5003C4708 /* cover_1.jpg */,
+				59235C0E15E0C8D5003C4708 /* cover_2.jpg */,
+				59235C0F15E0C8D5003C4708 /* cover_3.jpg */,
+				59235C1015E0C8D5003C4708 /* cover_4.jpg */,
+				59235C1115E0C8D5003C4708 /* cover_5.jpg */,
+				59235C1215E0C8D5003C4708 /* cover_6.jpg */,
+				59235C1315E0C8D5003C4708 /* cover_7.jpg */,
+				59235C1415E0C8D5003C4708 /* cover_8.jpg */,
+				59235C1515E0C8D5003C4708 /* cover_9.jpeg */,
+			);
+			name = TEST;
 			sourceTree = "<group>";
 		};
 		593907D115E0B9C600A09C51 /* TKLib */ = {
@@ -343,6 +383,15 @@
 				5939085615E0C0C400A09C51 /* speech_bubble_transparent@2x.png in Resources */,
 				5939085715E0C0C400A09C51 /* tabBarBackground.png in Resources */,
 				5939085815E0C0C400A09C51 /* tabBarBackground@2x.png in Resources */,
+				59235C1615E0C8D5003C4708 /* cover_1.jpg in Resources */,
+				59235C1715E0C8D5003C4708 /* cover_2.jpg in Resources */,
+				59235C1815E0C8D5003C4708 /* cover_3.jpg in Resources */,
+				59235C1915E0C8D5003C4708 /* cover_4.jpg in Resources */,
+				59235C1A15E0C8D5003C4708 /* cover_5.jpg in Resources */,
+				59235C1B15E0C8D5003C4708 /* cover_6.jpg in Resources */,
+				59235C1C15E0C8D5003C4708 /* cover_7.jpg in Resources */,
+				59235C1D15E0C8D5003C4708 /* cover_8.jpg in Resources */,
+				59235C1E15E0C8D5003C4708 /* cover_9.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -364,6 +413,7 @@
 				591FCD2915CFBEF6004FE480 /* PPRevealSideViewController.m in Sources */,
 				591FCD5215CFC1FC004FE480 /* MaSettingViewController.m in Sources */,
 				5939079C15E0B85200A09C51 /* MaCoverflowViewController.m in Sources */,
+				59235C2115E0CB3F003C4708 /* MaArtistViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

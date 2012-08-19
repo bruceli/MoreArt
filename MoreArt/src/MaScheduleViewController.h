@@ -10,5 +10,10 @@
 #import "MaRootViewController.h"
 
 @interface MaScheduleViewController : MaRootViewController 
-
+{
+	
+    UIView *portraitView;
+    UIView *landscapeView;
+    
+}
 @end

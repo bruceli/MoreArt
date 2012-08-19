@@ -33,6 +33,15 @@
 @implementation MaCoverflowViewController
 @synthesize coverflow,covers;
 
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        self.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Review" image:[UIImage imageNamed:@"globe"] tag:0];
+    }
+    return self;
+}
+
 
 - (BOOL) shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
 	if([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPhone)
@@ -112,14 +121,14 @@
 - (void) viewDidLoad {
     [super viewDidLoad];
 	
-	if([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPhone){
+//	if([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPhone){
 		covers = [[NSMutableArray alloc] initWithObjects:
 				  [UIImage imageNamed:@"cover_2.jpg"],[UIImage imageNamed:@"cover_1.jpg"],
 				  [UIImage imageNamed:@"cover_3.jpg"],[UIImage imageNamed:@"cover_4.jpg"],
 				  [UIImage imageNamed:@"cover_5.jpg"],[UIImage imageNamed:@"cover_6.jpg"],
 				  [UIImage imageNamed:@"cover_7.jpg"],[UIImage imageNamed:@"cover_8.jpg"],
 				  [UIImage imageNamed:@"cover_9.jpeg"],nil];
-	}else{
+/*	}else{
 		covers = [[NSMutableArray alloc] initWithObjects:
 				  [UIImage imageNamed:@"ipadcover_2.jpg"],[UIImage imageNamed:@"ipadcover_1.jpg"],
 				  [UIImage imageNamed:@"ipadcover_3.jpg"],[UIImage imageNamed:@"ipadcover_4.jpg"],
@@ -127,7 +136,7 @@
 				  [UIImage imageNamed:@"ipadcover_7.jpg"],[UIImage imageNamed:@"ipadcover_8.jpg"],
 				  [UIImage imageNamed:@"ipadcover_9.jpg"],nil];
 	}
-
+*/
 	[coverflow setNumberOfCovers:580];
 	
 }

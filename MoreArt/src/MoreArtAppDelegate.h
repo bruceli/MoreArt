@@ -14,21 +14,24 @@
 #import "MaWelcomeViewController.h"
 #import "PPRevealSideViewController.h"
 #import "MaSettingViewController.h"
+#import "MaArtistViewController.h"
+#import "MaCoverflowViewController.h"
 
 @interface MoreArtAppDelegate : UIResponder <UIApplicationDelegate, UITabBarControllerDelegate,PPRevealSideViewControllerDelegate>
 {
     MaScheduleViewController* _scheduleViewController;
-    MaBandViewController*   _bandViewController;
-    MaReviewViewController* _reviewViewController;
+    MaArtistViewController*   _artistViewController;
+    MaCoverflowViewController* _reviewViewController;
     MaWelcomeViewController* _welcomeViewController;
     PPRevealSideViewController* _revealSideViewController;
     UITabBarController *_tabBarController;
 
 }
+
 @property (strong, nonatomic) UIWindow *window;
 @property (nonatomic, retain) MaScheduleViewController* scheduleViewController;
-@property (nonatomic, retain) MaBandViewController*   bandViewController;
-@property (nonatomic, retain) MaReviewViewController* reviewViewController;
+@property (nonatomic, retain) MaArtistViewController*   artistViewController;
+@property (nonatomic, retain) MaCoverflowViewController* reviewViewController;
 @property (nonatomic, retain) MaWelcomeViewController* welcomeViewController;
 @property (nonatomic, retain) PPRevealSideViewController* revealSideViewController;
 

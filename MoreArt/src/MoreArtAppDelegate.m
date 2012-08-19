@@ -14,7 +14,7 @@
 
 @synthesize window = _window;
 @synthesize scheduleViewController = _scheduleViewController;
-@synthesize bandViewController = _bandViewController;
+@synthesize artistViewController = _artistViewController;
 @synthesize reviewViewController = _reviewViewController;
 @synthesize welcomeViewController = _welcomeViewController;
 @synthesize revealSideViewController = _revealSideViewController;
@@ -32,13 +32,13 @@
     UINavigationBar* navBar = schViewController.navigationBar;
     [navBar setBackgroundImage:[UIImage imageNamed: @"BarBackground"] forBarMetrics:UIBarMetricsDefault];
     
-    _bandViewController = [[MaBandViewController alloc] init];
-    UINavigationController* banViewController = [[UINavigationController alloc] initWithRootViewController:_bandViewController];
+    _artistViewController = [[MaArtistViewController alloc] init];
+    UINavigationController* banViewController = [[UINavigationController alloc] initWithRootViewController:_artistViewController];
     navBar = banViewController.navigationBar;
     [navBar setBackgroundImage:[UIImage imageNamed: @"BarBackground"] forBarMetrics:UIBarMetricsDefault];
     
     
-    _reviewViewController = [[MaReviewViewController alloc] init];
+    _reviewViewController = [[MaCoverflowViewController alloc] init];
     UINavigationController* revViewController = [[UINavigationController alloc] initWithRootViewController:_reviewViewController];
     navBar = revViewController.navigationBar;
     [navBar setBackgroundImage:[UIImage imageNamed: @"BarBackground"] forBarMetrics:UIBarMetricsDefault];

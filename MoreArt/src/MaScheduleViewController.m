@@ -43,6 +43,16 @@
 
 	self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemStop target:self action:@selector(showSettings)];
 
+	[[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
+	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(orientationChanged:) name:@"UIDeviceOrientationDidChangeNotification" object:nil];
+    
+    
+    landscapeView = [[UIView alloc]initWithFrame:self.view.bounds];
+    portraitView = [[UIView alloc]initWithFrame:self.view.bounds];
+    
+    landscapeView.backgroundColor = [UIColor greenColor];
+    portraitView.backgroundColor = [UIColor blueColor];
+
 }
 
 - (void)viewDidUnload
@@ -59,6 +69,20 @@
 -(void)showSettings
 {
     [super slideSettingViewController];
+}
+
+- (void) orientationChanged:(id)object
+{
+	UIInterfaceOrientation interfaceOrientation = [[object object] orientation];
+	
+	if (interfaceOrientation == UIInterfaceOrientationPortrait || interfaceOrientation == UIInterfaceOrientationPortraitUpsideDown)
+	{
+		self.view = portraitView;
+	}
+	else
+	{
+		self.view = landscapeView;
+	}
 }
 
 

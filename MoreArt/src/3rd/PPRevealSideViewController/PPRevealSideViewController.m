@@ -1346,7 +1346,7 @@
 }
 
 - (BOOL) shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation {
-    return [_rootViewController shouldAutorotateToInterfaceOrientation:toInterfaceOrientation];
+    return YES;
 }
 
 #pragma mark - Memory management things
