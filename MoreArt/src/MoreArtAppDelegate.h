@@ -7,37 +7,59 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "MaScheduleViewController.h"
-#import "MaBandViewController.h"
-#import "MaReviewViewController.h"
-#import "MaMoreViewController.h"
-#import "MaWelcomeViewController.h"
+#import "MaDouWoView.h"
+#import "MaDouSpaceView.h"
+#import "MaArt029View.h"
+#import "MaDouPeKingBaseView.h"
+#import "MaMoLangPhotoView.h"
+#import "MaBaseViewController.h"
+#import "MaAboutView.h"
+
+#import "MaDataSource.h"
+
 #import "PPRevealSideViewController.h"
 #import "MaSettingViewController.h"
-#import "MaArtistViewController.h"
-#import "MaCoverflowViewController.h"
+
+
+//#import "MaBandViewController.h"
+//#import "MaMoreViewController.h"
+//#import "MaWelcomeViewController.h"
+//#import "MaArtistViewController.h"
+//#import "MaCoverflowViewController.h"
 
 @interface MoreArtAppDelegate : UIResponder <UIApplicationDelegate, UITabBarControllerDelegate,PPRevealSideViewControllerDelegate>
 {
-    MaScheduleViewController* _scheduleViewController;
-    MaArtistViewController*   _artistViewController;
-    MaCoverflowViewController* _reviewViewController;
-    MaWelcomeViewController* _welcomeViewController;
-    PPRevealSideViewController* _revealSideViewController;
-    UITabBarController *_tabBarController;
+    MaDouWoView* _douWoView;
+    MaDouSpaceView*   _douSpaceView;
+    MaArt029View* _art029View;
+    MaDouPeKingBaseView* _douPeikingView;
+    MaMoLangPhotoView* _moLangPhotoView;
+    MaAboutView* _aboutView;
 
+    MaDataSource* _dataSource;
+    
+    MaBaseViewController* _baseViewController;
+    PPRevealSideViewController* _revealSideViewController;
 }
 
 @property (strong, nonatomic) UIWindow *window;
-@property (nonatomic, retain) MaScheduleViewController* scheduleViewController;
-@property (nonatomic, retain) MaArtistViewController*   artistViewController;
-@property (nonatomic, retain) MaCoverflowViewController* reviewViewController;
-@property (nonatomic, retain) MaWelcomeViewController* welcomeViewController;
+@property (nonatomic, retain) MaDouWoView* douWoView;
+@property (nonatomic, retain) MaDouSpaceView*   douSpaceView;
+@property (nonatomic, retain) MaArt029View*   art029View;
+@property (nonatomic, retain) MaDouPeKingBaseView*   douPeikingView;
+@property (nonatomic, retain) MaMoLangPhotoView*   moLangPhotoView;
+@property (nonatomic, retain) MaAboutView*   aboutView;
+
+@property (nonatomic, retain) MaDataSource*   dataSource;
+
+@property (nonatomic, retain) MaBaseViewController*   baseViewController;
 @property (nonatomic, retain) PPRevealSideViewController* revealSideViewController;
 
 //@property (nonatomic, retain) UITabBarController* tabBarController;
 //@property (nonatomic, retain) MaWeiboStreamViewController* weiboStreamViewController;
 //@property (nonatomic, retain) MaMoreViewController* moreViewController;
+//@property (nonatomic, retain) MaCoverflowViewController* reviewViewController;
+//@property (nonatomic, retain) MaWelcomeViewController* welcomeViewController;
 
 
 @end

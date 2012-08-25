@@ -9,45 +9,55 @@
 #import "MoreArtAppDelegate.h"
 #import "MaRootViewController.h"
 #import "MaDefine.h"
-
+ 
 @implementation MoreArtAppDelegate
 
 @synthesize window = _window;
-@synthesize scheduleViewController = _scheduleViewController;
-@synthesize artistViewController = _artistViewController;
-@synthesize reviewViewController = _reviewViewController;
-@synthesize welcomeViewController = _welcomeViewController;
+@synthesize douWoView = _douWoView;
+@synthesize douSpaceView = _douSpaceView;
+@synthesize art029View = _art029View;
+@synthesize douPeikingView = _douPeikingView;
+@synthesize moLangPhotoView = _moLangPhotoView;
+@synthesize aboutView = _aboutView;
+
+@synthesize dataSource = _dataSource;
+
+@synthesize baseViewController = _baseViewController;
 @synthesize revealSideViewController = _revealSideViewController;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    _tabBarController = [[UITabBarController alloc] init];
+     
     
-    UITabBar *tabBar = [_tabBarController tabBar];
-    [tabBar setBackgroundImage:[UIImage imageNamed:@"tabBarBackground"]];
-    
-    _scheduleViewController = [[MaScheduleViewController alloc] init];
-    UINavigationController* schViewController = [[UINavigationController alloc] initWithRootViewController:_scheduleViewController];
-    UINavigationBar* navBar = schViewController.navigationBar;
+    _baseViewController = [[MaBaseViewController alloc] init];
+    UINavigationController* theController = [[UINavigationController alloc] initWithRootViewController:_baseViewController];
+    UINavigationBar* navBar = theController.navigationBar;
     [navBar setBackgroundImage:[UIImage imageNamed: @"BarBackground"] forBarMetrics:UIBarMetricsDefault];
-    
-    _artistViewController = [[MaArtistViewController alloc] init];
-    UINavigationController* banViewController = [[UINavigationController alloc] initWithRootViewController:_artistViewController];
-    navBar = banViewController.navigationBar;
-    [navBar setBackgroundImage:[UIImage imageNamed: @"BarBackground"] forBarMetrics:UIBarMetricsDefault];
-    
-    
-    _reviewViewController = [[MaCoverflowViewController alloc] init];
-    UINavigationController* revViewController = [[UINavigationController alloc] initWithRootViewController:_reviewViewController];
-    navBar = revViewController.navigationBar;
-    [navBar setBackgroundImage:[UIImage imageNamed: @"BarBackground"] forBarMetrics:UIBarMetricsDefault];
-    
-    _tabBarController.viewControllers = [NSArray arrayWithObjects:schViewController, banViewController, revViewController, nil];
-    
-    
 
-    _revealSideViewController = [[PPRevealSideViewController alloc] initWithRootViewController:_tabBarController ];
+    _douWoView = [[MaDouWoView alloc] initWithFrame:_baseViewController.view.frame];
+    _douSpaceView = [[MaDouSpaceView alloc] initWithFrame:_baseViewController.view.frame];
+    _art029View = [[MaArt029View alloc] initWithFrame:_baseViewController.view.frame];
+    _douPeikingView =  [[MaDouPeKingBaseView alloc] initWithFrame:_baseViewController.view.frame];
+    _moLangPhotoView =  [[MaMoLangPhotoView alloc] initWithFrame:_baseViewController.view.frame];
+    _aboutView =  [[MaAboutView alloc] initWithFrame:_baseViewController.view.frame];
+    
+    _baseViewController.view = _douWoView;
+    
+    _douWoView.delegate = _baseViewController;
+    _douSpaceView.delegate = _baseViewController;
+    _art029View.delegate = _baseViewController ;
+    _douPeikingView.delegate = _baseViewController ;
+    _moLangPhotoView.delegate = _baseViewController;
+    _douWoView.dataSource = _baseViewController;
+    _douSpaceView.dataSource = _baseViewController;
+    _art029View.dataSource = _baseViewController ;
+    _douPeikingView.dataSource = _baseViewController ;
+    _moLangPhotoView.dataSource = _baseViewController;
+    
+    _dataSource = [[MaDataSource alloc] init];
+
+    _revealSideViewController = [[PPRevealSideViewController alloc] initWithRootViewController:theController ];
     _revealSideViewController.delegate = self;
 
     

@@ -9,5 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface MaSettingViewController : UITableViewController
+{
+    NSMutableArray* menuArray;
+    NSMutableArray* moreArray;
 
+}
 @end

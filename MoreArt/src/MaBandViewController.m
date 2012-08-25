@@ -19,7 +19,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         
-        self.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Band" image:[UIImage imageNamed:@"fire_02"] tag:0];
+//        self.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Band" image:[UIImage imageNamed:@"fire_02"] tag:0];
     }
     return self;
 }
@@ -29,7 +29,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     self.tableView.backgroundColor = [UIColor grayColor];
-    self.navigationItem.title = @"MaBandViewController";
+    self.navigationItem.title = NSLocalizedString(@"Weibo",nil);
 }
 
 - (void)viewDidUnload

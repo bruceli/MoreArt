@@ -1,45 +1,37 @@
 //
-//  MaScheduleViewController.m
+//  MaDouWoView.m
 //  MoreMusic
 //
 //  Created by Accthun He on 5/28/12.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import "MaScheduleViewController.h"
-#import "MaTableViewController.h"
+#import "MaDouWoView.h"
 #import "MoreArtAppDelegate.h"
 
-@interface MaScheduleViewController ()
+@interface MaDouWoView ()
 
 @end
 
-@implementation MaScheduleViewController
+@implementation MaDouWoView
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+- (id)initWithFrame:(CGRect)frame
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    self = [super initWithFrame:frame];
     if (self) {
-        self.view.autoresizingMask = UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleHeight;          
-        self.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Schedule" image:[UIImage imageNamed:@"clock"] tag:0];
-        return self;
-
-
+        // Initialization code
     }
     return self;
 }
 
--(void)viewWillAppear:(BOOL)animated
-{    
-    [super viewWillAppear:animated];
-}
 
+/*
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     self.tableView.backgroundColor = [UIColor darkGrayColor];
-    self.navigationItem.title = @"MaScheduleViewController";
+    self.navigationItem.title = NSLocalizedString(@"douWo_Nav_Title",nil);
 
 	self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemStop target:self action:@selector(showSettings)];
 
@@ -55,23 +47,12 @@
 
 }
 
-- (void)viewDidUnload
-{
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
-}
-
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
--(void)showSettings
-{
-    [super slideSettingViewController];
-}
-
-- (void) orientationChanged:(id)object
+ - (void) orientationChanged:(id)object
 {
 	UIInterfaceOrientation interfaceOrientation = [[object object] orientation];
 	
@@ -85,6 +66,6 @@
 	}
 }
 
-
+*/
 
 @end

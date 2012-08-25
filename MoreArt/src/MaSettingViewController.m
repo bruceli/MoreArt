@@ -8,7 +8,7 @@
 
 #import "MaSettingViewController.h"
 #import "MoreArtAppDelegate.h"
-
+#import "MaDefine.h"
 @interface MaSettingViewController ()
 
 @end
@@ -31,9 +31,24 @@
     self.tableView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"setting_bkg.png"]];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
- 
+    
+    MoreArtAppDelegate* app = (MoreArtAppDelegate *)[[UIApplication sharedApplication] delegate];
+    
+
+    NSArray* itemArray1 = [[NSArray alloc] initWithObjects:NSLocalizedString(@"douWo_Nav_Title",nil), app.douWoView, nil];
+    NSArray* itemArray2 = [[NSArray alloc] initWithObjects:NSLocalizedString(@"douSpace_Nav_Title",nil), app.douSpaceView, nil];
+    NSArray* itemArray3 = [[NSArray alloc] initWithObjects:NSLocalizedString(@"douBasePeking_Nav_Title",nil), app.douPeikingView, nil];
+    NSArray* itemArray4 = [[NSArray alloc] initWithObjects:NSLocalizedString(@"moLangPhotography_Nav_Title",nil), app.moLangPhotoView, nil];
+    NSArray* itemArray5 = [[NSArray alloc] initWithObjects:NSLocalizedString(@"art029_Nav_Title",nil), app.art029View, nil];
+     
+    menuArray = [[NSMutableArray alloc] initWithObjects: itemArray1, itemArray2, itemArray3, itemArray4, itemArray5, nil];
+    
+    NSArray* itemArray6 = [[NSArray alloc] initWithObjects:NSLocalizedString(@"about_Nav_Title",nil), app.aboutView, nil];
+    moreArray = [[NSMutableArray alloc] initWithObjects:itemArray6 , nil];
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    
 }
 
 - (void)viewDidUnload
@@ -53,25 +68,58 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
-    return 1;
+    return 2;
+}
+
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    NSString *sectionTitle =  @"Title";
+    
+    // Create label with section title
+    UILabel *label = [[UILabel alloc] init];
+    label.frame = CGRectMake(5, 0, 284, 23);
+    label.textColor = [UIColor whiteColor];
+    label.font = [UIFont fontWithName:@"STHeitiTC-Medium" size:17];
+    label.text = sectionTitle;
+    label.backgroundColor = [UIColor clearColor];
+    
+    // Create header view and add label as a subview
+    //    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 100)];
+    UIImageView* view = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"setting_header_section"]];
+    [view addSubview:label];
+    
+    return view;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    // Return the number of rows in the section.
-    return 1;
+    NSInteger count = 0;
+    if (section == 0) 
+        count =  [menuArray count];
+    else
+        count =  [moreArray count];
+    
+    return count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    NSArray* itemArray;
+    if (indexPath.section == 0) 
+        itemArray = [menuArray objectAtIndex:indexPath.row];
+    else
+        itemArray = [moreArray objectAtIndex:indexPath.row];
+
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
-
-    cell.textLabel.text = @"Logout";
+    
+    
+    cell.textLabel.text = [itemArray objectAtIndex:MA_MENU_TITLE];
     cell.textLabel.textColor = [UIColor whiteColor];
+    cell.textLabel.font = [UIFont fontWithName:@"STHeitiSC-Medium" size:16];
     return cell;
 }
 
@@ -118,13 +166,19 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
+    MoreArtAppDelegate* app = (MoreArtAppDelegate *)[[UIApplication sharedApplication] delegate];
+    
+    NSArray* itemArray;
+    if (indexPath.section == 0)
+        itemArray = [menuArray objectAtIndex:indexPath.row];
+    else
+        itemArray = [moreArray objectAtIndex:indexPath.row];
+
+    app.baseViewController.view = [itemArray objectAtIndex:MA_MENU_CONTROLLER];
+    app.baseViewController.navigationItem.title = [itemArray objectAtIndex:MA_MENU_TITLE];
+    
+    [self.revealSideViewController popViewControllerAnimated:YES];
+    
 }
 
 @end

@@ -20,7 +20,8 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         self.view.autoresizingMask = UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleHeight;
-        self.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Artist" image:[UIImage imageNamed:@"clock"] tag:0];    }
+//        self.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Artist" image:[UIImage imageNamed:@"clock"] tag:0];
+    }
     return self;
 }
 
@@ -194,7 +195,6 @@
 	cover.image = [covers objectAtIndex:index%[covers count]];
     
 	return cover;
-	
 }
 
 - (void) coverflowView:(TKCoverflowView*)coverflowView coverAtIndexWasTappedInFront:(int)index tapCount:(NSInteger)tapCount{
@@ -209,7 +209,6 @@
 	[UIView setAnimationDuration:1];
 	[UIView setAnimationTransition:UIViewAnimationTransitionFlipFromLeft forView:cover cache:YES];
 	[UIView commitAnimations];
-	
 }
 
 @end

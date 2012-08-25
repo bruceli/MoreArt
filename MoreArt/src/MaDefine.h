@@ -1,2 +1,4 @@
 #define SETTINGVIEW_OFFSET 40
 
+#define MA_MENU_TITLE 0
+#define MA_MENU_CONTROLLER 1
