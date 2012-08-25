@@ -14,7 +14,7 @@
 #import "MaMoLangPhotoView.h"
 #import "MaBaseViewController.h"
 #import "MaAboutView.h"
-
+#import "MaCoverFlowView.h"
 #import "MaDataSource.h"
 
 #import "PPRevealSideViewController.h"
@@ -35,7 +35,8 @@
     MaDouPeKingBaseView* _douPeikingView;
     MaMoLangPhotoView* _moLangPhotoView;
     MaAboutView* _aboutView;
-
+    MaCoverFlowView* _coverFlowView;
+    
     MaDataSource* _dataSource;
     
     MaBaseViewController* _baseViewController;
@@ -49,6 +50,7 @@
 @property (nonatomic, retain) MaDouPeKingBaseView*   douPeikingView;
 @property (nonatomic, retain) MaMoLangPhotoView*   moLangPhotoView;
 @property (nonatomic, retain) MaAboutView*   aboutView;
+@property (nonatomic, retain) MaCoverFlowView*   coverFlowView;
 
 @property (nonatomic, retain) MaDataSource*   dataSource;
 

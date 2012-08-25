@@ -21,7 +21,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+        NSLog(@"%@", @"BaseView initWithNibName");
     }
     return self;
 }
@@ -36,7 +36,13 @@
     self.navigationItem.title = NSLocalizedString(@"douWo_Nav_Title",nil);
     MoreArtAppDelegate* app = (MoreArtAppDelegate *)[[UIApplication sharedApplication] delegate];
     self.view = app.douWoView;
+    
+    [[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"UIDeviceOrientationDidChangeNotification" object:nil];
 
+	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(orientationChanged:) name:@"UIDeviceOrientationDidChangeNotification" object:nil];
+
+    NSLog(@"%@", @"BaseView viewDidLoad");
     
 	self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemStop target:self action:@selector(slideSettingViewController)];
     
@@ -82,6 +88,34 @@
 //    cell.textLabel.textColor = [UIColor whiteColor];
 //    cell.textLabel.font = [UIFont fontWithName:@"STHeitiSC-Medium" size:16];
     return cell;
+}
+
+- (void) orientationChanged:(id)object
+{
+	UIInterfaceOrientation interfaceOrientation = [[object object] orientation];
+    MoreArtAppDelegate* app = (MoreArtAppDelegate *)[[UIApplication sharedApplication] delegate];
+
+	if (interfaceOrientation == UIInterfaceOrientationPortrait ||interfaceOrientation ==  UIInterfaceOrientationPortraitUpsideDown)
+	{
+        if (currentView)
+        {
+            self.view = currentView;
+            self.navigationController.navigationBarHidden = NO;
+//            NSLog(@"%@", @"==== portrait");
+        }
+
+	}
+	else if(interfaceOrientation == UIDeviceOrientationLandscapeRight|| interfaceOrientation == UIDeviceOrientationLandscapeLeft)
+	{
+        if (app.coverFlowView != self.view) {
+//            NSLog(@"%@", @"==== landScape Mode");
+            currentView = self.view;
+        }
+        self.view = app.coverFlowView;
+        self.navigationController.navigationBarHidden = YES;
+
+
+	}
 }
 
 

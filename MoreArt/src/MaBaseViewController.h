@@ -10,9 +10,10 @@
 
 @interface MaBaseViewController : UIViewController <UITableViewDataSource,UITableViewDelegate>
 {
-    
+    id currentView;
     
 }
+
 
 
 @end

@@ -19,6 +19,7 @@
 	BOOL collapsed;
 
 }
+//- (void)loadCoverflowView;
 
 @property (retain,nonatomic) TKCoverflowView *coverflow;
 @property (retain,nonatomic) NSMutableArray *covers;

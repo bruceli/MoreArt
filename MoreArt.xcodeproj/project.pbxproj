@@ -27,8 +27,6 @@
 		59235C1C15E0C8D5003C4708 /* cover_7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 59235C1315E0C8D5003C4708 /* cover_7.jpg */; };
 		59235C1D15E0C8D5003C4708 /* cover_8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 59235C1415E0C8D5003C4708 /* cover_8.jpg */; };
 		59235C1E15E0C8D5003C4708 /* cover_9.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 59235C1515E0C8D5003C4708 /* cover_9.jpeg */; };
-		59235C2115E0CB3F003C4708 /* MaArtistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59235C2015E0CB3F003C4708 /* MaArtistViewController.m */; };
-		5939079C15E0B85200A09C51 /* MaCoverflowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5939079B15E0B85200A09C51 /* MaCoverflowViewController.m */; };
 		5939084915E0C0C400A09C51 /* BarBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 5939083915E0C0C400A09C51 /* BarBackground.png */; };
 		5939084A15E0C0C400A09C51 /* BarBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5939083A15E0C0C400A09C51 /* BarBackground@2x.png */; };
 		5939084B15E0C0C400A09C51 /* clock.png in Resources */ = {isa = PBXBuildFile; fileRef = 5939083B15E0C0C400A09C51 /* clock.png */; };
@@ -114,10 +112,6 @@
 		59235C1315E0C8D5003C4708 /* cover_7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = cover_7.jpg; path = Resources/coverflow_iphone/cover_7.jpg; sourceTree = "<group>"; };
 		59235C1415E0C8D5003C4708 /* cover_8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = cover_8.jpg; path = Resources/coverflow_iphone/cover_8.jpg; sourceTree = "<group>"; };
 		59235C1515E0C8D5003C4708 /* cover_9.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = cover_9.jpeg; path = Resources/coverflow_iphone/cover_9.jpeg; sourceTree = "<group>"; };
-		59235C1F15E0CB3F003C4708 /* MaArtistViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MaArtistViewController.h; path = src/MaArtistViewController.h; sourceTree = "<group>"; };
-		59235C2015E0CB3F003C4708 /* MaArtistViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MaArtistViewController.m; path = src/MaArtistViewController.m; sourceTree = "<group>"; };
-		5939079A15E0B85200A09C51 /* MaCoverflowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MaCoverflowViewController.h; path = src/MaCoverflowViewController.h; sourceTree = "<group>"; };
-		5939079B15E0B85200A09C51 /* MaCoverflowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MaCoverflowViewController.m; path = src/MaCoverflowViewController.m; sourceTree = "<group>"; };
 		5939083915E0C0C400A09C51 /* BarBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = BarBackground.png; path = Resources/BarBackground.png; sourceTree = "<group>"; };
 		5939083A15E0C0C400A09C51 /* BarBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "BarBackground@2x.png"; path = "Resources/BarBackground@2x.png"; sourceTree = "<group>"; };
 		5939083B15E0C0C400A09C51 /* clock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = clock.png; path = Resources/clock.png; sourceTree = "<group>"; };
@@ -215,8 +209,6 @@
 				591FCD2A15CFBF02004FE480 /* 3rd */,
 				591FCCF615CFBD9E004FE480 /* MaRootViewController.h */,
 				591FCCF715CFBD9E004FE480 /* MaRootViewController.m */,
-				59235C1F15E0CB3F003C4708 /* MaArtistViewController.h */,
-				59235C2015E0CB3F003C4708 /* MaArtistViewController.m */,
 				591FCD2415CFBE3E004FE480 /* MoreArtAppDelegate.h */,
 				591FCD2515CFBE3E004FE480 /* MoreArtAppDelegate.m */,
 				5983660F15E6866800E4E885 /* MaBaseViewController.h */,
@@ -230,7 +222,6 @@
 				5983660A15E6278100E4E885 /* PekingBase */,
 				5983660B15E6279100E4E885 /* MoPhoto */,
 				598365F315E5E28B00E4E885 /* Settings */,
-				598365FE15E5E87900E4E885 /* Coverflow */,
 				5983665115E699D600E4E885 /* About */,
 				598365F415E5E55900E4E885 /* Localizable.strings */,
 				59BA500E15E855E300E14A4E /* DataSource */,
@@ -338,15 +329,6 @@
 				5983661C15E68A5100E4E885 /* MaDouSpaceView.m */,
 			);
 			name = DouSpace;
-			sourceTree = "<group>";
-		};
-		598365FE15E5E87900E4E885 /* Coverflow */ = {
-			isa = PBXGroup;
-			children = (
-				5939079A15E0B85200A09C51 /* MaCoverflowViewController.h */,
-				5939079B15E0B85200A09C51 /* MaCoverflowViewController.m */,
-			);
-			name = Coverflow;
 			sourceTree = "<group>";
 		};
 		598365FF15E5E89500E4E885 /* DouWo */ = {
@@ -535,8 +517,6 @@
 				591FCD2615CFBE3E004FE480 /* MoreArtAppDelegate.m in Sources */,
 				591FCD2915CFBEF6004FE480 /* PPRevealSideViewController.m in Sources */,
 				591FCD5215CFC1FC004FE480 /* MaSettingViewController.m in Sources */,
-				5939079C15E0B85200A09C51 /* MaCoverflowViewController.m in Sources */,
-				59235C2115E0CB3F003C4708 /* MaArtistViewController.m in Sources */,
 				5983661115E6866900E4E885 /* MaBaseViewController.m in Sources */,
 				5983661715E688C600E4E885 /* MaTableView.m in Sources */,
 				5983661A15E68A3200E4E885 /* MaDouWoView.m in Sources */,

@@ -19,7 +19,7 @@
 @synthesize douPeikingView = _douPeikingView;
 @synthesize moLangPhotoView = _moLangPhotoView;
 @synthesize aboutView = _aboutView;
-
+@synthesize coverFlowView = _coverFlowView;
 @synthesize dataSource = _dataSource;
 
 @synthesize baseViewController = _baseViewController;
@@ -35,13 +35,15 @@
     UINavigationBar* navBar = theController.navigationBar;
     [navBar setBackgroundImage:[UIImage imageNamed: @"BarBackground"] forBarMetrics:UIBarMetricsDefault];
 
-    _douWoView = [[MaDouWoView alloc] initWithFrame:_baseViewController.view.frame];
-    _douSpaceView = [[MaDouSpaceView alloc] initWithFrame:_baseViewController.view.frame];
-    _art029View = [[MaArt029View alloc] initWithFrame:_baseViewController.view.frame];
-    _douPeikingView =  [[MaDouPeKingBaseView alloc] initWithFrame:_baseViewController.view.frame];
-    _moLangPhotoView =  [[MaMoLangPhotoView alloc] initWithFrame:_baseViewController.view.frame];
-    _aboutView =  [[MaAboutView alloc] initWithFrame:_baseViewController.view.frame];
-    
+    CGRect frame = _baseViewController.view.frame;
+    _douWoView = [[MaDouWoView alloc] initWithFrame:frame];
+    _douSpaceView = [[MaDouSpaceView alloc] initWithFrame:frame];
+    _art029View = [[MaArt029View alloc] initWithFrame:frame];
+    _douPeikingView =  [[MaDouPeKingBaseView alloc] initWithFrame:frame];
+    _moLangPhotoView =  [[MaMoLangPhotoView alloc] initWithFrame:frame];
+    _aboutView =  [[MaAboutView alloc] initWithFrame:frame];
+    _coverFlowView = [[MaCoverFlowView alloc] initWithFrame:frame];
+
     _baseViewController.view = _douWoView;
     
     _douWoView.delegate = _baseViewController;
@@ -54,6 +56,8 @@
     _art029View.dataSource = _baseViewController ;
     _douPeikingView.dataSource = _baseViewController ;
     _moLangPhotoView.dataSource = _baseViewController;
+    
+ //   [_coverFlowView loadCoverflowView];
     
     _dataSource = [[MaDataSource alloc] init];
 

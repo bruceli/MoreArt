@@ -9,7 +9,6 @@
 #import "MaCoverFlowView.h"
 
 @interface MaCoverFlowView ()
-- (void)loadCoverflowView;
 @end
 
 
@@ -20,85 +19,38 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        // Initialization code
+        self.autoresizingMask = UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleHeight;
+        NSLog(@"%@", @"Layout coverFlow View");
+        covers = [[NSMutableArray alloc] initWithObjects:
+                  [UIImage imageNamed:@"cover_2.jpg"],[UIImage imageNamed:@"cover_1.jpg"],
+                  [UIImage imageNamed:@"cover_3.jpg"],[UIImage imageNamed:@"cover_4.jpg"],
+                  [UIImage imageNamed:@"cover_5.jpg"],[UIImage imageNamed:@"cover_6.jpg"],
+                  [UIImage imageNamed:@"cover_7.jpg"],[UIImage imageNamed:@"cover_8.jpg"],
+                  [UIImage imageNamed:@"cover_9.jpeg"],nil];
+        
+        
+        CGRect r = [UIScreen mainScreen].bounds;
+        r = CGRectApplyAffineTransform(r, CGAffineTransformMakeRotation(90 * M_PI / 180.));
+        r.origin = CGPointZero;
+        
+        self.backgroundColor = [UIColor whiteColor];
+        self.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+        
+        
+        CGRect theRect =  CGRectMake(0, 0, 480, 1000);
+        
+        coverflow = [[TKCoverflowView alloc] initWithFrame:theRect];
+        coverflow.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+        coverflow.coverflowDelegate = self;
+        coverflow.dataSource = self;
+        [coverflow setNumberOfCovers:20];
+
+        [self addSubview:coverflow];
+
     }
     return self;
 }
 
-
-- (void)loadCoverflowView
-{
-    covers = [[NSMutableArray alloc] initWithObjects:
-              [UIImage imageNamed:@"cover_2.jpg"],[UIImage imageNamed:@"cover_1.jpg"],
-              [UIImage imageNamed:@"cover_3.jpg"],[UIImage imageNamed:@"cover_4.jpg"],
-              [UIImage imageNamed:@"cover_5.jpg"],[UIImage imageNamed:@"cover_6.jpg"],
-              [UIImage imageNamed:@"cover_7.jpg"],[UIImage imageNamed:@"cover_8.jpg"],
-              [UIImage imageNamed:@"cover_9.jpeg"],nil];
-    
-    [coverflow setNumberOfCovers:580];
-
-    CGRect r = [UIScreen mainScreen].bounds;
-	r = CGRectApplyAffineTransform(r, CGAffineTransformMakeRotation(90 * M_PI / 180.));
-	r.origin = CGPointZero;
-	
-    self.backgroundColor = [UIColor whiteColor];
-	self.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-	
-    r = self.bounds;
-	r.size.height = 1000;
-	
-	coverflow = [[TKCoverflowView alloc] initWithFrame:self.bounds];
-	coverflow.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-	coverflow.coverflowDelegate = self;
-	coverflow.dataSource = self;
-	if([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad){
-		coverflow.coverSpacing = 100;
-		coverflow.coverSize = CGSizeMake(300, 300);
-	}
-	
-//	[self addSubview:coverflow];
-	
-	
-	if([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPhone){
-		
-		UIButton *btn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-		btn.frame = CGRectMake(0,0,100,20);
-		[btn setTitle:@"# Covers" forState:UIControlStateNormal];
-		[btn addTarget:self action:@selector(changeNumberOfCovers) forControlEvents:UIControlEventTouchUpInside];
-		[self addSubview:btn];
-	}
-    /*
-    else{
-		
-		UIBarButtonItem *nocoversitem = [[UIBarButtonItem alloc] initWithTitle:@"# Covers"
-                                                                         style:UIBarButtonItemStyleBordered
-                                                                        target:self action:@selector(changeNumberOfCovers)];
-		
-		UIBarButtonItem *flex = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
-        
-		self.toolbarItems = [NSArray arrayWithObjects:flex,nocoversitem,nil];
-    }
-    */
-	
-    
-	CGSize s = self.bounds.size;
-	
-	UIButton *infoButton = [UIButton buttonWithType:UIButtonTypeInfoLight];
-	[infoButton addTarget:self action:@selector(info) forControlEvents:UIControlEventTouchUpInside];
-	infoButton.frame = CGRectMake(s.width-50, 5, 50, 30);
-	[self addSubview:infoButton];
-
-    [self addSubview:coverflow];
-
-}
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect
-{
-    // Drawing code
-}
-*/
 
 
 - (void) coverflowView:(TKCoverflowView*)coverflowView coverAtIndexWasBroughtToFront:(int)index{
@@ -135,5 +87,15 @@
 	[UIView commitAnimations];
 	
 }
+
+
+/*
+ // Only override drawRect: if you perform custom drawing.
+ // An empty implementation adversely affects performance during animation.
+ - (void)drawRect:(CGRect)rect
+ {
+ // Drawing code
+ }
+ */
 
 @end
