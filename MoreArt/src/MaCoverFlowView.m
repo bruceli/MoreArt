@@ -37,7 +37,7 @@
         self.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
         
         
-        CGRect theRect =  CGRectMake(0, 0, 480, 1000);
+        CGRect theRect =  CGRectMake(0, 0, 0, 0);
         
         coverflow = [[TKCoverflowView alloc] initWithFrame:theRect];
         coverflow.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
