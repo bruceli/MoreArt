@@ -42,14 +42,15 @@
     NSArray* itemArray5 = [[NSArray alloc] initWithObjects:NSLocalizedString(@"art029_Nav_Title",nil), app.art029View, nil];
     NSArray* itemArrayTEST = [[NSArray alloc] initWithObjects:NSLocalizedString(@"TEST_COVERFLOW",nil), app.coverFlowView, nil];
      
-    menuArray = [[NSMutableArray alloc] initWithObjects: itemArray1, itemArray2, itemArray3, itemArray4, itemArray5,itemArrayTEST, nil];
+    NSArray* itemCrossFade = [[NSArray alloc] initWithObjects:NSLocalizedString(@"CROSS_FADE",nil), app.crossFadeView, nil];
+
+    
+    menuArray = [[NSMutableArray alloc] initWithObjects: itemArray1, itemArray2, itemArray3, itemArray4, itemArray5,itemArrayTEST, itemCrossFade,nil];
     
     NSArray* itemArray6 = [[NSArray alloc] initWithObjects:NSLocalizedString(@"about_Nav_Title",nil), app.aboutView, nil];
     moreArray = [[NSMutableArray alloc] initWithObjects:itemArray6 , nil];
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    
-    
 }
 
 - (void)viewDidUnload

@@ -22,6 +22,8 @@
 @synthesize coverFlowView = _coverFlowView;
 @synthesize dataSource = _dataSource;
 
+@synthesize crossFadeView = _crossFadeView;
+
 @synthesize baseViewController = _baseViewController;
 @synthesize revealSideViewController = _revealSideViewController;
 
@@ -43,6 +45,7 @@
     _moLangPhotoView =  [[MaMoLangPhotoView alloc] initWithFrame:frame];
     _aboutView =  [[MaAboutView alloc] initWithFrame:frame];
     _coverFlowView = [[MaCoverFlowView alloc] initWithFrame:frame];
+    _crossFadeView = [[MaCrossFadeView alloc] initWithFrame:frame];
 
     _baseViewController.view = _douWoView;
     

@@ -15,6 +15,9 @@
 #import "MaBaseViewController.h"
 #import "MaAboutView.h"
 #import "MaCoverFlowView.h"
+
+#import "MaCrossFadeView.h"
+
 #import "MaDataSource.h"
 
 #import "PPRevealSideViewController.h"
@@ -37,6 +40,8 @@
     MaAboutView* _aboutView;
     MaCoverFlowView* _coverFlowView;
     
+    MaCrossFadeView* _crossFadeView;
+    
     MaDataSource* _dataSource;
     
     MaBaseViewController* _baseViewController;
@@ -51,6 +56,7 @@
 @property (nonatomic, retain) MaMoLangPhotoView*   moLangPhotoView;
 @property (nonatomic, retain) MaAboutView*   aboutView;
 @property (nonatomic, retain) MaCoverFlowView*   coverFlowView;
+@property (nonatomic, retain) MaCrossFadeView*   crossFadeView;
 
 @property (nonatomic, retain) MaDataSource*   dataSource;
 

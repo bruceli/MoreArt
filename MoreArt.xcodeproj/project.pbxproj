@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5917601515F32BAD0098729B /* MaCrossFadeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5917601415F32BAD0098729B /* MaCrossFadeView.m */; };
+		5917601815F330520098729B /* tianShan.png in Resources */ = {isa = PBXBuildFile; fileRef = 5917601615F330520098729B /* tianShan.png */; };
+		5917601915F330520098729B /* tianShan@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5917601715F330520098729B /* tianShan@2x.png */; };
 		591FCCD415CFBD31004FE480 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 591FCCD315CFBD31004FE480 /* UIKit.framework */; };
 		591FCCD615CFBD31004FE480 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 591FCCD515CFBD31004FE480 /* Foundation.framework */; };
 		591FCCD815CFBD31004FE480 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 591FCCD715CFBD31004FE480 /* CoreGraphics.framework */; };
@@ -89,6 +92,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5917601315F32BAC0098729B /* MaCrossFadeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MaCrossFadeView.h; path = src/MaCrossFadeView.h; sourceTree = "<group>"; };
+		5917601415F32BAD0098729B /* MaCrossFadeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MaCrossFadeView.m; path = src/MaCrossFadeView.m; sourceTree = "<group>"; };
+		5917601615F330520098729B /* tianShan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tianShan.png; path = Resources/tianShan.png; sourceTree = "<group>"; };
+		5917601715F330520098729B /* tianShan@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "tianShan@2x.png"; path = "Resources/tianShan@2x.png"; sourceTree = "<group>"; };
 		591FCCCF15CFBD31004FE480 /* MoreArt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoreArt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		591FCCD315CFBD31004FE480 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		591FCCD515CFBD31004FE480 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -238,6 +245,8 @@
 				5961503815F26E6900C93978 /* MaDetailViewController.h */,
 				5961503915F26E6A00C93978 /* MaDetailViewController.m */,
 				59A5BC4315E8975B00E67D54 /* CoverFlow */,
+				5917601315F32BAC0098729B /* MaCrossFadeView.h */,
+				5917601415F32BAD0098729B /* MaCrossFadeView.m */,
 				598365FF15E5E89500E4E885 /* DouWo */,
 				598365FD15E5E86600E4E885 /* DouSpace */,
 				5983660915E6277A00E4E885 /* Art029 */,
@@ -267,6 +276,8 @@
 		591FCD0515CFBDA8004FE480 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				5917601615F330520098729B /* tianShan.png */,
+				5917601715F330520098729B /* tianShan@2x.png */,
 				5983664A15E6978900E4E885 /* setting_header_section.png */,
 				5983664B15E6978900E4E885 /* setting_header_section@2x.png */,
 				5961501215F2648300C93978 /* cellAccessory.png */,
@@ -528,6 +539,8 @@
 				59A5BC3F15E893C200E67D54 /* activityDataSource.plist in Resources */,
 				5961501415F2648300C93978 /* cellAccessory.png in Resources */,
 				5961501515F2648300C93978 /* cellAccessory@2x.png in Resources */,
+				5917601815F330520098729B /* tianShan.png in Resources */,
+				5917601915F330520098729B /* tianShan@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -556,6 +569,7 @@
 				59A5BC4215E8975600E67D54 /* MaCoverFlowView.m in Sources */,
 				5961501015F251B300C93978 /* MaEZCell.m in Sources */,
 				5961503A15F26E6B00C93978 /* MaDetailViewController.m in Sources */,
+				5917601515F32BAD0098729B /* MaCrossFadeView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

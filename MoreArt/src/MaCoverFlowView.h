@@ -18,6 +18,8 @@
 	NSMutableArray *covers; // album covers images
 	BOOL collapsed;
 
+    UILabel* detailLabel;
+    
 }
 //- (void)loadCoverflowView;
 

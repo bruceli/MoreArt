@@ -39,6 +39,10 @@
         [coverflow setNumberOfCovers:20];
 
         [self addSubview:coverflow];
+                
+        detailLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 200, 460 , 90)];
+        detailLabel.backgroundColor = [[UIColor darkGrayColor]colorWithAlphaComponent:0.9];
+        [self addSubview:detailLabel];
 
     }
     return self;
