@@ -13,8 +13,8 @@
     UIImageView* _imageView;
     UIImage* _image;
     
-    NSMutableArray* leftArray;
-    NSMutableArray* rightArray;
+    NSMutableArray* _leftArray;
+    NSMutableArray* _rightArray;
     
     
     

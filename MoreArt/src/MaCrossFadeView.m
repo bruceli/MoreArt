@@ -39,10 +39,23 @@
 - (void)layoutSubviews
 {
     _image = [UIImage imageNamed:@"tianShan"];
-//    _imageView = [[UIImageView alloc] initWithImage:_image];
-//    [self addSubview:_imageView];
+    
+    NSData *data = UIImageJPEGRepresentation(_image, 1.0);
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask,  YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    NSString *fullPath = [documentsDirectory stringByAppendingPathComponent:@"tianshanOutput.jpg"];
+    [fileManager createFileAtPath:fullPath contents:data attributes:nil];
 
+    _imageView = [[UIImageView alloc] initWithImage:_image];
+//    [self addSubview:_imageView];
+    _leftArray = [[NSMutableArray alloc ]init];
     [self separateImage];
+    
+    for(UIImageView* imageView in _leftArray)
+    {
+        [self addSubview:imageView];
+    }
     
 }
 
@@ -61,12 +74,18 @@
     
     CGFloat theXlength = self.bounds.size.width/x;
     CGFloat theYlength = self.bounds.size.height/y;
+    CGFloat scale = [[UIScreen mainScreen] scale];
+
+    if (scale>1) {
+        theXlength = theXlength*scale;
+        theYlength = theYlength*scale;
+    }
     
     CGRect cropRect = CGRectZero;
     cropRect.size.width = theXlength;
     cropRect.size.height = theYlength;
 //    NSLog(@"%@",NSStringFromCGRect(cropRect));
-
+    
     NSInteger fileNo = 0;
     for (NSInteger i =0; i<x; i++) {
         for (NSInteger k =0; k<y; k++) {
@@ -77,13 +96,26 @@
             NSLog(@"%@",NSStringFromCGRect(cropRect));
             
             CGImageRef imageRef = CGImageCreateWithImageInRect([_image CGImage], cropRect);
-            UIImageView* cropImageView = [[UIImageView alloc] initWithFrame:cropRect];
-            cropImageView.image = [UIImage imageWithCGImage:imageRef];
+            
+            CGRect realRect;
+            UIImageView* cropImageView;
+            if (scale>1) {
+                realRect = CGRectMake(cropRect.origin.x / scale,
+                                  cropRect.origin.y / scale,
+                                  cropRect.size.width / scale,
+                                  cropRect.size.height / scale);
+                cropImageView = [[UIImageView alloc] initWithFrame:realRect];
+            }
+            else
+            {
+                cropImageView = [[UIImageView alloc] initWithFrame:cropRect];
+            }
 
-            [self addSubview:cropImageView];
+            cropImageView.image = [UIImage imageWithCGImage:imageRef];
+            [_leftArray addObject:cropImageView];
             NSLog(@"%@",NSStringFromCGRect(cropImageView.frame));
 
-            /*
+            
             NSData *data = UIImageJPEGRepresentation([UIImage imageWithCGImage:imageRef], 1.0);
             NSFileManager *fileManager = [NSFileManager defaultManager];
             NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask,  YES);
@@ -92,11 +124,11 @@
             [fileName appendString:@"image.jpeg"];
             NSString *fullPath = [documentsDirectory stringByAppendingPathComponent:fileName];
             
-            NSLog(@"%@",fullPath);
+//            NSLog(@"%@",fullPath);
             fileNo++;
             
             [fileManager createFileAtPath:fullPath contents:data attributes:nil];
-*/
+
             CGImageRelease(imageRef);
 
         }
