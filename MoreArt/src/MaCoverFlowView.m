@@ -32,13 +32,6 @@
         self.backgroundColor = [UIColor whiteColor];
         self.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
         
-        
-<<<<<<< HEAD
-        CGRect theRect =  CGRectMake(0, 0, 0, 0);
-=======
- //       CGRect theRect =  CGRectMake(0, 0, 0, 0);
->>>>>>> UI update
-        
         coverflow = [[TKCoverflowView alloc] initWithFrame:CGRectZero];
         coverflow.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
         coverflow.coverflowDelegate = self;
