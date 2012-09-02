@@ -33,8 +33,8 @@
     // self.clearsSelectionOnViewWillAppear = NO;
     
     MoreArtAppDelegate* app = (MoreArtAppDelegate *)[[UIApplication sharedApplication] delegate];
-    
 
+    
     NSArray* itemArray1 = [[NSArray alloc] initWithObjects:NSLocalizedString(@"douWo_Nav_Title",nil), app.douWoView, nil];
     NSArray* itemArray2 = [[NSArray alloc] initWithObjects:NSLocalizedString(@"douSpace_Nav_Title",nil), app.douSpaceView, nil];
     NSArray* itemArray3 = [[NSArray alloc] initWithObjects:NSLocalizedString(@"douBasePeking_Nav_Title",nil), app.douPeikingView, nil];

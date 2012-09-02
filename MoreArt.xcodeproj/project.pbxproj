@@ -43,6 +43,10 @@
 		5939085615E0C0C400A09C51 /* speech_bubble_transparent@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5939084615E0C0C400A09C51 /* speech_bubble_transparent@2x.png */; };
 		5939085715E0C0C400A09C51 /* tabBarBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 5939084715E0C0C400A09C51 /* tabBarBackground.png */; };
 		5939085815E0C0C400A09C51 /* tabBarBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5939084815E0C0C400A09C51 /* tabBarBackground@2x.png */; };
+		5961501015F251B300C93978 /* MaEZCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5961500F15F251B300C93978 /* MaEZCell.m */; };
+		5961501415F2648300C93978 /* cellAccessory.png in Resources */ = {isa = PBXBuildFile; fileRef = 5961501215F2648300C93978 /* cellAccessory.png */; };
+		5961501515F2648300C93978 /* cellAccessory@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5961501315F2648300C93978 /* cellAccessory@2x.png */; };
+		5961503A15F26E6B00C93978 /* MaDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5961503915F26E6A00C93978 /* MaDetailViewController.m */; };
 		598365F615E5E55900E4E885 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 598365F415E5E55900E4E885 /* Localizable.strings */; };
 		5983661115E6866900E4E885 /* MaBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5983661015E6866800E4E885 /* MaBaseViewController.m */; };
 		5983661715E688C600E4E885 /* MaTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5983661615E688C600E4E885 /* MaTableView.m */; };
@@ -128,6 +132,12 @@
 		5939084615E0C0C400A09C51 /* speech_bubble_transparent@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "speech_bubble_transparent@2x.png"; path = "Resources/speech_bubble_transparent@2x.png"; sourceTree = "<group>"; };
 		5939084715E0C0C400A09C51 /* tabBarBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tabBarBackground.png; path = Resources/tabBarBackground.png; sourceTree = "<group>"; };
 		5939084815E0C0C400A09C51 /* tabBarBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "tabBarBackground@2x.png"; path = "Resources/tabBarBackground@2x.png"; sourceTree = "<group>"; };
+		5961500F15F251B300C93978 /* MaEZCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MaEZCell.m; path = src/MaEZCell.m; sourceTree = "<group>"; };
+		5961501115F251CB00C93978 /* MaEZCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MaEZCell.h; path = src/MaEZCell.h; sourceTree = "<group>"; };
+		5961501215F2648300C93978 /* cellAccessory.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cellAccessory.png; path = Resources/cellAccessory.png; sourceTree = "<group>"; };
+		5961501315F2648300C93978 /* cellAccessory@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "cellAccessory@2x.png"; path = "Resources/cellAccessory@2x.png"; sourceTree = "<group>"; };
+		5961503815F26E6900C93978 /* MaDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MaDetailViewController.h; path = src/MaDetailViewController.h; sourceTree = "<group>"; };
+		5961503915F26E6A00C93978 /* MaDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MaDetailViewController.m; path = src/MaDetailViewController.m; sourceTree = "<group>"; };
 		598365D315E5E1E300E4E885 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		598365F515E5E55900E4E885 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		5983660F15E6866800E4E885 /* MaBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MaBaseViewController.h; path = src/MaBaseViewController.h; sourceTree = "<group>"; };
@@ -174,6 +184,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		59175FFB15F30AD20098729B /* MaEZCell */ = {
+			isa = PBXGroup;
+			children = (
+				5961501115F251CB00C93978 /* MaEZCell.h */,
+				5961500F15F251B300C93978 /* MaEZCell.m */,
+			);
+			name = MaEZCell;
+			sourceTree = "<group>";
+		};
 		591FCCC415CFBD31004FE480 = {
 			isa = PBXGroup;
 			children = (
@@ -215,6 +234,9 @@
 				5983661015E6866800E4E885 /* MaBaseViewController.m */,
 				5983661515E688C600E4E885 /* MaTableView.h */,
 				5983661615E688C600E4E885 /* MaTableView.m */,
+				59175FFB15F30AD20098729B /* MaEZCell */,
+				5961503815F26E6900C93978 /* MaDetailViewController.h */,
+				5961503915F26E6A00C93978 /* MaDetailViewController.m */,
 				59A5BC4315E8975B00E67D54 /* CoverFlow */,
 				598365FF15E5E89500E4E885 /* DouWo */,
 				598365FD15E5E86600E4E885 /* DouSpace */,
@@ -247,6 +269,8 @@
 			children = (
 				5983664A15E6978900E4E885 /* setting_header_section.png */,
 				5983664B15E6978900E4E885 /* setting_header_section@2x.png */,
+				5961501215F2648300C93978 /* cellAccessory.png */,
+				5961501315F2648300C93978 /* cellAccessory@2x.png */,
 				59235C0C15E0C8A7003C4708 /* TEST */,
 				5939083915E0C0C400A09C51 /* BarBackground.png */,
 				5939083A15E0C0C400A09C51 /* BarBackground@2x.png */,
@@ -502,6 +526,8 @@
 				5983664C15E6978900E4E885 /* setting_header_section.png in Resources */,
 				5983664D15E6978900E4E885 /* setting_header_section@2x.png in Resources */,
 				59A5BC3F15E893C200E67D54 /* activityDataSource.plist in Resources */,
+				5961501415F2648300C93978 /* cellAccessory.png in Resources */,
+				5961501515F2648300C93978 /* cellAccessory@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -528,6 +554,8 @@
 				59BA4FBD15E77BCF00E14A4E /* AsynchronousUIImage.m in Sources */,
 				59BA500D15E855DD00E14A4E /* MaDataSource.m in Sources */,
 				59A5BC4215E8975600E67D54 /* MaCoverFlowView.m in Sources */,
+				5961501015F251B300C93978 /* MaEZCell.m in Sources */,
+				5961503A15F26E6B00C93978 /* MaDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

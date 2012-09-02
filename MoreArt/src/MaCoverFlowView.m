@@ -28,18 +28,18 @@
                   [UIImage imageNamed:@"cover_7.jpg"],[UIImage imageNamed:@"cover_8.jpg"],
                   [UIImage imageNamed:@"cover_9.jpeg"],nil];
         
-        
-        CGRect r = [UIScreen mainScreen].bounds;
-        r = CGRectApplyAffineTransform(r, CGAffineTransformMakeRotation(90 * M_PI / 180.));
-        r.origin = CGPointZero;
-        
+            
         self.backgroundColor = [UIColor whiteColor];
         self.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
         
         
+<<<<<<< HEAD
         CGRect theRect =  CGRectMake(0, 0, 0, 0);
+=======
+ //       CGRect theRect =  CGRectMake(0, 0, 0, 0);
+>>>>>>> UI update
         
-        coverflow = [[TKCoverflowView alloc] initWithFrame:theRect];
+        coverflow = [[TKCoverflowView alloc] initWithFrame:CGRectZero];
         coverflow.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
         coverflow.coverflowDelegate = self;
         coverflow.dataSource = self;
@@ -54,7 +54,7 @@
 
 
 - (void) coverflowView:(TKCoverflowView*)coverflowView coverAtIndexWasBroughtToFront:(int)index{
-	NSLog(@"Front %d",index);
+//	NSLog(@"Front %d",index);
 }
 
 - (TKCoverflowCoverView*) coverflowView:(TKCoverflowView*)coverflowView coverAtIndex:(int)index{
@@ -75,7 +75,7 @@
 
 - (void) coverflowView:(TKCoverflowView*)coverflowView coverAtIndexWasTappedInFront:(int)index tapCount:(NSInteger)tapCount{
 	
-	TKLog(@"Index: %d",index);
+//	TKLog(@"Index: %d",index);
 	
 	if(tapCount<2) return;
     

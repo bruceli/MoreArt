@@ -287,6 +287,7 @@
 	}
 
 	for(UIView *v in views){
+//        NSLog(@"%@", NSStringFromCGRect(v.frame));
 		int i = [coverViews indexOfObject:v];
 		if(i < index) v.layer.transform = leftTransform;
 		else if(i > index) v.layer.transform = rightTransform;

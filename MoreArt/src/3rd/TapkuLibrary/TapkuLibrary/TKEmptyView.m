@@ -103,7 +103,7 @@
 
 #pragma mark -
 @implementation TKEmptyView
-@synthesize imageView=_imageView,titleLabel=_titleLabel,subtitleLabel=_subtitleLabel;
+@synthesize imageView=_imageView,titleLabel=_nameLabel,subtitleLabel=_subtitleLabel;
 
 
 - (id) initWithFrame:(CGRect)frame mask:(UIImage*)image title:(NSString*)titleString subtitle:(NSString*)subtitleString{
@@ -117,15 +117,15 @@
 	self.startPoint = CGPointZero;
 	self.endPoint = CGPointMake(0, 1);
     
-    _titleLabel = [[UILabel alloc] initWithFrame:CGRectZero];
-    _titleLabel.backgroundColor = [UIColor clearColor];
-    _titleLabel.font = [UIFont boldSystemFontOfSize:18];
-    _titleLabel.textColor = [UIColor colorWithRed:128/255. green:136/255. blue:149/255. alpha:1];
-    _titleLabel.textAlignment = UITextAlignmentCenter;
-    _titleLabel.shadowColor = [UIColor whiteColor];
-    _titleLabel.shadowOffset = CGSizeMake(0, 1);
+    _nameLabel = [[UILabel alloc] initWithFrame:CGRectZero];
+    _nameLabel.backgroundColor = [UIColor clearColor];
+    _nameLabel.font = [UIFont boldSystemFontOfSize:18];
+    _nameLabel.textColor = [UIColor colorWithRed:128/255. green:136/255. blue:149/255. alpha:1];
+    _nameLabel.textAlignment = UITextAlignmentCenter;
+    _nameLabel.shadowColor = [UIColor whiteColor];
+    _nameLabel.shadowOffset = CGSizeMake(0, 1);
     
-    _titleLabel.text = titleString;
+    _nameLabel.text = titleString;
     
     _subtitleLabel = [[UILabel alloc] initWithFrame:CGRectZero];
     _subtitleLabel.backgroundColor = [UIColor clearColor];
@@ -143,7 +143,7 @@
     
     [self addSubview:_imageView];
     [self addSubview:_subtitleLabel];
-    [self addSubview:_titleLabel];
+    [self addSubview:_nameLabel];
     
 
 		
@@ -167,8 +167,8 @@
 	
 	_imageView.frame = ir;
 	
-	_titleLabel.frame = CGRectMake(0,(int) MAX( s.height/2+s.height/4,(int)ir.origin.y+ir.size.height+4) , s.width , 20);
-	_subtitleLabel.frame = CGRectMake((int)0, _titleLabel.frame.origin.y + _titleLabel.frame.size.height , s.width , 16);
+	_nameLabel.frame = CGRectMake(0,(int) MAX( s.height/2+s.height/4,(int)ir.origin.y+ir.size.height+4) , s.width , 20);
+	_subtitleLabel.frame = CGRectMake((int)0, _nameLabel.frame.origin.y + _nameLabel.frame.size.height , s.width , 16);
 	
 }
 

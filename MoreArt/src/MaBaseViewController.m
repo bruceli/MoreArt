@@ -5,11 +5,14 @@
 //  Created by Thunder on 8/23/12.
 //  Copyright (c) 2012 MagicApp. All rights reserved.
 //
+#import "MaDefine.h"
 
 #import "MaBaseViewController.h"
 #import "MaSettingViewController.h"
 #import "MoreArtAppDelegate.h"
-#import "MaDefine.h"
+#import "MaDetailViewController.h"
+#import "MaEZCell.h"
+
 
 @interface MaBaseViewController ()
 
@@ -78,17 +81,39 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    MaEZCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        cell = [[MaEZCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
+    if (indexPath.row%2==0)
+        cell.rightLayout = TRUE;
     
-    cell.textLabel.text=@"test";
+    cell.accessoryView = [[ UIImageView alloc ] initWithImage:[UIImage imageNamed:@"cellAccessory" ]];
+
+    cell.imgName = @"test";
 //    cell.textLabel.textColor = [UIColor whiteColor];
 //    cell.textLabel.font = [UIFont fontWithName:@"STHeitiSC-Medium" size:16];
     return cell;
 }
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 75;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    // get section array from dataSource
+//    NSDictionary* dict = [dataSource objectAtIndex:indexPath.row];
+    
+    UIViewController* viewController = [[MaDetailViewController alloc]init];
+//    viewController.info = dict;
+//    viewController.navigationItem.title = [dict objectForKey:@"title"];
+    
+    [self.navigationController pushViewController: viewController animated:YES];
+}
+
 
 - (void) orientationChanged:(id)object
 {
