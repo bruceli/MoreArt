@@ -14,11 +14,16 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        // Initialization code
+        _theScroller = [NSTimer scheduledTimerWithTimeInterval: 3
+                                                            target: self
+                                                          selector: @selector(pagerViewScroller)
+                                                          userInfo: nil
+                                                           repeats: YES];
+        _needAutoScroll = YES;
+
     }
     return self;
 }
-
 
 -(void)layoutSubviews
 {
@@ -76,17 +81,14 @@
 
 -(void)pagerViewScroller
 {
-    while(YES) {
-        if (_needAutoScroll) {
-            [NSThread sleepForTimeInterval:2];
-            [self performSelectorOnMainThread:@selector(scrollPagerView) withObject:nil waitUntilDone:YES];
-        }
-        else
-        {
-            [NSThread sleepForTimeInterval:2];
-            NSLog(@"%@",@"Skipping Auto Scrolling");
-            
-        }
+    if (_needAutoScroll) {
+        [self performSelectorOnMainThread:@selector(scrollPagerView) withObject:nil waitUntilDone:YES];
+    }
+    else
+    {
+        [NSThread sleepForTimeInterval:2];
+        NSLog(@"%@",@"Skipping Auto Scrolling");
+        
     }
 }
 
@@ -104,18 +106,6 @@
     else
         _pagerView.page=0;
     NSLog(@"Current Page is  , %d", _pagerView.page);
-    
-    //    NSLog(@"%@", @"Scrolling");
-    /*    CGFloat contentOffset = _scrollPagerView.contentOffset.x+170; // half imageView width
-     
-     CGFloat maxContentSize = _scrollPagerView.frame.size.width * 6;
-     
-     if (contentOffset > maxContentSize) {
-     contentOffset = 160;
-     }
-     _pagerView.page = floorf(contentOffset / _scrollPagerView.frame.size.width);
-     NSLog(@"Current Page is  , %d", _pagerView.page);
-     */
     
 }
 

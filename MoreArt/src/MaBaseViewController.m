@@ -50,14 +50,11 @@
 	self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemStop target:self action:@selector(slideSettingViewController)];
 }
 
--(void)viewDidDisappear:(BOOL)animated
+/*-(void)viewDidDisappear:(BOOL)animated
 {
-    NSLog(@"%@", @"Unload here...");
+ //   NSLog(@"%@", @"Unload here...");
     [super viewDidDisappear:animated];
-    
-    
-    
-}
+}*/
 
 - (void)didReceiveMemoryWarning
 {

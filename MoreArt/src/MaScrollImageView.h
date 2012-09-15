@@ -15,5 +15,8 @@
     MCPagerView* _pagerView;
     BOOL _needAutoScroll;
     NSTimer* _autoScrollTimer;
+    NSTimer* _theScroller;
+
+    NSArray* _imageArray;
 }
 @end

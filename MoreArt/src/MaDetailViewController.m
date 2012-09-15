@@ -12,7 +12,6 @@
 @interface MaDetailViewController ()
 -(void) fillContents;
 -(void) adjustViewSize;
--(void) initPagerViews;
 
 @end
 
@@ -31,7 +30,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    _needAutoScroll = YES;
 
     CGRect bounds = [ [ UIScreen mainScreen ] applicationFrame ];
     _scrollView = [[UIScrollView alloc ] initWithFrame:bounds ];
@@ -43,7 +41,6 @@
     _bodyLabel = [[UILabel alloc] initWithFrame:CGRectMake(5, _titleLabel.frame.origin.y + _titleLabel.frame.size.height, 310, 400)];
  
     _titleLabel.backgroundColor = [UIColor darkGrayColor];
-    _imgView.backgroundColor = [UIColor darkGrayColor];
     _bodyLabel.backgroundColor = [UIColor darkGrayColor];
 
     _titleLabel.textColor = [UIColor whiteColor];
@@ -54,12 +51,13 @@
 
     _bodyLabel.textAlignment = UITextAlignmentLeft;
     _bodyLabel.numberOfLines = 0;
-
-    [self initPagerViews];
     
     [self.view addSubview:_titleLabel];
-    [self.view addSubview:_imgView];
     [self.view addSubview:_bodyLabel];
+
+    _scrollImageView = [[MaScrollImageView alloc] initWithFrame: CGRectMake(0, 0, 320, 135)];
+    [self.view addSubview:_scrollImageView];
+    
     
     // add ending Label
     CGRect rect = _bodyLabel.frame;
@@ -72,7 +70,6 @@
 
     _scrollView.contentSize = viewSize;
     
-    [NSThread detachNewThreadSelector:@selector(pagerViewScroller) toTarget:self withObject:nil];
 
     [self fillContents];
     [self adjustViewSize];
@@ -111,153 +108,6 @@
 {
 
 }
-
-
--(void) initPagerViews
-{    
-    // Pager Scroll view
-    CGRect theFrame = CGRectMake(0, 0, 320, 135);
-    _scrollPagerView = [[UIScrollView alloc] initWithFrame:theFrame];
-    
-    int i=0;
-    for (; i<6; i++) {
-        CGRect frame = CGRectMake(theFrame.size.width * i,
-                                  0,
-                                  theFrame.size.width,
-                                  theFrame.size.height);
-        
-        UILabel *label = [[UILabel alloc] initWithFrame:frame];
-        label.textAlignment = UITextAlignmentCenter;
-        label.font = [UIFont systemFontOfSize:40];
-        label.text = [NSString stringWithFormat:@"%d", i];
-        
-        if (i%2==0) {
-            label.backgroundColor = [UIColor grayColor];
-            label.textColor = [UIColor whiteColor];
-        }
-        
-        
-        [_scrollPagerView addSubview:label];
-    }
-    _scrollPagerView.contentSize = CGSizeMake(_scrollPagerView.frame.size.width * i, _scrollPagerView.frame.size.height);
-    _scrollPagerView.backgroundColor = [UIColor orangeColor];
-    _scrollPagerView.delegate = self;
-    _scrollPagerView.showsHorizontalScrollIndicator = NO;
-    [self.view addSubview: _scrollPagerView];
-    
-    
-    _pagerView = [[MCPagerView alloc] initWithFrame:CGRectMake(30, 100, 260, 32)];
-    _pagerView.delegate = self;
-    [self.view addSubview: _pagerView];
-    
-    [_pagerView setImage:[UIImage imageNamed:@"dot"]
-        highlightedImage:[UIImage imageNamed:@"dot_Selected"]
-                  forKey:@"a"];
-    [_pagerView setPattern:@"aaaaaa"];
-}
-
-
--(void)startAutoScroll
-{
-    _needAutoScroll = YES;
-    NSLog(@"%@", @"Enable Auto scroll");
-
-
-}
-
--(void)pagerViewScroller
-{
-    while(YES) {
-        if (_needAutoScroll) {
-            [NSThread sleepForTimeInterval:2];
-            [self performSelectorOnMainThread:@selector(scrollPagerView) withObject:nil waitUntilDone:YES];
-        }
-        else
-        {
-            [NSThread sleepForTimeInterval:2];
-            NSLog(@"%@",@"Skipping Auto Scrolling");
-
-        }
-    }
-}
-
-
--(void)scrollPagerView
-{
-    if (!_needAutoScroll) {
-        NSLog(@"%@",@"Skipping Auto Scrolling from scrollPagerView");
-        return;
-    }
-    
-    
-    if (_pagerView.page < 5) 
-        _pagerView.page++;
-    else
-        _pagerView.page=0;
-    NSLog(@"Current Page is  , %d", _pagerView.page);
-
-//    NSLog(@"%@", @"Scrolling");
-/*    CGFloat contentOffset = _scrollPagerView.contentOffset.x+170; // half imageView width
-    
-    CGFloat maxContentSize = _scrollPagerView.frame.size.width * 6;
-    
-    if (contentOffset > maxContentSize) {
-        contentOffset = 160;
-    }
-    _pagerView.page = floorf(contentOffset / _scrollPagerView.frame.size.width);
-    NSLog(@"Current Page is  , %d", _pagerView.page);
- */
-
-}
-
-
-//----------------------PagerView Delegate
-- (void)updatePager
-{    
-    CGFloat contentOffset = _scrollPagerView.contentOffset.x+160; // half imageView width
-    _pagerView.page = floorf(contentOffset / _scrollPagerView.frame.size.width);
-
-}
-
-- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
-{
-    [self updatePager];
-}
-
-
-- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
-{
-    _needAutoScroll = NO;
-    NSLog(@"%@", @"Disable Auto scroll");
-    _autoScrollTimer = [NSTimer scheduledTimerWithTimeInterval: 10
-                                                        target: self
-                                                      selector: @selector(startAutoScroll)
-                                                      userInfo: nil
-                                                       repeats: NO];
-}
-
-
-- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
-{
-    if (!decelerate) {
-        [self updatePager];
-    }
-}
-
-- (void)pageView:(MCPagerView *)pageView didUpdateToPage:(NSInteger)newPage
-{
-    CGPoint offset = CGPointMake(_scrollPagerView.frame.size.width * _pagerView.page, 0);
-    [_scrollPagerView setContentOffset:offset animated:YES];
-    
-    NSLog(@"Scrolling to , %f", _scrollPagerView.frame.size.width * _pagerView.page);
-
-}
-
--(void)needStopAutoScrolling
-{
-    _needAutoScroll = NO;
-}
-
 
 - (void) orientationChanged:(id)object
 {

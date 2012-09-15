@@ -69,6 +69,8 @@
 		59A5BC3F15E893C200E67D54 /* activityDataSource.plist in Resources */ = {isa = PBXBuildFile; fileRef = 59A5BC3E15E893C200E67D54 /* activityDataSource.plist */; };
 		59A5BC4215E8975600E67D54 /* MaCoverFlowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 59A5BC4115E8975600E67D54 /* MaCoverFlowView.m */; };
 		59A958681604483000669275 /* MaScrollImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 59A958671604483000669275 /* MaScrollImageView.m */; };
+		59A9586D16045CCE00669275 /* MaScrollImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59A9586C16045CCE00669275 /* MaScrollImageViewController.m */; };
+		59A9586F16045E7E00669275 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 59A9586E16045E7E00669275 /* Default-568h@2x.png */; };
 		59BA4FBD15E77BCF00E14A4E /* AsynchronousUIImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 59BA4FBC15E77BCF00E14A4E /* AsynchronousUIImage.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		59BA500D15E855DD00E14A4E /* MaDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 59BA500C15E855DC00E14A4E /* MaDataSource.m */; };
 /* End PBXBuildFile section */
@@ -182,6 +184,9 @@
 		59A5BC4115E8975600E67D54 /* MaCoverFlowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MaCoverFlowView.m; path = src/MaCoverFlowView.m; sourceTree = "<group>"; };
 		59A958661604483000669275 /* MaScrollImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MaScrollImageView.h; path = src/MaScrollImageView.h; sourceTree = "<group>"; };
 		59A958671604483000669275 /* MaScrollImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MaScrollImageView.m; path = src/MaScrollImageView.m; sourceTree = "<group>"; };
+		59A9586B16045CCE00669275 /* MaScrollImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MaScrollImageViewController.h; path = src/MaScrollImageViewController.h; sourceTree = "<group>"; };
+		59A9586C16045CCE00669275 /* MaScrollImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MaScrollImageViewController.m; path = src/MaScrollImageViewController.m; sourceTree = "<group>"; };
+		59A9586E16045E7E00669275 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "Resources/Default-568h@2x.png"; sourceTree = "<group>"; };
 		59BA4FBB15E77BCF00E14A4E /* AsynchronousUIImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AsynchronousUIImage.h; path = src/3rd/AsynchronousUIImage/AsynchronousUIImage.h; sourceTree = "<group>"; };
 		59BA4FBC15E77BCF00E14A4E /* AsynchronousUIImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AsynchronousUIImage.m; path = src/3rd/AsynchronousUIImage/AsynchronousUIImage.m; sourceTree = "<group>"; };
 		59BA500B15E855DC00E14A4E /* MaDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MaDataSource.h; path = src/MaDataSource.h; sourceTree = "<group>"; };
@@ -260,6 +265,8 @@
 				5961503915F26E6A00C93978 /* MaDetailViewController.m */,
 				59A958661604483000669275 /* MaScrollImageView.h */,
 				59A958671604483000669275 /* MaScrollImageView.m */,
+				59A9586B16045CCE00669275 /* MaScrollImageViewController.h */,
+				59A9586C16045CCE00669275 /* MaScrollImageViewController.m */,
 				59A5BC4315E8975B00E67D54 /* CoverFlow */,
 				5917601315F32BAC0098729B /* MaCrossFadeView.h */,
 				5917601415F32BAD0098729B /* MaCrossFadeView.m */,
@@ -292,6 +299,7 @@
 		591FCD0515CFBDA8004FE480 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				59A9586E16045E7E00669275 /* Default-568h@2x.png */,
 				5947AAD0160314BC007B4A68 /* dot_Selected.png */,
 				5947AAD1160314BC007B4A68 /* dot_Selected@2x.png */,
 				5947AAD2160314BC007B4A68 /* dot.png */,
@@ -575,6 +583,7 @@
 				5947AAD5160314BC007B4A68 /* dot_Selected@2x.png in Resources */,
 				5947AAD6160314BC007B4A68 /* dot.png in Resources */,
 				5947AAD7160314BC007B4A68 /* dot@2x.png in Resources */,
+				59A9586F16045E7E00669275 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -606,6 +615,7 @@
 				5917601515F32BAD0098729B /* MaCrossFadeView.m in Sources */,
 				5947AACE1603115F007B4A68 /* MCPagerView.m in Sources */,
 				59A958681604483000669275 /* MaScrollImageView.m in Sources */,
+				59A9586D16045CCE00669275 /* MaScrollImageViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

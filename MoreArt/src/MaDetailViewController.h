@@ -10,14 +10,14 @@
 #import "MaScrollImageView.h"
 
 
-@interface MaDetailViewController : UIViewController <UIScrollViewDelegate, MCPagerViewDelegate>
+@interface MaDetailViewController : UIViewController
 {
     UIScrollView* _scrollView;
-    UIImageView* _imgView;
+//    UIImageView* _imgView;
     
-    MCPagerView* _pagerView;
-    UIScrollView* _scrollPagerView;
-
+//    MCPagerView* _pagerView;
+//    UIScrollView* _scrollPagerView;
+    MaScrollImageView* _scrollImageView;
     UILabel* _titleLabel;
 //    UILabel* _headerLabel;
     UILabel* _bodyLabel;
@@ -25,8 +25,8 @@
     
     NSIndexPath* _indexPath;
     
-    BOOL _needAutoScroll;
-    NSTimer* _autoScrollTimer;
+//    BOOL _needAutoScroll;
+//    NSTimer* _autoScrollTimer;
     
     id _currentView;
 }
