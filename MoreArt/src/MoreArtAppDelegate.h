@@ -42,7 +42,7 @@
     
     MaCrossFadeView* _crossFadeView;
     
-    MaDataSource* _dataSource;
+    MaDataSource* _dataSourceMgr;
     
     MaBaseViewController* _baseViewController;
     PPRevealSideViewController* _revealSideViewController;
@@ -58,7 +58,7 @@
 @property (nonatomic, retain) MaCoverFlowView*   coverFlowView;
 @property (nonatomic, retain) MaCrossFadeView*   crossFadeView;
 
-@property (nonatomic, retain) MaDataSource*   dataSource;
+@property (nonatomic, retain) MaDataSource*   dataSourceMgr;
 
 @property (nonatomic, retain) MaBaseViewController*   baseViewController;
 @property (nonatomic, retain) PPRevealSideViewController* revealSideViewController;

@@ -24,7 +24,9 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        NSLog(@"%@", @"BaseView initWithNibName");
+        MoreArtAppDelegate* app = (MoreArtAppDelegate *)[[UIApplication sharedApplication] delegate];
+
+        _dataSourceMgr = app.dataSourceMgr;
     }
     return self;
 }
@@ -44,10 +46,16 @@
     [[NSNotificationCenter defaultCenter] removeObserver:self name:@"UIDeviceOrientationDidChangeNotification" object:nil];
 
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(orientationChanged:) name:@"UIDeviceOrientationDidChangeNotification" object:nil];
-
-    NSLog(@"%@", @"BaseView viewDidLoad");
     
 	self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemStop target:self action:@selector(slideSettingViewController)];
+}
+
+-(void)viewDidDisappear:(BOOL)animated
+{
+    NSLog(@"%@", @"Unload here...");
+    [super viewDidDisappear:animated];
+    
+    
     
 }
 
@@ -75,11 +83,12 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 5;
+    return [_dataSourceMgr.dataSource count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+//    NSLog(@"cellForRowAtIndexPath =  %d", indexPath.row);
     static NSString *CellIdentifier = @"Cell";
     MaEZCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
@@ -87,11 +96,16 @@
     }
     
     if (indexPath.row%2==0)
-        cell.rightLayout = TRUE;
+        cell.rightLayout = FALSE;
     
     cell.accessoryView = [[ UIImageView alloc ] initWithImage:[UIImage imageNamed:@"cellAccessory" ]];
-
-    cell.imgName = @"test";
+    
+    NSDictionary* dict = [_dataSourceMgr.dataSource objectAtIndex: indexPath.row];
+        
+    cell.titleString = [dict objectForKey:@"title"];
+    cell.discriptionString = [dict objectForKey:@"discription"];
+    cell.imgName = [dict objectForKey:@"image"];
+        
 //    cell.textLabel.textColor = [UIColor whiteColor];
 //    cell.textLabel.font = [UIFont fontWithName:@"STHeitiSC-Medium" size:16];
     return cell;
@@ -107,9 +121,10 @@
     // get section array from dataSource
 //    NSDictionary* dict = [dataSource objectAtIndex:indexPath.row];
     
-    UIViewController* viewController = [[MaDetailViewController alloc]init];
-//    viewController.info = dict;
-//    viewController.navigationItem.title = [dict objectForKey:@"title"];
+    MaDetailViewController* viewController = [[MaDetailViewController alloc]init];
+    viewController.indexPath = indexPath;
+    NSDictionary* dict = [_dataSourceMgr.dataSource objectAtIndex: indexPath.row];
+    viewController.navigationItem.title = [dict objectForKey:@"title"];
     
     [self.navigationController pushViewController: viewController animated:YES];
 }

@@ -8,6 +8,7 @@
 
 #import "MaDataSource.h"
 
+
 @implementation MaDataSource
 @synthesize dataSource = _dataSource;
 
@@ -16,46 +17,38 @@
     self = [super init];
     
     if (self) {
+        NSLog(@"%@", @"Init DataSourceMgr");
+
         NSString* path = [[NSBundle mainBundle] pathForResource:@"activityDataSource" ofType:@"plist"];
         //    NSLog(@"Datasource Location... %@", path);
         
-        NSDictionary *dict = [[NSDictionary alloc] initWithContentsOfFile:path];
-        _allActivityArray = [dict objectForKey:@"ActivityArray"];
+        _rootDictonary = [[NSDictionary alloc] initWithContentsOfFile:path];
+        _enumActivitiesArray = [_rootDictonary objectForKey:@"enumArray"];
         _currentActivityArray = [[NSMutableArray alloc] init];
-        _dataSource = [[NSMutableDictionary alloc] init];
+        _dataSource = [[NSMutableArray alloc] init];
+//        _dataSource  = [_rootDictonary objectForKey:[_enumActivitiesArray objectAtIndex:DOU_TYPE_DO_WUO]];
 
-    
+        
     }
 
     return self;
 }
 
 
--(void)updateSiteArray
+-(void)updateDataSourceArrayByViewType:(MaDouViewType)type
 {
     [_dataSource removeAllObjects];
-    NSMutableArray* sectionArray = [[NSMutableArray alloc] init];
+    NSLog(@"%@", @"UpdateSiteArray");
     
-    // get all site name
-    for (NSDictionary *dict in _currentActivityArray) {
-        NSString* siteString = [dict objectForKey:@"site"];
-        if(![sectionArray containsObject:siteString])
-            [sectionArray addObject:siteString];
-    }
-    [_dataSource setObject:sectionArray forKey:@"sectionNameArray"];
+    /*
+     Get Array Name from enumArray type;
+     Get array from Root ditionary;
+     */
     
-    // seprate array by site name
-    for(NSString* siteString in sectionArray)
-    {
-        NSMutableArray* secArray  = [[NSMutableArray alloc] init];
-        for (NSDictionary *dict in _currentActivityArray) {
-            NSString* string = [dict objectForKey:@"site"];
-            if([string isEqualToString:siteString])
-                [secArray addObject:dict];
-            
-        }
-        [_dataSource setObject:secArray forKey:siteString];
-    }
+    NSString* arrayName = [_enumActivitiesArray objectAtIndex:type];
+    [_dataSource addObjectsFromArray:[_rootDictonary objectForKey:arrayName]];
+    
+    
 }
 
 @end

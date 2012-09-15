@@ -46,6 +46,11 @@
 		5939085615E0C0C400A09C51 /* speech_bubble_transparent@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5939084615E0C0C400A09C51 /* speech_bubble_transparent@2x.png */; };
 		5939085715E0C0C400A09C51 /* tabBarBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 5939084715E0C0C400A09C51 /* tabBarBackground.png */; };
 		5939085815E0C0C400A09C51 /* tabBarBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5939084815E0C0C400A09C51 /* tabBarBackground@2x.png */; };
+		5947AACE1603115F007B4A68 /* MCPagerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5947AACD1603115F007B4A68 /* MCPagerView.m */; };
+		5947AAD4160314BC007B4A68 /* dot_Selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 5947AAD0160314BC007B4A68 /* dot_Selected.png */; };
+		5947AAD5160314BC007B4A68 /* dot_Selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5947AAD1160314BC007B4A68 /* dot_Selected@2x.png */; };
+		5947AAD6160314BC007B4A68 /* dot.png in Resources */ = {isa = PBXBuildFile; fileRef = 5947AAD2160314BC007B4A68 /* dot.png */; };
+		5947AAD7160314BC007B4A68 /* dot@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5947AAD3160314BC007B4A68 /* dot@2x.png */; };
 		5961501015F251B300C93978 /* MaEZCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5961500F15F251B300C93978 /* MaEZCell.m */; };
 		5961501415F2648300C93978 /* cellAccessory.png in Resources */ = {isa = PBXBuildFile; fileRef = 5961501215F2648300C93978 /* cellAccessory.png */; };
 		5961501515F2648300C93978 /* cellAccessory@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5961501315F2648300C93978 /* cellAccessory@2x.png */; };
@@ -63,6 +68,7 @@
 		5983665015E699D000E4E885 /* MaAboutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5983664F15E699D000E4E885 /* MaAboutView.m */; };
 		59A5BC3F15E893C200E67D54 /* activityDataSource.plist in Resources */ = {isa = PBXBuildFile; fileRef = 59A5BC3E15E893C200E67D54 /* activityDataSource.plist */; };
 		59A5BC4215E8975600E67D54 /* MaCoverFlowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 59A5BC4115E8975600E67D54 /* MaCoverFlowView.m */; };
+		59A958681604483000669275 /* MaScrollImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 59A958671604483000669275 /* MaScrollImageView.m */; };
 		59BA4FBD15E77BCF00E14A4E /* AsynchronousUIImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 59BA4FBC15E77BCF00E14A4E /* AsynchronousUIImage.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		59BA500D15E855DD00E14A4E /* MaDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 59BA500C15E855DC00E14A4E /* MaDataSource.m */; };
 /* End PBXBuildFile section */
@@ -139,6 +145,12 @@
 		5939084615E0C0C400A09C51 /* speech_bubble_transparent@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "speech_bubble_transparent@2x.png"; path = "Resources/speech_bubble_transparent@2x.png"; sourceTree = "<group>"; };
 		5939084715E0C0C400A09C51 /* tabBarBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tabBarBackground.png; path = Resources/tabBarBackground.png; sourceTree = "<group>"; };
 		5939084815E0C0C400A09C51 /* tabBarBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "tabBarBackground@2x.png"; path = "Resources/tabBarBackground@2x.png"; sourceTree = "<group>"; };
+		5947AACC1603115F007B4A68 /* MCPagerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MCPagerView.h; path = src/3rd/MCPagerView/MCPagerView.h; sourceTree = "<group>"; };
+		5947AACD1603115F007B4A68 /* MCPagerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MCPagerView.m; path = src/3rd/MCPagerView/MCPagerView.m; sourceTree = "<group>"; };
+		5947AAD0160314BC007B4A68 /* dot_Selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = dot_Selected.png; path = Resources/dot_Selected.png; sourceTree = "<group>"; };
+		5947AAD1160314BC007B4A68 /* dot_Selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "dot_Selected@2x.png"; path = "Resources/dot_Selected@2x.png"; sourceTree = "<group>"; };
+		5947AAD2160314BC007B4A68 /* dot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = dot.png; path = Resources/dot.png; sourceTree = "<group>"; };
+		5947AAD3160314BC007B4A68 /* dot@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "dot@2x.png"; path = "Resources/dot@2x.png"; sourceTree = "<group>"; };
 		5961500F15F251B300C93978 /* MaEZCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MaEZCell.m; path = src/MaEZCell.m; sourceTree = "<group>"; };
 		5961501115F251CB00C93978 /* MaEZCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MaEZCell.h; path = src/MaEZCell.h; sourceTree = "<group>"; };
 		5961501215F2648300C93978 /* cellAccessory.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cellAccessory.png; path = Resources/cellAccessory.png; sourceTree = "<group>"; };
@@ -168,6 +180,8 @@
 		59A5BC3E15E893C200E67D54 /* activityDataSource.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = activityDataSource.plist; path = Resources/activityDataSource.plist; sourceTree = "<group>"; };
 		59A5BC4015E8975600E67D54 /* MaCoverFlowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MaCoverFlowView.h; path = src/MaCoverFlowView.h; sourceTree = "<group>"; };
 		59A5BC4115E8975600E67D54 /* MaCoverFlowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MaCoverFlowView.m; path = src/MaCoverFlowView.m; sourceTree = "<group>"; };
+		59A958661604483000669275 /* MaScrollImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MaScrollImageView.h; path = src/MaScrollImageView.h; sourceTree = "<group>"; };
+		59A958671604483000669275 /* MaScrollImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MaScrollImageView.m; path = src/MaScrollImageView.m; sourceTree = "<group>"; };
 		59BA4FBB15E77BCF00E14A4E /* AsynchronousUIImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AsynchronousUIImage.h; path = src/3rd/AsynchronousUIImage/AsynchronousUIImage.h; sourceTree = "<group>"; };
 		59BA4FBC15E77BCF00E14A4E /* AsynchronousUIImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AsynchronousUIImage.m; path = src/3rd/AsynchronousUIImage/AsynchronousUIImage.m; sourceTree = "<group>"; };
 		59BA500B15E855DC00E14A4E /* MaDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MaDataSource.h; path = src/MaDataSource.h; sourceTree = "<group>"; };
@@ -244,6 +258,8 @@
 				59175FFB15F30AD20098729B /* MaEZCell */,
 				5961503815F26E6900C93978 /* MaDetailViewController.h */,
 				5961503915F26E6A00C93978 /* MaDetailViewController.m */,
+				59A958661604483000669275 /* MaScrollImageView.h */,
+				59A958671604483000669275 /* MaScrollImageView.m */,
 				59A5BC4315E8975B00E67D54 /* CoverFlow */,
 				5917601315F32BAC0098729B /* MaCrossFadeView.h */,
 				5917601415F32BAD0098729B /* MaCrossFadeView.m */,
@@ -276,6 +292,10 @@
 		591FCD0515CFBDA8004FE480 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				5947AAD0160314BC007B4A68 /* dot_Selected.png */,
+				5947AAD1160314BC007B4A68 /* dot_Selected@2x.png */,
+				5947AAD2160314BC007B4A68 /* dot.png */,
+				5947AAD3160314BC007B4A68 /* dot@2x.png */,
 				5917601615F330520098729B /* tianShan.png */,
 				5917601715F330520098729B /* tianShan@2x.png */,
 				5983664A15E6978900E4E885 /* setting_header_section.png */,
@@ -306,6 +326,7 @@
 		591FCD2A15CFBF02004FE480 /* 3rd */ = {
 			isa = PBXGroup;
 			children = (
+				5947AACF16031167007B4A68 /* PagerView */,
 				59BA4FBB15E77BCF00E14A4E /* AsynchronousUIImage.h */,
 				59BA4FBC15E77BCF00E14A4E /* AsynchronousUIImage.m */,
 				593907D115E0B9C600A09C51 /* TKLib */,
@@ -346,6 +367,15 @@
 				59235BFB15E0C381003C4708 /* TapkuLibrary.xcodeproj */,
 			);
 			name = TKLib;
+			sourceTree = "<group>";
+		};
+		5947AACF16031167007B4A68 /* PagerView */ = {
+			isa = PBXGroup;
+			children = (
+				5947AACC1603115F007B4A68 /* MCPagerView.h */,
+				5947AACD1603115F007B4A68 /* MCPagerView.m */,
+			);
+			name = PagerView;
 			sourceTree = "<group>";
 		};
 		598365F315E5E28B00E4E885 /* Settings */ = {
@@ -541,6 +571,10 @@
 				5961501515F2648300C93978 /* cellAccessory@2x.png in Resources */,
 				5917601815F330520098729B /* tianShan.png in Resources */,
 				5917601915F330520098729B /* tianShan@2x.png in Resources */,
+				5947AAD4160314BC007B4A68 /* dot_Selected.png in Resources */,
+				5947AAD5160314BC007B4A68 /* dot_Selected@2x.png in Resources */,
+				5947AAD6160314BC007B4A68 /* dot.png in Resources */,
+				5947AAD7160314BC007B4A68 /* dot@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -570,6 +604,8 @@
 				5961501015F251B300C93978 /* MaEZCell.m in Sources */,
 				5961503A15F26E6B00C93978 /* MaDetailViewController.m in Sources */,
 				5917601515F32BAD0098729B /* MaCrossFadeView.m in Sources */,
+				5947AACE1603115F007B4A68 /* MCPagerView.m in Sources */,
+				59A958681604483000669275 /* MaScrollImageView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

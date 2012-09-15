@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MaDefine.h"
 
 @interface MaTableView : UITableView
+{
+    MaDouViewType _douViewType;
+}
+
+@property (nonatomic) MaDouViewType   douViewType;
+
 
 @end

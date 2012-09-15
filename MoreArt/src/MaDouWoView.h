@@ -11,8 +11,6 @@
 @interface MaDouWoView : MaTableView
 {
 	
-    UIView *portraitView;
-    UIView *landscapeView;
     
 }
 @end

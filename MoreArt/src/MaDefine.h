@@ -2,3 +2,13 @@
 
 #define MA_MENU_TITLE 0
 #define MA_MENU_CONTROLLER 1
+
+
+enum {
+    DOU_TYPE_DO_WUO = 0,
+    DOU_TYPE_DOU_SPACE ,
+    DOU_TYPE_PEIKING_BASE,
+    DOU_TYPE_MO_PHOTO,
+    DOU_TYPE_ART029,
+};
+typedef NSUInteger MaDouViewType;

@@ -18,7 +18,8 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-     
+        _douViewType = DOU_TYPE_DOU_SPACE;
+
     }
     return self;
 }

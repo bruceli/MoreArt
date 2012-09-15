@@ -180,7 +180,6 @@
     app.baseViewController.navigationItem.title = [itemArray objectAtIndex:MA_MENU_TITLE];
     
     [self.revealSideViewController popViewControllerAnimated:YES];
-    
 }
 
 @end

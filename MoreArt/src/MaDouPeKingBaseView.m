@@ -18,7 +18,7 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        // Initialization code
+        _douViewType = DOU_TYPE_PEIKING_BASE;
     }
     return self;
 }

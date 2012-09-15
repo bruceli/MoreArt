@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MaCrossFadeView : UIView
+@interface MaCrossFadeView : UIView <UIGestureRecognizerDelegate>
 {
     UIImageView* _imageView;
     UIImage* _image;
@@ -16,8 +16,10 @@
     NSMutableArray* _leftArray;
     NSMutableArray* _rightArray;
     
-    
+    UIPanGestureRecognizer* _panGesture;
     
 }
+
+-(void) startAnimat;
 
 @end

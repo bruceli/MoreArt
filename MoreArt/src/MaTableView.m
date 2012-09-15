@@ -7,17 +7,31 @@
 //
 
 #import "MaTableView.h"
+#import "MoreArtAppDelegate.h"
 
 @implementation MaTableView
+
+@synthesize douViewType = _douViewType;
+
 
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self) {
+    //    _douViewType = 0;
         self.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"setting_bkg.png"]];
     }
     return self;
 }
+
+-(void)layoutSubviews
+{
+//    NSLog(@"%@", @"MaTableView LayoutSubviews");
+    
+    [super layoutSubviews];
+}
+
+
 
 /*
 // Only override drawRect: if you perform custom drawing.

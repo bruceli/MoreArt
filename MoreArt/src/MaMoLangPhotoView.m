@@ -17,7 +17,7 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        // Initialization code
+        _douViewType = DOU_TYPE_MO_PHOTO;
     }
     return self;
 }

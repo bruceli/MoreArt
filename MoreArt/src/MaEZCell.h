@@ -12,6 +12,8 @@
 @interface MaEZCell : UITableViewCell
 {
     NSString* _titleString;
+    NSString* _discriptionString;
+
     NSString* _imgName;
     
     UILabel* _titleLabel;
@@ -21,6 +23,7 @@
 }
 
 @property (nonatomic, copy) NSString *titleString;
+@property (nonatomic, copy) NSString *discriptionString;
 @property (nonatomic, copy) NSString *imgName;
 @property (nonatomic) BOOL rightLayout;
 

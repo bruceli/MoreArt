@@ -20,52 +20,14 @@
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
+        _douViewType = DOU_TYPE_DO_WUO;
+        MoreArtAppDelegate* app = (MoreArtAppDelegate *)[[UIApplication sharedApplication] delegate];
+        [app.dataSourceMgr updateDataSourceArrayByViewType:_douViewType];
+        
+
     }
     return self;
 }
 
-
-/*
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-	// Do any additional setup after loading the view.
-    self.tableView.backgroundColor = [UIColor darkGrayColor];
-    self.navigationItem.title = NSLocalizedString(@"douWo_Nav_Title",nil);
-
-	self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemStop target:self action:@selector(showSettings)];
-
-	[[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
-	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(orientationChanged:) name:@"UIDeviceOrientationDidChangeNotification" object:nil];
-    
-    
-    landscapeView = [[UIView alloc]initWithFrame:self.view.bounds];
-    portraitView = [[UIView alloc]initWithFrame:self.view.bounds];
-    
-    landscapeView.backgroundColor = [UIColor greenColor];
-    portraitView.backgroundColor = [UIColor blueColor];
-
-}
-
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
-}
-
- - (void) orientationChanged:(id)object
-{
-	UIInterfaceOrientation interfaceOrientation = [[object object] orientation];
-	
-	if (interfaceOrientation == UIInterfaceOrientationPortrait || interfaceOrientation == UIInterfaceOrientationPortraitUpsideDown)
-	{
-		self.view = portraitView;
-	}
-	else
-	{
-		self.view = landscapeView;
-	}
-}
-
-*/
 
 @end

@@ -7,15 +7,18 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "MaDefine.h"
 
 @interface MaDataSource : NSObject
 {
-    NSMutableArray* _allActivityArray;
+    NSMutableArray* _enumActivitiesArray;
     NSMutableArray* _currentActivityArray;
+    NSDictionary* _rootDictonary;
     
-    NSMutableDictionary* _dataSource;
+    NSMutableArray* _dataSource;
 }
-@property (nonatomic, retain) NSMutableDictionary* dataSource;
+@property (nonatomic, retain) NSMutableArray* dataSource;
 
+-(void)updateDataSourceArrayByViewType:(MaDouViewType)type;
 
 @end

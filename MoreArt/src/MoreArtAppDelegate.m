@@ -20,7 +20,7 @@
 @synthesize moLangPhotoView = _moLangPhotoView;
 @synthesize aboutView = _aboutView;
 @synthesize coverFlowView = _coverFlowView;
-@synthesize dataSource = _dataSource;
+@synthesize dataSourceMgr = _dataSourceMgr;
 
 @synthesize crossFadeView = _crossFadeView;
 
@@ -31,7 +31,8 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
      
-    
+    _dataSourceMgr = [[MaDataSource alloc] init];
+
     _baseViewController = [[MaBaseViewController alloc] init];
     UINavigationController* theController = [[UINavigationController alloc] initWithRootViewController:_baseViewController];
     UINavigationBar* navBar = theController.navigationBar;
@@ -62,7 +63,6 @@
     
  //   [_coverFlowView loadCoverflowView];
     
-    _dataSource = [[MaDataSource alloc] init];
 
     _revealSideViewController = [[PPRevealSideViewController alloc] initWithRootViewController:theController ];
     _revealSideViewController.delegate = self;

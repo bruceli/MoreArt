@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+@class MaDataSource;
 
 @interface MaBaseViewController : UIViewController <UITableViewDataSource,UITableViewDelegate>
 {
     id currentView;
+    
+    MaDataSource* _dataSourceMgr;
     
 }
 
