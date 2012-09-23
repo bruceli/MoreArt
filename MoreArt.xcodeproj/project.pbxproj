@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		26947910160EF47700E3BCBE /* a.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 2694790E160EF47700E3BCBE /* a.jpeg */; };
-		26947911160EF47700E3BCBE /* b.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 2694790F160EF47700E3BCBE /* b.jpeg */; };
 		5917601515F32BAD0098729B /* MaCrossFadeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5917601415F32BAD0098729B /* MaCrossFadeView.m */; };
 		5917601815F330520098729B /* tianShan.png in Resources */ = {isa = PBXBuildFile; fileRef = 5917601615F330520098729B /* tianShan.png */; };
 		5917601915F330520098729B /* tianShan@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5917601715F330520098729B /* tianShan@2x.png */; };
@@ -239,8 +237,6 @@
 		2607A924160EE9A400B45451 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				2694790E160EF47700E3BCBE /* a.jpeg */,
-				2694790F160EF47700E3BCBE /* b.jpeg */,
 			);
 			name = Resources;
 			sourceTree = "<group>";

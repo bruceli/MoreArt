@@ -13,7 +13,7 @@
 @interface MaDetailViewController : UIViewController
 {
     UIScrollView* _scrollView;
-//    UIImageView* _imgView;
+    UIImageView* _avatarImgView;
     
 //    MCPagerView* _pagerView;
 //    UIScrollView* _scrollPagerView;

@@ -37,12 +37,17 @@
     
     self.view = _scrollView;
     _scrollView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"setting_bkg.png"]];
-    _titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(5, 140, 310, 35)];
-    _bodyLabel = [[UILabel alloc] initWithFrame:CGRectMake(5, _titleLabel.frame.origin.y + _titleLabel.frame.size.height, 310, 400)];
+    _avatarImgView = [[UIImageView alloc] initWithFrame:CGRectMake(5,140, 85, 85)];
+
+    _titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(_avatarImgView.frame.origin.x + _avatarImgView.frame.size.width, 140, 310, 35)];
+
+    _bodyLabel = [[UILabel alloc] initWithFrame:CGRectMake(5, _avatarImgView.frame.origin.y + _avatarImgView.frame.size.height, 310, 400)];
+    
  
     _titleLabel.backgroundColor = [UIColor darkGrayColor];
     _bodyLabel.backgroundColor = [UIColor darkGrayColor];
-
+    _avatarImgView.backgroundColor = [UIColor brownColor];
+    
     _titleLabel.textColor = [UIColor whiteColor];
     _bodyLabel.textColor = [UIColor greenColor];
     
@@ -54,6 +59,7 @@
     
     [self.view addSubview:_titleLabel];
     [self.view addSubview:_bodyLabel];
+    [self.view addSubview:_avatarImgView];
 
     _scrollImageViewController = [[MaScrollImageViewController alloc] init];
     [self.view addSubview:_scrollImageViewController.view];
