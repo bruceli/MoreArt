@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2607A922160EE99600B45451 /* a.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 2607A920160EE99600B45451 /* a.jpeg */; };
-		2607A923160EE99600B45451 /* b.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 2607A921160EE99600B45451 /* b.jpeg */; };
+		26947910160EF47700E3BCBE /* a.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 2694790E160EF47700E3BCBE /* a.jpeg */; };
+		26947911160EF47700E3BCBE /* b.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 2694790F160EF47700E3BCBE /* b.jpeg */; };
 		5917601515F32BAD0098729B /* MaCrossFadeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5917601415F32BAD0098729B /* MaCrossFadeView.m */; };
 		5917601815F330520098729B /* tianShan.png in Resources */ = {isa = PBXBuildFile; fileRef = 5917601615F330520098729B /* tianShan.png */; };
 		5917601915F330520098729B /* tianShan@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5917601715F330520098729B /* tianShan@2x.png */; };
@@ -109,8 +109,8 @@
 		2607A91D160EE90E00B45451 /* subView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = subView.m; sourceTree = "<group>"; };
 		2607A91E160EE90E00B45451 /* subViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = subViewController.h; sourceTree = "<group>"; };
 		2607A91F160EE90E00B45451 /* subViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = subViewController.m; sourceTree = "<group>"; };
-		2607A920160EE99600B45451 /* a.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = a.jpeg; path = ../../freeland/FlipImage/FlipImage/a.jpeg; sourceTree = "<group>"; };
-		2607A921160EE99600B45451 /* b.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = b.jpeg; path = ../../freeland/FlipImage/FlipImage/b.jpeg; sourceTree = "<group>"; };
+		2694790E160EF47700E3BCBE /* a.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = a.jpeg; path = Resources/a.jpeg; sourceTree = "<group>"; };
+		2694790F160EF47700E3BCBE /* b.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = b.jpeg; path = Resources/b.jpeg; sourceTree = "<group>"; };
 		5917601315F32BAC0098729B /* MaCrossFadeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MaCrossFadeView.h; path = src/MaCrossFadeView.h; sourceTree = "<group>"; };
 		5917601415F32BAD0098729B /* MaCrossFadeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MaCrossFadeView.m; path = src/MaCrossFadeView.m; sourceTree = "<group>"; };
 		5917601615F330520098729B /* tianShan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tianShan.png; path = Resources/tianShan.png; sourceTree = "<group>"; };
@@ -239,8 +239,8 @@
 		2607A924160EE9A400B45451 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				2607A920160EE99600B45451 /* a.jpeg */,
-				2607A921160EE99600B45451 /* b.jpeg */,
+				2694790E160EF47700E3BCBE /* a.jpeg */,
+				2694790F160EF47700E3BCBE /* b.jpeg */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -646,8 +646,8 @@
 				5947AAD7160314BC007B4A68 /* dot@2x.png in Resources */,
 				59A9586F16045E7E00669275 /* Default-568h@2x.png in Resources */,
 				59D213F4160DBD6B000968E5 /* img in Resources */,
-				2607A922160EE99600B45451 /* a.jpeg in Resources */,
-				2607A923160EE99600B45451 /* b.jpeg in Resources */,
+				26947910160EF47700E3BCBE /* a.jpeg in Resources */,
+				26947911160EF47700E3BCBE /* b.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
