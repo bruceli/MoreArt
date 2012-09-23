@@ -14,13 +14,17 @@
 }
 
 @synthesize page = _page;
-@synthesize pattern = _pattern;
+//@synthesize pattern = _pattern;
 @synthesize delegate = _delegate;
+@synthesize normalDotImage = _normalDotImage;
+@synthesize highlightedDotImage = _highlightedDotImage;
+
+//@synthesize pattern = _pattern;
 
 - (void)commonInit
 {
     _page = 0;
-    _pattern = @"";
+//    _pattern = @"";
     _images = [NSMutableDictionary dictionary];
     _pageViews = [NSMutableArray array];
 }
@@ -62,21 +66,15 @@
     [[NSNotificationCenter defaultCenter] postNotificationName:MCPAGERVIEW_DID_UPDATE_NOTIFICATION object:self];
 }
 
-- (NSInteger)numberOfPages
-{
-    return _pattern.length;
-}
-
 - (void)tapped:(UITapGestureRecognizer *)recognizer
 {
     self.page = [_pageViews indexOfObject:recognizer.view];
-    [_delegate respondsToSelector:@selector(needStopAutoScrolling)];
+    [_delegate respondsToSelector:@selector(didTouchPagerView)];
 }
 
-- (UIImageView *)imageViewForKey:(NSString *)key
+- (UIImageView *)imageDotViewForKey
 {
-    NSDictionary *imageData = [_images objectForKey:key];
-    UIImageView *imageView = [[UIImageView alloc] initWithImage:[imageData objectForKey:@"normal"] highlightedImage:[imageData objectForKey:@"highlighted"]];
+    UIImageView *imageView = [[UIImageView alloc] initWithImage:_normalDotImage highlightedImage:_highlightedDotImage];
     imageView.userInteractionEnabled = YES;
     UITapGestureRecognizer *tgr = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapped:)];
     [imageView addGestureRecognizer:tgr];
@@ -95,8 +93,7 @@
     NSInteger pages = self.numberOfPages;
     CGFloat xOffset = 0;
     for (int i=0; i<pages; i++) {
-        NSString *key = [_pattern substringWithRange:NSMakeRange(i, 1)];
-        UIImageView *imageView = [self imageViewForKey:key];
+        UIImageView *imageView = [self imageDotViewForKey];
         
         CGRect frame = imageView.frame;
         frame.origin.x = xOffset;

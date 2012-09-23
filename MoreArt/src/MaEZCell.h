@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-//#import "FXLabel.h"
+#import "AsyncImageView.h"
 
 @interface MaEZCell : UITableViewCell
 {
@@ -18,7 +18,7 @@
     
     UILabel* _titleLabel;
     UILabel* _detailLabel;
-    UIImageView* _imgView;
+    AsyncImageView* _imgView;
     BOOL _rightLayout;
 }
 

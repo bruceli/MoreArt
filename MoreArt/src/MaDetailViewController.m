@@ -55,8 +55,11 @@
     [self.view addSubview:_titleLabel];
     [self.view addSubview:_bodyLabel];
 
-    _scrollImageView = [[MaScrollImageView alloc] initWithFrame: CGRectMake(0, 0, 320, 135)];
-    [self.view addSubview:_scrollImageView];
+    _scrollImageViewController = [[MaScrollImageViewController alloc] init];
+    [self.view addSubview:_scrollImageViewController.view];
+
+//    _scrollImageView = [[MaScrollImageView alloc] initWithFrame: CGRectMake(0, 0, 320, 135)];
+//    [self.view addSubview:_scrollImageView];
     
     
     // add ending Label

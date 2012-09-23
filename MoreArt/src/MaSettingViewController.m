@@ -179,6 +179,8 @@
     app.baseViewController.view = [itemArray objectAtIndex:MA_MENU_CONTROLLER];
     app.baseViewController.navigationItem.title = [itemArray objectAtIndex:MA_MENU_TITLE];
     
+    [app.baseViewController updateDataSourceBy:indexPath.row];
+    
     [self.revealSideViewController popViewControllerAnimated:YES];
 }
 

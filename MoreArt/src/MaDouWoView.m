@@ -21,10 +21,10 @@
     if (self) {
         // Initialization code
         _douViewType = DOU_TYPE_DO_WUO;
-        MoreArtAppDelegate* app = (MoreArtAppDelegate *)[[UIApplication sharedApplication] delegate];
-        [app.dataSourceMgr updateDataSourceArrayByViewType:_douViewType];
-        
-
+        _scrollImageViewController = [[MaScrollImageViewController alloc] init];
+//        [self addSubview:_scrollImageViewController.view];
+        _scrollImageViewController.view.frame = CGRectMake(0, 0, 320, 135);
+        self.tableHeaderView = _scrollImageViewController.view;
     }
     return self;
 }

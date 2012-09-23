@@ -22,6 +22,13 @@
     if (self) {
         // Initialization code
         _rightLayout = TRUE;
+        _imgView = [[AsyncImageView alloc] initWithFrame:CGRectZero];
+        _titleLabel = [[UILabel alloc] initWithFrame:CGRectZero];
+        _detailLabel = [[UILabel alloc] initWithFrame:CGRectZero];
+        
+        [self addSubview:_titleLabel];
+        [self addSubview:_detailLabel];
+        [self addSubview:_imgView];
     }
     return self;
 }
@@ -38,22 +45,42 @@
     [super layoutSubviews];
     
     if (!_rightLayout) {
-        _imgView = [[UIImageView alloc] initWithFrame:CGRectMake(7, 10, 70, 55)];
-        _titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(85, 5,210 , 25)];
-        _detailLabel = [[UILabel alloc] initWithFrame:CGRectMake(85, 33, 210, 37)];
+        _imgView.frame = CGRectMake(7, 10, 70, 55);
+        _titleLabel.frame = CGRectMake(85, 5,210 , 25);
+        _detailLabel.frame = CGRectMake(85, 33, 210, 37);
     }
     else
     {
-        _imgView = [[UIImageView alloc] initWithFrame:CGRectMake(222, 10, 70, 55)];
-        _titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(7, 5,210 , 25)];
-        _detailLabel = [[UILabel alloc] initWithFrame:CGRectMake(7, 33, 210, 37)];
+        _imgView.frame = CGRectMake(222, 10, 70, 55);
+        _titleLabel.frame = CGRectMake(7, 5,210 , 25);
+        _detailLabel.frame = CGRectMake(7, 33, 210, 37);
 
     }
     //        _isSchCell = YES;
     self.selectionStyle = UITableViewCellSelectionStyleNone;
-    [self addSubview:_titleLabel];
-    [self addSubview:_detailLabel];
-    [self addSubview:_imgView];
+
+    _imgView.contentMode = UIViewContentModeScaleAspectFill;
+    _imgView.clipsToBounds = YES;
+    _imgView.showActivityIndicator = YES;
+    
+    [[AsyncImageLoader sharedLoader] cancelLoadingImagesForTarget:_imgView];
+    
+    
+    NSURL* theURL = nil;
+    if (_imgName!=nil) {
+        if ([_imgName hasPrefix:@"http://"]) {
+            theURL = [NSURL URLWithString:_imgName];
+        }
+        else
+        {
+            
+            NSString* theFilePathString = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:_imgName];
+            theURL = [NSURL fileURLWithPath:theFilePathString];
+        }
+    }
+
+    _imgView.imageURL = theURL;
+    
 
     
     self.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"setting_bkg.png"]];
@@ -70,13 +97,6 @@
     _detailLabel.textColor = [UIColor whiteColor];
     _detailLabel.numberOfLines = 0;
     
-    
-    if (_imgName != nil) {
-        NSMutableString* imagetitleString = [NSMutableString stringWithString:_imgName];
-        [imagetitleString appendString:@".jpeg"];
-        UIImage* bandImg = [UIImage imageNamed:imagetitleString];
-        _imgView.image = bandImg;
-    }
 }
 
 

@@ -17,6 +17,7 @@
     
 }
 
+-(void)updateDataSourceBy:(MaDouViewType)type;
 
 
 @end

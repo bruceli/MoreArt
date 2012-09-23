@@ -7,16 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "MCPagerView.h"
 
-@interface MaScrollImageView : UIScrollView <UIScrollViewDelegate, MCPagerViewDelegate>
+@interface MaScrollImageView : UIScrollView
 {
-    UIScrollView* _scrollPagerView;
-    MCPagerView* _pagerView;
-    BOOL _needAutoScroll;
-    NSTimer* _autoScrollTimer;
-    NSTimer* _theScroller;
-
-    NSArray* _imageArray;
+    UIScrollView* _scrollView;
 }
+@property (nonatomic, retain) UIScrollView*   scrollView;
+
+
 @end

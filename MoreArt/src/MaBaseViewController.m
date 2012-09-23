@@ -40,6 +40,8 @@
     
     self.navigationItem.title = NSLocalizedString(@"douWo_Nav_Title",nil);
     MoreArtAppDelegate* app = (MoreArtAppDelegate *)[[UIApplication sharedApplication] delegate];
+    [_dataSourceMgr updateDataSourceArrayByViewType:DOU_TYPE_DO_WUO];
+
     self.view = app.douWoView;
     
     [[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
@@ -49,6 +51,12 @@
     
 	self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemStop target:self action:@selector(slideSettingViewController)];
 }
+
+-(void)updateDataSourceBy:(MaDouViewType)type
+{
+    [_dataSourceMgr updateDataSourceArrayByViewType:type];
+}
+
 
 /*-(void)viewDidDisappear:(BOOL)animated
 {
@@ -101,8 +109,10 @@
         
     cell.titleString = [dict objectForKey:@"title"];
     cell.discriptionString = [dict objectForKey:@"discription"];
-    cell.imgName = [dict objectForKey:@"image"];
-        
+    cell.imgName = [dict objectForKey:@"avatar"];
+
+    
+    
 //    cell.textLabel.textColor = [UIColor whiteColor];
 //    cell.textLabel.font = [UIFont fontWithName:@"STHeitiSC-Medium" size:16];
     return cell;

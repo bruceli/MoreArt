@@ -7,6 +7,7 @@
 //
 
 #import "MaArt029View.h"
+#import "MoreArtAppDelegate.h"
 
 @interface MaArt029View ()
 

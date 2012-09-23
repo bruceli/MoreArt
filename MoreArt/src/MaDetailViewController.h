@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "MaScrollImageView.h"
+#import "MaScrollImageViewController.h"
 
 
 @interface MaDetailViewController : UIViewController
@@ -17,7 +17,7 @@
     
 //    MCPagerView* _pagerView;
 //    UIScrollView* _scrollPagerView;
-    MaScrollImageView* _scrollImageView;
+    MaScrollImageViewController* _scrollImageViewController;
     UILabel* _titleLabel;
 //    UILabel* _headerLabel;
     UILabel* _bodyLabel;

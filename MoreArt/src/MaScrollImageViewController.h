@@ -7,7 +7,20 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MaScrollImageView.h"
 
-@interface MaScrollImageViewController : UIViewController
+@interface MaScrollImageViewController : UIViewController <UIScrollViewDelegate>
+{
+    MaScrollImageView* _scrollImageView;
+    BOOL _needAutoScroll;
+    
+    NSInteger _currentPageIndex;
+    NSTimer* _autoScrollTimer;
+    NSTimer* _theScroller;
+    
+    NSArray* _imageArray;
+}
+
+@property (nonatomic, retain) NSArray*  imageArray;
 
 @end
