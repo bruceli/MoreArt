@@ -55,6 +55,8 @@
 		5961501515F2648300C93978 /* cellAccessory@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5961501315F2648300C93978 /* cellAccessory@2x.png */; };
 		5961503A15F26E6B00C93978 /* MaDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5961503915F26E6A00C93978 /* MaDetailViewController.m */; };
 		596F8873160ECD810036E2CC /* EGORefreshTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 596F8870160ECD810036E2CC /* EGORefreshTableHeaderView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		596F88C1160EF91A0036E2CC /* a.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 596F88BF160EF91A0036E2CC /* a.jpeg */; };
+		596F88C2160EF91A0036E2CC /* b.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 596F88C0160EF91A0036E2CC /* b.jpeg */; };
 		598365F615E5E55900E4E885 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 598365F415E5E55900E4E885 /* Localizable.strings */; };
 		5983661115E6866900E4E885 /* MaBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5983661015E6866800E4E885 /* MaBaseViewController.m */; };
 		5983661715E688C600E4E885 /* MaTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5983661615E688C600E4E885 /* MaTableView.m */; };
@@ -107,8 +109,6 @@
 		2607A91D160EE90E00B45451 /* subView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = subView.m; sourceTree = "<group>"; };
 		2607A91E160EE90E00B45451 /* subViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = subViewController.h; sourceTree = "<group>"; };
 		2607A91F160EE90E00B45451 /* subViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = subViewController.m; sourceTree = "<group>"; };
-		2694790E160EF47700E3BCBE /* a.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = a.jpeg; path = Resources/a.jpeg; sourceTree = "<group>"; };
-		2694790F160EF47700E3BCBE /* b.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = b.jpeg; path = Resources/b.jpeg; sourceTree = "<group>"; };
 		5917601315F32BAC0098729B /* MaCrossFadeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MaCrossFadeView.h; path = src/MaCrossFadeView.h; sourceTree = "<group>"; };
 		5917601415F32BAD0098729B /* MaCrossFadeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MaCrossFadeView.m; path = src/MaCrossFadeView.m; sourceTree = "<group>"; };
 		5917601615F330520098729B /* tianShan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tianShan.png; path = Resources/tianShan.png; sourceTree = "<group>"; };
@@ -168,6 +168,8 @@
 		5961503915F26E6A00C93978 /* MaDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MaDetailViewController.m; path = src/MaDetailViewController.m; sourceTree = "<group>"; };
 		596F886F160ECD810036E2CC /* EGORefreshTableHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EGORefreshTableHeaderView.h; path = src/3rd/RefreshTableHeaderView/EGORefreshTableHeaderView.h; sourceTree = "<group>"; };
 		596F8870160ECD810036E2CC /* EGORefreshTableHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EGORefreshTableHeaderView.m; path = src/3rd/RefreshTableHeaderView/EGORefreshTableHeaderView.m; sourceTree = "<group>"; };
+		596F88BF160EF91A0036E2CC /* a.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = a.jpeg; path = Resources/a.jpeg; sourceTree = "<group>"; };
+		596F88C0160EF91A0036E2CC /* b.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = b.jpeg; path = Resources/b.jpeg; sourceTree = "<group>"; };
 		598365D315E5E1E300E4E885 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		598365F515E5E55900E4E885 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		5983660F15E6866800E4E885 /* MaBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MaBaseViewController.h; path = src/MaBaseViewController.h; sourceTree = "<group>"; };
@@ -237,6 +239,8 @@
 		2607A924160EE9A400B45451 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				596F88BF160EF91A0036E2CC /* a.jpeg */,
+				596F88C0160EF91A0036E2CC /* b.jpeg */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -642,8 +646,8 @@
 				5947AAD7160314BC007B4A68 /* dot@2x.png in Resources */,
 				59A9586F16045E7E00669275 /* Default-568h@2x.png in Resources */,
 				59D213F4160DBD6B000968E5 /* img in Resources */,
-				26947910160EF47700E3BCBE /* a.jpeg in Resources */,
-				26947911160EF47700E3BCBE /* b.jpeg in Resources */,
+				596F88C1160EF91A0036E2CC /* a.jpeg in Resources */,
+				596F88C2160EF91A0036E2CC /* b.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
