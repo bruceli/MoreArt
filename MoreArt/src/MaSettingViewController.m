@@ -175,11 +175,21 @@
         itemArray = [menuArray objectAtIndex:indexPath.row];
     else
         itemArray = [moreArray objectAtIndex:indexPath.row];
-
+    
+    if ([app.baseViewController.view isKindOfClass:[UITableView class]]) {
+        [((MaTableView*)app.baseViewController.view).scrollImageViewController stopScrolling];
+    }
+    
     app.baseViewController.view = [itemArray objectAtIndex:MA_MENU_CONTROLLER];
     app.baseViewController.navigationItem.title = [itemArray objectAtIndex:MA_MENU_TITLE];
     
-    [app.baseViewController updateDataSourceBy:indexPath.row];
+    
+    if ([[itemArray objectAtIndex:MA_MENU_CONTROLLER] isKindOfClass:[MaTableView class]]) {
+        [((MaTableView*)app.baseViewController.view).scrollImageViewController startScrolling];
+        [app.baseViewController updateDataSourceBy:indexPath.row];
+
+    }
+
     
     [self.revealSideViewController popViewControllerAnimated:YES];
 }

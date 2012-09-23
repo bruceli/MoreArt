@@ -27,6 +27,30 @@
     return self;
 }
 
+-(void)startScrolling
+{
+    if (!_theScroller) {
+        _theScroller = [NSTimer scheduledTimerWithTimeInterval:1.5 target:self selector:@selector(pagerViewScroller) userInfo:nil repeats:YES];
+        NSLog(@"%@",@"Start scrolling");
+
+    }
+    else
+        NSLog(@"%@",@"**Scrolling skipping ");
+
+    _needAutoScroll = YES;
+
+
+}
+
+-(void)stopScrolling
+{
+    [_autoScrollTimer invalidate];
+    _autoScrollTimer = nil;
+    [_theScroller invalidate];
+    _theScroller = nil;
+    NSLog(@"%@",@"Stop scrolling");
+    
+}
 
 - (void)viewDidLoad
 {
@@ -35,11 +59,11 @@
     CGRect rect = self.view.bounds;
     [self.view setFrame:rect];
     
+    
 
 	// Do any additional setup after loading the view.
+    [self startScrolling];
     
-    _theScroller = [NSTimer scheduledTimerWithTimeInterval:1.5 target:self selector:@selector(pagerViewScroller) userInfo:nil repeats:YES];
-    _needAutoScroll = YES;
     NSArray* array = [NSArray arrayWithObjects:@"0",@"1",@"2",@"3",@"4", nil];
     _imageArray = [[NSMutableArray alloc] initWithArray:array];
     _scrollImageView.delegate = self;
@@ -52,11 +76,7 @@
 
 - (void)viewWillDisappear:(BOOL)animated
 {
-    [_autoScrollTimer invalidate];
-    _autoScrollTimer = nil;
-    [_theScroller invalidate];
-    _theScroller = nil;
-    
+    [self stopScrolling];
     [super viewWillDisappear:animated];
 }
 

@@ -21,6 +21,9 @@
     NSArray* _imageArray;
 }
 
+-(void)stopScrolling;
+-(void)startScrolling;
+
 @property (nonatomic, retain) NSArray*  imageArray;
 
 @end

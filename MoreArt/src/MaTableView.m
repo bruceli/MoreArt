@@ -12,7 +12,7 @@
 @implementation MaTableView
 
 @synthesize douViewType = _douViewType;
-
+@synthesize scrollImageViewController = _scrollImageViewController;
 
 - (id)initWithFrame:(CGRect)frame
 {

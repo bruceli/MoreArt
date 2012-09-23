@@ -7,12 +7,10 @@
 //
 
 #import "MATableView.h"
-#import "MaScrollImageViewController.h"
 
 
 @interface MaDouWoView : MaTableView
 {
-	MaScrollImageViewController* _scrollImageViewController;
     
 }
 @end
