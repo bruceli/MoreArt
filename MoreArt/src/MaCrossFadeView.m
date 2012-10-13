@@ -68,8 +68,6 @@
     {
         [self addSubview:imageView];
     }
-    
-
 }
 
 -(void)separateImage

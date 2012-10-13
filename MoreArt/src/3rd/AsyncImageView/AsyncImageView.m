@@ -661,6 +661,23 @@ NSString *const AsyncImageErrorKey = @"error";
     return self;
 }
 
+- (void)setImageByString:(NSString*)imageAddress
+{
+    NSURL* theURL;
+    if (imageAddress!=nil) {
+        if ([imageAddress hasPrefix:@"http://"]) {
+            theURL = [NSURL URLWithString:imageAddress];
+        }
+        else
+        {
+            NSString* theFilePathString = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:imageAddress];
+            theURL = [NSURL fileURLWithPath:theFilePathString];
+        }
+    }
+
+    [self setImageURL:theURL];
+}
+
 - (void)setImageURL:(NSURL *)imageURL
 {
     super.imageURL = imageURL;

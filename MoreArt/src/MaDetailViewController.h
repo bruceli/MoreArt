@@ -8,29 +8,30 @@
 
 #import <UIKit/UIKit.h>
 #import "MaScrollImageViewController.h"
+#import "AsyncImageView.h"
+#import "MTLabel.h"
 
-
-@interface MaDetailViewController : UIViewController
+@interface MaDetailViewController : UIViewController <MTLabelDelegate>
 {
     UIScrollView* _scrollView;
-    UIImageView* _avatarImgView;
+    AsyncImageView* _avatarImgView;
     
-//    MCPagerView* _pagerView;
-//    UIScrollView* _scrollPagerView;
     MaScrollImageViewController* _scrollImageViewController;
     UILabel* _titleLabel;
-//    UILabel* _headerLabel;
-    UILabel* _bodyLabel;
+    MTLabel* _header_S_Label;
+    MTLabel* _header_L_Label;
+
+//    MTLabel* _bodyLabel;
     UILabel* _endingLabel;
     
     NSIndexPath* _indexPath;
-    
-//    BOOL _needAutoScroll;
-//    NSTimer* _autoScrollTimer;
-    
+        
     id _currentView;
 }
 
 @property (nonatomic, retain) NSIndexPath* indexPath;
+
+
+
 
 @end

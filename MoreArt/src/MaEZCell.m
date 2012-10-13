@@ -66,7 +66,7 @@
     [[AsyncImageLoader sharedLoader] cancelLoadingImagesForTarget:_imgView];
     
     
-    NSURL* theURL = nil;
+/*    NSURL* theURL = nil;
     if (_imgName!=nil) {
         if ([_imgName hasPrefix:@"http://"]) {
             theURL = [NSURL URLWithString:_imgName];
@@ -80,7 +80,8 @@
     }
 
     _imgView.imageURL = theURL;
-    
+   */
+    [_imgView setImageByString:_imgName];
 
     
     self.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"setting_bkg.png"]];

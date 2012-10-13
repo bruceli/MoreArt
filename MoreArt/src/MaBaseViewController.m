@@ -100,8 +100,10 @@
         cell = [[MaEZCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
-    if (indexPath.row%2==0)
-        cell.rightLayout = FALSE;
+// if (indexPath.row%2==0)
+        cell.rightLayout = YES;
+//    else
+//        cell.rightLayout = NO;
     
     cell.accessoryView = [[ UIImageView alloc ] initWithImage:[UIImage imageNamed:@"cellAccessory" ]];
     

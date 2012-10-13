@@ -6,31 +6,58 @@
 	<array>
 		<dict>
 			<key>avatar</key>
-			<string>http://charcoaldesign.co.uk/AsyncImageView/Forest/IMG_0356.JPG</string>
+			<string>avatar/dingZW.jpg</string>
 			<key>title</key>
-			<string>Art029</string>
+			<string>丁志伟</string>
 			<key>discription</key>
-			<string>设计师和工程师致力于创造一款耳机，让各种耳型的用户都能舒适、牢固地佩戴，同时能够呈现绝佳的音质效果。他们邀请多人测试了种不同的设计原型。最终</string>
+			<string>在图像的合法化挪用之中，我们似乎找到了一种快感，这种快感没有很愤世嫉俗的好恶和批评，也没有背负很沉重的艺术史的那些说教式的思想包袱，而是一种纯粹形式化的游戏，这样一来，艺术又回归到了她原始的面貌，除此之外，对于技术的尊重也自然而然造就了画家的行业属性。所以，这批绘画是我对于技术和图像的一些个人的粗浅的理解，希望在图像的可复制与可再造之间找回一点手工感。</string>
 			<key>detail</key>
-			<string>第一部電腦並沒有作業系統。這是由於早期電腦的建立方式（如同建造機械算盤）與效能不足以執行如此程式。但在1947年發明了電晶體，以及莫里斯·威尔克斯發明的微程序方法，使得電腦不再是機械裝置，而是電子產品。系統管理工具以及簡化硬體操作流程的程式很快就出現了，且成為作業系統的濫觴。到了1960年代早期，商用電腦製造商製造了批次處理系統，此系統可將工作的建置、排程以及執行序列化。此時，廠商為每一台不同型號的電腦創造不同的作業系統，因此為某電腦而寫的程式無法移植到其他電腦上執行，即使是同型號的電腦也不行。
-到了1964年，IBM System/360推出了一系列用途與價位都不同的大型電腦，而它們都共用代號為OS/360的作業系統（而非每種產品都用量身訂做的作業系統）。讓單一作業系統適用於整個系列的產品是System/360成功的關鍵，且實際上IBM目前的大型系統便是此系統的後裔；為System/360所寫的應用程式依然可以在現代的IBM機器上執行！</string>
+			<string>1981年生于河南周口
+2005年毕业于西安美术学院油画系，获学士学位
+2005年至2009年，供职于周口师范学院美术系
+2012年毕业于河南大学艺术学院，获硕士学位
+ 
+个展
+2012年7月  西安豆空间“修订的图像”丁志伟油画展
+2012年3月  河南大学艺术学院“二手经验”丁志伟油画作品展
+2005年5月  西安美术学院“走过2005——丁志伟油画展”
+
+群展
+2012年 西安当代艺术生态报告                 西安
+2007年 从这里出发——2007上海青年美术大展   上海
+2005年 “搭白”1+上艺术计划三（行为）       西安 重庆
+2003年 陕西省第三届油画展                   西安
+2001年 《西部·西部》艺术大展               西安
+1994年 “94青少年美术作品国际联展”         澳门 美国 韩国 日本……</string>
 			<key>imageArray</key>
 			<array>
 				<dict>
 					<key>imageName</key>
-					<string>http://charcoaldesign.co.uk/AsyncImageView/Forest/IMG_0356.JPG</string>
+					<string>arts/dingZW/寂寥的法庭路.jpg</string>
 					<key>artDiscription</key>
 					<string></string>
 				</dict>
 				<dict>
 					<key>imageName</key>
-					<string>http://charcoaldesign.co.uk/AsyncImageView/Forest/IMG_0356.JPG</string>
+					<string>arts/dingZW/你被捕了.jpg</string>
 					<key>artDiscription</key>
 					<string></string>
 				</dict>
 				<dict>
 					<key>imageName</key>
+					<string>arts/dingZW/变异的宠物.jpg</string>
+					<key>artDiscription</key>
 					<string></string>
+				</dict>
+				<dict>
+					<key>imageName</key>
+					<string>arts/dingZW/变异者.jpg</string>
+					<key>artDiscription</key>
+					<string></string>
+				</dict>
+				<dict>
+					<key>imageName</key>
+					<string>arts/dingZW/最后的亚当.jpg</string>
 					<key>artDiscription</key>
 					<string></string>
 				</dict>
@@ -38,96 +65,908 @@
 		</dict>
 		<dict>
 			<key>avatar</key>
-			<string>img/IMG_0173.jpg</string>
+			<string>avatar/yaoLD.jpg</string>
+			<key>title</key>
+			<string>姚立冬</string>
+			<key>discription</key>
+			<string>我每件作品的初衷都非常简单，根源是源于我对儿时的回忆。在记忆中最为深刻的就是在儿时的伟大梦想，长大后要当警察，要当医生……但是我今天对这些曾经接受的教育方式和理想产生了质疑，于是我把两者联系起来，作为我的创作主题。在我的作品当中能看出来我是不断的用各种方式问我儿时和各种事情之间的关系。为什么？又不为什么？我现在努力的去回忆我的儿时，费尽心机的去探寻我儿时的很多事情，在如今这个浩荡的世界当中寻找自己的栖息地，我需要搭建起一座属于自己的房子……</string>
+			<key>detail</key>
+			<string></string>
 			<key>imageArray</key>
 			<array>
 				<dict>
 					<key>imageName</key>
-					<string></string>
+					<string>arts/yaoLD/帽子系列1.jpg</string>
 					<key>artDiscription</key>
 					<string></string>
 				</dict>
 				<dict>
 					<key>imageName</key>
-					<string></string>
+					<string>arts/yaoLD/帽子系列2.jpg</string>
 					<key>artDiscription</key>
 					<string></string>
 				</dict>
 				<dict>
 					<key>imageName</key>
+					<string>arts/yaoLD/帽子系列3.jpg</string>
+					<key>artDiscription</key>
 					<string></string>
+				</dict>
+				<dict>
+					<key>imageName</key>
+					<string>arts/yaoLD/帽子系列4.jpg</string>
+					<key>artDiscription</key>
+					<string></string>
+				</dict>
+				<dict>
+					<key>imageName</key>
+					<string>arts/yaoLD/帽子系列5.jpg</string>
 					<key>artDiscription</key>
 					<string></string>
 				</dict>
 			</array>
-			<key>title</key>
-			<string>闻乐起舞</string>
-			<key>discription</key>
-			<string>轻点播放出你钟爱的歌曲，或整个专辑，或某位艺术家的所有曲目。</string>
-			<key>detail</key>
-			<string>试想你正听着一首心爱的歌曲，还想继续沉浸在同一曲风的曼妙旋律中，只需轻点 Genius, 它会在 iPod nano 找出风格与之极其相配的其他歌曲，并为你生成一个 Genius 播放列表。要获得更多意想不到的歌曲组合，尽可在 iTunes 中创建 Genius 混合曲目，并将喜欢的组合同步到 iPod nano 上。然后轻点 Genius 混合曲目，重新发现你久违的歌曲，或找到已被你遗忘的旋律。</string>
 		</dict>
 		<dict>
 			<key>avatar</key>
-			<string>http://charcoaldesign.co.uk/AsyncImageView/Forest/IMG_0355.JPG</string>
+			<string>avatar/zhangB.jpg</string>
+			<key>title</key>
+			<string>张备</string>
+			<key>discription</key>
+			<string>可以割掉的和割不掉的，甚至说是残留的，不仅仅是物，而是一种幽灵，无处不在，欲摆脱其牢笼亦愈陷愈深，所以，当从物的关注转移到对辫子话语之关注时，小心翼翼地揭开僵尸的面纱，不禁发现：辫子绅士仍具有活力。</string>
+			<key>detail</key>
+			<string>1981年生于河南新密市
+2005年毕业于中原工学院设计艺术系，获学士学位
+2012年5月毕业于河南大学艺术学院美术史论专业，获硕士学位
+2012年5月考入河南大学文学院文艺学博士研究生</string>
 			<key>imageArray</key>
 			<array>
 				<dict>
 					<key>imageName</key>
-					<string></string>
+					<string>arts/zhangB/劳工.jpg</string>
 					<key>artDiscription</key>
 					<string></string>
 				</dict>
 				<dict>
 					<key>imageName</key>
-					<string></string>
+					<string>arts/zhangB/帝国别走.jpg</string>
 					<key>artDiscription</key>
 					<string></string>
 				</dict>
 				<dict>
 					<key>imageName</key>
+					<string>arts/zhangB/张勋.jpg</string>
+					<key>artDiscription</key>
 					<string></string>
+				</dict>
+				<dict>
+					<key>imageName</key>
+					<string>arts/zhangB/深喉.jpg</string>
+					<key>artDiscription</key>
+					<string></string>
+				</dict>
+				<dict>
+					<key>imageName</key>
+					<string>arts/zhangB/王国维.jpg</string>
+					<key>artDiscription</key>
+					<string></string>
+				</dict>
+				<dict>
+					<key>imageName</key>
+					<string>arts/zhangB/蝗虫.jpg</string>
 					<key>artDiscription</key>
 					<string></string>
 				</dict>
 			</array>
-			<key>title</key>
-			<string>更加纤薄</string>
-			<key>discription</key>
-			<string>你钟爱的音乐、照片和视频都能呈现得更加清晰。按钮可让你快速播放、暂停、切换歌曲，也可调节音量。</string>
-			<key>detail</key>
-			<string>平滑的全新阳极电镀铝设计，令 iPod nano 的触感与其音质一样出色。 如果没有绚丽夺目，难以取舍的缤纷色彩，iPod nano 也就不是 iPod nano 了。</string>
 		</dict>
 		<dict>
 			<key>avatar</key>
-			<string>http://charcoaldesign.co.uk/AsyncImageView/Forest/IMG_0357.JPG</string>
+			<string>avatar/zhangY.jpg</string>
+			<key>title</key>
+			<string>张英</string>
+			<key>discription</key>
+			<string>最初的种子总是能长出奇异的芽---------我的创作是不断尝试与自我反省的过程。在此过程中试图留下一条生命的轨迹，寻找一条人生之路。孩子、符号、动物、植物、各种人与生物、及我的想象。它们是头脑中集体记忆的产物，时刻在驱使我与我的内心对话。</string>
+			<key>detail</key>
+			<string>我的创作是不断尝试与自我反省的过程。在此过程中试图留下一条生命的轨迹，寻找一条人生之路。孩子、符号、动物、植物、各种人与生物、及我的想象。它们是头脑中集体记忆的产物，时刻在驱使我与我的内心对话。
+   瓷土可以将自然世界、文明世界、人文历史和地质年代联系到一起。软和硬、光亮和粗糙、内部和外部、形体和表面，自然的事实给我很多启迪来考虑那些看似迥异的事物之间的内在联系。
+   经过高温烧制后的瓷土质感叫我沉迷，我不断发掘它们的可能状态。用手捏制出脑海里的物像，赋于它别一种存在，这样的创造具有着无限的可能性，它代表着我的终生追求。
+《初芽》——最初的种子总是能长出奇异的芽。
+这个系列是以孩子作为造像主体，呈现他们头脑中的世界，那里就像一片土壤，他的探索思考就像一颗颗会发芽、开花的种子。而实际上，这组头像脑袋上生长的物像并非具象的表达，它们没有现实的参照物，存活在任何一个人的思维空间，散发着或清晰、或混沌、或莫名其妙的气息。
+这组作品是2011年11月开始创作，截至目前成型的已经有十件也许以后会脱离孩子这个主体，希望通过它不断的探讨人之本性，以及生命的更多可能。
+《距离》这组装置作品也是在去年和《初芽》同时开始创作的。会不断延展。探讨任何事物之间的距离，包括和自己与自己内心的距离、和陌生人、和亲人和空间和城市的距离，象迷宫一样展现，通过密集的排列组合反过来说明时空距离。用抽象的概念，瓷土高温烧制后独特的质感试图留给受众片刻的冥想。</string>
 			<key>imageArray</key>
 			<array>
 				<dict>
 					<key>imageName</key>
-					<string></string>
+					<string>arts/zhangY/初芽3.jpg</string>
 					<key>artDiscription</key>
 					<string></string>
 				</dict>
 				<dict>
 					<key>imageName</key>
-					<string></string>
+					<string>arts/zhangY/初芽4.jpg</string>
 					<key>artDiscription</key>
 					<string></string>
 				</dict>
 				<dict>
 					<key>imageName</key>
+					<string>arts/zhangY/初芽5.jpg</string>
+					<key>artDiscription</key>
 					<string></string>
+				</dict>
+				<dict>
+					<key>imageName</key>
+					<string>arts/zhangY/距离.jpg</string>
 					<key>artDiscription</key>
 					<string></string>
 				</dict>
 			</array>
+		</dict>
+		<dict>
+			<key>avatar</key>
+			<string>avatar/yangGK.jpg</string>
 			<key>title</key>
-			<string>更宽广的世界</string>
+			<string>杨坤戈</string>
 			<key>discription</key>
-			<string>作为相机手机风靡全世界，完全在情理之中，因为照片看起来如此赏心悦目，很难相信是手机拍摄。</string>
+			<string>关于作品我觉得没有什么特别好阐释的，我从没想过要有多么大的气魄绘制出多么壮丽的画卷，它就是我的一种小情绪，这样或者那样，或暖或冷，细细的痒痒的。我总是对一些精致细小东西所着迷，喜欢收集，勾勒，描摹。我很愿意将这些东西放到我的作品中去，每一次的创作就好像在和自己说话，私密，独立。沉浸在自己的世界里，变换着各种角色，沉淀着自己一段时间的情绪。我也很感谢我的老师，从不限制规定我们一定要创作什么样的作品，不管我们有什么想法，她们总是尽量辅助我们更好的完成作品。</string>
 			<key>detail</key>
-			<string>每张照片都有 800 万像素高分辨率，并且由具备更大光圈的 ƒ/2.4 定制镜头拍摄，此外还有更先进的背部照度传感器、出色的自动白平衡功能、更理想的色彩保真度和面部检测，图像模糊的情况也会减少。iOS 6 推出一项激动人心的全新功能：全景模式。只需一次平滑移动，你就可以拍下效果惊人的 240 度全景照片。无论拍摄家庭聚会大合照，或绵延数里的绚丽落日场景，大画面中的巨细点滴都可尽收镜底。陀螺仪、A5 芯片和相机 app 相互配合，呈现出天衣无缝的高分辨率全景照。</string>
+			<string>1988年出生于陕西安康
+2011年毕业于西安美术学院
+2011年，时空留痕——西安美术学院2011届研究生.本科生优秀作品展，西安，中国。
+2011年，瞧桥看——中新国际艺术交流展，西安，中国。
+2012年，青年艺术100——北京，中国
+2012年，西安当代艺术生态报告——西安，中国</string>
+			<key>imageArray</key>
+			<array>
+				<dict>
+					<key>imageName</key>
+					<string>arts/yangGK/之子于归.jpg</string>
+					<key>artDiscription</key>
+					<string></string>
+				</dict>
+				<dict>
+					<key>imageName</key>
+					<string>arts/yangGK/硕人.jpg</string>
+					<key>artDiscription</key>
+					<string></string>
+				</dict>
+				<dict>
+					<key>imageName</key>
+					<string>arts/yangGK/絮.jpg</string>
+					<key>artDiscription</key>
+					<string></string>
+				</dict>
+				<dict>
+					<key>imageName</key>
+					<string>arts/yangGK/胭脂.jpg</string>
+					<key>artDiscription</key>
+					<string></string>
+				</dict>
+				<dict>
+					<key>imageName</key>
+					<string>arts/yangGK/谜.jpg</string>
+					<key>artDiscription</key>
+					<string></string>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>avatar</key>
+			<string>avatar/liuYD.jpg</string>
+			<key>title</key>
+			<string>柳昱东</string>
+			<key>discription</key>
+			<string>《皮囊》是通过我对自己成长的焦虑和迷茫，以及对我们当下这一代人引发的对生命的思考，从生命的原初到生命终结，当剥离了生命之外的金钱、权利、荣誉而裸露的面对
+自己亦或上帝，这不光是自己乃至每一个人都要面对的，是一个人对生命价值的反思，也
+是中国老庄哲学里归一返朴的思想本旨。</string>
+			<key>detail</key>
+			<string>1984年 出生于甘肃庄浪
+2006年 西安美术学院雕塑系毕业
+
+群展
+2007年 西安纺织城艺术区开放展                       西安
+2008年 西安当代艺术十年回顾展                       西安
+2009年 西安青年艺术家联展                           西安
+2009年 西安纺织城艺术节雕塑展                       西安
+2010年 北京宋庄文化艺术节                           北京
+2010年 西安曲江国际光影艺术节                       西安
+2011年 西安当代艺术三十年回顾展                     西安
+
+收藏
+2006年 全国美术院校应届毕业生优秀作品提名展铜奖     北京
+</string>
+			<key>imageArray</key>
+			<array>
+				<dict>
+					<key>imageName</key>
+					<string>arts/liuYD/皮囊.jpg</string>
+					<key>artDiscription</key>
+					<string></string>
+				</dict>
+				<dict>
+					<key>imageName</key>
+					<string>arts/liuYD/匏瓠.jpg</string>
+					<key>artDiscription</key>
+					<string></string>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>avatar</key>
+			<string>avatar/wangQQ.jpg</string>
+			<key>title</key>
+			<string>王庆庆</string>
+			<key>discription</key>
+			<string>《薯民的胜利》
+ “薯民的胜利”听起来很荒谬，因为，胜利是伴随着一种革命实践，所以谁也不会觉得土豆和革命有什么关系，这也是我以土豆为主要题材创作的一个目的，往往一个时代的变革或一种体制的改良前总是显得那么的平静，这与土豆的象征义再贴切不过了，在大地的滋养和掩埋下，这样的一个个，一群群平凡的食物好像也在孕育着什么？当它们脱离大地的掩埋被人们再次装入各种容器中，掩埋还在继续只是变得更加“密不透风”、“邪恶无情”。而这一切无法选择，但当外部力量包裹的越紧，压力越大，众多的个体在巨大外压的作用下张力往往也是最大的，这种力量是一种被动，当没有了新鲜的空气时，代表着力量的嫩芽就会打破这种对抗的力量 “破茧而出”，虽然长芽的土豆已经几乎没有了可食用的功利价值和目的论上的意义，但至少它有了存在的意义，不再那么沉静、内向和沉稳了！
+对于我个人的创作而言，我在反思雕塑的属性，也存在自我审视的意义，想用这样的方式把内心的感受和现实的理论做一次碰撞，这可能也是我为什么要这样做的一个兴奋点吧，也可能只有这样的呈现才是我内心最真实的体会吧。一件事情、一个理论、一种形式往往“放大”了去看，会更加的清晰明了，更容易得到明确的结果，而我们很难愿意去这样做，是懒惰？是懦弱？还是茫然？我想我们应该深刻的总结一下，我觉得这很有必要。
+
+《力的N次方》
+每一个出生与这个年代的人都从小有“自命不凡”的感觉，这是我们这一代被时代“宠爱过度“的表征，而且潜意识里总会有这样的想法，即我们从小被教育的综合体进行了很系统化的思想填充，然而一旦我们发现我们这一代遭遇到了种种的时代症候的时候，我们又会反思，不但反思我们自己，也反思我们的父母那一代，甚至会思考我们的父母那代人经历了什么，学到了什么？又得出了什么？但是这是他们自己都很难回答的问题，而我们呢？接受了系统化的知识教育和抽象化的思想填充……当在自己有了真正的感受之后，忽然发现需要进行梳理和遗弃，也需要一个新的“知识体系”来填补“遗弃”之后的勇气真空，更需要不断的接受多方面的质疑、检验和“N次教育”（包括自己）后总结出来相对正确的模式来教育纯新的下一代，所以很多种力的叠加并不是一个简简单单广义上的“压力”能说明的，而是一个复杂的“力场”。
+从我个人的角度出发，也正是想通过作品最真实的表达我们的一种状态，也是和自己、包括我们这一代人的一种“对话”，通过这种“对话”让每个人都能感受到我们的成长和教育并不是简单而纯净的铁桶一块，而是很有可能地遭遇到各种复杂的场域化实践的复合化“力场”。
+
+《被遮蔽的纯净》
+作为物性之自然涌现，水最能体现这样一种特质：它纯净而无形，又是无孔不入的，它可以汇小而成大，可曲可张，可绵延千里，又可一泻注洋。作为一种自然的馈赠，人类自古对于水的描述既有赞美又有畏惧，然而这种赞美和畏惧时至今日却又被日益膨胀的无畏之心所遮蔽，当然水之可贵之处，就在于它的巨大之善，它无欲无求，而有欲有求的是人心。
+所以我们需要反思，需要回归，需要找寻无弊的原初之水，我们每个个体之内在原初不正是一滴水吗？……所以当我们决定净化自己的时候，迷雾自然散去，遮蔽也是徒劳。
+《皮囊》是通过我对自己成长的焦虑和迷茫，以及对我们当下这一代人引发的对生命
+的思考，从生命的原初到生命终结，当剥离了生命之外的金钱、权利、荣誉而裸露的面对
+自己亦或上帝，这不光是自己乃至每一个人都要面对的，是一个人对生命价值的反思，也
+是中国老庄哲学里归一返朴的思想本旨。</string>
+			<key>detail</key>
+			<string>1983年  出生于陕西省西安市
+2006年  毕业于西北大学艺术系，获学士学位
+2009-2010年 进修于中央美术学院雕塑系
+
+个展
+2009 《封存》行为艺术展  西安 
+
+群展
+2010 “跨界-crossover” 第六届中国。宋庄文化艺术节 西安群落联展 北京
+2010 “重构——美丽生活” 首届陕西当代艺术年展 西安
+2011   西安纺织城艺术区5年回顾展
+2012   西安当代艺术生态报告
+
+</string>
+			<key>imageArray</key>
+			<array>
+				<dict>
+					<key>imageName</key>
+					<string>arts/wangQQ/力的N次方.jpg</string>
+					<key>artDiscription</key>
+					<string></string>
+				</dict>
+				<dict>
+					<key>imageName</key>
+					<string>arts/wangQQ/组合.jpg</string>
+					<key>artDiscription</key>
+					<string></string>
+				</dict>
+				<dict>
+					<key>imageName</key>
+					<string>arts/wangQQ/薯民的胜利效果图.jpg</string>
+					<key>artDiscription</key>
+					<string></string>
+				</dict>
+				<dict>
+					<key>imageName</key>
+					<string>arts/wangQQ/被遮蔽的纯净净化.jpg</string>
+					<key>artDiscription</key>
+					<string></string>
+				</dict>
+				<dict>
+					<key>imageName</key>
+					<string>arts/wangQQ/被遮蔽的纯净发酵.jpg</string>
+					<key>artDiscription</key>
+					<string></string>
+				</dict>
+				<dict>
+					<key>imageName</key>
+					<string>arts/wangQQ/被遮蔽的纯净污浊.jpg</string>
+					<key>artDiscription</key>
+					<string></string>
+				</dict>
+				<dict>
+					<key>imageName</key>
+					<string>arts/wangQQ/被遮蔽的纯净蒙蔽.jpg</string>
+					<key>artDiscription</key>
+					<string></string>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>avatar</key>
+			<string>avatar/shiYB.jpg</string>
+			<key>title</key>
+			<string>石珩伯</string>
+			<key>discription</key>
+			<string>这些年…	
+
+守护阶段：我出生在秦岭脚下，渭水之边的陕西千阳。在守护的阶段，我把自己寄
+托在我营造的一个意义的残局里面，假借红色的狮子石雕（西安周边汉唐时期的狮子雕
+塑），来守护逐渐消亡的“净土”。红色的石狮子被我空投到南（北）极，假设了一个
+“美的”残局，是我对文化生态和自然生态的焦虑和关注，也是我从秦岭出发对全球的想
+象及自身身份的反思。
+迁徙、造化阶段：在守护的那个残局当中，我无法找到答案，我试图“突围”。其间
+我又创造了一个即将升空又充满悖论的“冰火箭”化为“容器”来载我迁徙。迁徙既是逃
+离又是突围，但这个硕大的“引力场”让我筋疲力尽，最终我选择了着陆，再回到原点，
+回到自然，感受“造化”对艺术的后坐力。这样便经历了“造化”系列的安静期，在平静
+中寻找新的出口。
+藏象阶段：在经过守护迁徙之后，我在“造化”的过程中冷静的返回原点，返回自
+然，重新思考我生存的原象和绘画对其的表现力。终于“藏象”组画一张张显现。“藏
+象”二字首见于《素问六节藏象论》，藏是指藏于体内的脏器。象：表现于外的生理病理
+现象。藏象学就是通过对人体生理病理的观察，研究人体各脏腑的生理功能病理变化及相
+互关系的学说。
+在这个互联的时代，原象信息会被飞快的覆盖起来，而我以碎片的状态对表象之下的
+原象信息逐步展开了捕捉，并进行创作。画面不在像以前干净简洁，色彩分明，而是笔触
+朴拙、颜料叠加。在尽情的抒写涂抹当中体验绘画的温度，发表我对现实原象的探究。素
+材也一反原来的单一重复，而是环环相扣，犹如多米诺骨牌。营造出一个个看似不可思议
+没有关系的虚象，但在虚象之下，却是一连串的“蝴蝶效应”的原象，所以“藏象阶段”
+的作品是我思考还原世界本色新的路径。</string>
+			<key>detail</key>
+			<string>1981年生于陕西千阳
+2005年毕业于西安美院油画系 获学士学位
+2005九月任教于宝鸡文理学院美术系至今
+2006至2010年聘任于西安美术学院油画系                  
+
+群展: 
+2012年“长安三月”陕西实力派中青年及新生代艺术大展（西安）
+2012年九城艺术家联展（上海）
+2011年纺织城艺术区五年回顾展（西安）
+2011年中韩国际艺术交流展（西安）
+2011年中新国际艺术交流展（西安）
+2011年“温差”艺术展(洛杉矶)
+2010年韩国光州艺术节(韩国)
+2010年第六界宋庄文化艺术节
+2010早春之旅--西安当代艺术十人联展（上海）
+2009年惊喜当代艺(北京)
+2009年主场艺术展(北京
+2009年第五届宋庄艺术节(北京)
+2009年时尚西安展（西安）   
+2009年中韩艺术展（上海）
+2009年“聚”西安艺术家联展（西安）
+2009年特色+起色展（西安）
+2009年&quot;谈话就是运动&quot;艺术展(北京)
+2009年“镔铁”当代艺术展（西安）
+2009年爱劳动西安青年艺术家联展（西安）
+2008年第二十三届亚洲国际美术展（广州）
+2008年西安当代艺术十年回顾展（西安）
+2008年“不所”收藏展（上海）
+2008年“山水”三人艺术联展（西安）
+2007年回到苏联—西安文献展北京巡展（北京）
+2007年西安纺织城艺术区开放展 （西安）
+2007年变形展 （西安）
+2007年西安首届文献展 （西安）
+2006年参加架上艺术“非格类”绘画首次展（上海）
+2003年十位青年艺术家油画联展〈西安〉
+2003年油画〈风景`午后〉入选陕西省第三届油画展 （西安）
+
+个展：2010年“造化”石珩伯油画个展（西安）
+2008年  试射“道道道” （西安）
+策展：2009软装修艺术展（西安）
+2010年第六界宋庄文化艺术节西安群落艺术自驾游展（北京）
+
+收藏：《守护·系列》被Yang@Tiroche画廊收藏（以色列）
+《守护·系列》被西安么艺术中心收藏（西安）
+《秦岭·系列》，，《造化·系列》多幅作品美国及国内私人藏家收藏。
+发表：
+作品《守护NO.8》发表于《当代美术家》2010年第8期
+作品《冰火箭》发表于、《画刊》2009年第一期
+作品《守护NO.9》发表于《名家》2008年第二期
+</string>
+			<key>imageArray</key>
+			<array>
+				<dict>
+					<key>imageName</key>
+					<string>arts/shiYB/藏象2.jpg</string>
+					<key>artDiscription</key>
+					<string></string>
+				</dict>
+				<dict>
+					<key>imageName</key>
+					<string>arts/shiYB/藏象6.jpg</string>
+					<key>artDiscription</key>
+					<string></string>
+				</dict>
+				<dict>
+					<key>imageName</key>
+					<string>arts/shiYB/藏象9.jpg</string>
+					<key>artDiscription</key>
+					<string></string>
+				</dict>
+				<dict>
+					<key>imageName</key>
+					<string>arts/shiYB/藏象之原境1.jpg</string>
+					<key>artDiscription</key>
+					<string></string>
+				</dict>
+				<dict>
+					<key>imageName</key>
+					<string>arts/shiYB/藏象之原境5.jpg</string>
+					<key>artDiscription</key>
+					<string></string>
+				</dict>
+				<dict>
+					<key>imageName</key>
+					<string>arts/shiYB/藏象之瑞鹤图.jpg</string>
+					<key>artDiscription</key>
+					<string></string>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>avatar</key>
+			<string>avatar/qiY.jpg</string>
+			<key>title</key>
+			<string>祁逸</string>
+			<key>discription</key>
+			<string>从某种意义上讲，艺术对于我来说只能是一场自身生命历程的纪实电影。是一种纪实性很强的作品，因为我的艺术感觉一直比较倾向于“私密性”“隐藏性”。
+
+    一般来讲，我总是习惯于以一个“他者”的身份去观察和感知我们所处的现实环境，也许这完全是我个人的原因。我常常本能以有距离的方式去体验那些隐藏于表象之下的东西，如人对自身某种记忆的瞬间片段性的回忆，对我来说是最具有真实感觉的时候。也许因此注定我不可能成为一个关注大环境的艺术家，还是习惯将艺术与“生死”“内心感知”一类概念联系起来，相信直觉更甚于对观念的探索，依凭个人的历程更甚于经验的依赖，更注重情感的真实性，但又仰慕理性的分析，他们总是在我对事物的判断中起作用，使我的艺术常常以某种“个人日记”的方式流露出来。
+
+    相信艺术是个人性的东西。</string>
+			<key>detail</key>
+			<string>1984年生于浙江温州
+展览： 
+2011年新加坡发起亚洲艺术巡展上海站(上海)
+2010年陕西首届当代艺术展（西安）
+2010年曲江国际光影艺术节（西安） 
+2010年第六届宋庄艺术节（北京） 
+2010年终南雅集纺织城青年艺术家联展（西安） 
+2010年新加坡发起亚洲艺术巡展（柬埔寨）
+ 2010年水土服不中法联展(西安）
+ 2010年新加坡发起亚洲艺术巡展（西安站）
+ 2010年早春之旅西安当代十人作品展 （上海）
+ 2009年“惊喜”当代艺术展（北京）  
+2009年证大艺术超超市 （上海） 
+2009年纺织城艺术节（西安）
+2009年（主场）当代艺术展（北京）
+2009年第五届宋庄艺术节（北京）
+2009年再造纺织城艺术展览
+2009   “买的起”艺术节     西安
+2009年特色艺术展览
+2009年“镔铁”当代艺术展（西安）
+ 2009年爱劳动西安青年艺术家联展（西安）
+ 2008年西安当代艺术十年回顾展（西安）
+  2007年回到苏联—西安文献展北京巡展（北京）
+  2007年西安纺织城艺术区开放展 （西安）
+2007  纺织城艺术区开放展+“艺术在城市再生中的作用”论坛  西安
+   2007  深圳·香港城市/建筑双城双年展 西安分展场 +纺织城创意产业协会工作室开放展  西安
+2007年西安首届文献展 （西安）</string>
+			<key>imageArray</key>
+			<array>
+				<dict>
+					<key>imageName</key>
+					<string>arts/qiY/南之南系列一.jpg</string>
+					<key>artDiscription</key>
+					<string></string>
+				</dict>
+				<dict>
+					<key>imageName</key>
+					<string>arts/qiY/南之南系列二.jpg</string>
+					<key>artDiscription</key>
+					<string></string>
+				</dict>
+				<dict>
+					<key>imageName</key>
+					<string>arts/qiY/南之南系列三.jpg</string>
+					<key>artDiscription</key>
+					<string></string>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>avatar</key>
+			<string>avatar/qinYZ.jpg</string>
+			<key>title</key>
+			<string>秦一朝</string>
+			<key>discription</key>
+			<string></string>
+			<key>detail</key>
+			<string>1981年  出生于陕西省宝鸡市
+2005年  毕业于西安美术学院油画系，获学士学位
+2011-2012年  攻读西安美术学院油画系艺术硕士
+2010年  合伙创办长安长少儿美术创意空间
+2005.2011年 受聘于西安美术学院油画系
+2007年至今  创作在西安纺织城艺术区
+
+个展
+2005年  “秦一朝个展”，西安，西安美院展厅
+2010年  “么眉眼”，西安，么艺术中心 (X-COMA)
+2012年  “秦一朝新作展”， 西安，墨朗艺术车间
+
+群展
+2011 “混搭的图像——中国当代油画邀请展”外围展 （西安）
+2010   新学院精神提名展 （北京）
+2010   第六届宋庄文化艺术节 （北京）
+2010   早春之旅——西安当代艺术十人展 （上海）
+2009   第五届宋庄文化艺术节 （北京）
+2009   时尚西安展 （西安）
+2009   中韩艺术展 （上海）
+2009   “镔铁”当代艺术展 （西安）
+2009   爱劳动西安青年艺术家联展 （西安）
+2008   西安当代艺术十年回顾展 （西安）
+2008   不所收藏展 （上海）
+2008   山水三人展 （西安）
+2007   回到苏联——西安文献展北京巡展 （北京）
+2007   西安纺织城艺术区开放展 （西安）
+2007   变形展 （西安）
+2007   西安首届文献展 （西安）</string>
+			<key>imageArray</key>
+			<array>
+				<dict>
+					<key>imageName</key>
+					<string>arts/qinYZ/剩下的金子.jpg</string>
+					<key>artDiscription</key>
+					<string></string>
+				</dict>
+				<dict>
+					<key>imageName</key>
+					<string>arts/qinYZ/小丑鱼.jpg</string>
+					<key>artDiscription</key>
+					<string></string>
+				</dict>
+				<dict>
+					<key>imageName</key>
+					<string>arts/qinYZ/盲从1.jpg</string>
+					<key>artDiscription</key>
+					<string></string>
+				</dict>
+				<dict>
+					<key>imageName</key>
+					<string>arts/qinYZ/盲从2.jpg</string>
+					<key>artDiscription</key>
+					<string></string>
+				</dict>
+				<dict>
+					<key>imageName</key>
+					<string>arts/qinYZ/金石为开.jpg</string>
+					<key>artDiscription</key>
+					<string></string>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>avatar</key>
+			<string>avatar/chengQN.jpg</string>
+			<key>title</key>
+			<string>程乾宁</string>
+			<key>discription</key>
+			<string></string>
+			<key>detail</key>
+			<string>1998年毕业于西安美术学院油画系。
+
+展览
+2011  纺织城艺术区5年纪念展 西安
+2011  西安首届现代艺术展30年纪念展 西安
+2011  程乾宁 郭燕作品展 美国 洛杉矶
+2010  中国 荷兰 当代艺术家交流展 厦门
+2010  中国•西安曲江国际光影艺术节/圣景/艺术家邀请展 西安
+2010 《水土服不—中法艺术交流展》 西安么艺术中心
+2010  《早春之旅—西安当代艺术十人展》 上海惠生艺术中心
+2009 《千与千寻》 上海证大美术馆
+2009  《惊喜展》  北京杰森画廊
+2009  中国西安•纺织城艺术节
+2009  THE HOME COURT 《主场》当代艺术展  北京798白盒子艺术馆
+2009  第五届宋庄艺术节   北京
+2009  再造纺织城青年艺术家联展 西安 
+2008  《西安当代艺术十年回顾•钩沉》 西安
+2007 《回到苏联》 北京798艺术区方音空间 
+2007 《首届西安文献展》 西安
+2007 《变形展》 西安 </string>
+			<key>imageArray</key>
+			<array>
+				<dict>
+					<key>imageName</key>
+					<string>arts/chengQN/俑壹.jpg</string>
+					<key>artDiscription</key>
+					<string></string>
+				</dict>
+				<dict>
+					<key>imageName</key>
+					<string>arts/chengQN/俑贰.jpg</string>
+					<key>artDiscription</key>
+					<string></string>
+				</dict>
+				<dict>
+					<key>imageName</key>
+					<string>arts/chengQN/俑叁.jpg</string>
+					<key>artDiscription</key>
+					<string></string>
+				</dict>
+				<dict>
+					<key>imageName</key>
+					<string>arts/chengQN/俑肆.jpg</string>
+					<key>artDiscription</key>
+					<string></string>
+				</dict>
+				<dict>
+					<key>imageName</key>
+					<string>arts/chengQN/俑伍.jpg</string>
+					<key>artDiscription</key>
+					<string></string>
+				</dict>
+				<dict>
+					<key>imageName</key>
+					<string>arts/chengQN/俑陆.jpg</string>
+					<key>artDiscription</key>
+					<string></string>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>avatar</key>
+			<string>avatar/luoR.jpg</string>
+			<key>title</key>
+			<string>罗瑞</string>
+			<key>discription</key>
+			<string> 这座雕塑的原型是一只名为“妞妞”的母狗。她来自于意大利纯正血统——卡斯罗，是贵族护卫犬。早年和我结缘，漂洋过海来到中国。
+    说到养它的初衷，不只是消遣玩乐，更多是出于对这个品系的一种情结，想让更多哈狗族们见识到他身上无与伦比的高贵与不羁。
+ 然而岁月蹉跎中，她凶猛的面孔被代之以和善，锋利的爪牙亦藏起了锋芒。在我的训导下，她不再奔跑，玩闹，只会习惯性地坐下，趴下，睡下，跪下。有时还在我的棒喝下读书断字。
+ 有一天，她开口说话。
+   “我想回家。”
+“只有认真看书，才能回去”。我随便应声。
+ 至此之后，她捧起了神圣的书……
+ 她拥有了人类的智慧，有了自己的工作，她会去《非诚勿扰》，梦想着嫁入豪门……
+终于，一切都遂了心愿。她和中国田园犬喜结连理，生活在老板豪宅的后院。
+我去看她，她一如既往地耷拉着头凝视前方。待我走近，她突然立身，跟着老公一起对我呲牙。
+“这家伙，长出息了！”我心中暗喜。
+为了再见猛犬的野性。我故意向她挑衅。他们腾身一跃，如疾风，似烈火，若闪电，向我扑将而来……
+我慌乱地退后数尺，随即，一声哀嚎，他们重重摔在地下。
+身后现出一条重重的铁链。</string>
+			<key>detail</key>
+			<string>1982年   出生于陕西西安，
+2003年   就读于西安美院雕塑系。
+2007年至今   现西安纺织城艺术车间B区。
+
+群展
+2004年   雕塑《理想与现实》荣获西安美术学院首届《法的精神.艺术表现》
+最佳创作奖。（西安）
+2005年  《铁马冰河》获大学生艺术节一等奖。（北京）
+2006年  《自由.非也》获学院之光优秀奖。（北京）
+2007年  《空间思维》艺术展。（上海）
+2007年  《西安美术学院泥塑展》获三等奖。（西安）
+2009年  《很年轻，很能干》青年艺术家联展。（西安）
+2009年  《买得起》艺术展。（西安）
+2009年   思班艺术《特色》艺术展。（西安）
+2009年   聚  西安蜗客尚品酒店(西安)
+2009 年  千与千寻  上海证大美术馆（上海）
+2010 年  水土服不—中法艺术交流展 （西安）
+2011 年  终南雅集  （西安）
+2011 年  西安首届当代艺术节  （西安）
+2011 年  西安现代艺术30年回顾 （西安）</string>
+			<key>imageArray</key>
+			<array>
+				<dict>
+					<key>imageName</key>
+					<string>arts/luoR/1.jpg</string>
+					<key>artDiscription</key>
+					<string></string>
+				</dict>
+				<dict>
+					<key>imageName</key>
+					<string>arts/luoR/2.jpg</string>
+					<key>artDiscription</key>
+					<string></string>
+				</dict>
+				<dict>
+					<key>imageName</key>
+					<string>arts/luoR/3.jpg</string>
+					<key>artDiscription</key>
+					<string></string>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>avatar</key>
+			<string>avatar/suD.jpg</string>
+			<key>title</key>
+			<string>苏丹彧</string>
+			<key>discription</key>
+			<string>一种对灵性生活的追求，对精神自由的追求，可以说自有人类以来就存在。但在这个飞速运转的经济时代，人性中最本真的东西渐渐在消失，真善美被封锁在心灵的最深处，人越来越觉得自身的安全感在不断的缺失，在这种倒退的状态下，我却在希望，挣扎与茫然中度过。人的多面性使我们更想要寻找让心灵栖息的地方，层层剥离，在这样的状态中，开始渴望童话里的幸福生活，因为他们的结局是美好的，即使这种美好是一种假象。当人独自面对自我的时候，内心多半充满了悲伤，孤独与渴望的，而我就在一种假想的状态下去诠释这种悲伤，在悲伤中警醒我们的心。这其中不仅仅呈现的是表层的情感世界，而是让我们在这样一种状态下能够自省，从中退身而出。</string>
+			<key>detail</key>
+			<string>1985年6月出生
+2007年毕业于西安美术学院油画系
+现于西安纺织城艺术区创作
+
+2007 
+深圳.香港城市/建筑双城双年展  西安分展场
+
+2008  
+西安当代艺术十年回顾  西安
+首届五四国际年轻艺术节  北京
+
+2009   
+“惊喜”当代艺术展  北京
+千与千寻  上海
+“主场”当代艺术展  北京
+第五届宋庄艺术节 “群落，群落”  北京
+“起色” 展  西安
+“万丈“——苏丹彧个展  西安
+爱劳动--西安青年艺术家联展  西安
+“镔铁”当代艺术展  西安
+内力”（Inlook）当代女性艺术家展  西安
+暨“Outlook”青年女性艺术家推荐展  西安
+
+2010
+四方三地城市艺术化国际交流周  西安
+宅居时代  西安 
+第六届宋庄艺术节 “自驾游”  北京
+长安部落  杭州
+1x Suitcase 亚洲纸本巡回展  亚洲
+早春之旅  上海
+
+2011
+彼岸.幸福树女性艺术沙龙  西安
+西安首届现代艺术展---30年纪念展  西安
+桥瞧看——中新国际艺术交流展  西安
+七届宋庄艺术节 “80后艺术档案”  北京
+90分钟博物馆现场艺术  西安
+纺织城创意产业协会工作室开放展  西安</string>
+			<key>imageArray</key>
+			<array>
+				<dict>
+					<key>imageName</key>
+					<string>arts/suD/独白丛林之中.jpg</string>
+					<key>artDiscription</key>
+					<string></string>
+				</dict>
+				<dict>
+					<key>imageName</key>
+					<string>arts/suD/独白云层之上.jpg</string>
+					<key>artDiscription</key>
+					<string></string>
+				</dict>
+				<dict>
+					<key>imageName</key>
+					<string>arts/suD/独白未曾抵达的海.jpg</string>
+					<key>artDiscription</key>
+					<string></string>
+				</dict>
+				<dict>
+					<key>imageName</key>
+					<string>arts/suD/独白起飞的瞬间.jpg</string>
+					<key>artDiscription</key>
+					<string></string>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>avatar</key>
+			<string>avatar/xieF.jpg</string>
+			<key>title</key>
+			<string>谢菲</string>
+			<key>discription</key>
+			<string>“关系”是一个我感兴趣并却会一直关注的系列，它既可以是一个名词又可以是一个动词。关系无处不在，见缝插针式地密布在我们的时空，有时甚至会让人感到窒息。当人的精神游离于感官之外的另一个空间时，距离也不再只是一个刻度。</string>
+			<key>detail</key>
+			<string>1973年  出生于陕西省西安市
+1997年  毕业于西安美术学院设计系，获学士学位
+2008年  毕业于西安美术学院美教系，获硕士学位
+
+个展
+2012年 “看”这个世界，西安，纺织城艺术区豆蜗艺术坊
+
+群展
+2008年   “全国艺术硕士优秀作品展”，北京，中国美术馆
+2008年   “陕西中青年水彩画邀请展”，西安，亮宝楼
+2009年   “第十一届全国美展”，盘锦， 辽河美术馆
+2010年   “第九届全国水彩.粉画展”，宁波，宁波美术馆
+2011年   “诗情画意相约世园女子诗画艺术展”，西安，880艺术仓库
+2011年   “陕西省纪念建党90周年美展”，西安，陕西省美术馆
+2011年   “2011宋庄女性诗画艺术展”，北京，茗墨塘艺术馆
+2011年   “纺织城艺术区五周年回顾展”，西安，么艺术空间
+
+收藏
+2009年至2012年  《镜》系列等多幅作品被个人收藏
+
+发表
+2009年 作品《镜》No.2发表于《中国水彩》2009年第12期
+2009年   作品《思》发表于《陕西美术》2009年第12期
+2011年  作品《午后》、《历夏》、《望》No.1、《镜》No.5发表于《艺树》2011年第1期
+</string>
+			<key>imageArray</key>
+			<array>
+				<dict>
+					<key>imageName</key>
+					<string>arts/xieF/关系3.jpg</string>
+					<key>artDiscription</key>
+					<string></string>
+				</dict>
+				<dict>
+					<key>imageName</key>
+					<string>arts/xieF/关系6.jpg</string>
+					<key>artDiscription</key>
+					<string></string>
+				</dict>
+				<dict>
+					<key>imageName</key>
+					<string>arts/xieF/小仙女.jpg</string>
+					<key>artDiscription</key>
+					<string></string>
+				</dict>
+				<dict>
+					<key>imageName</key>
+					<string>arts/xieF/小仙女4.jpg</string>
+					<key>artDiscription</key>
+					<string></string>
+				</dict>
+				<dict>
+					<key>imageName</key>
+					<string>arts/xieF/寂寞的夏天5.jpg</string>
+					<key>artDiscription</key>
+					<string></string>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>avatar</key>
+			<string>avatar/gaoH.jpg</string>
+			<key>title</key>
+			<string>高昊</string>
+			<key>discription</key>
+			<string>一个好的艺术家不能仅作为思想的自动贩售机呈现于世，所以我画画。可我必须得给自己从不写生实物只会空穴来风找一个合适的理由，于是我默许了通过视网膜的万物为自然。作为一个家教保守文凭山寨的架上绘画爱好者，最终我干着土的不能再土的事情：崇敬自然，画我所见。</string>
+			<key>detail</key>
+			<string>1984年生于陕西
+2008年毕业于西安美术学院
+入住西安纺织城艺术区至今
+2011年加入0二9艺术小组
+2012年西安美术学院硕士在读
+
+参展经历
+
+2010
+早春之旅—西安当代艺术十人展  上海惠生艺术中心
+水土服不—中法艺术交流展  西安X-coma艺术中心
+长安部落  杭州艺术博览会
+终南雅集  西安绳空间
+艺术自驾游—第六届宋庄艺术节  北京宋庄
+要有光—西安第一届光影艺术节  西安大唐芙蓉园
+西安首届当代艺术节  西安国展中心
+
+2009
+爱劳动—西安青年艺术家联展  西安墨朗艺术车间
+再造纺织城—青年艺术家联展  西安X-coma艺术中心
+西安派对—第五届宋庄艺术节  北京宋庄
+主场—当代艺术展  北京798白盒子艺术馆
+中国西安•纺织城艺术节  西安纺织城艺术区
+惊喜展  北京杰森画廊
+聚  西安蜗客尚品酒店
+千与千寻  上海证大美术馆
+
+2011
+西安当代艺术三十周年回顾展 西安X-coma艺术中心
+纺织城艺术区五周年回顾展 西安X-coma艺术中心</string>
+			<key>imageArray</key>
+			<array>
+				<dict>
+					<key>imageName</key>
+					<string>arts/gaoH/兰1.jpg</string>
+					<key>artDiscription</key>
+					<string></string>
+				</dict>
+				<dict>
+					<key>imageName</key>
+					<string>arts/gaoH/兰2.jpg</string>
+					<key>artDiscription</key>
+					<string></string>
+				</dict>
+				<dict>
+					<key>imageName</key>
+					<string>arts/gaoH/竹1.jpg</string>
+					<key>artDiscription</key>
+					<string></string>
+				</dict>
+				<dict>
+					<key>imageName</key>
+					<string>arts/gaoH/竹2.jpg</string>
+					<key>artDiscription</key>
+					<string></string>
+				</dict>
+				<dict>
+					<key>imageName</key>
+					<string>arts/gaoH/竹3.jpg</string>
+					<key>artDiscription</key>
+					<string></string>
+				</dict>
+			</array>
 		</dict>
 	</array>
 	<key>douWo</key>

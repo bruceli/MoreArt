@@ -51,12 +51,12 @@
     _baseViewController.view = _douWoView;
     
     _douWoView.delegate = _baseViewController;
-    _douSpaceView.delegate = _baseViewController;
+//    _douSpaceView.delegate = _baseViewController;
     _art029View.delegate = _baseViewController ;
     _douPeikingView.delegate = _baseViewController ;
     _moLangPhotoView.delegate = _baseViewController;
     _douWoView.dataSource = _baseViewController;
-    _douSpaceView.dataSource = _baseViewController;
+//    _douSpaceView.dataSource = _baseViewController;
     _art029View.dataSource = _baseViewController ;
     _douPeikingView.dataSource = _baseViewController ;
     _moLangPhotoView.dataSource = _baseViewController;

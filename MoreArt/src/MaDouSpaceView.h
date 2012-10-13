@@ -6,10 +6,9 @@
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import "MaTableView.h"
+#import "MaPlainView.h"
 
-
-@interface MaDouSpaceView : MaTableView 
+@interface MaDouSpaceView : MaPlainView
 {
 
 }

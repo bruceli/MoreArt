@@ -30,6 +30,7 @@
 		59235C1C15E0C8D5003C4708 /* cover_7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 59235C1315E0C8D5003C4708 /* cover_7.jpg */; };
 		59235C1D15E0C8D5003C4708 /* cover_8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 59235C1415E0C8D5003C4708 /* cover_8.jpg */; };
 		59235C1E15E0C8D5003C4708 /* cover_9.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 59235C1515E0C8D5003C4708 /* cover_9.jpeg */; };
+		592BB76E1615767600BAD4FF /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 592BB76D1615767600BAD4FF /* CoreText.framework */; };
 		5939084915E0C0C400A09C51 /* BarBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 5939083915E0C0C400A09C51 /* BarBackground.png */; };
 		5939084A15E0C0C400A09C51 /* BarBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5939083A15E0C0C400A09C51 /* BarBackground@2x.png */; };
 		5939084B15E0C0C400A09C51 /* clock.png in Resources */ = {isa = PBXBuildFile; fileRef = 5939083B15E0C0C400A09C51 /* clock.png */; };
@@ -57,6 +58,8 @@
 		596F8873160ECD810036E2CC /* EGORefreshTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 596F8870160ECD810036E2CC /* EGORefreshTableHeaderView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		596F88C1160EF91A0036E2CC /* a.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 596F88BF160EF91A0036E2CC /* a.jpeg */; };
 		596F88C2160EF91A0036E2CC /* b.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 596F88C0160EF91A0036E2CC /* b.jpeg */; };
+		5972069B1615589D00A2543E /* avatar in Resources */ = {isa = PBXBuildFile; fileRef = 5972069A1615589D00A2543E /* avatar */; };
+		597206A316156B6500A2543E /* MTLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 597206A216156B6500A2543E /* MTLabel.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		598365F615E5E55900E4E885 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 598365F415E5E55900E4E885 /* Localizable.strings */; };
 		5983661115E6866900E4E885 /* MaBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5983661015E6866800E4E885 /* MaBaseViewController.m */; };
 		5983661715E688C600E4E885 /* MaTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5983661615E688C600E4E885 /* MaTableView.m */; };
@@ -74,8 +77,9 @@
 		59A9586D16045CCE00669275 /* MaScrollImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59A9586C16045CCE00669275 /* MaScrollImageViewController.m */; };
 		59A9586F16045E7E00669275 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 59A9586E16045E7E00669275 /* Default-568h@2x.png */; };
 		59BA500D15E855DD00E14A4E /* MaDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 59BA500C15E855DC00E14A4E /* MaDataSource.m */; };
+		59C45B5516287FE1009CCCCB /* arts in Resources */ = {isa = PBXBuildFile; fileRef = 59C45B5416287FE1009CCCCB /* arts */; };
 		59D213C2160DA634000968E5 /* AsyncImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 59D213C1160DA634000968E5 /* AsyncImageView.m */; };
-		59D213F4160DBD6B000968E5 /* img in Resources */ = {isa = PBXBuildFile; fileRef = 59D213F3160DBD6B000968E5 /* img */; };
+		59EFD3EF1629294700E1FA9F /* MaPlainView.m in Sources */ = {isa = PBXBuildFile; fileRef = 59EFD3EE1629294700E1FA9F /* MaPlainView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -140,6 +144,7 @@
 		59235C1315E0C8D5003C4708 /* cover_7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = cover_7.jpg; path = Resources/coverflow_iphone/cover_7.jpg; sourceTree = "<group>"; };
 		59235C1415E0C8D5003C4708 /* cover_8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = cover_8.jpg; path = Resources/coverflow_iphone/cover_8.jpg; sourceTree = "<group>"; };
 		59235C1515E0C8D5003C4708 /* cover_9.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = cover_9.jpeg; path = Resources/coverflow_iphone/cover_9.jpeg; sourceTree = "<group>"; };
+		592BB76D1615767600BAD4FF /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		5939083915E0C0C400A09C51 /* BarBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = BarBackground.png; path = Resources/BarBackground.png; sourceTree = "<group>"; };
 		5939083A15E0C0C400A09C51 /* BarBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "BarBackground@2x.png"; path = "Resources/BarBackground@2x.png"; sourceTree = "<group>"; };
 		5939083B15E0C0C400A09C51 /* clock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = clock.png; path = Resources/clock.png; sourceTree = "<group>"; };
@@ -170,6 +175,9 @@
 		596F8870160ECD810036E2CC /* EGORefreshTableHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EGORefreshTableHeaderView.m; path = src/3rd/RefreshTableHeaderView/EGORefreshTableHeaderView.m; sourceTree = "<group>"; };
 		596F88BF160EF91A0036E2CC /* a.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = a.jpeg; path = Resources/a.jpeg; sourceTree = "<group>"; };
 		596F88C0160EF91A0036E2CC /* b.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = b.jpeg; path = Resources/b.jpeg; sourceTree = "<group>"; };
+		5972069A1615589D00A2543E /* avatar */ = {isa = PBXFileReference; lastKnownFileType = folder; name = avatar; path = Resources/avatar; sourceTree = "<group>"; };
+		597206A116156B6500A2543E /* MTLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MTLabel.h; path = src/3rd/MTLabel/MTLabel.h; sourceTree = "<group>"; };
+		597206A216156B6500A2543E /* MTLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MTLabel.m; path = src/3rd/MTLabel/MTLabel.m; sourceTree = "<group>"; };
 		598365D315E5E1E300E4E885 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		598365F515E5E55900E4E885 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		5983660F15E6866800E4E885 /* MaBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MaBaseViewController.h; path = src/MaBaseViewController.h; sourceTree = "<group>"; };
@@ -200,10 +208,12 @@
 		59A9586E16045E7E00669275 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "Resources/Default-568h@2x.png"; sourceTree = "<group>"; };
 		59BA500B15E855DC00E14A4E /* MaDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MaDataSource.h; path = src/MaDataSource.h; sourceTree = "<group>"; };
 		59BA500C15E855DC00E14A4E /* MaDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MaDataSource.m; path = src/MaDataSource.m; sourceTree = "<group>"; };
+		59C45B5416287FE1009CCCCB /* arts */ = {isa = PBXFileReference; lastKnownFileType = folder; name = arts; path = Resources/arts; sourceTree = "<group>"; };
 		59CA53C115CFC593006FC431 /* MaDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MaDefine.h; path = src/MaDefine.h; sourceTree = "<group>"; };
 		59D213C0160DA634000968E5 /* AsyncImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AsyncImageView.h; path = src/3rd/AsyncImageView/AsyncImageView.h; sourceTree = "<group>"; };
 		59D213C1160DA634000968E5 /* AsyncImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AsyncImageView.m; path = src/3rd/AsyncImageView/AsyncImageView.m; sourceTree = "<group>"; };
-		59D213F3160DBD6B000968E5 /* img */ = {isa = PBXFileReference; lastKnownFileType = folder; name = img; path = Resources/img; sourceTree = "<group>"; };
+		59EFD3ED1629294700E1FA9F /* MaPlainView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MaPlainView.h; path = src/MaPlainView.h; sourceTree = "<group>"; };
+		59EFD3EE1629294700E1FA9F /* MaPlainView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MaPlainView.m; path = src/MaPlainView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,6 +226,7 @@
 				591FCCD615CFBD31004FE480 /* Foundation.framework in Frameworks */,
 				591FCCD815CFBD31004FE480 /* CoreGraphics.framework in Frameworks */,
 				59235C0B15E0C71D003C4708 /* QuartzCore.framework in Frameworks */,
+				592BB76E1615767600BAD4FF /* CoreText.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,6 +285,7 @@
 		591FCCD215CFBD31004FE480 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				592BB76D1615767600BAD4FF /* CoreText.framework */,
 				59235C0A15E0C71D003C4708 /* QuartzCore.framework */,
 				591FCCD315CFBD31004FE480 /* UIKit.framework */,
 				591FCCD515CFBD31004FE480 /* Foundation.framework */,
@@ -296,13 +308,12 @@
 				5983661015E6866800E4E885 /* MaBaseViewController.m */,
 				5983661515E688C600E4E885 /* MaTableView.h */,
 				5983661615E688C600E4E885 /* MaTableView.m */,
+				59EFD3ED1629294700E1FA9F /* MaPlainView.h */,
+				59EFD3EE1629294700E1FA9F /* MaPlainView.m */,
 				59175FFB15F30AD20098729B /* MaEZCell */,
 				5961503815F26E6900C93978 /* MaDetailViewController.h */,
 				5961503915F26E6A00C93978 /* MaDetailViewController.m */,
-				59A958661604483000669275 /* MaScrollImageView.h */,
-				59A958671604483000669275 /* MaScrollImageView.m */,
-				59A9586B16045CCE00669275 /* MaScrollImageViewController.h */,
-				59A9586C16045CCE00669275 /* MaScrollImageViewController.m */,
+				59EFD3EC1629291800E1FA9F /* ScrollImage */,
 				59A5BC4315E8975B00E67D54 /* CoverFlow */,
 				5917601315F32BAC0098729B /* MaCrossFadeView.h */,
 				5917601415F32BAD0098729B /* MaCrossFadeView.m */,
@@ -335,7 +346,8 @@
 		591FCD0515CFBDA8004FE480 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				59D213F3160DBD6B000968E5 /* img */,
+				59C45B5416287FE1009CCCCB /* arts */,
+				5972069A1615589D00A2543E /* avatar */,
 				59A9586E16045E7E00669275 /* Default-568h@2x.png */,
 				5947AAD0160314BC007B4A68 /* dot_Selected.png */,
 				5947AAD1160314BC007B4A68 /* dot_Selected@2x.png */,
@@ -371,6 +383,7 @@
 		591FCD2A15CFBF02004FE480 /* 3rd */ = {
 			isa = PBXGroup;
 			children = (
+				597206A016156B5A00A2543E /* MTLabel */,
 				596F886E160ECD5B0036E2CC /* RefreshTableHeaderView */,
 				596F886D160ECD460036E2CC /* AsyncImageView */,
 				5947AACF16031167007B4A68 /* PagerView */,
@@ -445,6 +458,15 @@
 				596F8870160ECD810036E2CC /* EGORefreshTableHeaderView.m */,
 			);
 			name = RefreshTableHeaderView;
+			sourceTree = "<group>";
+		};
+		597206A016156B5A00A2543E /* MTLabel */ = {
+			isa = PBXGroup;
+			children = (
+				597206A116156B6500A2543E /* MTLabel.h */,
+				597206A216156B6500A2543E /* MTLabel.m */,
+			);
+			name = MTLabel;
 			sourceTree = "<group>";
 		};
 		598365F315E5E28B00E4E885 /* Settings */ = {
@@ -527,6 +549,17 @@
 				59BA500C15E855DC00E14A4E /* MaDataSource.m */,
 			);
 			name = DataSource;
+			sourceTree = "<group>";
+		};
+		59EFD3EC1629291800E1FA9F /* ScrollImage */ = {
+			isa = PBXGroup;
+			children = (
+				59A958661604483000669275 /* MaScrollImageView.h */,
+				59A958671604483000669275 /* MaScrollImageView.m */,
+				59A9586B16045CCE00669275 /* MaScrollImageViewController.h */,
+				59A9586C16045CCE00669275 /* MaScrollImageViewController.m */,
+			);
+			name = ScrollImage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -645,9 +678,10 @@
 				5947AAD6160314BC007B4A68 /* dot.png in Resources */,
 				5947AAD7160314BC007B4A68 /* dot@2x.png in Resources */,
 				59A9586F16045E7E00669275 /* Default-568h@2x.png in Resources */,
-				59D213F4160DBD6B000968E5 /* img in Resources */,
 				596F88C1160EF91A0036E2CC /* a.jpeg in Resources */,
 				596F88C2160EF91A0036E2CC /* b.jpeg in Resources */,
+				5972069B1615589D00A2543E /* avatar in Resources */,
+				59C45B5516287FE1009CCCCB /* arts in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -680,6 +714,8 @@
 				59A9586D16045CCE00669275 /* MaScrollImageViewController.m in Sources */,
 				59D213C2160DA634000968E5 /* AsyncImageView.m in Sources */,
 				596F8873160ECD810036E2CC /* EGORefreshTableHeaderView.m in Sources */,
+				597206A316156B6500A2543E /* MTLabel.m in Sources */,
+				59EFD3EF1629294700E1FA9F /* MaPlainView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -736,7 +772,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -756,7 +792,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -766,6 +802,10 @@
 		591FCCEE15CFBD32004FE480 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MoreArt/MoreArt-Prefix.pch";
 				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/MoreArt/src/3rd/TapkuLibrary/TapkuLibrary\"";
@@ -779,6 +819,10 @@
 		591FCCEF15CFBD32004FE480 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MoreArt/MoreArt-Prefix.pch";
 				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/MoreArt/src/3rd/TapkuLibrary/TapkuLibrary\"";

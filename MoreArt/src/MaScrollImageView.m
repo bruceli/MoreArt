@@ -7,51 +7,76 @@
 //
 
 #import "MaScrollImageView.h"
+#import "AsyncImageView.h"
+#import "MaDefine.h"
 
 @implementation MaScrollImageView
-//@synthesize pagerView = _pagerView;
 @synthesize scrollView = _scrollView;
+@synthesize imageArray = _imageArray;
 
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self) {
-        
-        CGRect theFrame = CGRectMake(0, 0, 320, 135);
-        _scrollView = [[UIScrollView alloc] initWithFrame:theFrame];
-        
-        int i=0;
-        for (; i<5; i++) {
-            CGRect frame = CGRectMake(theFrame.size.width * i,
-                                      0,
-                                      theFrame.size.width,
-                                      theFrame.size.height);
-            
-            UILabel *label = [[UILabel alloc] initWithFrame:frame];
-            label.textAlignment = UITextAlignmentCenter;
-            label.font = [UIFont systemFontOfSize:40];
-            label.text = [NSString stringWithFormat:@"%d", i];
-            
-            if (i%2==0) {
-                label.backgroundColor = [UIColor grayColor];
-                label.textColor = [UIColor whiteColor];
-            }
-            
-            
-            [_scrollView addSubview:label];
-        }
-        _scrollView.contentSize = CGSizeMake(_scrollView.frame.size.width * i, _scrollView.frame.size.height);
-        _scrollView.backgroundColor = [UIColor orangeColor];
-        _scrollView.showsHorizontalScrollIndicator = NO;
-        [self addSubview: _scrollView];
-        
+        _imageCount = 0;
     }
     return self;
 }
 
 -(void)layoutSubviews
 {
+    CGRect theFrame = CGRectMake(0, 0, MA_SCROLL_IMAGE_WIDTH, MA_SCROLL_IMAGE_HEIGHT);
+    _scrollView = [[UIScrollView alloc] initWithFrame:theFrame];
+    
+    _scrollView.backgroundColor = [UIColor brownColor];
+    [self addSubview: _scrollView];
+    
+    for (_imageCount = 0 ; _imageCount < [_imageArray count]; _imageCount ++) {
+        CGRect frame = CGRectMake(MA_SCROLL_IMAGE_WIDTH * _imageCount,
+                                  0,
+                                  MA_SCROLL_IMAGE_WIDTH,
+                                  MA_SCROLL_IMAGE_HEIGHT);
+        
+        NSLog(@"%d", _imageCount);
+        NSLog(@"%@", NSStringFromCGRect(frame));
+        
+        NSDictionary* dict = [_imageArray objectAtIndex:_imageCount];
+        AsyncImageView* imgView = [[AsyncImageView alloc] initWithFrame:frame];
+        [imgView setImageByString:[dict objectForKey:@"imageName"]];
+        NSLog(@"%@", [dict objectForKey:@"imageName"]);
 
+        imgView.backgroundColor = [UIColor whiteColor];
+        [_scrollView addSubview:imgView];
+        
+        _scrollView.contentSize = CGSizeMake(_scrollView.frame.size.width *(_imageCount+1), _scrollView.frame.size.height);
+        _scrollView.backgroundColor = [UIColor orangeColor];
+        _scrollView.showsHorizontalScrollIndicator = NO;
+    }
+    
 }
+
+/*
+-(void)addImageWith:(NSString*)imagePath
+{
+    CGRect frame = CGRectMake(MA_SCROLL_IMAGE_WIDTH * _imageCount,
+                              0,
+                              MA_SCROLL_IMAGE_WIDTH,
+                              MA_SCROLL_IMAGE_HEIGHT);
+
+    NSLog(@"%d", _imageCount);
+    NSLog(@"%@", NSStringFromCGRect(frame));
+    
+    AsyncImageView* imgView = [[AsyncImageView alloc] initWithFrame:frame];
+    [imgView setImageByString:imagePath];
+    imgView.backgroundColor = [UIColor whiteColor];
+    [_scrollView addSubview:imgView];
+    
+    _scrollView.contentSize = CGSizeMake(_scrollView.frame.size.width * _imageCount, _scrollView.frame.size.height);
+    _scrollView.backgroundColor = [UIColor orangeColor];
+    _scrollView.showsHorizontalScrollIndicator = NO;
+    _imageCount++;
+}
+*/
+
 
 @end

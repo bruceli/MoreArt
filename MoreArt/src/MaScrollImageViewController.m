@@ -38,17 +38,20 @@
         NSLog(@"%@",@"**Scrolling skipping ");
 
     _needAutoScroll = YES;
-
-
 }
 
 -(void)stopScrolling
 {
-    [_autoScrollTimer invalidate];
-    _autoScrollTimer = nil;
-    [_theScroller invalidate];
-    _theScroller = nil;
-    NSLog(@"%@",@"Stop scrolling");
+    NSLog(@"%@",@"Exit Stop scrolling");
+
+    if (_autoScrollTimer) {
+        [_autoScrollTimer invalidate];
+        _autoScrollTimer = nil;
+    }
+    if (_theScroller) {
+        [_theScroller invalidate];
+        _theScroller = nil;
+    }
     
 }
 
@@ -58,19 +61,26 @@
     //INIT RECT
     CGRect rect = self.view.bounds;
     [self.view setFrame:rect];
-    
-    
 
-	// Do any additional setup after loading the view.
     [self startScrolling];
-    
-    NSArray* array = [NSArray arrayWithObjects:@"0",@"1",@"2",@"3",@"4", nil];
-    _imageArray = [[NSMutableArray alloc] initWithArray:array];
     _scrollImageView.delegate = self;
     
     _currentPageIndex = 0;
     _scrollImageView.scrollView.delegate = self;
 
+}
+
+-(void)setScrollingImagesBy:(NSArray*)array
+{
+    _scrollImageView.imageArray = array;
+    
+    /*
+    _imageArray = array;
+    for (NSDictionary* dict in _imageArray)
+    {
+        [_scrollImageView addImageWith:[dict objectForKey:@"imageName"]];
+    }
+     */
 }
 
 
@@ -116,12 +126,13 @@
         return;
     }
     
+//    NSLog(@"Current Page is  , %d", _currentPageIndex);
+
     NSInteger page = _currentPageIndex + 1;
-    if (page < [_imageArray count])
+    if (page < [_scrollImageView.imageArray count])
         _currentPageIndex++;
     else
         _currentPageIndex=0;
-    NSLog(@"Current Page is  , %d", _currentPageIndex);
     
     [self updatePager];
 }
@@ -172,6 +183,8 @@
         NSLog(@"Drag to , %f", _scrollImageView.frame.size.width * _currentPageIndex);
     }
 }
+
+
 
 /*
 - (void)pageView:(MCPagerView *)pageView didUpdateToPage:(NSInteger)newPage

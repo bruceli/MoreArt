@@ -11,8 +11,14 @@
 @interface MaScrollImageView : UIScrollView
 {
     UIScrollView* _scrollView;
+    NSInteger _imageCount;
+    NSArray* _imageArray;
 }
+
 @property (nonatomic, retain) UIScrollView*   scrollView;
+@property (nonatomic, retain) NSArray*   imageArray;
+
+-(void)addImageWith:(NSString*)imagePath;
 
 
 @end

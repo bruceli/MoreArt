@@ -23,6 +23,8 @@
 
 -(void)stopScrolling;
 -(void)startScrolling;
+-(void)setScrollingImagesBy:(NSArray*)array;
+
 
 @property (nonatomic, retain) NSArray*  imageArray;
 
