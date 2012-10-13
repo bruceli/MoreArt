@@ -18,7 +18,7 @@
 @property (nonatomic, retain) UIScrollView*   scrollView;
 @property (nonatomic, retain) NSArray*   imageArray;
 
--(void)addImageWith:(NSString*)imagePath;
+//-(void)addImageWith:(NSString*)imagePath;
 
 
 @end

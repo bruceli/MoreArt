@@ -17,9 +17,7 @@
     AsyncImageView* _avatarImgView;
     
     MaScrollImageViewController* _scrollImageViewController;
-    UILabel* _titleLabel;
-    MTLabel* _header_S_Label;
-    MTLabel* _header_L_Label;
+    MTLabel* _detail_Label;
 
 //    MTLabel* _bodyLabel;
     UILabel* _endingLabel;
