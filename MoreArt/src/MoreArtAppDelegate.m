@@ -9,7 +9,7 @@
 #import "MoreArtAppDelegate.h"
 #import "MaRootViewController.h"
 #import "MaDefine.h"
- 
+
 @implementation MoreArtAppDelegate
 
 @synthesize window = _window;
@@ -78,6 +78,8 @@
 //    MoreArtAppDelegate* app = (MoreArtAppDelegate *)[[UIApplication sharedApplication] delegate];
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleBlackOpaque animated:YES];
     [self.window makeKeyAndVisible];
+    
+    
     return YES;
 }
 

@@ -30,6 +30,7 @@
 		59235C1C15E0C8D5003C4708 /* cover_7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 59235C1315E0C8D5003C4708 /* cover_7.jpg */; };
 		59235C1D15E0C8D5003C4708 /* cover_8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 59235C1415E0C8D5003C4708 /* cover_8.jpg */; };
 		59235C1E15E0C8D5003C4708 /* cover_9.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 59235C1515E0C8D5003C4708 /* cover_9.jpeg */; };
+		59237266164B8B8900FF5A97 /* MaImageArrayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 59237265164B8B8900FF5A97 /* MaImageArrayView.m */; };
 		592BB76E1615767600BAD4FF /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 592BB76D1615767600BAD4FF /* CoreText.framework */; };
 		5939084915E0C0C400A09C51 /* BarBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 5939083915E0C0C400A09C51 /* BarBackground.png */; };
 		5939084A15E0C0C400A09C51 /* BarBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5939083A15E0C0C400A09C51 /* BarBackground@2x.png */; };
@@ -76,8 +77,13 @@
 		59A958681604483000669275 /* MaScrollImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 59A958671604483000669275 /* MaScrollImageView.m */; };
 		59A9586D16045CCE00669275 /* MaScrollImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59A9586C16045CCE00669275 /* MaScrollImageViewController.m */; };
 		59A9586F16045E7E00669275 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 59A9586E16045E7E00669275 /* Default-568h@2x.png */; };
+		59ABA4FD1642697C0060983A /* libDTCoreText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 59ABA49C164262B70060983A /* libDTCoreText.a */; };
 		59BA500D15E855DD00E14A4E /* MaDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 59BA500C15E855DC00E14A4E /* MaDataSource.m */; };
 		59C45B5516287FE1009CCCCB /* arts in Resources */ = {isa = PBXBuildFile; fileRef = 59C45B5416287FE1009CCCCB /* arts */; };
+		59D0B4FB164A372A009CE214 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59D0B4FA164A3729009CE214 /* ImageIO.framework */; };
+		59D0B4FD164A373A009CE214 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 59D0B4FC164A373A009CE214 /* libxml2.dylib */; };
+		59D0B501164A3784009CE214 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59D0B500164A3784009CE214 /* MobileCoreServices.framework */; };
+		59D0B521164A3C13009CE214 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59D0B520164A3C13009CE214 /* MapKit.framework */; };
 		59D213C2160DA634000968E5 /* AsyncImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 59D213C1160DA634000968E5 /* AsyncImageView.m */; };
 		59EFD3EF1629294700E1FA9F /* MaPlainView.m in Sources */ = {isa = PBXBuildFile; fileRef = 59EFD3EE1629294700E1FA9F /* MaPlainView.m */; };
 /* End PBXBuildFile section */
@@ -103,6 +109,62 @@
 			proxyType = 1;
 			remoteGlobalIDString = D2AAC07D0554694100DB518D;
 			remoteInfo = TapkuLibrary;
+		};
+		59ABA497164262B70060983A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 59ABA483164262B70060983A /* DTCoreText.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1D6058910D05DD3D006BFB54;
+			remoteInfo = DemoApp;
+		};
+		59ABA499164262B70060983A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 59ABA483164262B70060983A /* DTCoreText.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A70F119B14863198009202BF;
+			remoteInfo = "Static Framework";
+		};
+		59ABA49B164262B70060983A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 59ABA483164262B70060983A /* DTCoreText.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A70F11DE148632CD009202BF;
+			remoteInfo = "Static Library";
+		};
+		59ABA49D164262B70060983A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 59ABA483164262B70060983A /* DTCoreText.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A788CA681486456100E1AFD9;
+			remoteInfo = UnitTest;
+		};
+		59ABA49F164262B70060983A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 59ABA483164262B70060983A /* DTCoreText.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A7949A5814CC456000A8CCDE;
+			remoteInfo = MacUnitTest;
+		};
+		59ABA4A1164262B70060983A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 59ABA483164262B70060983A /* DTCoreText.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A7F7EFCD1573603100F5A4D0;
+			remoteInfo = "Static Library (no DTFoundation)";
+		};
+		59ABA4A3164262B70060983A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 59ABA483164262B70060983A /* DTCoreText.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E2262DC61638331500BFDAD7;
+			remoteInfo = "Mac Framework";
+		};
+		59ABA4FB1642695A0060983A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 59ABA483164262B70060983A /* DTCoreText.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = A70F11DD148632CD009202BF;
+			remoteInfo = "Static Library";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -144,6 +206,8 @@
 		59235C1315E0C8D5003C4708 /* cover_7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = cover_7.jpg; path = Resources/coverflow_iphone/cover_7.jpg; sourceTree = "<group>"; };
 		59235C1415E0C8D5003C4708 /* cover_8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = cover_8.jpg; path = Resources/coverflow_iphone/cover_8.jpg; sourceTree = "<group>"; };
 		59235C1515E0C8D5003C4708 /* cover_9.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = cover_9.jpeg; path = Resources/coverflow_iphone/cover_9.jpeg; sourceTree = "<group>"; };
+		59237264164B8B8900FF5A97 /* MaImageArrayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MaImageArrayView.h; path = src/MaImageArrayView.h; sourceTree = "<group>"; };
+		59237265164B8B8900FF5A97 /* MaImageArrayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MaImageArrayView.m; path = src/MaImageArrayView.m; sourceTree = "<group>"; };
 		592BB76D1615767600BAD4FF /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		5939083915E0C0C400A09C51 /* BarBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = BarBackground.png; path = Resources/BarBackground.png; sourceTree = "<group>"; };
 		5939083A15E0C0C400A09C51 /* BarBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "BarBackground@2x.png"; path = "Resources/BarBackground@2x.png"; sourceTree = "<group>"; };
@@ -206,10 +270,16 @@
 		59A9586B16045CCE00669275 /* MaScrollImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MaScrollImageViewController.h; path = src/MaScrollImageViewController.h; sourceTree = "<group>"; };
 		59A9586C16045CCE00669275 /* MaScrollImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MaScrollImageViewController.m; path = src/MaScrollImageViewController.m; sourceTree = "<group>"; };
 		59A9586E16045E7E00669275 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "Resources/Default-568h@2x.png"; sourceTree = "<group>"; };
+		59ABA483164262B70060983A /* DTCoreText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DTCoreText.xcodeproj; path = src/3rd/DTCoreText/DTCoreText.xcodeproj; sourceTree = "<group>"; };
 		59BA500B15E855DC00E14A4E /* MaDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MaDataSource.h; path = src/MaDataSource.h; sourceTree = "<group>"; };
 		59BA500C15E855DC00E14A4E /* MaDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MaDataSource.m; path = src/MaDataSource.m; sourceTree = "<group>"; };
 		59C45B5416287FE1009CCCCB /* arts */ = {isa = PBXFileReference; lastKnownFileType = folder; name = arts; path = Resources/arts; sourceTree = "<group>"; };
 		59CA53C115CFC593006FC431 /* MaDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MaDefine.h; path = src/MaDefine.h; sourceTree = "<group>"; };
+		59D0B4FA164A3729009CE214 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		59D0B4FC164A373A009CE214 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
+		59D0B4FE164A376C009CE214 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		59D0B500164A3784009CE214 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		59D0B520164A3C13009CE214 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		59D213C0160DA634000968E5 /* AsyncImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AsyncImageView.h; path = src/3rd/AsyncImageView/AsyncImageView.h; sourceTree = "<group>"; };
 		59D213C1160DA634000968E5 /* AsyncImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AsyncImageView.m; path = src/3rd/AsyncImageView/AsyncImageView.m; sourceTree = "<group>"; };
 		59EFD3ED1629294700E1FA9F /* MaPlainView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MaPlainView.h; path = src/MaPlainView.h; sourceTree = "<group>"; };
@@ -221,6 +291,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59D0B521164A3C13009CE214 /* MapKit.framework in Frameworks */,
+				59D0B501164A3784009CE214 /* MobileCoreServices.framework in Frameworks */,
+				59D0B4FD164A373A009CE214 /* libxml2.dylib in Frameworks */,
+				59D0B4FB164A372A009CE214 /* ImageIO.framework in Frameworks */,
+				59ABA4FD1642697C0060983A /* libDTCoreText.a in Frameworks */,
 				59235C0915E0C695003C4708 /* libTapkuLibrary.a in Frameworks */,
 				591FCCD415CFBD31004FE480 /* UIKit.framework in Frameworks */,
 				591FCCD615CFBD31004FE480 /* Foundation.framework in Frameworks */,
@@ -285,6 +360,11 @@
 		591FCCD215CFBD31004FE480 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				59D0B520164A3C13009CE214 /* MapKit.framework */,
+				59D0B500164A3784009CE214 /* MobileCoreServices.framework */,
+				59D0B4FE164A376C009CE214 /* AVFoundation.framework */,
+				59D0B4FC164A373A009CE214 /* libxml2.dylib */,
+				59D0B4FA164A3729009CE214 /* ImageIO.framework */,
 				592BB76D1615767600BAD4FF /* CoreText.framework */,
 				59235C0A15E0C71D003C4708 /* QuartzCore.framework */,
 				591FCCD315CFBD31004FE480 /* UIKit.framework */,
@@ -313,6 +393,8 @@
 				59175FFB15F30AD20098729B /* MaEZCell */,
 				5961503815F26E6900C93978 /* MaDetailViewController.h */,
 				5961503915F26E6A00C93978 /* MaDetailViewController.m */,
+				59237264164B8B8900FF5A97 /* MaImageArrayView.h */,
+				59237265164B8B8900FF5A97 /* MaImageArrayView.m */,
 				59EFD3EC1629291800E1FA9F /* ScrollImage */,
 				59A5BC4315E8975B00E67D54 /* CoverFlow */,
 				5917601315F32BAC0098729B /* MaCrossFadeView.h */,
@@ -383,6 +465,7 @@
 		591FCD2A15CFBF02004FE480 /* 3rd */ = {
 			isa = PBXGroup;
 			children = (
+				59ABA4AC164262BE0060983A /* DTCoreText */,
 				597206A016156B5A00A2543E /* MTLabel */,
 				596F886E160ECD5B0036E2CC /* RefreshTableHeaderView */,
 				596F886D160ECD460036E2CC /* AsyncImageView */,
@@ -541,6 +624,28 @@
 			name = CoverFlow;
 			sourceTree = "<group>";
 		};
+		59ABA484164262B70060983A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				59ABA498164262B70060983A /* DemoApp.app */,
+				59ABA49A164262B70060983A /* DTCoreText.framework */,
+				59ABA49C164262B70060983A /* libDTCoreText.a */,
+				59ABA49E164262B70060983A /* UnitTest.octest */,
+				59ABA4A0164262B70060983A /* MacUnitTest.octest */,
+				59ABA4A2164262B70060983A /* libDTCoreText_no_DTFoundation.a */,
+				59ABA4A4164262B70060983A /* DTCoreText.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		59ABA4AC164262BE0060983A /* DTCoreText */ = {
+			isa = PBXGroup;
+			children = (
+				59ABA483164262B70060983A /* DTCoreText.xcodeproj */,
+			);
+			name = DTCoreText;
+			sourceTree = "<group>";
+		};
 		59BA500E15E855E300E14A4E /* DataSource */ = {
 			isa = PBXGroup;
 			children = (
@@ -576,6 +681,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				59ABA4FC1642695A0060983A /* PBXTargetDependency */,
 				59235C0815E0C3DA003C4708 /* PBXTargetDependency */,
 			);
 			name = MoreArt;
@@ -606,6 +712,10 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
+					ProductGroup = 59ABA484164262B70060983A /* Products */;
+					ProjectRef = 59ABA483164262B70060983A /* DTCoreText.xcodeproj */;
+				},
+				{
 					ProductGroup = 59235BFC15E0C381003C4708 /* Products */;
 					ProjectRef = 59235BFB15E0C381003C4708 /* TapkuLibrary.xcodeproj */;
 				},
@@ -630,6 +740,55 @@
 			fileType = wrapper.cfbundle;
 			path = LogicTests.octest;
 			remoteRef = 59235C0515E0C381003C4708 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		59ABA498164262B70060983A /* DemoApp.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = DemoApp.app;
+			remoteRef = 59ABA497164262B70060983A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		59ABA49A164262B70060983A /* DTCoreText.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = DTCoreText.framework;
+			remoteRef = 59ABA499164262B70060983A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		59ABA49C164262B70060983A /* libDTCoreText.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libDTCoreText.a;
+			remoteRef = 59ABA49B164262B70060983A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		59ABA49E164262B70060983A /* UnitTest.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = UnitTest.octest;
+			remoteRef = 59ABA49D164262B70060983A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		59ABA4A0164262B70060983A /* MacUnitTest.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = MacUnitTest.octest;
+			remoteRef = 59ABA49F164262B70060983A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		59ABA4A2164262B70060983A /* libDTCoreText_no_DTFoundation.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libDTCoreText_no_DTFoundation.a;
+			remoteRef = 59ABA4A1164262B70060983A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		59ABA4A4164262B70060983A /* DTCoreText.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = DTCoreText.framework;
+			remoteRef = 59ABA4A3164262B70060983A /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -716,6 +875,7 @@
 				596F8873160ECD810036E2CC /* EGORefreshTableHeaderView.m in Sources */,
 				597206A316156B6500A2543E /* MTLabel.m in Sources */,
 				59EFD3EF1629294700E1FA9F /* MaPlainView.m in Sources */,
+				59237266164B8B8900FF5A97 /* MaImageArrayView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -726,6 +886,11 @@
 			isa = PBXTargetDependency;
 			name = TapkuLibrary;
 			targetProxy = 59235C0715E0C3DA003C4708 /* PBXContainerItemProxy */;
+		};
+		59ABA4FC1642695A0060983A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Static Library";
+			targetProxy = 59ABA4FB1642695A0060983A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -753,7 +918,7 @@
 		591FCCEB15CFBD32004FE480 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -773,14 +938,16 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
+				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/MoreArt/src/3rd/DTCoreText/Core/Externals/DTFoundation/Core/Source\"";
 			};
 			name = Debug;
 		};
 		591FCCEC15CFBD32004FE480 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -794,7 +961,9 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
+				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/MoreArt/src/3rd/DTCoreText/Core/Externals/DTFoundation/Core/Source\"";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -810,8 +979,16 @@
 				GCC_PREFIX_HEADER = "MoreArt/MoreArt-Prefix.pch";
 				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/MoreArt/src/3rd/TapkuLibrary/TapkuLibrary\"";
 				INFOPLIST_FILE = "MoreArt/MoreArt-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../Library/Developer/Xcode/DerivedData/MoreArt-dpqyiukxyudlxgchwrflycjuprzz/Build/Products/Debug-iphoneos\"",
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				USER_HEADER_SEARCH_PATHS = "";
+				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/MoreArt/src/3rd/DTCoreText/Core/Source\" \"$(SRCROOT)/MoreArt/src/3rd/DTCoreText/Core/Externals/DTFoundation/Core/Source\" \"$(SRCROOT)/MoreArt/src/3rd/DTCoreText/Core/Externals/DTFoundation/Core\"";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -827,8 +1004,16 @@
 				GCC_PREFIX_HEADER = "MoreArt/MoreArt-Prefix.pch";
 				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/MoreArt/src/3rd/TapkuLibrary/TapkuLibrary\"";
 				INFOPLIST_FILE = "MoreArt/MoreArt-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../Library/Developer/Xcode/DerivedData/MoreArt-dpqyiukxyudlxgchwrflycjuprzz/Build/Products/Debug-iphoneos\"",
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				USER_HEADER_SEARCH_PATHS = "";
+				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/MoreArt/src/3rd/DTCoreText/Core/Source\" \"$(SRCROOT)/MoreArt/src/3rd/DTCoreText/Core/Externals/DTFoundation/Core/Source\" \"$(SRCROOT)/MoreArt/src/3rd/DTCoreText/Core/Externals/DTFoundation/Core\"";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

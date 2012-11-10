@@ -7,23 +7,23 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "MaScrollImageViewController.h"
 #import "AsyncImageView.h"
-#import "MTLabel.h"
+#import "MaImageArrayView.h"
 
-@interface MaDetailViewController : UIViewController <MTLabelDelegate>
+
+@interface MaDetailViewController : UIViewController <DTAttributedTextContentViewDelegate>
 {
     UIScrollView* _scrollView;
-    AsyncImageView* _avatarImgView;
     
-    MaScrollImageViewController* _scrollImageViewController;
-    MTLabel* _detail_Label;
-
-//    MTLabel* _bodyLabel;
-    UILabel* _endingLabel;
+    AsyncImageView* _headerImageView;
+    MaImageArrayView* _imageGroupView;
+    
+    DTAttributedTextView* _textView;
+    
+    
     
     NSIndexPath* _indexPath;
-        
+
     id _currentView;
 }
 
