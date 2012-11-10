@@ -60,7 +60,6 @@
 		596F88C1160EF91A0036E2CC /* a.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 596F88BF160EF91A0036E2CC /* a.jpeg */; };
 		596F88C2160EF91A0036E2CC /* b.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 596F88C0160EF91A0036E2CC /* b.jpeg */; };
 		5972069B1615589D00A2543E /* avatar in Resources */ = {isa = PBXBuildFile; fileRef = 5972069A1615589D00A2543E /* avatar */; };
-		597206A316156B6500A2543E /* MTLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 597206A216156B6500A2543E /* MTLabel.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		598365F615E5E55900E4E885 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 598365F415E5E55900E4E885 /* Localizable.strings */; };
 		5983661115E6866900E4E885 /* MaBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5983661015E6866800E4E885 /* MaBaseViewController.m */; };
 		5983661715E688C600E4E885 /* MaTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5983661615E688C600E4E885 /* MaTableView.m */; };
@@ -240,8 +239,6 @@
 		596F88BF160EF91A0036E2CC /* a.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = a.jpeg; path = Resources/a.jpeg; sourceTree = "<group>"; };
 		596F88C0160EF91A0036E2CC /* b.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = b.jpeg; path = Resources/b.jpeg; sourceTree = "<group>"; };
 		5972069A1615589D00A2543E /* avatar */ = {isa = PBXFileReference; lastKnownFileType = folder; name = avatar; path = Resources/avatar; sourceTree = "<group>"; };
-		597206A116156B6500A2543E /* MTLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MTLabel.h; path = src/3rd/MTLabel/MTLabel.h; sourceTree = "<group>"; };
-		597206A216156B6500A2543E /* MTLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MTLabel.m; path = src/3rd/MTLabel/MTLabel.m; sourceTree = "<group>"; };
 		598365D315E5E1E300E4E885 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		598365F515E5E55900E4E885 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		5983660F15E6866800E4E885 /* MaBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MaBaseViewController.h; path = src/MaBaseViewController.h; sourceTree = "<group>"; };
@@ -466,10 +463,8 @@
 			isa = PBXGroup;
 			children = (
 				59ABA4AC164262BE0060983A /* DTCoreText */,
-				597206A016156B5A00A2543E /* MTLabel */,
 				596F886E160ECD5B0036E2CC /* RefreshTableHeaderView */,
 				596F886D160ECD460036E2CC /* AsyncImageView */,
-				5947AACF16031167007B4A68 /* PagerView */,
 				593907D115E0B9C600A09C51 /* TKLib */,
 				596F886C160ECD2B0036E2CC /* SideViewController */,
 			);
@@ -509,13 +504,6 @@
 			name = TKLib;
 			sourceTree = "<group>";
 		};
-		5947AACF16031167007B4A68 /* PagerView */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = PagerView;
-			sourceTree = "<group>";
-		};
 		596F886C160ECD2B0036E2CC /* SideViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -541,15 +529,6 @@
 				596F8870160ECD810036E2CC /* EGORefreshTableHeaderView.m */,
 			);
 			name = RefreshTableHeaderView;
-			sourceTree = "<group>";
-		};
-		597206A016156B5A00A2543E /* MTLabel */ = {
-			isa = PBXGroup;
-			children = (
-				597206A116156B6500A2543E /* MTLabel.h */,
-				597206A216156B6500A2543E /* MTLabel.m */,
-			);
-			name = MTLabel;
 			sourceTree = "<group>";
 		};
 		598365F315E5E28B00E4E885 /* Settings */ = {
@@ -873,7 +852,6 @@
 				59A9586D16045CCE00669275 /* MaScrollImageViewController.m in Sources */,
 				59D213C2160DA634000968E5 /* AsyncImageView.m in Sources */,
 				596F8873160ECD810036E2CC /* EGORefreshTableHeaderView.m in Sources */,
-				597206A316156B6500A2543E /* MTLabel.m in Sources */,
 				59EFD3EF1629294700E1FA9F /* MaPlainView.m in Sources */,
 				59237266164B8B8900FF5A97 /* MaImageArrayView.m in Sources */,
 			);
