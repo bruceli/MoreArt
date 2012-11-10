@@ -88,8 +88,8 @@
     
     NSString* imgName = [dict objectForKey:@"avatar"];
     // Fill IMG
-    //[_headerImageView setImageByString:imgName];
-    [_headerImageView setImage:[UIImage imageNamed:@"1.jpg"]];
+    [_headerImageView setImageByString:imgName];
+    //[_headerImageView setImage:[UIImage imageNamed:@"1.jpg"]];
     
     // example for setting a willFlushCallback, that gets called before elements are written to the generated attributed string
 	void (^callBackBlock)(DTHTMLElement *element) = ^(DTHTMLElement *element) {
