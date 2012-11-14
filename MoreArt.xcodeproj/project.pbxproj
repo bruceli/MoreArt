@@ -85,6 +85,7 @@
 		59D0B521164A3C13009CE214 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59D0B520164A3C13009CE214 /* MapKit.framework */; };
 		59D213C2160DA634000968E5 /* AsyncImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 59D213C1160DA634000968E5 /* AsyncImageView.m */; };
 		59EFD3EF1629294700E1FA9F /* MaPlainView.m in Sources */ = {isa = PBXBuildFile; fileRef = 59EFD3EE1629294700E1FA9F /* MaPlainView.m */; };
+		59FE0DA216537CD400190994 /* css.plist in Resources */ = {isa = PBXBuildFile; fileRef = 59FE0DA116537CD400190994 /* css.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -281,6 +282,7 @@
 		59D213C1160DA634000968E5 /* AsyncImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AsyncImageView.m; path = src/3rd/AsyncImageView/AsyncImageView.m; sourceTree = "<group>"; };
 		59EFD3ED1629294700E1FA9F /* MaPlainView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MaPlainView.h; path = src/MaPlainView.h; sourceTree = "<group>"; };
 		59EFD3EE1629294700E1FA9F /* MaPlainView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MaPlainView.m; path = src/MaPlainView.m; sourceTree = "<group>"; };
+		59FE0DA116537CD400190994 /* css.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = css.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -631,6 +633,7 @@
 				59A5BC3E15E893C200E67D54 /* activityDataSource.plist */,
 				59BA500B15E855DC00E14A4E /* MaDataSource.h */,
 				59BA500C15E855DC00E14A4E /* MaDataSource.m */,
+				59FE0DA116537CD400190994 /* css.plist */,
 			);
 			name = DataSource;
 			sourceTree = "<group>";
@@ -820,6 +823,7 @@
 				596F88C2160EF91A0036E2CC /* b.jpeg in Resources */,
 				5972069B1615589D00A2543E /* avatar in Resources */,
 				59C45B5516287FE1009CCCCB /* arts in Resources */,
+				59FE0DA216537CD400190994 /* css.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

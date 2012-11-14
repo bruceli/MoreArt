@@ -8,6 +8,7 @@
 
 #import "MaDetailViewController.h"
 #import "MoreArtAppDelegate.h"
+#define kMA_PARAGRPH_MARK
 
 @interface MaDetailViewController ()
 -(void) fillContents;
@@ -101,10 +102,17 @@
 	};
     // Fill TXT
     //    _textView.text = [dict objectForKey:@"detail"];
-    NSString *detailStr = [dict objectForKey:@"detail"];
-    NSLog(@"%@",detailStr);
+ //   NSString *detailStr = [dict objectForKey:@"detail"];
     
-    NSData *data = [detailStr dataUsingEncoding:NSUTF8StringEncoding];
+    NSString *detailStr = [self encodeDetailText:[dict objectForKey:@"discription"]];
+    
+    NSString *eventStr = [self encodeEventsText:[dict objectForKey:@"event"]];
+    
+    NSMutableString* infoString = [NSMutableString stringWithString:detailStr];
+    [infoString appendString:eventStr];
+    NSLog(@"%@",infoString);
+
+    NSData *data = [infoString dataUsingEncoding:NSUTF8StringEncoding];
     CGSize maxImageSize = CGSizeMake(self.view.bounds.size.width - 20.0, self.view.bounds.size.height - 20.0);
     
     NSDictionary *options = [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithFloat:1.0],
@@ -172,6 +180,76 @@
         
 	}
 }
+
+-(NSString*) encodeDetailText:(NSString*)text
+{
+    if ([text length] ==0)
+        return @"";
+    
+    // Load CSS style file.
+    NSString* path = [[NSBundle mainBundle] pathForResource:@"css" ofType:@"plist"];
+//    NSLog(@"Datasource Location... %@", path);
+    NSDictionary* cssStyleDict = [[NSDictionary alloc] initWithContentsOfFile:path];
+    
+    // init result string.
+    NSMutableString* detailText = [NSMutableString stringWithString:text];
+    // Append header <p style=""; "">
+    [detailText insertString:[cssStyleDict objectForKey:@"kMA_029DETAIL_STYLE"] atIndex:0];
+    [detailText insertString:[cssStyleDict objectForKey:@"kMA_PARAGRPH_HEADER"] atIndex:0];
+
+    // add </p> at the end
+    [detailText appendString:[cssStyleDict objectForKey:@"kMA_PARAGRPH_END"]];
+    
+    // replacement paragraph mark  </p> <p>
+    NSMutableString* paragraphMark = [NSMutableString stringWithString: [cssStyleDict objectForKey:@"kMA_PARAGRPH_MARK"]];
+    [paragraphMark appendString:[cssStyleDict objectForKey:@"kMA_029DETAIL_STYLE"]];
+    
+    NSMutableString* result = [NSMutableString stringWithString: [detailText stringByReplacingOccurrencesOfString: @"kMA_PARAGRPH_MARK" withString:paragraphMark]];
+    
+    return result;
+}
+
+-(NSString*) encodeEventsText: (NSArray*)eventArray
+{
+    if ([eventArray count] ==0)
+        return @"";
+    
+    NSString* path = [[NSBundle mainBundle] pathForResource:@"css" ofType:@"plist"];
+    NSDictionary* cssStyleDict = [[NSDictionary alloc] initWithContentsOfFile:path];
+
+    NSMutableString* resultString = [[NSMutableString alloc] init];
+    
+    for (NSDictionary *dict in eventArray)
+    {
+        NSMutableString* subEventString = [[NSMutableString alloc] init];
+        // Event Name <p style="font-size:15px;line-height:15px;color:white;">eventName</p>
+        [subEventString insertString:[cssStyleDict objectForKey:@"kMA_029DETAIL_STYLE"] atIndex:0];
+        [subEventString insertString:[cssStyleDict objectForKey:@"kMA_PARAGRPH_HEADER"] atIndex:0];
+        [subEventString appendString:[dict objectForKey:@"eventName"]];
+        [subEventString appendString:[cssStyleDict objectForKey:@"kMA_PARAGRPH_END"]];
+        //<ul  style="font-size:13px;line-height:15px;color:white;">
+        
+        [subEventString appendString:[cssStyleDict objectForKey:@"kMA_LIST_HEADER"]];
+        [subEventString appendString:[cssStyleDict objectForKey:@"kMA_029DETAIL_STYLE"]];
+
+        NSArray* itemArray = [dict objectForKey:@"events"];
+        for (NSString *eventItem in itemArray)
+        {
+            //<li > EVENT TEXT HERE  </li>
+            NSMutableString* eventItemString = [NSMutableString stringWithString:eventItem];
+            [eventItemString insertString:[cssStyleDict objectForKey:@"kMA_ITEM_HEADER"] atIndex:0];
+            [eventItemString appendString:[cssStyleDict objectForKey:@"kMA_ITEM_END"]];
+            [subEventString appendString: eventItemString];
+        }
+
+        //</ul>
+        [subEventString appendString:[cssStyleDict objectForKey:@"kMA_LIST_END"]];
+        [resultString appendString:subEventString];
+    }
+
+    return resultString;
+}
+
 
 
 
