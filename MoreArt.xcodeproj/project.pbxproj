@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		5917601515F32BAD0098729B /* MaCrossFadeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5917601415F32BAD0098729B /* MaCrossFadeView.m */; };
-		5917601815F330520098729B /* tianShan.png in Resources */ = {isa = PBXBuildFile; fileRef = 5917601615F330520098729B /* tianShan.png */; };
-		5917601915F330520098729B /* tianShan@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5917601715F330520098729B /* tianShan@2x.png */; };
 		591FCCD415CFBD31004FE480 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 591FCCD315CFBD31004FE480 /* UIKit.framework */; };
 		591FCCD615CFBD31004FE480 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 591FCCD515CFBD31004FE480 /* Foundation.framework */; };
 		591FCCD815CFBD31004FE480 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 591FCCD715CFBD31004FE480 /* CoreGraphics.framework */; };
@@ -77,7 +75,6 @@
 		59A9586F16045E7E00669275 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 59A9586E16045E7E00669275 /* Default-568h@2x.png */; };
 		59ABA4FD1642697C0060983A /* libDTCoreText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 59ABA49C164262B70060983A /* libDTCoreText.a */; };
 		59BA500D15E855DD00E14A4E /* MaDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 59BA500C15E855DC00E14A4E /* MaDataSource.m */; };
-		59C45B5516287FE1009CCCCB /* arts in Resources */ = {isa = PBXBuildFile; fileRef = 59C45B5416287FE1009CCCCB /* arts */; };
 		59C889001655F06600C0A13A /* imageIndex.plist in Resources */ = {isa = PBXBuildFile; fileRef = 59C888FF1655F06600C0A13A /* imageIndex.plist */; };
 		59D0B4FB164A372A009CE214 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59D0B4FA164A3729009CE214 /* ImageIO.framework */; };
 		59D0B4FD164A373A009CE214 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 59D0B4FC164A373A009CE214 /* libxml2.dylib */; };
@@ -177,8 +174,6 @@
 		2607A91F160EE90E00B45451 /* subViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = subViewController.m; sourceTree = "<group>"; };
 		5917601315F32BAC0098729B /* MaCrossFadeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MaCrossFadeView.h; path = src/MaCrossFadeView.h; sourceTree = "<group>"; };
 		5917601415F32BAD0098729B /* MaCrossFadeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MaCrossFadeView.m; path = src/MaCrossFadeView.m; sourceTree = "<group>"; };
-		5917601615F330520098729B /* tianShan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tianShan.png; path = Resources/tianShan.png; sourceTree = "<group>"; };
-		5917601715F330520098729B /* tianShan@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "tianShan@2x.png"; path = "Resources/tianShan@2x.png"; sourceTree = "<group>"; };
 		591FCCCF15CFBD31004FE480 /* MoreArt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoreArt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		591FCCD315CFBD31004FE480 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		591FCCD515CFBD31004FE480 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -270,7 +265,6 @@
 		59ABA483164262B70060983A /* DTCoreText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DTCoreText.xcodeproj; path = src/3rd/DTCoreText/DTCoreText.xcodeproj; sourceTree = "<group>"; };
 		59BA500B15E855DC00E14A4E /* MaDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MaDataSource.h; path = src/MaDataSource.h; sourceTree = "<group>"; };
 		59BA500C15E855DC00E14A4E /* MaDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MaDataSource.m; path = src/MaDataSource.m; sourceTree = "<group>"; };
-		59C45B5416287FE1009CCCCB /* arts */ = {isa = PBXFileReference; lastKnownFileType = folder; name = arts; path = Resources/arts; sourceTree = "<group>"; };
 		59C888FF1655F06600C0A13A /* imageIndex.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = imageIndex.plist; sourceTree = "<group>"; };
 		59CA53C115CFC593006FC431 /* MaDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MaDefine.h; path = src/MaDefine.h; sourceTree = "<group>"; };
 		59D0B4FA164A3729009CE214 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
@@ -427,14 +421,11 @@
 		591FCD0515CFBDA8004FE480 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				59C45B5416287FE1009CCCCB /* arts */,
 				59A9586E16045E7E00669275 /* Default-568h@2x.png */,
 				5947AAD0160314BC007B4A68 /* dot_Selected.png */,
 				5947AAD1160314BC007B4A68 /* dot_Selected@2x.png */,
 				5947AAD2160314BC007B4A68 /* dot.png */,
 				5947AAD3160314BC007B4A68 /* dot@2x.png */,
-				5917601615F330520098729B /* tianShan.png */,
-				5917601715F330520098729B /* tianShan@2x.png */,
 				5983664A15E6978900E4E885 /* setting_header_section.png */,
 				5983664B15E6978900E4E885 /* setting_header_section@2x.png */,
 				5961501215F2648300C93978 /* cellAccessory.png */,
@@ -812,8 +803,6 @@
 				59A5BC3F15E893C200E67D54 /* activityDataSource.plist in Resources */,
 				5961501415F2648300C93978 /* cellAccessory.png in Resources */,
 				5961501515F2648300C93978 /* cellAccessory@2x.png in Resources */,
-				5917601815F330520098729B /* tianShan.png in Resources */,
-				5917601915F330520098729B /* tianShan@2x.png in Resources */,
 				5947AAD4160314BC007B4A68 /* dot_Selected.png in Resources */,
 				5947AAD5160314BC007B4A68 /* dot_Selected@2x.png in Resources */,
 				5947AAD6160314BC007B4A68 /* dot.png in Resources */,
@@ -821,7 +810,6 @@
 				59A9586F16045E7E00669275 /* Default-568h@2x.png in Resources */,
 				596F88C1160EF91A0036E2CC /* a.jpeg in Resources */,
 				596F88C2160EF91A0036E2CC /* b.jpeg in Resources */,
-				59C45B5516287FE1009CCCCB /* arts in Resources */,
 				59FE0DA216537CD400190994 /* css.plist in Resources */,
 				59C889001655F06600C0A13A /* imageIndex.plist in Resources */,
 			);
