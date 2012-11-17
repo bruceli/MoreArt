@@ -10,9 +10,12 @@
 
 @interface MaImageArrayView : UIScrollView
 {
-    NSMutableArray* imageViewArray;
-    
-    
+    NSMutableArray* _imageViewArray;
+    NSArray* _imageArray;
 }
+-(void)loadImagesBy: (NSArray*)array;
+
+
+@property (nonatomic, retain) NSArray* imageArray;
 
 @end

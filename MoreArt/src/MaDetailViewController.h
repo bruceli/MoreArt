@@ -20,8 +20,6 @@
     
     DTAttributedTextView* _textView;
     
-    
-    
     NSIndexPath* _indexPath;
 
     id _currentView;

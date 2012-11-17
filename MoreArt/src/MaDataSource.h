@@ -14,10 +14,13 @@
     NSMutableArray* _enumActivitiesArray;
     NSMutableArray* _currentActivityArray;
     NSDictionary* _rootDictonary;
+    NSMutableDictionary* _imageIndexDict;
+    
     
     NSMutableArray* _dataSource;
 }
 @property (nonatomic, retain) NSMutableArray* dataSource;
+@property (nonatomic, retain) NSMutableDictionary* imageIndexDict;
 
 -(void)updateDataSourceArrayByViewType:(MaDouViewType)type;
 

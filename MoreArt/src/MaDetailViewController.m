@@ -13,7 +13,6 @@
 @interface MaDetailViewController ()
 -(void) fillContents;
 -(void) adjustViewSize;
-
 @end
 
 @implementation MaDetailViewController
@@ -84,13 +83,52 @@
     MoreArtAppDelegate* app = (MoreArtAppDelegate *)[[UIApplication sharedApplication] delegate];
     // Load data from MGR
     NSDictionary* dict = [app.dataSourceMgr.dataSource objectAtIndex: _indexPath.row];
+    NSDictionary* imgDict = app.dataSourceMgr.imageIndexDict;
     
-    // Fill scrollerImage
-    
-    NSString* imgName = [dict objectForKey:@"avatar"];
     // Fill IMG
-    [_headerImageView setImageByString:imgName];
-    //[_headerImageView setImage:[UIImage imageNamed:@"1.jpg"]];
+    CGFloat scale = [[UIScreen mainScreen] scale];
+    NSMutableString* avatarImageName = [NSMutableString stringWithString:[dict objectForKey:@"avatar"]];
+    [avatarImageName appendString:@"Title"];
+    NSString* imgPath;
+    if ([avatarImageName length]>0) {
+        if (scale>1)
+        {   // Image Upload issue, switch retina here.
+            imgPath = [imgDict objectForKey:avatarImageName];
+        }
+        else
+        {
+            NSMutableString* retinaImageName = [NSMutableString stringWithString:avatarImageName];
+            [retinaImageName appendString:@"@2x"];
+            imgPath = [imgDict objectForKey:retinaImageName];
+        }
+    }
+    [_headerImageView setImageByString:imgPath];
+    
+    // Fill imageArray;
+    NSArray* array = [dict objectForKey:@"imageArray"];
+    NSMutableArray* imgArray = [[NSMutableArray alloc] init];
+    // Use square image form pic server
+    for (NSDictionary* dict in array) {
+        NSString* imagePrefix = [dict objectForKey:@"imageName"];
+        if ([imagePrefix length]>0) {
+            if (scale>1)
+            {
+                NSMutableString* retinaImageName = [NSMutableString stringWithString:imagePrefix];
+                [retinaImageName appendString:@"@2x"];
+                imgPath = [imgDict objectForKey:retinaImageName];
+            }
+            else
+                imgPath = [imgDict objectForKey:imagePrefix];
+        }
+        NSMutableDictionary* imgDict = [NSMutableDictionary dictionaryWithDictionary:dict];
+        
+        if([imgPath length]>0)
+            [imgDict setObject:imgPath forKey:@"imagePath"];
+        
+        [imgArray addObject:imgDict];
+    }
+    [_imageGroupView loadImagesBy:imgArray];
+    
     
     // example for setting a willFlushCallback, that gets called before elements are written to the generated attributed string
 	void (^callBackBlock)(DTHTMLElement *element) = ^(DTHTMLElement *element) {
@@ -100,17 +138,13 @@
 			element.displayStyle = DTHTMLElementDisplayStyleBlock;
 		}
 	};
+    
     // Fill TXT
-    //    _textView.text = [dict objectForKey:@"detail"];
- //   NSString *detailStr = [dict objectForKey:@"detail"];
-    
     NSString *detailStr = [self encodeDetailText:[dict objectForKey:@"discription"]];
-    
     NSString *eventStr = [self encodeEventsText:[dict objectForKey:@"event"]];
-    
     NSMutableString* infoString = [NSMutableString stringWithString:detailStr];
     [infoString appendString:eventStr];
-    NSLog(@"%@",infoString);
+//    NSLog(@"%@",infoString);
 
     NSData *data = [infoString dataUsingEncoding:NSUTF8StringEncoding];
     CGSize maxImageSize = CGSizeMake(self.view.bounds.size.width - 20.0, self.view.bounds.size.height - 20.0);
@@ -249,7 +283,6 @@
 
     return resultString;
 }
-
 
 
 

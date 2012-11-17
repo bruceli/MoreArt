@@ -6,7 +6,7 @@
 	<array>
 		<dict>
 			<key>avatar</key>
-			<string>avatar/dingZW.jpg</string>
+			<string>dingZW</string>
 			<key>title</key>
 			<string>丁志伟</string>
 			<key>discription</key>
@@ -52,31 +52,31 @@
 			<array>
 				<dict>
 					<key>imageName</key>
-					<string>arts/dingZW/寂寥的法庭路.jpg</string>
+					<string>dingZW寂寥的法庭路</string>
 					<key>artDiscription</key>
 					<string></string>
 				</dict>
 				<dict>
 					<key>imageName</key>
-					<string>arts/dingZW/你被捕了.jpg</string>
+					<string>dingZW你被捕了</string>
 					<key>artDiscription</key>
 					<string></string>
 				</dict>
 				<dict>
 					<key>imageName</key>
-					<string>arts/dingZW/变异的宠物.jpg</string>
+					<string>dingZW变异的宠物</string>
 					<key>artDiscription</key>
 					<string></string>
 				</dict>
 				<dict>
 					<key>imageName</key>
-					<string>arts/dingZW/变异者.jpg</string>
+					<string>dingZW变异者</string>
 					<key>artDiscription</key>
 					<string></string>
 				</dict>
 				<dict>
 					<key>imageName</key>
-					<string>arts/dingZW/最后的亚当.jpg</string>
+					<string>dingZW最后的亚当</string>
 					<key>artDiscription</key>
 					<string></string>
 				</dict>
@@ -84,7 +84,7 @@
 		</dict>
 		<dict>
 			<key>avatar</key>
-			<string>avatar/yaoLD.jpg</string>
+			<string>yaoLD</string>
 			<key>title</key>
 			<string>姚立冬</string>
 			<key>discription</key>
@@ -95,31 +95,31 @@
 			<array>
 				<dict>
 					<key>imageName</key>
-					<string>arts/yaoLD/帽子系列1.jpg</string>
+					<string>yaoLD帽子系列1</string>
 					<key>artDiscription</key>
 					<string></string>
 				</dict>
 				<dict>
 					<key>imageName</key>
-					<string>arts/yaoLD/帽子系列2.jpg</string>
+					<string>yaoLD帽子系列2</string>
 					<key>artDiscription</key>
 					<string></string>
 				</dict>
 				<dict>
 					<key>imageName</key>
-					<string>arts/yaoLD/帽子系列3.jpg</string>
+					<string>yaoLD帽子系列3</string>
 					<key>artDiscription</key>
 					<string></string>
 				</dict>
 				<dict>
 					<key>imageName</key>
-					<string>arts/yaoLD/帽子系列4.jpg</string>
+					<string>yaoLD帽子系列4</string>
 					<key>artDiscription</key>
 					<string></string>
 				</dict>
 				<dict>
 					<key>imageName</key>
-					<string>arts/yaoLD/帽子系列5.jpg</string>
+					<string>yaoLD帽子系列5</string>
 					<key>artDiscription</key>
 					<string></string>
 				</dict>
@@ -127,7 +127,7 @@
 		</dict>
 		<dict>
 			<key>avatar</key>
-			<string>avatar/zhangB.jpg</string>
+			<string>zhangB</string>
 			<key>title</key>
 			<string>张备</string>
 			<key>discription</key>
@@ -150,37 +150,37 @@
 			<array>
 				<dict>
 					<key>imageName</key>
-					<string>arts/zhangB/劳工.jpg</string>
+					<string>zhangB劳工</string>
 					<key>artDiscription</key>
 					<string></string>
 				</dict>
 				<dict>
 					<key>imageName</key>
-					<string>arts/zhangB/帝国别走.jpg</string>
+					<string>zhangB帝国别走</string>
 					<key>artDiscription</key>
 					<string></string>
 				</dict>
 				<dict>
 					<key>imageName</key>
-					<string>arts/zhangB/张勋.jpg</string>
+					<string>zhangB张勋</string>
 					<key>artDiscription</key>
 					<string></string>
 				</dict>
 				<dict>
 					<key>imageName</key>
-					<string>arts/zhangB/深喉.jpg</string>
+					<string>zhangB深喉</string>
 					<key>artDiscription</key>
 					<string></string>
 				</dict>
 				<dict>
 					<key>imageName</key>
-					<string>arts/zhangB/王国维.jpg</string>
+					<string>zhangB王国维</string>
 					<key>artDiscription</key>
 					<string></string>
 				</dict>
 				<dict>
 					<key>imageName</key>
-					<string>arts/zhangB/蝗虫.jpg</string>
+					<string>zhangB蝗虫</string>
 					<key>artDiscription</key>
 					<string></string>
 				</dict>
@@ -188,7 +188,7 @@
 		</dict>
 		<dict>
 			<key>avatar</key>
-			<string>avatar/zhangY.jpg</string>
+			<string>zhangY</string>
 			<key>title</key>
 			<string>张英</string>
 			<key>discription</key>
@@ -201,30 +201,44 @@
 这组作品是2011年11月开始创作，截至目前成型的已经有十件也许以后会脱离孩子这个主体，希望通过它不断的探讨人之本性，以及生命的更多可能。kMA_PARAGRPH_MARK
 《距离》这组装置作品也是在去年和《初芽》同时开始创作的。会不断延展。探讨任何事物之间的距离，包括和自己与自己内心的距离、和陌生人、和亲人和空间和城市的距离，象迷宫一样展现，通过密集的排列组合反过来说明时空距离。用抽象的概念，瓷土高温烧制后独特的质感试图留给受众片刻的冥想。</string>
 			<key>event</key>
-			<array/>
+			<array>
+				<dict>
+					<key>eventName</key>
+					<string>简介</string>
+					<key>events</key>
+					<array>
+						<string>1988年 出生于陕西安康</string>
+						<string>2011年 毕业于西安美术学院</string>
+						<string>2011年 时空留痕——西安美术学院2011届研究生.本科生优秀作品展，西安，中国。</string>
+						<string>2011年 瞧桥看——中新国际艺术交流展，西安，中国。</string>
+						<string>2012年 青年艺术100——北京，中国</string>
+						<string>2012年 西安当代艺术生态报告——西安，中国</string>
+					</array>
+				</dict>
+			</array>
 			<key>imageArray</key>
 			<array>
 				<dict>
 					<key>imageName</key>
-					<string>arts/zhangY/初芽3.jpg</string>
+					<string>zhangY初芽3</string>
 					<key>artDiscription</key>
 					<string></string>
 				</dict>
 				<dict>
 					<key>imageName</key>
-					<string>arts/zhangY/初芽4.jpg</string>
+					<string>zhangY初芽4</string>
 					<key>artDiscription</key>
 					<string></string>
 				</dict>
 				<dict>
 					<key>imageName</key>
-					<string>arts/zhangY/初芽5.jpg</string>
+					<string>zhangY初芽5</string>
 					<key>artDiscription</key>
 					<string></string>
 				</dict>
 				<dict>
 					<key>imageName</key>
-					<string>arts/zhangY/距离.jpg</string>
+					<string>zhangY距离</string>
 					<key>artDiscription</key>
 					<string></string>
 				</dict>
@@ -232,7 +246,7 @@
 		</dict>
 		<dict>
 			<key>avatar</key>
-			<string>avatar/yangGK.jpg</string>
+			<string>yangGK</string>
 			<key>title</key>
 			<string>杨坤戈</string>
 			<key>discription</key>
@@ -257,31 +271,31 @@
 			<array>
 				<dict>
 					<key>imageName</key>
-					<string>arts/yangGK/之子于归.jpg</string>
+					<string>yangGK之子于归</string>
 					<key>artDiscription</key>
 					<string></string>
 				</dict>
 				<dict>
 					<key>imageName</key>
-					<string>arts/yangGK/硕人.jpg</string>
+					<string>yangGK硕人</string>
 					<key>artDiscription</key>
 					<string></string>
 				</dict>
 				<dict>
 					<key>imageName</key>
-					<string>arts/yangGK/絮.jpg</string>
+					<string>yangGK絮</string>
 					<key>artDiscription</key>
 					<string></string>
 				</dict>
 				<dict>
 					<key>imageName</key>
-					<string>arts/yangGK/胭脂.jpg</string>
+					<string>yangGK胭脂</string>
 					<key>artDiscription</key>
 					<string></string>
 				</dict>
 				<dict>
 					<key>imageName</key>
-					<string>arts/yangGK/谜.jpg</string>
+					<string>yangGK谜</string>
 					<key>artDiscription</key>
 					<string></string>
 				</dict>
@@ -289,7 +303,7 @@
 		</dict>
 		<dict>
 			<key>avatar</key>
-			<string>avatar/liuYD.jpg</string>
+			<string>liuYD</string>
 			<key>title</key>
 			<string>柳昱东</string>
 			<key>discription</key>
@@ -334,13 +348,13 @@
 			<array>
 				<dict>
 					<key>imageName</key>
-					<string>arts/liuYD/皮囊.jpg</string>
+					<string>liuYD皮囊</string>
 					<key>artDiscription</key>
 					<string></string>
 				</dict>
 				<dict>
 					<key>imageName</key>
-					<string>arts/liuYD/匏瓠.jpg</string>
+					<string>liuYD匏瓠</string>
 					<key>artDiscription</key>
 					<string></string>
 				</dict>
@@ -348,7 +362,7 @@
 		</dict>
 		<dict>
 			<key>avatar</key>
-			<string>avatar/wangQQ.jpg</string>
+			<string>wangQQ</string>
 			<key>title</key>
 			<string>王庆庆</string>
 			<key>discription</key>
@@ -403,43 +417,43 @@
 			<array>
 				<dict>
 					<key>imageName</key>
-					<string>arts/wangQQ/力的N次方.jpg</string>
+					<string>wangQQ力的N次方</string>
 					<key>artDiscription</key>
 					<string></string>
 				</dict>
 				<dict>
 					<key>imageName</key>
-					<string>arts/wangQQ/组合.jpg</string>
+					<string>wangQQ组合</string>
 					<key>artDiscription</key>
 					<string></string>
 				</dict>
 				<dict>
 					<key>imageName</key>
-					<string>arts/wangQQ/薯民的胜利效果图.jpg</string>
+					<string>wangQQ薯民的胜利效果图</string>
 					<key>artDiscription</key>
 					<string></string>
 				</dict>
 				<dict>
 					<key>imageName</key>
-					<string>arts/wangQQ/被遮蔽的纯净净化.jpg</string>
+					<string>wangQQ被遮蔽的纯净净化</string>
 					<key>artDiscription</key>
 					<string></string>
 				</dict>
 				<dict>
 					<key>imageName</key>
-					<string>arts/wangQQ/被遮蔽的纯净发酵.jpg</string>
+					<string>wangQQ被遮蔽的纯净发酵</string>
 					<key>artDiscription</key>
 					<string></string>
 				</dict>
 				<dict>
 					<key>imageName</key>
-					<string>arts/wangQQ/被遮蔽的纯净污浊.jpg</string>
+					<string>wangQQ被遮蔽的纯净污浊</string>
 					<key>artDiscription</key>
 					<string></string>
 				</dict>
 				<dict>
 					<key>imageName</key>
-					<string>arts/wangQQ/被遮蔽的纯净蒙蔽.jpg</string>
+					<string>wangQQ被遮蔽的纯净蒙蔽</string>
 					<key>artDiscription</key>
 					<string></string>
 				</dict>
@@ -447,7 +461,7 @@
 		</dict>
 		<dict>
 			<key>avatar</key>
-			<string>avatar/shiYB.jpg</string>
+			<string>shiYB</string>
 			<key>title</key>
 			<string>石珩伯</string>
 			<key>discription</key>
@@ -568,37 +582,37 @@
 			<array>
 				<dict>
 					<key>imageName</key>
-					<string>arts/shiYB/藏象2.jpg</string>
+					<string>shiYB藏象2</string>
 					<key>artDiscription</key>
 					<string></string>
 				</dict>
 				<dict>
 					<key>imageName</key>
-					<string>arts/shiYB/藏象6.jpg</string>
+					<string>shiYB藏象6</string>
 					<key>artDiscription</key>
 					<string></string>
 				</dict>
 				<dict>
 					<key>imageName</key>
-					<string>arts/shiYB/藏象9.jpg</string>
+					<string>shiYB藏象9</string>
 					<key>artDiscription</key>
 					<string></string>
 				</dict>
 				<dict>
 					<key>imageName</key>
-					<string>arts/shiYB/藏象之原境1.jpg</string>
+					<string>shiYB藏象之原境1</string>
 					<key>artDiscription</key>
 					<string></string>
 				</dict>
 				<dict>
 					<key>imageName</key>
-					<string>arts/shiYB/藏象之原境5.jpg</string>
+					<string>shiYB藏象之原境5</string>
 					<key>artDiscription</key>
 					<string></string>
 				</dict>
 				<dict>
 					<key>imageName</key>
-					<string>arts/shiYB/藏象之瑞鹤图.jpg</string>
+					<string>shiYB藏象之瑞鹤图</string>
 					<key>artDiscription</key>
 					<string></string>
 				</dict>
@@ -606,7 +620,7 @@
 		</dict>
 		<dict>
 			<key>avatar</key>
-			<string>avatar/qiY.jpg</string>
+			<string>qiY</string>
 			<key>title</key>
 			<string>祁逸</string>
 			<key>discription</key>
@@ -615,51 +629,90 @@
     一般来讲，我总是习惯于以一个“他者”的身份去观察和感知我们所处的现实环境，也许这完全是我个人的原因。我常常本能以有距离的方式去体验那些隐藏于表象之下的东西，如人对自身某种记忆的瞬间片段性的回忆，对我来说是最具有真实感觉的时候。也许因此注定我不可能成为一个关注大环境的艺术家，还是习惯将艺术与“生死”“内心感知”一类概念联系起来，相信直觉更甚于对观念的探索，依凭个人的历程更甚于经验的依赖，更注重情感的真实性，但又仰慕理性的分析，他们总是在我对事物的判断中起作用，使我的艺术常常以某种“个人日记”的方式流露出来。
 
     相信艺术是个人性的东西。</string>
-			<key>detail</key>
-			<string>1984年生于浙江温州
-展览： 
-2011年新加坡发起亚洲艺术巡展上海站(上海)
-2010年陕西首届当代艺术展（西安）
-2010年曲江国际光影艺术节（西安） 
-2010年第六届宋庄艺术节（北京） 
-2010年终南雅集纺织城青年艺术家联展（西安） 
-2010年新加坡发起亚洲艺术巡展（柬埔寨）
- 2010年水土服不中法联展(西安）
- 2010年新加坡发起亚洲艺术巡展（西安站）
- 2010年早春之旅西安当代十人作品展 （上海）
- 2009年“惊喜”当代艺术展（北京）  
-2009年证大艺术超超市 （上海） 
-2009年纺织城艺术节（西安）
-2009年（主场）当代艺术展（北京）
-2009年第五届宋庄艺术节（北京）
-2009年再造纺织城艺术展览
-2009   “买的起”艺术节     西安
-2009年特色艺术展览
-2009年“镔铁”当代艺术展（西安）
- 2009年爱劳动西安青年艺术家联展（西安）
- 2008年西安当代艺术十年回顾展（西安）
-  2007年回到苏联—西安文献展北京巡展（北京）
-  2007年西安纺织城艺术区开放展 （西安）
-2007  纺织城艺术区开放展+“艺术在城市再生中的作用”论坛  西安
-   2007  深圳·香港城市/建筑双城双年展 西安分展场 +纺织城创意产业协会工作室开放展  西安
-2007年西安首届文献展 （西安）</string>
+			<key>event</key>
+			<array>
+				<dict>
+					<key>eventName</key>
+					<string>简介</string>
+					<key>events</key>
+					<array>
+						<string>1984年 生于浙江温州</string>
+					</array>
+				</dict>
+				<dict>
+					<key>eventName</key>
+					<string>展览</string>
+					<key>events</key>
+					<array>
+						<string>2011年 新加坡发起亚洲艺术巡展上海站(上海)
+</string>
+						<string>2010年 陕西首届当代艺术展（西安）
+</string>
+						<string>2010年 曲江国际光影艺术节（西安） 
+</string>
+						<string>2010年 第六届宋庄艺术节（北京） 
+</string>
+						<string>2010年 终南雅集纺织城青年艺术家联展（西安） 
+</string>
+						<string>2010年 新加坡发起亚洲艺术巡展（柬埔寨）
+</string>
+						<string>2010年 水土服不中法联展(西安）
+</string>
+						<string>2010年 新加坡发起亚洲艺术巡展（西安站）
+</string>
+						<string>2010年 早春之旅西安当代十人作品展 （上海）
+</string>
+						<string>2009年 “惊喜”当代艺术展（北京）  
+</string>
+						<string>2009年 证大艺术超超市 （上海） 
+</string>
+						<string>2009年 纺织城艺术节（西安）
+</string>
+						<string>2009年 （主场）当代艺术展（北京）
+</string>
+						<string>2009年 第五届宋庄艺术节（北京）
+</string>
+						<string>2009年 再造纺织城艺术展览
+</string>
+						<string>2009年 “买的起”艺术节 （西安）
+</string>
+						<string>2009年 特色艺术展览
+</string>
+						<string>2009年 “镔铁”当代艺术展（西安）
+</string>
+						<string>2009年 爱劳动西安青年艺术家联展（西安）
+</string>
+						<string>2008年 西安当代艺术十年回顾展（西安）
+</string>
+						<string>2007年 回到苏联—西安文献展北京巡展（北京）
+</string>
+						<string>2007年 西安纺织城艺术区开放展 （西安）
+</string>
+						<string>2007年 纺织城艺术区开放展+“艺术在城市再生中的作用”论坛  （西安）
+</string>
+						<string>2007年 深圳·香港城市/建筑双城双年展 西安分展场 +纺织城创意产业协会工作室开放展  （西安）
+</string>
+						<string>2007年 西安首届文献展 （西安）</string>
+					</array>
+				</dict>
+			</array>
 			<key>imageArray</key>
 			<array>
 				<dict>
 					<key>imageName</key>
-					<string>arts/qiY/南之南系列一.jpg</string>
+					<string>qiY南之南系列一</string>
 					<key>artDiscription</key>
 					<string></string>
 				</dict>
 				<dict>
 					<key>imageName</key>
-					<string>arts/qiY/南之南系列二.jpg</string>
+					<string>qiY南之南系列二</string>
 					<key>artDiscription</key>
 					<string></string>
 				</dict>
 				<dict>
 					<key>imageName</key>
-					<string>arts/qiY/南之南系列三.jpg</string>
+					<string>qiY南之南系列三</string>
 					<key>artDiscription</key>
 					<string></string>
 				</dict>
@@ -667,70 +720,113 @@
 		</dict>
 		<dict>
 			<key>avatar</key>
-			<string>avatar/qinYZ.jpg</string>
+			<string>qinYZ</string>
 			<key>title</key>
 			<string>秦一朝</string>
 			<key>discription</key>
 			<string></string>
-			<key>detail</key>
-			<string>1981年  出生于陕西省宝鸡市
-2005年  毕业于西安美术学院油画系，获学士学位
-2011-2012年  攻读西安美术学院油画系艺术硕士
-2010年  合伙创办长安长少儿美术创意空间
-2005.2011年 受聘于西安美术学院油画系
-2007年至今  创作在西安纺织城艺术区
-
-个展
-2005年  “秦一朝个展”，西安，西安美院展厅
-2010年  “么眉眼”，西安，么艺术中心 (X-COMA)
-2012年  “秦一朝新作展”， 西安，墨朗艺术车间
-
-群展
-2011 “混搭的图像——中国当代油画邀请展”外围展 （西安）
-2010   新学院精神提名展 （北京）
-2010   第六届宋庄文化艺术节 （北京）
-2010   早春之旅——西安当代艺术十人展 （上海）
-2009   第五届宋庄文化艺术节 （北京）
-2009   时尚西安展 （西安）
-2009   中韩艺术展 （上海）
-2009   “镔铁”当代艺术展 （西安）
-2009   爱劳动西安青年艺术家联展 （西安）
-2008   西安当代艺术十年回顾展 （西安）
-2008   不所收藏展 （上海）
-2008   山水三人展 （西安）
-2007   回到苏联——西安文献展北京巡展 （北京）
-2007   西安纺织城艺术区开放展 （西安）
-2007   变形展 （西安）
-2007   西安首届文献展 （西安）</string>
+			<key>event</key>
+			<array>
+				<dict>
+					<key>eventName</key>
+					<string>简介</string>
+					<key>events</key>
+					<array>
+						<string>1981年  出生于陕西省宝鸡市
+</string>
+						<string>2005年  毕业于西安美术学院油画系，获学士学位
+</string>
+						<string>2011-2012年  攻读西安美术学院油画系艺术硕士
+</string>
+						<string>2010年  合伙创办长安长少儿美术创意空间
+</string>
+						<string>2005-2011年 受聘于西安美术学院油画系
+</string>
+						<string>2007年至今  创作在西安纺织城艺术区
+</string>
+					</array>
+				</dict>
+				<dict>
+					<key>eventName</key>
+					<string>个展</string>
+					<key>events</key>
+					<array>
+						<string>2005年 “秦一朝个展”，西安，西安美院展厅
+</string>
+						<string>2010年 “么眉眼”，西安，么艺术中心 (X-COMA)
+</string>
+						<string>2012年 “秦一朝新作展”， 西安，墨朗艺术车间
+</string>
+					</array>
+				</dict>
+				<dict>
+					<key>eventName</key>
+					<string>群展</string>
+					<key>events</key>
+					<array>
+						<string>2011 “混搭的图像——中国当代油画邀请展”外围展 （西安）
+</string>
+						<string>2010 新学院精神提名展 （北京）
+</string>
+						<string>2010 第六届宋庄文化艺术节 （北京）
+</string>
+						<string>2010 早春之旅——西安当代艺术十人展 （上海）
+</string>
+						<string>2009 第五届宋庄文化艺术节 （北京）
+</string>
+						<string>2009 时尚西安展 （西安）
+</string>
+						<string>2009 中韩艺术展 （上海）
+</string>
+						<string>2009 “镔铁”当代艺术展 （西安）
+</string>
+						<string>2009 爱劳动西安青年艺术家联展 （西安）
+</string>
+						<string>2008 西安当代艺术十年回顾展 （西安）
+</string>
+						<string>2008 不所收藏展 （上海）
+</string>
+						<string>2008 山水三人展 （西安）
+</string>
+						<string>2007 回到苏联——西安文献展北京巡展 （北京）
+</string>
+						<string>2007 西安纺织城艺术区开放展 （西安）
+</string>
+						<string>2007 变形展 （西安）
+</string>
+						<string>2007 西安首届文献展 （西安）</string>
+					</array>
+				</dict>
+			</array>
 			<key>imageArray</key>
 			<array>
 				<dict>
 					<key>imageName</key>
-					<string>arts/qinYZ/剩下的金子.jpg</string>
+					<string>qinYZ剩下的金子</string>
 					<key>artDiscription</key>
 					<string></string>
 				</dict>
 				<dict>
 					<key>imageName</key>
-					<string>arts/qinYZ/小丑鱼.jpg</string>
+					<string>qinYZ小丑鱼</string>
 					<key>artDiscription</key>
 					<string></string>
 				</dict>
 				<dict>
 					<key>imageName</key>
-					<string>arts/qinYZ/盲从1.jpg</string>
+					<string>qinYZ盲从1</string>
 					<key>artDiscription</key>
 					<string></string>
 				</dict>
 				<dict>
 					<key>imageName</key>
-					<string>arts/qinYZ/盲从2.jpg</string>
+					<string>qinYZ盲从2</string>
 					<key>artDiscription</key>
 					<string></string>
 				</dict>
 				<dict>
 					<key>imageName</key>
-					<string>arts/qinYZ/金石为开.jpg</string>
+					<string>qinYZ金石为开</string>
 					<key>artDiscription</key>
 					<string></string>
 				</dict>
@@ -738,67 +834,98 @@
 		</dict>
 		<dict>
 			<key>avatar</key>
-			<string>avatar/chengQN.jpg</string>
+			<string>chengQN</string>
 			<key>title</key>
 			<string>程乾宁</string>
 			<key>discription</key>
 			<string></string>
-			<key>detail</key>
-			<string>1998年毕业于西安美术学院油画系。
-
-展览
-2011  纺织城艺术区5年纪念展 西安
-2011  西安首届现代艺术展30年纪念展 西安
-2011  程乾宁 郭燕作品展 美国 洛杉矶
-2010  中国 荷兰 当代艺术家交流展 厦门
-2010  中国•西安曲江国际光影艺术节/圣景/艺术家邀请展 西安
-2010 《水土服不—中法艺术交流展》 西安么艺术中心
-2010  《早春之旅—西安当代艺术十人展》 上海惠生艺术中心
-2009 《千与千寻》 上海证大美术馆
-2009  《惊喜展》  北京杰森画廊
-2009  中国西安•纺织城艺术节
-2009  THE HOME COURT 《主场》当代艺术展  北京798白盒子艺术馆
-2009  第五届宋庄艺术节   北京
-2009  再造纺织城青年艺术家联展 西安 
-2008  《西安当代艺术十年回顾•钩沉》 西安
-2007 《回到苏联》 北京798艺术区方音空间 
-2007 《首届西安文献展》 西安
-2007 《变形展》 西安 </string>
+			<key>event</key>
+			<array>
+				<dict>
+					<key>eventName</key>
+					<string>简介</string>
+					<key>events</key>
+					<array>
+						<string>1998年 毕业于西安美术学院油画系。
+</string>
+					</array>
+				</dict>
+				<dict>
+					<key>eventName</key>
+					<string>展览</string>
+					<key>events</key>
+					<array>
+						<string>2011  纺织城艺术区5年纪念展 西安
+</string>
+						<string>2011  西安首届现代艺术展30年纪念展 西安
+</string>
+						<string>2011  程乾宁 郭燕作品展 美国 洛杉矶
+</string>
+						<string>2010  中国 荷兰 当代艺术家交流展 厦门
+</string>
+						<string>2010  中国•西安曲江国际光影艺术节/圣景/艺术家邀请展 西安
+</string>
+						<string>2010 《水土服不—中法艺术交流展》 西安么艺术中心
+</string>
+						<string>2010  《早春之旅—西安当代艺术十人展》 上海惠生艺术中心
+</string>
+						<string>2009 《千与千寻》 上海证大美术馆
+</string>
+						<string>2009  《惊喜展》  北京杰森画廊
+</string>
+						<string>2009  中国西安•纺织城艺术节
+</string>
+						<string>2009  THE HOME COURT 《主场》当代艺术展  北京798白盒子艺术馆
+</string>
+						<string>2009  第五届宋庄艺术节   北京
+</string>
+						<string>2009  再造纺织城青年艺术家联展 西安 
+</string>
+						<string>2008  《西安当代艺术十年回顾•钩沉》 西安
+</string>
+						<string>2007 《回到苏联》 北京798艺术区方音空间 
+</string>
+						<string>2007 《首届西安文献展》 西安
+</string>
+						<string>2007 《变形展》 西安 </string>
+					</array>
+				</dict>
+			</array>
 			<key>imageArray</key>
 			<array>
 				<dict>
 					<key>imageName</key>
-					<string>arts/chengQN/俑壹.jpg</string>
+					<string>chengQN俑壹</string>
 					<key>artDiscription</key>
 					<string></string>
 				</dict>
 				<dict>
 					<key>imageName</key>
-					<string>arts/chengQN/俑贰.jpg</string>
+					<string>chengQN俑贰</string>
 					<key>artDiscription</key>
 					<string></string>
 				</dict>
 				<dict>
 					<key>imageName</key>
-					<string>arts/chengQN/俑叁.jpg</string>
+					<string>chengQN俑叁</string>
 					<key>artDiscription</key>
 					<string></string>
 				</dict>
 				<dict>
 					<key>imageName</key>
-					<string>arts/chengQN/俑肆.jpg</string>
+					<string>chengQN俑肆</string>
 					<key>artDiscription</key>
 					<string></string>
 				</dict>
 				<dict>
 					<key>imageName</key>
-					<string>arts/chengQN/俑伍.jpg</string>
+					<string>chengQN俑伍</string>
 					<key>artDiscription</key>
 					<string></string>
 				</dict>
 				<dict>
 					<key>imageName</key>
-					<string>arts/chengQN/俑陆.jpg</string>
+					<string>chengQN俑陆</string>
 					<key>artDiscription</key>
 					<string></string>
 				</dict>
@@ -806,7 +933,7 @@
 		</dict>
 		<dict>
 			<key>avatar</key>
-			<string>avatar/luoR.jpg</string>
+			<string>luoR</string>
 			<key>title</key>
 			<string>罗瑞</string>
 			<key>discription</key>
@@ -824,44 +951,73 @@
 为了再见猛犬的野性。我故意向她挑衅。他们腾身一跃，如疾风，似烈火，若闪电，向我扑将而来……
 我慌乱地退后数尺，随即，一声哀嚎，他们重重摔在地下。
 身后现出一条重重的铁链。</string>
-			<key>detail</key>
-			<string>1982年   出生于陕西西安，
-2003年   就读于西安美院雕塑系。
-2007年至今   现西安纺织城艺术车间B区。
-
-群展
-2004年   雕塑《理想与现实》荣获西安美术学院首届《法的精神.艺术表现》
-最佳创作奖。（西安）
-2005年  《铁马冰河》获大学生艺术节一等奖。（北京）
-2006年  《自由.非也》获学院之光优秀奖。（北京）
-2007年  《空间思维》艺术展。（上海）
-2007年  《西安美术学院泥塑展》获三等奖。（西安）
-2009年  《很年轻，很能干》青年艺术家联展。（西安）
-2009年  《买得起》艺术展。（西安）
-2009年   思班艺术《特色》艺术展。（西安）
-2009年   聚  西安蜗客尚品酒店(西安)
-2009 年  千与千寻  上海证大美术馆（上海）
-2010 年  水土服不—中法艺术交流展 （西安）
-2011 年  终南雅集  （西安）
-2011 年  西安首届当代艺术节  （西安）
-2011 年  西安现代艺术30年回顾 （西安）</string>
+			<key>event</key>
+			<array>
+				<dict>
+					<key>eventName</key>
+					<string>简介</string>
+					<key>events</key>
+					<array>
+						<string>1982年 出生于陕西西安，
+</string>
+						<string>2003年 就读于西安美院雕塑系。
+</string>
+						<string>2007年至今 现西安纺织城艺术车间B区。
+</string>
+					</array>
+				</dict>
+				<dict>
+					<key>eventName</key>
+					<string>群展</string>
+					<key>events</key>
+					<array>
+						<string>2004年 雕塑《理想与现实》荣获西安美术学院首届《法的精神.艺术表现》 最佳创作奖。（西安）
+</string>
+						<string>2005年 《铁马冰河》获大学生艺术节一等奖。（北京）
+</string>
+						<string>2006年 《自由.非也》获学院之光优秀奖。（北京）
+</string>
+						<string>2007年 《空间思维》艺术展。（上海）
+</string>
+						<string>2007年 《西安美术学院泥塑展》获三等奖。（西安）
+</string>
+						<string>2009年 《很年轻，很能干》青年艺术家联展。（西安）
+</string>
+						<string>2009年 《买得起》艺术展。（西安）
+</string>
+						<string>2009年 思班艺术《特色》艺术展。（西安）
+</string>
+						<string>2009年 聚  西安蜗客尚品酒店(西安)
+</string>
+						<string>2009年 千与千寻  上海证大美术馆（上海）
+</string>
+						<string>2010年 水土服不—中法艺术交流展 （西安）
+</string>
+						<string>2011年 终南雅集  （西安）
+</string>
+						<string>2011年 西安首届当代艺术节  （西安）
+</string>
+						<string>2011年 西安现代艺术30年回顾 （西安）</string>
+					</array>
+				</dict>
+			</array>
 			<key>imageArray</key>
 			<array>
 				<dict>
 					<key>imageName</key>
-					<string>arts/luoR/1.jpg</string>
+					<string>luoR1</string>
 					<key>artDiscription</key>
 					<string></string>
 				</dict>
 				<dict>
 					<key>imageName</key>
-					<string>arts/luoR/2.jpg</string>
+					<string>luoR2</string>
 					<key>artDiscription</key>
 					<string></string>
 				</dict>
 				<dict>
 					<key>imageName</key>
-					<string>arts/luoR/3.jpg</string>
+					<string>luoR3</string>
 					<key>artDiscription</key>
 					<string></string>
 				</dict>
@@ -869,73 +1025,106 @@
 		</dict>
 		<dict>
 			<key>avatar</key>
-			<string>avatar/suD.jpg</string>
+			<string>suD</string>
 			<key>title</key>
 			<string>苏丹彧</string>
 			<key>discription</key>
 			<string>一种对灵性生活的追求，对精神自由的追求，可以说自有人类以来就存在。但在这个飞速运转的经济时代，人性中最本真的东西渐渐在消失，真善美被封锁在心灵的最深处，人越来越觉得自身的安全感在不断的缺失，在这种倒退的状态下，我却在希望，挣扎与茫然中度过。人的多面性使我们更想要寻找让心灵栖息的地方，层层剥离，在这样的状态中，开始渴望童话里的幸福生活，因为他们的结局是美好的，即使这种美好是一种假象。当人独自面对自我的时候，内心多半充满了悲伤，孤独与渴望的，而我就在一种假想的状态下去诠释这种悲伤，在悲伤中警醒我们的心。这其中不仅仅呈现的是表层的情感世界，而是让我们在这样一种状态下能够自省，从中退身而出。</string>
-			<key>detail</key>
-			<string>1985年6月出生
-2007年毕业于西安美术学院油画系
-现于西安纺织城艺术区创作
-
-2007 
-深圳.香港城市/建筑双城双年展  西安分展场
-
-2008  
-西安当代艺术十年回顾  西安
-首届五四国际年轻艺术节  北京
-
-2009   
-“惊喜”当代艺术展  北京
-千与千寻  上海
-“主场”当代艺术展  北京
-第五届宋庄艺术节 “群落，群落”  北京
-“起色” 展  西安
-“万丈“——苏丹彧个展  西安
-爱劳动--西安青年艺术家联展  西安
-“镔铁”当代艺术展  西安
-内力”（Inlook）当代女性艺术家展  西安
-暨“Outlook”青年女性艺术家推荐展  西安
-
-2010
-四方三地城市艺术化国际交流周  西安
-宅居时代  西安 
-第六届宋庄艺术节 “自驾游”  北京
-长安部落  杭州
-1x Suitcase 亚洲纸本巡回展  亚洲
-早春之旅  上海
-
-2011
-彼岸.幸福树女性艺术沙龙  西安
-西安首届现代艺术展---30年纪念展  西安
-桥瞧看——中新国际艺术交流展  西安
-七届宋庄艺术节 “80后艺术档案”  北京
-90分钟博物馆现场艺术  西安
-纺织城创意产业协会工作室开放展  西安</string>
+			<key>event</key>
+			<array>
+				<dict>
+					<key>eventName</key>
+					<string>简介</string>
+					<key>events</key>
+					<array>
+						<string>1985年6月出生
+</string>
+						<string>2007年毕业于西安美术学院油画系
+</string>
+						<string>现于西安纺织城艺术区创作
+</string>
+					</array>
+				</dict>
+				<dict>
+					<key>eventName</key>
+					<string>展览</string>
+					<key>events</key>
+					<array>
+						<string>2007 深圳.香港城市/建筑双城双年展  西安分展场
+</string>
+						<string>2008 西安当代艺术十年回顾  西安
+</string>
+						<string>2008 首届五四国际年轻艺术节  北京
+</string>
+						<string>2009 “惊喜”当代艺术展  北京
+</string>
+						<string>2009 千与千寻  上海
+</string>
+						<string>2009 “主场”当代艺术展  北京
+</string>
+						<string>2009 第五届宋庄艺术节 “群落，群落”  北京
+</string>
+						<string>2009 “起色” 展  西安
+</string>
+						<string>2009 “万丈“——苏丹彧个展  西安
+</string>
+						<string>2009 爱劳动--西安青年艺术家联展  西安
+</string>
+						<string>2009 “镔铁”当代艺术展  西安
+</string>
+						<string>2009 内力”（Inlook）当代女性艺术家展  西安
+</string>
+						<string>2009 暨“Outlook”青年女性艺术家推荐展  西安
+</string>
+						<string>2010 四方三地城市艺术化国际交流周  西安
+</string>
+						<string>2010 宅居时代  西安 
+</string>
+						<string>2010 第六届宋庄艺术节 “自驾游”  北京
+</string>
+						<string>2010 长安部落  杭州
+</string>
+						<string>2010 1x Suitcase 亚洲纸本巡回展  亚洲
+</string>
+						<string>2010 早春之旅  上海
+</string>
+						<string>2011 彼岸.幸福树女性艺术沙龙  西安
+</string>
+						<string>2011 西安首届现代艺术展---30年纪念展  西安
+</string>
+						<string>2011 桥瞧看——中新国际艺术交流展  西安
+</string>
+						<string>2011 七届宋庄艺术节 “80后艺术档案”  北京
+</string>
+						<string>2011 90分钟博物馆现场艺术  西安
+</string>
+						<string>2011 纺织城创意产业协会工作室开放展  西安</string>
+					</array>
+				</dict>
+			</array>
 			<key>imageArray</key>
 			<array>
 				<dict>
 					<key>imageName</key>
-					<string>arts/suD/独白丛林之中.jpg</string>
+					<string>suD独白丛林之中</string>
 					<key>artDiscription</key>
 					<string></string>
 				</dict>
 				<dict>
 					<key>imageName</key>
-					<string>arts/suD/独白云层之上.jpg</string>
+					<string>suD独白云层之上</string>
 					<key>artDiscription</key>
 					<string></string>
 				</dict>
 				<dict>
 					<key>imageName</key>
-					<string>arts/suD/独白未曾抵达的海.jpg</string>
+					<string>suD独白未曾抵达的海</string>
 					<key>artDiscription</key>
 					<string></string>
 				</dict>
 				<dict>
 					<key>imageName</key>
-					<string>arts/suD/独白起飞的瞬间.jpg</string>
+					<string>suD独白起飞的瞬间</string>
 					<key>artDiscription</key>
 					<string></string>
 				</dict>
@@ -943,66 +1132,110 @@
 		</dict>
 		<dict>
 			<key>avatar</key>
-			<string>avatar/xieF.jpg</string>
+			<string>xieF</string>
 			<key>title</key>
 			<string>谢菲</string>
 			<key>discription</key>
 			<string>“关系”是一个我感兴趣并却会一直关注的系列，它既可以是一个名词又可以是一个动词。关系无处不在，见缝插针式地密布在我们的时空，有时甚至会让人感到窒息。当人的精神游离于感官之外的另一个空间时，距离也不再只是一个刻度。</string>
-			<key>detail</key>
-			<string>1973年  出生于陕西省西安市
-1997年  毕业于西安美术学院设计系，获学士学位
-2008年  毕业于西安美术学院美教系，获硕士学位
-
-个展
-2012年 “看”这个世界，西安，纺织城艺术区豆蜗艺术坊
-
-群展
-2008年   “全国艺术硕士优秀作品展”，北京，中国美术馆
-2008年   “陕西中青年水彩画邀请展”，西安，亮宝楼
-2009年   “第十一届全国美展”，盘锦， 辽河美术馆
-2010年   “第九届全国水彩.粉画展”，宁波，宁波美术馆
-2011年   “诗情画意相约世园女子诗画艺术展”，西安，880艺术仓库
-2011年   “陕西省纪念建党90周年美展”，西安，陕西省美术馆
-2011年   “2011宋庄女性诗画艺术展”，北京，茗墨塘艺术馆
-2011年   “纺织城艺术区五周年回顾展”，西安，么艺术空间
-
-收藏
-2009年至2012年  《镜》系列等多幅作品被个人收藏
-
-发表
-2009年 作品《镜》No.2发表于《中国水彩》2009年第12期
-2009年   作品《思》发表于《陕西美术》2009年第12期
-2011年  作品《午后》、《历夏》、《望》No.1、《镜》No.5发表于《艺树》2011年第1期
+			<key>event</key>
+			<array>
+				<dict>
+					<key>eventName</key>
+					<string>简介</string>
+					<key>events</key>
+					<array>
+						<string>1973年  出生于陕西省西安市
 </string>
+						<string>1997年  毕业于西安美术学院设计系，获学士学位
+</string>
+						<string>2008年  毕业于西安美术学院美教系，获硕士学位
+</string>
+					</array>
+				</dict>
+				<dict>
+					<key>eventName</key>
+					<string>个展</string>
+					<key>events</key>
+					<array>
+						<string>2012年 “看”这个世界，西安，纺织城艺术区豆蜗艺术坊
+</string>
+					</array>
+				</dict>
+				<dict>
+					<key>eventName</key>
+					<string>群展</string>
+					<key>events</key>
+					<array>
+						<string>2008年   “全国艺术硕士优秀作品展”，北京，中国美术馆
+</string>
+						<string>2008年   “陕西中青年水彩画邀请展”，西安，亮宝楼
+</string>
+						<string>2009年   “第十一届全国美展”，盘锦， 辽河美术馆
+</string>
+						<string>2010年   “第九届全国水彩.粉画展”，宁波，宁波美术馆
+</string>
+						<string>2011年   “诗情画意相约世园女子诗画艺术展”，西安，880艺术仓库
+</string>
+						<string>2011年   “陕西省纪念建党90周年美展”，西安，陕西省美术馆
+</string>
+						<string>2011年   “2011宋庄女性诗画艺术展”，北京，茗墨塘艺术馆
+</string>
+						<string>2011年   “纺织城艺术区五周年回顾展”，西安，么艺术空间
+</string>
+					</array>
+				</dict>
+				<dict>
+					<key>eventName</key>
+					<string>收藏</string>
+					<key>events</key>
+					<array>
+						<string>2009年至2012年  《镜》系列等多幅作品被个人收藏
+</string>
+					</array>
+				</dict>
+				<dict>
+					<key>eventName</key>
+					<string>发表</string>
+					<key>events</key>
+					<array>
+						<string>2009年 作品《镜》No.2发表于《中国水彩》2009年第12期
+</string>
+						<string>2009年 作品《思》发表于《陕西美术》2009年第12期
+</string>
+						<string>2011年 作品《午后》、《历夏》、《望》No.1、《镜》No.5发表于《艺树》2011年第1期
+</string>
+					</array>
+				</dict>
+			</array>
 			<key>imageArray</key>
 			<array>
 				<dict>
 					<key>imageName</key>
-					<string>arts/xieF/关系3.jpg</string>
+					<string>xieF关系3</string>
 					<key>artDiscription</key>
 					<string></string>
 				</dict>
 				<dict>
 					<key>imageName</key>
-					<string>arts/xieF/关系6.jpg</string>
+					<string>xieF关系6</string>
 					<key>artDiscription</key>
 					<string></string>
 				</dict>
 				<dict>
 					<key>imageName</key>
-					<string>arts/xieF/小仙女.jpg</string>
+					<string>xieF小仙女</string>
 					<key>artDiscription</key>
 					<string></string>
 				</dict>
 				<dict>
 					<key>imageName</key>
-					<string>arts/xieF/小仙女4.jpg</string>
+					<string>xieF小仙女4</string>
 					<key>artDiscription</key>
 					<string></string>
 				</dict>
 				<dict>
 					<key>imageName</key>
-					<string>arts/xieF/寂寞的夏天5.jpg</string>
+					<string>xieF寂寞的夏天5</string>
 					<key>artDiscription</key>
 					<string></string>
 				</dict>
@@ -1010,71 +1243,98 @@
 		</dict>
 		<dict>
 			<key>avatar</key>
-			<string>avatar/gaoH.jpg</string>
+			<string>gaoH</string>
 			<key>title</key>
 			<string>高昊</string>
 			<key>discription</key>
 			<string>一个好的艺术家不能仅作为思想的自动贩售机呈现于世，所以我画画。可我必须得给自己从不写生实物只会空穴来风找一个合适的理由，于是我默许了通过视网膜的万物为自然。作为一个家教保守文凭山寨的架上绘画爱好者，最终我干着土的不能再土的事情：崇敬自然，画我所见。</string>
-			<key>detail</key>
-			<string>1984年生于陕西
-2008年毕业于西安美术学院
-入住西安纺织城艺术区至今
-2011年加入0二9艺术小组
-2012年西安美术学院硕士在读
-
-参展经历
-
-2010
-早春之旅—西安当代艺术十人展  上海惠生艺术中心
-水土服不—中法艺术交流展  西安X-coma艺术中心
-长安部落  杭州艺术博览会
-终南雅集  西安绳空间
-艺术自驾游—第六届宋庄艺术节  北京宋庄
-要有光—西安第一届光影艺术节  西安大唐芙蓉园
-西安首届当代艺术节  西安国展中心
-
-2009
-爱劳动—西安青年艺术家联展  西安墨朗艺术车间
-再造纺织城—青年艺术家联展  西安X-coma艺术中心
-西安派对—第五届宋庄艺术节  北京宋庄
-主场—当代艺术展  北京798白盒子艺术馆
-中国西安•纺织城艺术节  西安纺织城艺术区
-惊喜展  北京杰森画廊
-聚  西安蜗客尚品酒店
-千与千寻  上海证大美术馆
-
-2011
-西安当代艺术三十周年回顾展 西安X-coma艺术中心
-纺织城艺术区五周年回顾展 西安X-coma艺术中心</string>
+			<key>event</key>
+			<array>
+				<dict>
+					<key>eventName</key>
+					<string>简介</string>
+					<key>events</key>
+					<array>
+						<string>1984年 生于陕西
+</string>
+						<string>2008年 毕业于西安美术学院 入住西安纺织城艺术区至今
+</string>
+						<string>2011年 年加入0二9艺术小组
+</string>
+						<string>2012年 年西安美术学院硕士在读
+</string>
+					</array>
+				</dict>
+				<dict>
+					<key>eventName</key>
+					<string>参展经历</string>
+					<key>events</key>
+					<array>
+						<string>2010年 早春之旅—西安当代艺术十人展  上海惠生艺术中心
+</string>
+						<string>2010年 水土服不—中法艺术交流展  西安X-coma艺术中心
+</string>
+						<string>2010年 长安部落  杭州艺术博览会
+</string>
+						<string>2010年 终南雅集  西安绳空间
+</string>
+						<string>2010年 艺术自驾游—第六届宋庄艺术节  北京宋庄
+</string>
+						<string>2010年 要有光—西安第一届光影艺术节  西安大唐芙蓉园
+</string>
+						<string>2010年 西安首届当代艺术节  西安国展中心
+</string>
+						<string>2009年 爱劳动—西安青年艺术家联展  西安墨朗艺术车间
+</string>
+						<string>2009年 再造纺织城—青年艺术家联展  西安X-coma艺术中心
+</string>
+						<string>2009年 西安派对—第五届宋庄艺术节  北京宋庄
+</string>
+						<string>2009年 主场—当代艺术展  北京798白盒子艺术馆
+</string>
+						<string>2009年 中国西安•纺织城艺术节  西安纺织城艺术区
+</string>
+						<string>2009年 惊喜展  北京杰森画廊
+</string>
+						<string>2009年 聚  西安蜗客尚品酒店
+</string>
+						<string>2009年 千与千寻  上海证大美术馆
+</string>
+						<string>2011年 西安当代艺术三十周年回顾展 西安X-coma艺术中心
+</string>
+						<string>2011年 纺织城艺术区五周年回顾展 西安X-coma艺术中心</string>
+					</array>
+				</dict>
+			</array>
 			<key>imageArray</key>
 			<array>
 				<dict>
 					<key>imageName</key>
-					<string>arts/gaoH/兰1.jpg</string>
+					<string>gaoH兰1</string>
 					<key>artDiscription</key>
 					<string></string>
 				</dict>
 				<dict>
 					<key>imageName</key>
-					<string>arts/gaoH/兰2.jpg</string>
+					<string>gaoH兰2</string>
 					<key>artDiscription</key>
 					<string></string>
 				</dict>
 				<dict>
 					<key>imageName</key>
-					<string>arts/gaoH/竹1.jpg</string>
+					<string>gaoH竹1</string>
 					<key>artDiscription</key>
 					<string></string>
 				</dict>
 				<dict>
 					<key>imageName</key>
-					<string>arts/gaoH/竹2.jpg</string>
+					<string>gaoH竹2</string>
 					<key>artDiscription</key>
 					<string></string>
 				</dict>
 				<dict>
 					<key>imageName</key>
-					<string>arts/gaoH/竹3.jpg</string>
+					<string>gaoH竹3</string>
 					<key>artDiscription</key>
 					<string></string>
 				</dict>

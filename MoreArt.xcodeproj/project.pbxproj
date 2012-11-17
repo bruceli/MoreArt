@@ -59,7 +59,6 @@
 		596F8873160ECD810036E2CC /* EGORefreshTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 596F8870160ECD810036E2CC /* EGORefreshTableHeaderView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		596F88C1160EF91A0036E2CC /* a.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 596F88BF160EF91A0036E2CC /* a.jpeg */; };
 		596F88C2160EF91A0036E2CC /* b.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 596F88C0160EF91A0036E2CC /* b.jpeg */; };
-		5972069B1615589D00A2543E /* avatar in Resources */ = {isa = PBXBuildFile; fileRef = 5972069A1615589D00A2543E /* avatar */; };
 		598365F615E5E55900E4E885 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 598365F415E5E55900E4E885 /* Localizable.strings */; };
 		5983661115E6866900E4E885 /* MaBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5983661015E6866800E4E885 /* MaBaseViewController.m */; };
 		5983661715E688C600E4E885 /* MaTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5983661615E688C600E4E885 /* MaTableView.m */; };
@@ -79,6 +78,7 @@
 		59ABA4FD1642697C0060983A /* libDTCoreText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 59ABA49C164262B70060983A /* libDTCoreText.a */; };
 		59BA500D15E855DD00E14A4E /* MaDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 59BA500C15E855DC00E14A4E /* MaDataSource.m */; };
 		59C45B5516287FE1009CCCCB /* arts in Resources */ = {isa = PBXBuildFile; fileRef = 59C45B5416287FE1009CCCCB /* arts */; };
+		59C889001655F06600C0A13A /* imageIndex.plist in Resources */ = {isa = PBXBuildFile; fileRef = 59C888FF1655F06600C0A13A /* imageIndex.plist */; };
 		59D0B4FB164A372A009CE214 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59D0B4FA164A3729009CE214 /* ImageIO.framework */; };
 		59D0B4FD164A373A009CE214 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 59D0B4FC164A373A009CE214 /* libxml2.dylib */; };
 		59D0B501164A3784009CE214 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59D0B500164A3784009CE214 /* MobileCoreServices.framework */; };
@@ -239,7 +239,6 @@
 		596F8870160ECD810036E2CC /* EGORefreshTableHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EGORefreshTableHeaderView.m; path = src/3rd/RefreshTableHeaderView/EGORefreshTableHeaderView.m; sourceTree = "<group>"; };
 		596F88BF160EF91A0036E2CC /* a.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = a.jpeg; path = Resources/a.jpeg; sourceTree = "<group>"; };
 		596F88C0160EF91A0036E2CC /* b.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = b.jpeg; path = Resources/b.jpeg; sourceTree = "<group>"; };
-		5972069A1615589D00A2543E /* avatar */ = {isa = PBXFileReference; lastKnownFileType = folder; name = avatar; path = Resources/avatar; sourceTree = "<group>"; };
 		598365D315E5E1E300E4E885 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		598365F515E5E55900E4E885 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		5983660F15E6866800E4E885 /* MaBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MaBaseViewController.h; path = src/MaBaseViewController.h; sourceTree = "<group>"; };
@@ -272,6 +271,7 @@
 		59BA500B15E855DC00E14A4E /* MaDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MaDataSource.h; path = src/MaDataSource.h; sourceTree = "<group>"; };
 		59BA500C15E855DC00E14A4E /* MaDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MaDataSource.m; path = src/MaDataSource.m; sourceTree = "<group>"; };
 		59C45B5416287FE1009CCCCB /* arts */ = {isa = PBXFileReference; lastKnownFileType = folder; name = arts; path = Resources/arts; sourceTree = "<group>"; };
+		59C888FF1655F06600C0A13A /* imageIndex.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = imageIndex.plist; sourceTree = "<group>"; };
 		59CA53C115CFC593006FC431 /* MaDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MaDefine.h; path = src/MaDefine.h; sourceTree = "<group>"; };
 		59D0B4FA164A3729009CE214 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		59D0B4FC164A373A009CE214 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
@@ -428,7 +428,6 @@
 			isa = PBXGroup;
 			children = (
 				59C45B5416287FE1009CCCCB /* arts */,
-				5972069A1615589D00A2543E /* avatar */,
 				59A9586E16045E7E00669275 /* Default-568h@2x.png */,
 				5947AAD0160314BC007B4A68 /* dot_Selected.png */,
 				5947AAD1160314BC007B4A68 /* dot_Selected@2x.png */,
@@ -634,6 +633,7 @@
 				59BA500B15E855DC00E14A4E /* MaDataSource.h */,
 				59BA500C15E855DC00E14A4E /* MaDataSource.m */,
 				59FE0DA116537CD400190994 /* css.plist */,
+				59C888FF1655F06600C0A13A /* imageIndex.plist */,
 			);
 			name = DataSource;
 			sourceTree = "<group>";
@@ -821,9 +821,9 @@
 				59A9586F16045E7E00669275 /* Default-568h@2x.png in Resources */,
 				596F88C1160EF91A0036E2CC /* a.jpeg in Resources */,
 				596F88C2160EF91A0036E2CC /* b.jpeg in Resources */,
-				5972069B1615589D00A2543E /* avatar in Resources */,
 				59C45B5516287FE1009CCCCB /* arts in Resources */,
 				59FE0DA216537CD400190994 /* css.plist in Resources */,
+				59C889001655F06600C0A13A /* imageIndex.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

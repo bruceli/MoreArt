@@ -100,10 +100,7 @@
         cell = [[MaEZCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
-// if (indexPath.row%2==0)
-        cell.rightLayout = YES;
-//    else
-//        cell.rightLayout = NO;
+    cell.rightLayout = YES;
     
     cell.accessoryView = [[ UIImageView alloc ] initWithImage:[UIImage imageNamed:@"cellAccessory" ]];
     
@@ -111,12 +108,24 @@
         
     cell.titleString = [dict objectForKey:@"title"];
     cell.discriptionString = [dict objectForKey:@"discription"];
-    cell.imgName = [dict objectForKey:@"avatar"];
-
+    NSString* imgName = [dict objectForKey:@"avatar"] ;
     
+    if ([imgName length]>0) {
+        CGFloat scale = [[UIScreen mainScreen] scale];
+        NSMutableString* retinaImageName = [NSMutableString stringWithString:imgName];
+        if (scale>1 && [imgName length] >0)
+        {
+            [retinaImageName appendString:@"@2x"];
+            NSString* imgPath = [_dataSourceMgr.imageIndexDict objectForKey:retinaImageName];
+            cell.imgName = imgPath;
+        }
+        else
+        {
+            NSString* imgPath = [_dataSourceMgr.imageIndexDict objectForKey:imgName];
+            cell.imgName = imgPath;
+        }
+    }
     
-//    cell.textLabel.textColor = [UIColor whiteColor];
-//    cell.textLabel.font = [UIFont fontWithName:@"STHeitiSC-Medium" size:16];
     return cell;
 }
 
@@ -162,8 +171,6 @@
         }
         self.view = app.coverFlowView;
         self.navigationController.navigationBarHidden = YES;
-
-
 	}
 }
 
