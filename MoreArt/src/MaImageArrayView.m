@@ -13,9 +13,13 @@
 #define MA_IMAGE_ARRAY_CELL_SIZE 60
 #define MA_IMAGE_ARRAY_CELL_GAP 2
 #define MA_IMAGE_ARRAY_MINIMUM_CELL_COUNT 6
+@interface MaImageArrayView ()
+-(AsyncImageView*)createImgViewBy:(CGRect)frame;
+@end
 
 @implementation MaImageArrayView
 @synthesize imageArray = _imageArray;
+@synthesize img_delegate;
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -32,12 +36,7 @@
                                       MA_IMAGE_ARRAY_CELL_SIZE);
 //            NSLog(@"%d", i);
 //            NSLog(@"%@", NSStringFromCGRect(frame));
-            
-            AsyncImageView* imgView = [[AsyncImageView alloc] initWithFrame:frame];
-            [imgView.layer setBorderColor: [[UIColor whiteColor] CGColor]];
-            [imgView.layer setBorderWidth: 1.0];
-            
-            imgView.backgroundColor = [UIColor colorWithRed:(random()%100)/(float)100 green:(random()%100)/(float)100 blue:(random()%100)/(float)100 alpha:1];
+            AsyncImageView* imgView = [self createImgViewBy:frame];
             [_imageViewArray addObject:imgView];
             [self addSubview:imgView];
         }
@@ -79,12 +78,7 @@
                                         MA_IMAGE_ARRAY_CELL_GAP*2,
                                         MA_IMAGE_ARRAY_CELL_SIZE,
                                         MA_IMAGE_ARRAY_CELL_SIZE);
-
-            AsyncImageView* imgView = [[AsyncImageView alloc] initWithFrame:frame];
-            [imgView.layer setBorderColor: [[UIColor whiteColor] CGColor]];
-            [imgView.layer setBorderWidth: 1.0];
-
-            imgView.backgroundColor = [UIColor colorWithRed:(random()%100)/(float)100 green:(random()%100)/(float)100 blue:(random()%100)/(float)100 alpha:1];
+            AsyncImageView* imgView = [self createImgViewBy:frame];
             [_imageViewArray addObject:imgView];
             [self addSubview:imgView];        
         }
@@ -105,9 +99,47 @@
 
 -(void)layoutSubviews
 {
-    
-    
 }
+
+-(AsyncImageView*)createImgViewBy:(CGRect)frame
+{
+    AsyncImageView* imgView = [[AsyncImageView alloc] initWithFrame:frame];
+    [imgView.layer setBorderColor: [[UIColor whiteColor] CGColor]];
+    [imgView.layer setBorderWidth: 1.0];
+    
+    UITapGestureRecognizer *myTapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(gestureTapEvent:)];
+    imgView.userInteractionEnabled = YES;
+    [imgView addGestureRecognizer:myTapGesture];
+
+    
+    imgView.backgroundColor = [UIColor colorWithRed:(random()%100)/(float)100 green:(random()%100)/(float)100 blue:(random()%100)/(float)100 alpha:1];
+    return imgView;
+}
+
+-(void)gestureTapEvent:(UITapGestureRecognizer *)gesture {
+    
+    AsyncImageView* imgView = (AsyncImageView*)gesture.view ;
+    
+    NSInteger index = [_imageViewArray indexOfObject:imgView];
+    NSLog(@"%d",index);
+    NSDictionary* dict = [_imageArray objectAtIndex:index];
+    NSString* imgPath = [dict objectForKey:@"imagePath"];
+    NSLog(@"%@",imgPath);
+    [self popupImageFrom:imgPath];
+}
+
+-(void)popupImageFrom:(NSString*)path
+{
+    [self.img_delegate openImage:path];
+
+}
+
+-(void)closePopupImg:(UITapGestureRecognizer *)gesture {
+    AsyncImageView* imgView = (AsyncImageView*)gesture.view;
+    [[imgView superview] removeFromSuperview];
+}
+
+
 /*
  // Only override drawRect: if you perform custom drawing.
  // An empty implementation adversely affects performance during animation.

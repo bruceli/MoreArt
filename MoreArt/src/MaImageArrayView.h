@@ -7,15 +7,21 @@
 //
 
 #import <UIKit/UIKit.h>
+@class MaImageArrayView;
+
+@protocol MaImageArrayViewDelegate
+- (void) openImage: (NSString *) path;
+@end //end protocol
 
 @interface MaImageArrayView : UIScrollView
 {
     NSMutableArray* _imageViewArray;
     NSArray* _imageArray;
 }
+
 -(void)loadImagesBy: (NSArray*)array;
 
-
+@property (nonatomic, weak) id <MaImageArrayViewDelegate> img_delegate;
 @property (nonatomic, retain) NSArray* imageArray;
 
 @end

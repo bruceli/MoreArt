@@ -14,7 +14,14 @@
 @interface MaPlainView : UIView
 {
     MaDouViewType _douViewType;
-    MaScrollImageViewController* _scrollImageViewController;
+//    MaScrollImageViewController* _scrollImageViewController;
+    
+    DTAttributedTextView* _textView;
+    UIScrollView* _scrollView;
+    UIView* _leftShadowView;
+    UIView* _rightShadowView;
 
+    
+    
 }
 @end

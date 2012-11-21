@@ -57,6 +57,7 @@
 		596F8873160ECD810036E2CC /* EGORefreshTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 596F8870160ECD810036E2CC /* EGORefreshTableHeaderView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		596F88C1160EF91A0036E2CC /* a.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 596F88BF160EF91A0036E2CC /* a.jpeg */; };
 		596F88C2160EF91A0036E2CC /* b.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 596F88C0160EF91A0036E2CC /* b.jpeg */; };
+		597E4E43165C8E72005E8FD7 /* MaDetailImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 597E4E42165C8E72005E8FD7 /* MaDetailImageViewController.m */; };
 		598365F615E5E55900E4E885 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 598365F415E5E55900E4E885 /* Localizable.strings */; };
 		5983661115E6866900E4E885 /* MaBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5983661015E6866800E4E885 /* MaBaseViewController.m */; };
 		5983661715E688C600E4E885 /* MaTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5983661615E688C600E4E885 /* MaTableView.m */; };
@@ -70,8 +71,6 @@
 		5983665015E699D000E4E885 /* MaAboutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5983664F15E699D000E4E885 /* MaAboutView.m */; };
 		59A5BC3F15E893C200E67D54 /* activityDataSource.plist in Resources */ = {isa = PBXBuildFile; fileRef = 59A5BC3E15E893C200E67D54 /* activityDataSource.plist */; };
 		59A5BC4215E8975600E67D54 /* MaCoverFlowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 59A5BC4115E8975600E67D54 /* MaCoverFlowView.m */; };
-		59A958681604483000669275 /* MaScrollImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 59A958671604483000669275 /* MaScrollImageView.m */; };
-		59A9586D16045CCE00669275 /* MaScrollImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59A9586C16045CCE00669275 /* MaScrollImageViewController.m */; };
 		59A9586F16045E7E00669275 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 59A9586E16045E7E00669275 /* Default-568h@2x.png */; };
 		59ABA4FD1642697C0060983A /* libDTCoreText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 59ABA49C164262B70060983A /* libDTCoreText.a */; };
 		59BA500D15E855DD00E14A4E /* MaDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 59BA500C15E855DC00E14A4E /* MaDataSource.m */; };
@@ -234,6 +233,8 @@
 		596F8870160ECD810036E2CC /* EGORefreshTableHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EGORefreshTableHeaderView.m; path = src/3rd/RefreshTableHeaderView/EGORefreshTableHeaderView.m; sourceTree = "<group>"; };
 		596F88BF160EF91A0036E2CC /* a.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = a.jpeg; path = Resources/a.jpeg; sourceTree = "<group>"; };
 		596F88C0160EF91A0036E2CC /* b.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = b.jpeg; path = Resources/b.jpeg; sourceTree = "<group>"; };
+		597E4E41165C8E72005E8FD7 /* MaDetailImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MaDetailImageViewController.h; path = src/MaDetailImageViewController.h; sourceTree = "<group>"; };
+		597E4E42165C8E72005E8FD7 /* MaDetailImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MaDetailImageViewController.m; path = src/MaDetailImageViewController.m; sourceTree = "<group>"; };
 		598365D315E5E1E300E4E885 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		598365F515E5E55900E4E885 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		5983660F15E6866800E4E885 /* MaBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MaBaseViewController.h; path = src/MaBaseViewController.h; sourceTree = "<group>"; };
@@ -257,10 +258,6 @@
 		59A5BC3E15E893C200E67D54 /* activityDataSource.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = activityDataSource.plist; path = Resources/activityDataSource.plist; sourceTree = "<group>"; };
 		59A5BC4015E8975600E67D54 /* MaCoverFlowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MaCoverFlowView.h; path = src/MaCoverFlowView.h; sourceTree = "<group>"; };
 		59A5BC4115E8975600E67D54 /* MaCoverFlowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MaCoverFlowView.m; path = src/MaCoverFlowView.m; sourceTree = "<group>"; };
-		59A958661604483000669275 /* MaScrollImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MaScrollImageView.h; path = src/MaScrollImageView.h; sourceTree = "<group>"; };
-		59A958671604483000669275 /* MaScrollImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MaScrollImageView.m; path = src/MaScrollImageView.m; sourceTree = "<group>"; };
-		59A9586B16045CCE00669275 /* MaScrollImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MaScrollImageViewController.h; path = src/MaScrollImageViewController.h; sourceTree = "<group>"; };
-		59A9586C16045CCE00669275 /* MaScrollImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MaScrollImageViewController.m; path = src/MaScrollImageViewController.m; sourceTree = "<group>"; };
 		59A9586E16045E7E00669275 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "Resources/Default-568h@2x.png"; sourceTree = "<group>"; };
 		59ABA483164262B70060983A /* DTCoreText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DTCoreText.xcodeproj; path = src/3rd/DTCoreText/DTCoreText.xcodeproj; sourceTree = "<group>"; };
 		59BA500B15E855DC00E14A4E /* MaDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MaDataSource.h; path = src/MaDataSource.h; sourceTree = "<group>"; };
@@ -370,28 +367,13 @@
 		591FCCD915CFBD31004FE480 /* MoreArt */ = {
 			isa = PBXGroup;
 			children = (
-				2607A916160EE82C00B45451 /* Start */,
+				597E4E90165CD1CF005E8FD7 /* MaBase */,
 				59CA53C115CFC593006FC431 /* MaDefine.h */,
 				591FCD2A15CFBF02004FE480 /* 3rd */,
 				591FCCF615CFBD9E004FE480 /* MaRootViewController.h */,
 				591FCCF715CFBD9E004FE480 /* MaRootViewController.m */,
 				591FCD2415CFBE3E004FE480 /* MoreArtAppDelegate.h */,
 				591FCD2515CFBE3E004FE480 /* MoreArtAppDelegate.m */,
-				5983660F15E6866800E4E885 /* MaBaseViewController.h */,
-				5983661015E6866800E4E885 /* MaBaseViewController.m */,
-				5983661515E688C600E4E885 /* MaTableView.h */,
-				5983661615E688C600E4E885 /* MaTableView.m */,
-				59EFD3ED1629294700E1FA9F /* MaPlainView.h */,
-				59EFD3EE1629294700E1FA9F /* MaPlainView.m */,
-				59175FFB15F30AD20098729B /* MaEZCell */,
-				5961503815F26E6900C93978 /* MaDetailViewController.h */,
-				5961503915F26E6A00C93978 /* MaDetailViewController.m */,
-				59237264164B8B8900FF5A97 /* MaImageArrayView.h */,
-				59237265164B8B8900FF5A97 /* MaImageArrayView.m */,
-				59EFD3EC1629291800E1FA9F /* ScrollImage */,
-				59A5BC4315E8975B00E67D54 /* CoverFlow */,
-				5917601315F32BAC0098729B /* MaCrossFadeView.h */,
-				5917601415F32BAD0098729B /* MaCrossFadeView.m */,
 				598365FF15E5E89500E4E885 /* DouWo */,
 				598365FD15E5E86600E4E885 /* DouSpace */,
 				5983660915E6277A00E4E885 /* Art029 */,
@@ -399,8 +381,7 @@
 				5983660B15E6279100E4E885 /* MoPhoto */,
 				598365F315E5E28B00E4E885 /* Settings */,
 				5983665115E699D600E4E885 /* About */,
-				598365F415E5E55900E4E885 /* Localizable.strings */,
-				59BA500E15E855E300E14A4E /* DataSource */,
+				597E4E8F165CD1B5005E8FD7 /* TEST */,
 				591FCD0515CFBDA8004FE480 /* Resources */,
 				591FCCDA15CFBD31004FE480 /* Supporting Files */,
 			);
@@ -421,6 +402,7 @@
 		591FCD0515CFBDA8004FE480 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				598365F415E5E55900E4E885 /* Localizable.strings */,
 				59A9586E16045E7E00669275 /* Default-568h@2x.png */,
 				5947AAD0160314BC007B4A68 /* dot_Selected.png */,
 				5947AAD1160314BC007B4A68 /* dot_Selected@2x.png */,
@@ -523,6 +505,34 @@
 			name = RefreshTableHeaderView;
 			sourceTree = "<group>";
 		};
+		597E4E8F165CD1B5005E8FD7 /* TEST */ = {
+			isa = PBXGroup;
+			children = (
+				2607A916160EE82C00B45451 /* Start */,
+				5917601315F32BAC0098729B /* MaCrossFadeView.h */,
+				5917601415F32BAD0098729B /* MaCrossFadeView.m */,
+			);
+			name = TEST;
+			sourceTree = "<group>";
+		};
+		597E4E90165CD1CF005E8FD7 /* MaBase */ = {
+			isa = PBXGroup;
+			children = (
+				59BA500E15E855E300E14A4E /* DataSource */,
+				59175FFB15F30AD20098729B /* MaEZCell */,
+				59A5BC4315E8975B00E67D54 /* CoverFlow */,
+				597E4E41165C8E72005E8FD7 /* MaDetailImageViewController.h */,
+				597E4E42165C8E72005E8FD7 /* MaDetailImageViewController.m */,
+				5983660F15E6866800E4E885 /* MaBaseViewController.h */,
+				5983661015E6866800E4E885 /* MaBaseViewController.m */,
+				5983661515E688C600E4E885 /* MaTableView.h */,
+				5983661615E688C600E4E885 /* MaTableView.m */,
+				59EFD3ED1629294700E1FA9F /* MaPlainView.h */,
+				59EFD3EE1629294700E1FA9F /* MaPlainView.m */,
+			);
+			name = MaBase;
+			sourceTree = "<group>";
+		};
 		598365F315E5E28B00E4E885 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
@@ -553,6 +563,10 @@
 		5983660915E6277A00E4E885 /* Art029 */ = {
 			isa = PBXGroup;
 			children = (
+				59237264164B8B8900FF5A97 /* MaImageArrayView.h */,
+				59237265164B8B8900FF5A97 /* MaImageArrayView.m */,
+				5961503815F26E6900C93978 /* MaDetailViewController.h */,
+				5961503915F26E6A00C93978 /* MaDetailViewController.m */,
 				5983661E15E68A7100E4E885 /* MaArt029View.h */,
 				5983661F15E68A7100E4E885 /* MaArt029View.m */,
 			);
@@ -627,17 +641,6 @@
 				59C888FF1655F06600C0A13A /* imageIndex.plist */,
 			);
 			name = DataSource;
-			sourceTree = "<group>";
-		};
-		59EFD3EC1629291800E1FA9F /* ScrollImage */ = {
-			isa = PBXGroup;
-			children = (
-				59A958661604483000669275 /* MaScrollImageView.h */,
-				59A958671604483000669275 /* MaScrollImageView.m */,
-				59A9586B16045CCE00669275 /* MaScrollImageViewController.h */,
-				59A9586C16045CCE00669275 /* MaScrollImageViewController.m */,
-			);
-			name = ScrollImage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -840,12 +843,11 @@
 				5961501015F251B300C93978 /* MaEZCell.m in Sources */,
 				5961503A15F26E6B00C93978 /* MaDetailViewController.m in Sources */,
 				5917601515F32BAD0098729B /* MaCrossFadeView.m in Sources */,
-				59A958681604483000669275 /* MaScrollImageView.m in Sources */,
-				59A9586D16045CCE00669275 /* MaScrollImageViewController.m in Sources */,
 				59D213C2160DA634000968E5 /* AsyncImageView.m in Sources */,
 				596F8873160ECD810036E2CC /* EGORefreshTableHeaderView.m in Sources */,
 				59EFD3EF1629294700E1FA9F /* MaPlainView.m in Sources */,
 				59237266164B8B8900FF5A97 /* MaImageArrayView.m in Sources */,
+				597E4E43165C8E72005E8FD7 /* MaDetailImageViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,7 +11,7 @@
 #import "MaImageArrayView.h"
 
 
-@interface MaDetailViewController : UIViewController <DTAttributedTextContentViewDelegate>
+@interface MaDetailViewController : UIViewController <DTAttributedTextContentViewDelegate,MaImageArrayViewDelegate>
 {
     UIScrollView* _scrollView;
     

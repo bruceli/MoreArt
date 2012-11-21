@@ -8,6 +8,8 @@
 
 #import "MaDetailViewController.h"
 #import "MoreArtAppDelegate.h"
+#import "MaDetailImageViewController.h"
+
 #define kMA_PARAGRPH_MARK
 
 @interface MaDetailViewController ()
@@ -37,7 +39,7 @@
     
     self.view = _scrollView;
     _scrollView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"setting_bkg.png"]];
-    
+
     //    MoreArtAppDelegate* app = (MoreArtAppDelegate *)[[UIApplication sharedApplication] delegate];
     // Load data from MGR
     
@@ -52,6 +54,7 @@
     
     _imageGroupView = [[MaImageArrayView alloc] initWithFrame:CGRectMake(0, 195, 320, 68)];
     _imageGroupView.backgroundColor = [UIColor lightGrayColor];
+    _imageGroupView.img_delegate = self;
     [self.view addSubview:_imageGroupView];
     
 	_textView = [[DTAttributedTextView alloc] initWithFrame:CGRectMake(10, 260, 300, 100)];
@@ -62,10 +65,13 @@
     
     [self fillContents];
     [self adjustViewSize];
-    
-    //    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"UIDeviceOrientationDidChangeNotification" object:nil];
-    //    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(orientationChanged:) name:@"UIDeviceOrientationDidChangeNotification" object:nil];
+    [[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"UIDeviceOrientationDidChangeNotification" object:nil];
+	
+	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(orientationChanged:) name:@"UIDeviceOrientationDidChangeNotification" object:nil];
 }
+
+
 
 - (void)viewDidUnload
 {
@@ -187,6 +193,45 @@
     _scrollView.contentSize = size;
 }
 
+-(void)prepareCoverFlowImage
+{
+    MoreArtAppDelegate* app = (MoreArtAppDelegate *)[[UIApplication sharedApplication] delegate];
+    // Load data from MGR
+    NSDictionary* dict = [app.dataSourceMgr.dataSource objectAtIndex: _indexPath.row];
+    NSDictionary* imgDict = app.dataSourceMgr.imageIndexDict;
+	NSString* imgPath;
+
+    // Fill IMG
+    CGFloat scale = [[UIScreen mainScreen] scale];
+
+    // Fill imageArray;
+    NSArray* array = [dict objectForKey:@"imageArray"];
+    NSMutableArray* imgArray = [[NSMutableArray alloc] init];
+    // Use square image form pic server
+    for (NSDictionary* dict in array) {
+        NSString* imagePrefix = [dict objectForKey:@"imageName"];
+        if ([imagePrefix length]>0) {
+            if (scale>1)
+            {
+                NSMutableString* retinaImageName = [NSMutableString stringWithString:imagePrefix];
+                [retinaImageName appendString:@"@2x"];
+                imgPath = [imgDict objectForKey:retinaImageName];
+            }
+            else
+                imgPath = [imgDict objectForKey:imagePrefix];
+        }
+        NSMutableDictionary* imgDict = [NSMutableDictionary dictionaryWithDictionary:dict];
+        
+        if([imgPath length]>0)
+            [imgDict setObject:imgPath forKey:@"imagePath"];
+        
+        [imgArray addObject:imgDict];
+    }
+
+	[app.coverFlowView loadCoverFlowImageBy :imgArray ];
+	
+}
+
 - (void) orientationChanged:(id)object
 {
 	UIInterfaceOrientation interfaceOrientation = [[object object] orientation];
@@ -208,6 +253,8 @@
             //            NSLog(@"%@", @"==== landScape Mode");
             _currentView = self.view;
         }
+        
+        [self prepareCoverFlowImage];
         self.view = app.coverFlowView;
         self.navigationController.navigationBarHidden = YES;
         
@@ -284,6 +331,17 @@
     return resultString;
 }
 
+- (void)openImage:(NSString*)path;
+{
 
+    MaDetailImageViewController* viewController = [[MaDetailImageViewController alloc]init];
+        //viewController.imageName = @"cartoonOriginal.jpg";
+        //viewController.navigationItem.title = NSLocalizedString(@"CartoonMap",nil);
+    
+    viewController.imagePath = path;
+    [viewController setupImage];
+    [self.navigationController pushViewController: viewController animated:YES];
+
+}
 
 @end

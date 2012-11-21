@@ -16,12 +16,14 @@
 {
 	TKCoverflowView *coverflow;
 	NSMutableArray *covers; // album covers images
+	NSArray* _imagePathArray;
 	BOOL collapsed;
 
     UILabel* detailLabel;
     
 }
 //- (void)loadCoverflowView;
+-(void)loadCoverFlowImageBy:(NSArray*)array;
 
 @property (retain,nonatomic) TKCoverflowView *coverflow;
 @property (retain,nonatomic) NSMutableArray *covers;

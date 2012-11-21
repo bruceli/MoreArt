@@ -101,7 +101,8 @@
     }
     
     cell.rightLayout = YES;
-    
+    cell.imgName = @"";
+
     cell.accessoryView = [[ UIImageView alloc ] initWithImage:[UIImage imageNamed:@"cellAccessory" ]];
     
     NSDictionary* dict = [_dataSourceMgr.dataSource objectAtIndex: indexPath.row];

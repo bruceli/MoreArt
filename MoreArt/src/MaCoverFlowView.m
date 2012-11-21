@@ -7,6 +7,7 @@
 //
 
 #import "MaCoverFlowView.h"
+#import "AsyncImageView.h"
 
 @interface MaCoverFlowView ()
 @end
@@ -21,14 +22,8 @@
     if (self) {
         self.autoresizingMask = UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleHeight;
         NSLog(@"%@", @"Layout coverFlow View");
-        covers = [[NSMutableArray alloc] initWithObjects:
-                  [UIImage imageNamed:@"cover_2.jpg"],[UIImage imageNamed:@"cover_1.jpg"],
-                  [UIImage imageNamed:@"cover_3.jpg"],[UIImage imageNamed:@"cover_4.jpg"],
-                  [UIImage imageNamed:@"cover_5.jpg"],[UIImage imageNamed:@"cover_6.jpg"],
-                  [UIImage imageNamed:@"cover_7.jpg"],[UIImage imageNamed:@"cover_8.jpg"],
-                  [UIImage imageNamed:@"cover_9.jpeg"],nil];
-        
-            
+        covers = [[NSMutableArray alloc] init ];
+		
         self.backgroundColor = [UIColor whiteColor];
         self.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
         
@@ -36,18 +31,23 @@
         coverflow.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
         coverflow.coverflowDelegate = self;
         coverflow.dataSource = self;
-        [coverflow setNumberOfCovers:20];
-
+		[coverflow setNumberOfCovers:0];
         [self addSubview:coverflow];
+		
+		
                 
-        detailLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 200, 460 , 90)];
-        detailLabel.backgroundColor = [[UIColor darkGrayColor]colorWithAlphaComponent:0.9];
-        [self addSubview:detailLabel];
-
+     //   detailLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 200, 460 , 90)];
+     //   detailLabel.backgroundColor = [[UIColor darkGrayColor]colorWithAlphaComponent:0.9];
+     //   [self addSubview:detailLabel];
     }
     return self;
 }
 
+-(void)loadCoverFlowImageBy:(NSArray*)array
+{
+	_imagePathArray = array;
+	[coverflow setNumberOfCovers:[array count]];
+}
 
 
 - (void) coverflowView:(TKCoverflowView*)coverflowView coverAtIndexWasBroughtToFront:(int)index{
@@ -63,11 +63,15 @@
 		cover = [[TKCoverflowCoverView alloc] initWithFrame:rect]; // 224
 		cover.baseline = 224;
 	}
-    
-	cover.image = [covers objectAtIndex:index%[covers count]];
-    
-	return cover;
 	
+	//if ([covers count]>0)     
+	//	cover.image = [covers objectAtIndex:index%[covers count]];
+    
+	NSDictionary* dict = [_imagePathArray objectAtIndex:index];
+	NSString* path = [dict objectForKey:@"imagePath"];
+	[[AsyncImageLoader sharedLoader] loadImageWithURL:[NSURL URLWithString:path] target:cover action:@selector(setImage:)];
+	
+	return cover;
 }
 
 - (void) coverflowView:(TKCoverflowView*)coverflowView coverAtIndexWasTappedInFront:(int)index tapCount:(NSInteger)tapCount{

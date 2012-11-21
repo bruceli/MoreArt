@@ -6,11 +6,10 @@
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import "MATableView.h"
+#import "MaPlainView.h"
 
 
-@interface MaDouWoView : MaTableView
+@interface MaDouWoView : MaPlainView
 {
-    
 }
 @end
