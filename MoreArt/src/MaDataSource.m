@@ -23,7 +23,6 @@
         NSLog(@"%@", @"Init DataSourceMgr");
         NSLog(@"%@", @"/");
 
-
         NSString* path = [[NSBundle mainBundle] pathForResource:@"activityDataSource" ofType:@"plist"];
         //    NSLog(@"Datasource Location... %@", path);
         
@@ -33,9 +32,7 @@
         _dataSource = [[NSMutableArray alloc] init];
 //        _dataSource  = [_rootDictonary objectForKey:[_enumActivitiesArray objectAtIndex:DOU_TYPE_DO_WUO]];
         [self loadImageIndex];
-        
     }
-
     return self;
 }
 

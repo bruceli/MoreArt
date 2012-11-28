@@ -184,14 +184,11 @@
     app.baseViewController.navigationItem.title = [itemArray objectAtIndex:MA_MENU_TITLE];
     
     
-    if ([[itemArray objectAtIndex:MA_MENU_CONTROLLER] isKindOfClass:[MaTableView class]]) {
-        [((MaTableView*)app.baseViewController.view).scrollImageViewController startScrolling];
-        [app.baseViewController updateDataSourceBy:indexPath.row];
+//    if ([[itemArray objectAtIndex:MA_MENU_CONTROLLER] isKindOfClass:[MaTableView class]]) {
 
-    }
-
-    
-    [self.revealSideViewController popViewControllerAnimated:YES];
+	// update Data source
+	[app.baseViewController updateDataSourceBy:indexPath.row];	
+	[self.revealSideViewController popViewControllerAnimated:YES];
 }
 
 @end

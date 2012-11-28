@@ -2,6 +2,33 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>douWo</key>
+	<array>
+		<dict>
+			<key>imageName</key>
+			<string>douwoB</string>
+			<key>artDiscription</key>
+			<string>天气现象主要源于不同地方的温度差异。从大的尺度来看，接近赤道的地区单位面积接收到的太阳能总的来说比其他地区大。</string>
+		</dict>
+		<dict>
+			<key>imageName</key>
+			<string>douwoC</string>
+			<key>artDiscription</key>
+			<string>天氣密度（溫度和濕度）是由一個地方和另一個之間的差異 。這些差異可能是由於從熱帶太陽的角度在任何特定地點，由不同緯度。</string>
+		</dict>
+		<dict>
+			<key>imageName</key>
+			<string>douwoD</string>
+			<key>artDiscription</key>
+			<string>極地和熱帶空氣之間的強烈的溫度反差引起的噴流 。在天氣系統中緯度地區，如溫帶氣旋，造成噴流流的不穩定性 。</string>
+		</dict>
+		<dict>
+			<key>imageName</key>
+			<string>douwoE</string>
+			<key>artDiscription</key>
+			<string>表面溫度反過來的差異造成的壓力差。天氣預報是科學和應用技術，預測國家未來某個時間和位置的大氣。</string>
+		</dict>
+	</array>
 	<key>art029</key>
 	<array>
 		<dict>
@@ -1339,126 +1366,6 @@
 					<string></string>
 				</dict>
 			</array>
-		</dict>
-	</array>
-	<key>douWo</key>
-	<array>
-		<dict>
-			<key>title</key>
-			<string>Wifi</string>
-			<key>discription</key>
-			<string>设计师和工程师致力于创造一款耳机，让各种耳型的用户都能舒适、牢固地佩戴，同时能够呈现绝佳的音质效果。他们邀请多人测试了种不同的设计原型。最终</string>
-			<key>detail</key>
-			<string>第一部電腦並沒有作業系統。這是由於早期電腦的建立方式（如同建造機械算盤）與效能不足以執行如此程式。但在1947年發明了電晶體，以及莫里斯·威尔克斯發明的微程序方法，使得電腦不再是機械裝置，而是電子產品。系統管理工具以及簡化硬體操作流程的程式很快就出現了，且成為作業系統的濫觴。到了1960年代早期，商用電腦製造商製造了批次處理系統，此系統可將工作的建置、排程以及執行序列化。此時，廠商為每一台不同型號的電腦創造不同的作業系統，因此為某電腦而寫的程式無法移植到其他電腦上執行，即使是同型號的電腦也不行。
-到了1964年，IBM System/360推出了一系列用途與價位都不同的大型電腦，而它們都共用代號為OS/360的作業系統（而非每種產品都用量身訂做的作業系統）。讓單一作業系統適用於整個系列的產品是System/360成功的關鍵，且實際上IBM目前的大型系統便是此系統的後裔；為System/360所寫的應用程式依然可以在現代的IBM機器上執行！</string>
-			<key>imageArray</key>
-			<array>
-				<dict>
-					<key>imageName</key>
-					<string></string>
-					<key>artDiscription</key>
-					<string></string>
-				</dict>
-				<dict>
-					<key>imageName</key>
-					<string></string>
-					<key>artDiscription</key>
-					<string></string>
-				</dict>
-				<dict>
-					<key>imageName</key>
-					<string></string>
-					<key>artDiscription</key>
-					<string></string>
-				</dict>
-			</array>
-		</dict>
-		<dict>
-			<key>imageArray</key>
-			<array>
-				<dict>
-					<key>imageName</key>
-					<string></string>
-					<key>artDiscription</key>
-					<string></string>
-				</dict>
-				<dict>
-					<key>imageName</key>
-					<string></string>
-					<key>artDiscription</key>
-					<string></string>
-				</dict>
-				<dict>
-					<key>imageName</key>
-					<string></string>
-					<key>artDiscription</key>
-					<string></string>
-				</dict>
-			</array>
-			<key>title</key>
-			<string>闻乐起舞</string>
-			<key>discription</key>
-			<string>轻点播放出你钟爱的歌曲，或整个专辑，或某位艺术家的所有曲目。</string>
-			<key>detail</key>
-			<string>试想你正听着一首心爱的歌曲，还想继续沉浸在同一曲风的曼妙旋律中，只需轻点 Genius, 它会在 iPod nano 找出风格与之极其相配的其他歌曲，并为你生成一个 Genius 播放列表。要获得更多意想不到的歌曲组合，尽可在 iTunes 中创建 Genius 混合曲目，并将喜欢的组合同步到 iPod nano 上。然后轻点 Genius 混合曲目，重新发现你久违的歌曲，或找到已被你遗忘的旋律。</string>
-		</dict>
-		<dict>
-			<key>imageArray</key>
-			<array>
-				<dict>
-					<key>imageName</key>
-					<string></string>
-					<key>artDiscription</key>
-					<string></string>
-				</dict>
-				<dict>
-					<key>imageName</key>
-					<string></string>
-					<key>artDiscription</key>
-					<string></string>
-				</dict>
-				<dict>
-					<key>imageName</key>
-					<string></string>
-					<key>artDiscription</key>
-					<string></string>
-				</dict>
-			</array>
-			<key>title</key>
-			<string>更加纤薄</string>
-			<key>discription</key>
-			<string>你钟爱的音乐、照片和视频都能呈现得更加清晰。按钮可让你快速播放、暂停、切换歌曲，也可调节音量。</string>
-			<key>detail</key>
-			<string>平滑的全新阳极电镀铝设计，令 iPod nano 的触感与其音质一样出色。 如果没有绚丽夺目，难以取舍的缤纷色彩，iPod nano 也就不是 iPod nano 了。</string>
-		</dict>
-		<dict>
-			<key>imageArray</key>
-			<array>
-				<dict>
-					<key>imageName</key>
-					<string></string>
-					<key>artDiscription</key>
-					<string></string>
-				</dict>
-				<dict>
-					<key>imageName</key>
-					<string></string>
-					<key>artDiscription</key>
-					<string></string>
-				</dict>
-				<dict>
-					<key>imageName</key>
-					<string></string>
-					<key>artDiscription</key>
-					<string></string>
-				</dict>
-			</array>
-			<key>title</key>
-			<string>更宽广的世界</string>
-			<key>discription</key>
-			<string>作为相机手机风靡全世界，完全在情理之中，因为照片看起来如此赏心悦目，很难相信是手机拍摄。</string>
-			<key>detail</key>
-			<string>每张照片都有 800 万像素高分辨率，并且由具备更大光圈的 ƒ/2.4 定制镜头拍摄，此外还有更先进的背部照度传感器、出色的自动白平衡功能、更理想的色彩保真度和面部检测，图像模糊的情况也会减少。iOS 6 推出一项激动人心的全新功能：全景模式。只需一次平滑移动，你就可以拍下效果惊人的 240 度全景照片。无论拍摄家庭聚会大合照，或绵延数里的绚丽落日场景，大画面中的巨细点滴都可尽收镜底。陀螺仪、A5 芯片和相机 app 相互配合，呈现出天衣无缝的高分辨率全景照。</string>
 		</dict>
 	</array>
 	<key>enumArray</key>

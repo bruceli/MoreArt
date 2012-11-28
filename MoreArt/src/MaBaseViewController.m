@@ -50,6 +50,7 @@
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(orientationChanged:) name:@"UIDeviceOrientationDidChangeNotification" object:nil];
     
 	self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemStop target:self action:@selector(slideSettingViewController)];
+	
 }
 
 -(void)updateDataSourceBy:(MaDouViewType)type
@@ -176,5 +177,46 @@
 }
 
 
+-(void) toggleZoom:(AsyncImageView*) sender 
+{
+	if (proxyView)
+	{
+		CGRect frame =
+		[proxyView.superview convertRect:sender.frame fromView:sender.window];
+		sender.frame = frame;
+		
+		CGRect proxyViewFrame = proxyView.frame;
+		
+		[proxyView.superview addSubview:sender];
+		[proxyView removeFromSuperview];
+		proxyView = nil;
+		
+		[UIView animateWithDuration:0.2 animations:^{ sender.frame = proxyViewFrame; }];
+		
+		[UIView animateWithDuration:0.2 animations:
+					^{ sender.frame = proxyViewFrame;} 
+				completion:
+					^(BOOL finished){
+						[[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationFade];
+						[self.navigationController setNavigationBarHidden:NO animated:YES];
+					}
+		 ];
+	}
+	else
+	{
+		proxyView = [[UIView alloc] initWithFrame:sender.frame];
+		proxyView.hidden = YES;
+		proxyView.autoresizingMask = sender.autoresizingMask;
+		[sender.superview addSubview:proxyView];
+		
+		CGRect frame = [sender.window convertRect:sender.frame fromView:proxyView.superview];
+		[sender.window addSubview:sender];
+		sender.frame = frame;
+		
+		[UIView animateWithDuration:0.2 animations:^{ sender.frame = sender.window.bounds;}];
+		[[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationFade];
+		[self.navigationController setNavigationBarHidden:YES animated:YES];
+	}
+}
 
 @end

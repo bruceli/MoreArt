@@ -8,6 +8,8 @@
 #define ZOOM_VIEW_TAG 100
 #define ZOOM_STEP 1.5
 
+
+
 #import "MaDetailImageViewController.h"
 
 @interface MaDetailImageViewController ()
@@ -30,7 +32,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
 }
 
 -(void)setupViews
@@ -52,7 +53,6 @@
     [[AsyncImageLoader sharedLoader] cancelLoadingImagesForTarget:_imageView];
     
     [_scrollView addSubview:_imageView];
-    
     // CGRect frame = CGRectMake(0,0,320,400);
     // [imageView setFrame:frame];
     

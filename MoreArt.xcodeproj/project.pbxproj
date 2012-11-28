@@ -233,6 +233,10 @@
 		596F8870160ECD810036E2CC /* EGORefreshTableHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EGORefreshTableHeaderView.m; path = src/3rd/RefreshTableHeaderView/EGORefreshTableHeaderView.m; sourceTree = "<group>"; };
 		596F88BF160EF91A0036E2CC /* a.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = a.jpeg; path = Resources/a.jpeg; sourceTree = "<group>"; };
 		596F88C0160EF91A0036E2CC /* b.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = b.jpeg; path = Resources/b.jpeg; sourceTree = "<group>"; };
+		5972C579165DE6F500E7B145 /* MaScrollImageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MaScrollImageView.h; path = src/MaScrollImageView.h; sourceTree = "<group>"; };
+		5972C57A165DE6F500E7B145 /* MaScrollImageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = MaScrollImageView.m; path = src/MaScrollImageView.m; sourceTree = "<group>"; };
+		5972C57B165DE6F500E7B145 /* MaScrollImageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MaScrollImageViewController.h; path = src/MaScrollImageViewController.h; sourceTree = "<group>"; };
+		5972C57C165DE6F500E7B145 /* MaScrollImageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = MaScrollImageViewController.m; path = src/MaScrollImageViewController.m; sourceTree = "<group>"; };
 		597E4E41165C8E72005E8FD7 /* MaDetailImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MaDetailImageViewController.h; path = src/MaDetailImageViewController.h; sourceTree = "<group>"; };
 		597E4E42165C8E72005E8FD7 /* MaDetailImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MaDetailImageViewController.m; path = src/MaDetailImageViewController.m; sourceTree = "<group>"; };
 		598365D315E5E1E300E4E885 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
@@ -436,11 +440,11 @@
 		591FCD2A15CFBF02004FE480 /* 3rd */ = {
 			isa = PBXGroup;
 			children = (
+				596F886C160ECD2B0036E2CC /* SideViewController */,
 				59ABA4AC164262BE0060983A /* DTCoreText */,
 				596F886E160ECD5B0036E2CC /* RefreshTableHeaderView */,
 				596F886D160ECD460036E2CC /* AsyncImageView */,
 				593907D115E0B9C600A09C51 /* TKLib */,
-				596F886C160ECD2B0036E2CC /* SideViewController */,
 			);
 			name = 3rd;
 			sourceTree = "<group>";
@@ -508,6 +512,10 @@
 		597E4E8F165CD1B5005E8FD7 /* TEST */ = {
 			isa = PBXGroup;
 			children = (
+				5972C579165DE6F500E7B145 /* MaScrollImageView.h */,
+				5972C57A165DE6F500E7B145 /* MaScrollImageView.m */,
+				5972C57B165DE6F500E7B145 /* MaScrollImageViewController.h */,
+				5972C57C165DE6F500E7B145 /* MaScrollImageViewController.m */,
 				2607A916160EE82C00B45451 /* Start */,
 				5917601315F32BAC0098729B /* MaCrossFadeView.h */,
 				5917601415F32BAD0098729B /* MaCrossFadeView.m */,

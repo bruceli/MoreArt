@@ -9,7 +9,11 @@
 #import "MaPlainView.h"
 
 
-@interface MaDouWoView : MaPlainView
+@interface MaDouWoView : MaPlainView <UIScrollViewDelegate>
 {
+	NSInteger _currentPageIndex;
+    UIScrollView* _scrollView;
 }
+
+
 @end

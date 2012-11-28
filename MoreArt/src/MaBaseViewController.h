@@ -8,12 +8,14 @@
 
 #import <UIKit/UIKit.h>
 @class MaDataSource;
+#import "MaPlainView.h"
 
-@interface MaBaseViewController : UIViewController <UITableViewDataSource,UITableViewDelegate>
+@interface MaBaseViewController : UIViewController <UITableViewDataSource,UITableViewDelegate,MaViewPlainDelegate>
 {
     id currentView;
     
     MaDataSource* _dataSourceMgr;
+	UIView *proxyView;
     
 }
 

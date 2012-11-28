@@ -8,20 +8,19 @@
 
 #import <UIKit/UIKit.h>
 #import "MaDefine.h"
-@class MaScrollImageViewController;
 
+@class MaPlainView,AsyncImageView; 
+@protocol MaViewPlainDelegate   //define delegate protocol
+- (void) toggleZoom: (AsyncImageView *) sender; 
+@end //end protocol
 
-@interface MaPlainView : UIView
+@interface MaPlainView : UIView 
 {
-    MaDouViewType _douViewType;
-//    MaScrollImageViewController* _scrollImageViewController;
-    
-    DTAttributedTextView* _textView;
-    UIScrollView* _scrollView;
+    MaDouViewType _douViewType;    
+//    DTAttributedTextView* _textView;
     UIView* _leftShadowView;
-    UIView* _rightShadowView;
-
-    
-    
+    UIView* _rightShadowView;    
 }
+@property (nonatomic, weak) id <MaViewPlainDelegate> delegate; //define MyClassDelegate as delegate
+
 @end
