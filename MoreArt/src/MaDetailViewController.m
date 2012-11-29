@@ -37,6 +37,7 @@
     _scrollView = [[UIScrollView alloc ] initWithFrame:bounds ];
     _scrollView.alwaysBounceVertical=YES;
     
+	
     self.view = _scrollView;
     _scrollView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"setting_bkg.png"]];
 
@@ -193,6 +194,7 @@
     _scrollView.contentSize = size;
 }
 
+
 -(void)prepareCoverFlowImage
 {
     MoreArtAppDelegate* app = (MoreArtAppDelegate *)[[UIApplication sharedApplication] delegate];
@@ -331,17 +333,91 @@
     return resultString;
 }
 
-- (void)openImage:(NSString*)path;
+- (void)openImage:(AsyncImageView*)view;
 {
-
-    MaDetailImageViewController* viewController = [[MaDetailImageViewController alloc]init];
-        //viewController.imageName = @"cartoonOriginal.jpg";
-        //viewController.navigationItem.title = NSLocalizedString(@"CartoonMap",nil);
-    
-    viewController.imagePath = path;
-    [viewController setupImage];
-    [self.navigationController pushViewController: viewController animated:YES];
-
+	
 }
+
+-(void)addSingleTapGestureRecognizerTo:(UIView*)view
+{
+    UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleSingleTap:)];
+	singleTap.numberOfTapsRequired = 1;
+	[view setUserInteractionEnabled:YES];
+    [view addGestureRecognizer:singleTap];
+}
+
+- (void)handleSingleTap:(UIGestureRecognizer *)gestureRecognizer {
+	UIView* view = gestureRecognizer.view;	
+	[self toggleZoom:view];
+}
+
+-(void)initScrollableImageView:(UIImage*)image
+{
+	[self addSingleTapGestureRecognizerTo:_scrollableImageView];
+	
+}
+
+-(void) toggleZoom:(UIView*) sender 
+{
+	if (_hiddenView)
+	{					
+		// zoomout
+		CGRect frame = [sender.window convertRect:_hiddenView.frame fromView:_hiddenView.superview];
+
+		NSLog(@"end frame is ,%@", NSStringFromCGRect(frame));
+		[[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationSlide];
+		[UIView animateWithDuration:0.3 animations:
+		 ^{ sender.frame = frame; sender.alpha = 0.0;} 
+						 completion:
+		 ^(BOOL finished){
+			 [_scrollableImageView removeFromSuperview];
+			 _hiddenView = nil;
+			 _scrollableImageView = nil;
+		 }];
+	}
+	else
+	{					// zoom in
+		_hiddenView = (AsyncImageView*)sender;
+		
+		_scrollableImageView = [[UIScrollView alloc]init];
+		_scrollableImageView.delegate = self;
+		_scrollableImageView.backgroundColor = [UIColor orangeColor];
+
+		
+		CGRect frame = [sender.window convertRect:sender.frame fromView:sender.superview];
+		NSLog(@"Sender frame is ,%@", NSStringFromCGRect(frame));
+
+		CGRect screenRect = [[UIScreen mainScreen] bounds];
+//		NSLog(@"screenRect frame is ,%@", NSStringFromCGRect(screenRect));
+		// prepair scrollableImage Animation
+		_scrollableImageView.frame = frame;
+		[UIView animateWithDuration:0.2 animations:^{ _scrollableImageView.frame = screenRect; }];
+		[self initScrollableImageView:((AsyncImageView*)sender).image];
+		[sender.window addSubview:_scrollableImageView];
+
+//		[self.navigationController setNavigationBarHidden:YES animated:YES];
+		[[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationSlide];
+
+		//------------------
+		/*
+		//[sender.window addSubview:sender];
+		[self initScrollableImageView:((AsyncImageView*)sender).image];
+		[sender.window addSubview:_scrollView];
+		_scrollView.frame = frame;
+		 CGRect frame = [sender.window convertRect:sender.frame fromView:proxyView.superview];
+		 [sender.window addSubview:sender];
+		 sender.frame = frame;
+		[self.navigationController setNavigationBarHidden:YES animated:YES];
+		[[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationFade];
+		
+		//		[UIView animateWithDuration:0.2 animations:^{ sender.frame = sender.window.bounds;}];
+		 */
+
+	}
+}
+
+
+
+
 
 @end

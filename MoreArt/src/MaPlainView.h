@@ -11,7 +11,7 @@
 
 @class MaPlainView,AsyncImageView; 
 @protocol MaViewPlainDelegate   //define delegate protocol
-- (void) toggleZoom: (AsyncImageView *) sender; 
+- (void) toggleZoom: (UIView *) sender; 
 @end //end protocol
 
 @interface MaPlainView : UIView 

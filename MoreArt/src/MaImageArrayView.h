@@ -8,9 +8,10 @@
 
 #import <UIKit/UIKit.h>
 @class MaImageArrayView;
+@class AsyncImageView;
 
 @protocol MaImageArrayViewDelegate
-- (void) openImage: (NSString *) path;
+-(void)toggleZoom:(UIView*) sender;
 @end //end protocol
 
 @interface MaImageArrayView : UIScrollView

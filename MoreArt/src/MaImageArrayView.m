@@ -121,17 +121,20 @@
     AsyncImageView* imgView = (AsyncImageView*)gesture.view ;
     
     NSInteger index = [_imageViewArray indexOfObject:imgView];
-    NSLog(@"%d",index);
-    NSDictionary* dict = [_imageArray objectAtIndex:index];
-    NSString* imgPath = [dict objectForKey:@"imagePath"];
-    NSLog(@"%@",imgPath);
-    [self popupImageFrom:imgPath];
+//    NSLog(@"%d",index);
+//    NSDictionary* dict = [_imageArray objectAtIndex:index];
+//    NSString* imgPath = [dict objectForKey:@"imagePath"];
+//    NSLog(@"%@",imgPath);
+	if (index < [_imageArray count]) 
+		[self popupImageFrom:imgView];
+	else
+		NSLog(@"%@",@"NIL IMAGE, SKIP");
+
 }
 
--(void)popupImageFrom:(NSString*)path
+-(void)popupImageFrom:(AsyncImageView*)view
 {
-    [self.img_delegate openImage:path];
-
+	[self.img_delegate toggleZoom:view];
 }
 
 -(void)closePopupImg:(UITapGestureRecognizer *)gesture {

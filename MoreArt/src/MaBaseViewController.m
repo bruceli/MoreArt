@@ -35,8 +35,11 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    
-    self.view.backgroundColor = [UIColor darkGrayColor];
+	_scrollView = [[UIScrollView alloc]init];
+	_scrollView.delegate = self;
+	_scrollView.backgroundColor = [UIColor orangeColor];
+	
+	self.view.backgroundColor = [UIColor darkGrayColor];
     
     self.navigationItem.title = NSLocalizedString(@"douWo_Nav_Title",nil);
     MoreArtAppDelegate* app = (MoreArtAppDelegate *)[[UIApplication sharedApplication] delegate];
@@ -138,8 +141,8 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // get section array from dataSource
-//    NSDictionary* dict = [dataSource objectAtIndex:indexPath.row];
+//	get section array from dataSource
+//	NSDictionary* dict = [dataSource objectAtIndex:indexPath.row];
     
     MaDetailViewController* viewController = [[MaDetailViewController alloc]init];
     viewController.indexPath = indexPath;
@@ -176,24 +179,46 @@
 	}
 }
 
+-(void)addSingleTapGestureRecognizerTo:(UIView*)view
+{
+    UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleSingleTap:)];
+	singleTap.numberOfTapsRequired = 1;
+	[view setUserInteractionEnabled:YES];
+    [view addGestureRecognizer:singleTap];
+}
 
--(void) toggleZoom:(AsyncImageView*) sender 
+- (void)handleSingleTap:(UIGestureRecognizer *)gestureRecognizer {
+	UIView* view = gestureRecognizer.view;	
+	[self toggleZoom:view];
+}
+
+
+-(void)initScrollableImageView:(UIImage*)image
+{
+	[self addSingleTapGestureRecognizerTo:_scrollView];
+
+}
+
+-(void) toggleZoom:(UIView*) sender 
 {
 	if (proxyView)
-	{
+	{					// zoomout
 		CGRect frame =
 		[proxyView.superview convertRect:sender.frame fromView:sender.window];
 		sender.frame = frame;
 		
 		CGRect proxyViewFrame = proxyView.frame;
 		
-		[proxyView.superview addSubview:sender];
+		[proxyView.superview addSubview:_hiddenView];
 		[proxyView removeFromSuperview];
+		[_scrollView removeFromSuperview];
 		proxyView = nil;
-		
-		[UIView animateWithDuration:0.2 animations:^{ sender.frame = proxyViewFrame; }];
-		
-		[UIView animateWithDuration:0.2 animations:
+		_hiddenView = nil;
+		[UIView animateWithDuration:0.3 animations:^{ sender.frame = proxyViewFrame; }];
+		[[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationFade];
+		[self.navigationController setNavigationBarHidden:NO animated:YES];
+/*
+		[UIView animateWithDuration:0.3 animations:
 					^{ sender.frame = proxyViewFrame;} 
 				completion:
 					^(BOOL finished){
@@ -201,21 +226,30 @@
 						[self.navigationController setNavigationBarHidden:NO animated:YES];
 					}
 		 ];
+	*/
 	}
 	else
-	{
+	{					// zoom in
 		proxyView = [[UIView alloc] initWithFrame:sender.frame];
 		proxyView.hidden = YES;
+		_hiddenView = (AsyncImageView*)sender;
 		proxyView.autoresizingMask = sender.autoresizingMask;
 		[sender.superview addSubview:proxyView];
 		
 		CGRect frame = [sender.window convertRect:sender.frame fromView:proxyView.superview];
-		[sender.window addSubview:sender];
-		sender.frame = frame;
-		
-		[UIView animateWithDuration:0.2 animations:^{ sender.frame = sender.window.bounds;}];
-		[[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationFade];
+		//[sender.window addSubview:sender];
+		[self initScrollableImageView:((AsyncImageView*)sender).image];
+		[sender.window addSubview:_scrollView];
+		_scrollView.frame = frame;
+/*
+ CGRect frame = [sender.window convertRect:sender.frame fromView:proxyView.superview];
+ [sender.window addSubview:sender];
+ sender.frame = frame;
+*/
 		[self.navigationController setNavigationBarHidden:YES animated:YES];
+		[[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationFade];
+
+//		[UIView animateWithDuration:0.2 animations:^{ sender.frame = sender.window.bounds;}];
 	}
 }
 
