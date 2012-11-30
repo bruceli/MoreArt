@@ -617,6 +617,7 @@ NSString *const AsyncImageErrorKey = @"error";
 	return [[AsyncImageLoader sharedLoader] URLForTarget:self action:@selector(setImage:)];
 }
 
+
 @end
 
 
@@ -634,6 +635,7 @@ NSString *const AsyncImageErrorKey = @"error";
 @synthesize crossfadeImages = _crossfadeImages;
 @synthesize crossfadeDuration = _crossfadeDuration;
 @synthesize activityView = _activityView;
+@synthesize delegate;
 
 - (void)setUp
 {
@@ -713,6 +715,14 @@ NSString *const AsyncImageErrorKey = @"error";
         objc_msgSend(self.layer, @selector(addAnimation:forKey:), animation, nil);
     }
     super.image = image;
+	
+	// call delegate to resize self frame.
+//	if([delegate respondsToSelector:@selector(imageIsReadyNotify)])
+//		[self.delegate calendarMonthView:self monthDidChange:dateForMonth animated:YES];
+	if (delegate) {
+		[delegate imageIsReadyNotify];
+	}
+	
     [_activityView stopAnimating];
 }
 

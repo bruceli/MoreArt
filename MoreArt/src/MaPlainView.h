@@ -21,6 +21,6 @@
     UIView* _leftShadowView;
     UIView* _rightShadowView;    
 }
-@property (nonatomic, weak) id <MaViewPlainDelegate> delegate; //define MyClassDelegate as delegate
+@property (nonatomic, weak) id <MaViewPlainDelegate> delegate; //define MaViewPlainDelegate as delegate
 
 @end

@@ -40,11 +40,6 @@
 	
     self.view = _scrollView;
     _scrollView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"setting_bkg.png"]];
-
-    //    MoreArtAppDelegate* app = (MoreArtAppDelegate *)[[UIApplication sharedApplication] delegate];
-    // Load data from MGR
-    
-    //    NSDictionary* dict = [app.dataSourceMgr.dataSource objectAtIndex: _indexPath.row];
     
     _headerImageView = [[AsyncImageView alloc] initWithFrame:CGRectMake(0,0, 320, 190)];
     _headerImageView.contentMode = UIViewContentModeScaleAspectFill;
@@ -333,28 +328,46 @@
     return resultString;
 }
 
-- (void)openImage:(AsyncImageView*)view;
+-(void) setImageForScrollableImageView:(AsyncImageView*)imageView
 {
+	// Get orignal image path.
+	CGFloat scale = [[UIScreen mainScreen] scale];
+	MoreArtAppDelegate* app = (MoreArtAppDelegate *)[[UIApplication sharedApplication] delegate];
+    // Load data from MGR
+    NSDictionary* dict = [app.dataSourceMgr.dataSource objectAtIndex: _indexPath.row];
+    NSDictionary* imgDict = app.dataSourceMgr.imageIndexDict;
+    NSArray* array = [dict objectForKey:@"imageArray"];
 	
+	NSDictionary* itemDict = [array objectAtIndex:[_imageGroupView.imageViewArray indexOfObject:imageView]];
+	
+	NSString* imgPath;
+	NSString* imagePrefix = [itemDict objectForKey:@"imageName"];
+	if ([imagePrefix length]>0) {
+		if (scale>1)
+		{
+			NSMutableString* retinaImageName = [NSMutableString stringWithString:imagePrefix];
+			[retinaImageName appendString:@"@2x"];
+			imgPath = [imgDict objectForKey:retinaImageName];
+		}
+		else
+			imgPath = [imgDict objectForKey:imagePrefix];
+	}
+	
+	[_scaleImageView loadImageFrom:imgPath];
 }
 
--(void)addSingleTapGestureRecognizerTo:(UIView*)view
-{
-    UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleSingleTap:)];
-	singleTap.numberOfTapsRequired = 1;
-	[view setUserInteractionEnabled:YES];
-    [view addGestureRecognizer:singleTap];
-}
-
+/*
 - (void)handleSingleTap:(UIGestureRecognizer *)gestureRecognizer {
 	UIView* view = gestureRecognizer.view;	
 	[self toggleZoom:view];
 }
+*/
 
--(void)initScrollableImageView:(UIImage*)image
+-(void)initScaleImageView
 {
-	[self addSingleTapGestureRecognizerTo:_scrollableImageView];
-	
+//	_scaleImageView.delegate = self;
+
+
 }
 
 -(void) toggleZoom:(UIView*) sender 
@@ -363,55 +376,35 @@
 	{					
 		// zoomout
 		CGRect frame = [sender.window convertRect:_hiddenView.frame fromView:_hiddenView.superview];
-
-		NSLog(@"end frame is ,%@", NSStringFromCGRect(frame));
+//		NSLog(@"end frame is ,%@", NSStringFromCGRect(frame));
 		[[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationSlide];
 		[UIView animateWithDuration:0.3 animations:
 		 ^{ sender.frame = frame; sender.alpha = 0.0;} 
 						 completion:
 		 ^(BOOL finished){
-			 [_scrollableImageView removeFromSuperview];
+			 [_scaleImageView removeFromSuperview];
 			 _hiddenView = nil;
-			 _scrollableImageView = nil;
+			 _scaleImageView = nil;
 		 }];
 	}
 	else
-	{					// zoom in
+	{					// zoom in		
 		_hiddenView = (AsyncImageView*)sender;
-		
-		_scrollableImageView = [[UIScrollView alloc]init];
-		_scrollableImageView.delegate = self;
-		_scrollableImageView.backgroundColor = [UIColor orangeColor];
-
-		
 		CGRect frame = [sender.window convertRect:sender.frame fromView:sender.superview];
-		NSLog(@"Sender frame is ,%@", NSStringFromCGRect(frame));
+//		NSLog(@"Sender frame is ,%@", NSStringFromCGRect(frame));
 
 		CGRect screenRect = [[UIScreen mainScreen] bounds];
 //		NSLog(@"screenRect frame is ,%@", NSStringFromCGRect(screenRect));
 		// prepair scrollableImage Animation
-		_scrollableImageView.frame = frame;
-		[UIView animateWithDuration:0.2 animations:^{ _scrollableImageView.frame = screenRect; }];
-		[self initScrollableImageView:((AsyncImageView*)sender).image];
-		[sender.window addSubview:_scrollableImageView];
+		_scaleImageView = [[MaScaleImageView alloc] initWithFrame:frame];
+		_scaleImageView._scaleImageViewDelegate = self;
+//		_scaleImageView.frame = frame;
+		[UIView animateWithDuration:0.2 animations:^{ _scaleImageView.frame = screenRect; }];
+		[self setImageForScrollableImageView:((AsyncImageView*)sender)];
+		[sender.window addSubview:_scaleImageView];
 
 //		[self.navigationController setNavigationBarHidden:YES animated:YES];
 		[[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationSlide];
-
-		//------------------
-		/*
-		//[sender.window addSubview:sender];
-		[self initScrollableImageView:((AsyncImageView*)sender).image];
-		[sender.window addSubview:_scrollView];
-		_scrollView.frame = frame;
-		 CGRect frame = [sender.window convertRect:sender.frame fromView:proxyView.superview];
-		 [sender.window addSubview:sender];
-		 sender.frame = frame;
-		[self.navigationController setNavigationBarHidden:YES animated:YES];
-		[[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationFade];
-		
-		//		[UIView animateWithDuration:0.2 animations:^{ sender.frame = sender.window.bounds;}];
-		 */
 
 	}
 }

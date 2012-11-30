@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 @class MaImageArrayView;
-@class AsyncImageView;
 
 @protocol MaImageArrayViewDelegate
 -(void)toggleZoom:(UIView*) sender;
@@ -24,5 +23,6 @@
 
 @property (nonatomic, weak) id <MaImageArrayViewDelegate> img_delegate;
 @property (nonatomic, retain) NSArray* imageArray;
+@property (nonatomic, readonly) NSMutableArray* imageViewArray;
 
 @end

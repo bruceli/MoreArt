@@ -19,6 +19,7 @@
 
 @implementation MaImageArrayView
 @synthesize imageArray = _imageArray;
+@synthesize imageViewArray = _imageViewArray;
 @synthesize img_delegate;
 
 - (id)initWithFrame:(CGRect)frame
@@ -110,7 +111,6 @@
     UITapGestureRecognizer *myTapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(gestureTapEvent:)];
     imgView.userInteractionEnabled = YES;
     [imgView addGestureRecognizer:myTapGesture];
-
     
     imgView.backgroundColor = [UIColor colorWithRed:(random()%100)/(float)100 green:(random()%100)/(float)100 blue:(random()%100)/(float)100 alpha:1];
     return imgView;
@@ -127,8 +127,8 @@
 //    NSLog(@"%@",imgPath);
 	if (index < [_imageArray count]) 
 		[self popupImageFrom:imgView];
-	else
-		NSLog(@"%@",@"NIL IMAGE, SKIP");
+//	else
+//		NSLog(@"%@",@"NIL IMAGE, SKIP");
 
 }
 

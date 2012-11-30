@@ -97,11 +97,13 @@ extern NSString *const AsyncImageErrorKey;
 
 
 @interface UIImageView(AsyncImageView)
-
 @property (nonatomic, strong) NSURL *imageURL;
-
 @end
 
+
+@protocol AsyncImageViewDelegate
+-(void)imageIsReadyNotify;
+@end 
 
 @interface AsyncImageView : UIImageView
 - (void)setImageByString:(NSString*)imageAddress;
@@ -109,5 +111,5 @@ extern NSString *const AsyncImageErrorKey;
 @property (nonatomic, assign) UIActivityIndicatorViewStyle activityIndicatorStyle;
 @property (nonatomic, assign) BOOL crossfadeImages;
 @property (nonatomic, assign) NSTimeInterval crossfadeDuration;
-
+@property (nonatomic, weak) id <AsyncImageViewDelegate> delegate;
 @end

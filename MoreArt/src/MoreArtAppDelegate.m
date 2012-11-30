@@ -9,6 +9,7 @@
 #import "MoreArtAppDelegate.h"
 #import "MaRootViewController.h"
 #import "MaDefine.h"
+#import "AsyncImageView.h"
 
 @implementation MoreArtAppDelegate
 
@@ -32,6 +33,7 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
      
     _dataSourceMgr = [[MaDataSource alloc] init];
+	[AsyncImageLoader sharedLoader];
 
     _baseViewController = [[MaBaseViewController alloc] init];
     UINavigationController* theController = [[UINavigationController alloc] initWithRootViewController:_baseViewController];
@@ -49,20 +51,12 @@
     _crossFadeView = [[MaCrossFadeView alloc] initWithFrame:frame];
 
     _baseViewController.view = _douWoView;
-    
-//    _douWoView.delegate = _baseViewController;
-//    _douSpaceView.delegate = _baseViewController;
-    _art029View.delegate = _baseViewController ;
+	_art029View.delegate = _baseViewController ;
     _douPeikingView.delegate = _baseViewController ;
     _moLangPhotoView.delegate = _baseViewController;
-//    _douWoView.dataSource = _baseViewController;
-//    _douSpaceView.dataSource = _baseViewController;
     _art029View.dataSource = _baseViewController ;
     _douPeikingView.dataSource = _baseViewController ;
     _moLangPhotoView.dataSource = _baseViewController;
-    
- //   [_coverFlowView loadCoverflowView];
-    
 
     _revealSideViewController = [[PPRevealSideViewController alloc] initWithRootViewController:theController ];
     _revealSideViewController.delegate = self;

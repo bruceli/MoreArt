@@ -9,9 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "AsyncImageView.h"
 #import "MaImageArrayView.h"
+#import "MaScaleImageView.h"
 
-
-@interface MaDetailViewController : UIViewController <DTAttributedTextContentViewDelegate,MaImageArrayViewDelegate,UIScrollViewDelegate>
+@interface MaDetailViewController : UIViewController <DTAttributedTextContentViewDelegate,MaImageArrayViewDelegate,UIScrollViewDelegate,MaScaleImageViewDelegate>
 {
     UIScrollView* _scrollView;
     
@@ -22,8 +22,8 @@
     
     NSIndexPath* _indexPath;
 	AsyncImageView* _hiddenView;
-	UIScrollView* _scrollableImageView;
-
+	MaScaleImageView* _scaleImageView;
+	
     id _currentView;
 }
 
