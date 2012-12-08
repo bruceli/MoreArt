@@ -18,5 +18,7 @@
 	<string>&lt;li&gt; </string>
 	<key>kMA_ITEM_END</key>
 	<string> &lt;/li&gt;</string>
+	<key>kMA_DOUWO_DETAIL_STYLE</key>
+	<string> style=&quot;font-size:15px;line-height:19px;color:white;&quot;&gt;</string>
 </dict>
 </plist>

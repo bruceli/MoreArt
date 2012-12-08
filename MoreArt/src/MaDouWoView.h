@@ -7,12 +7,16 @@
 //
 
 #import "MaPlainView.h"
+#import "MaScaleImageView.h"
 
-
-@interface MaDouWoView : MaPlainView <UIScrollViewDelegate>
+@interface MaDouWoView : MaPlainView <DTAttributedTextContentViewDelegate,MaScaleImageViewDelegate,AsyncImageViewDelegate>
 {
-	NSInteger _currentPageIndex;
+//	NSInteger _currentPageIndex;
     UIScrollView* _scrollView;
+	AsyncImageView* _hiddenView;
+	MaScaleImageView* _scaleImageView;
+
+//	DTAttributedTextView* _textView;
 }
 
 

@@ -52,7 +52,15 @@
 
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(orientationChanged:) name:@"UIDeviceOrientationDidChangeNotification" object:nil];
     
-	self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemStop target:self action:@selector(slideSettingViewController)];
+	
+	UIImageView* imgView = [[UIImageView alloc] initWithFrame:CGRectMake(0,0, 50, 44)];
+	imgView.image = [UIImage imageNamed:@"button_slider_1"];
+	UIBarButtonItem* buttom = [[UIBarButtonItem alloc] initWithCustomView:imgView];
+//	UIBarButtonItem* buttom = [[UIBarButtonItem alloc ]initWithImage:[UIImage imageNamed:@"button_slider_1"] style:UIBarButtonItemStylePlain target:self action:@selector(slideSettingViewController)];
+	
+	buttom.width = 20;
+	self.navigationItem.leftBarButtonItem = buttom;
+	//self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemStop target:self action:@selector(slideSettingViewController)];
 	
 }
 

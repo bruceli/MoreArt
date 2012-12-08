@@ -720,7 +720,7 @@ NSString *const AsyncImageErrorKey = @"error";
 //	if([delegate respondsToSelector:@selector(imageIsReadyNotify)])
 //		[self.delegate calendarMonthView:self monthDidChange:dateForMonth animated:YES];
 	if (delegate) {
-		[delegate imageIsReadyNotify];
+		[delegate imageIsReadyNotify:self];
 	}
 	
     [_activityView stopAnimating];
@@ -732,5 +732,29 @@ NSString *const AsyncImageErrorKey = @"error";
 	[_activityView release];
     [super ah_dealloc];
 }
+
+- (CGSize)imageScale {
+    CGFloat sx = self.frame.size.width / self.image.size.width;
+    CGFloat sy = self.frame.size.height / self.image.size.height;
+    CGFloat s = 1.0;
+    switch (self.contentMode) {
+        case UIViewContentModeScaleAspectFit:
+            s = fminf(sx, sy);
+            return CGSizeMake(s, s);
+            break;
+			
+        case UIViewContentModeScaleAspectFill:
+            s = fmaxf(sx, sy);
+            return CGSizeMake(s, s);
+            break;
+			
+        case UIViewContentModeScaleToFill:
+            return CGSizeMake(sx, sy);
+			
+        default:
+            return CGSizeMake(s, s);
+    }
+}
+
 
 @end

@@ -7,6 +7,11 @@
 //
 
 #import "MaScaleImageView.h"
+#import "MaDefine.h"
+
+#define MA_MAX_ZOOM_RATE 2.5
+#define MA_MIN_ZOOM_RATE 1.0
+
 
 @implementation MaScaleImageView
 @synthesize _scaleImageViewDelegate;
@@ -16,18 +21,29 @@
     self = [super initWithFrame:frame];
     if (self) {
 		self.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"setting_bkg.png"]];
-		
-		_imageView = [[AsyncImageView alloc] initWithFrame:CGRectMake(0,0, 320, 190)];
-		_imageView.contentMode = UIViewContentModeScaleAspectFill;
+		CGRect screenFrame = [[UIScreen mainScreen] bounds];
+
+		_imageView = [[AsyncImageView alloc] initWithFrame:screenFrame];
+		_imageView.contentMode = UIViewContentModeScaleAspectFit;
 		_imageView.clipsToBounds = YES;
 		_imageView.showActivityIndicator = YES;
 		_imageView.delegate = self;
-		
+		_imageView.backgroundColor = [UIColor clearColor];
+
+		self.delegate = self;
+		self.showsVerticalScrollIndicator = NO;
+		self.showsHorizontalScrollIndicator = NO;
+		[self setMinimumZoomScale:MA_MIN_ZOOM_RATE];
+		[self setMaximumZoomScale:MA_MAX_ZOOM_RATE];
+		[self setZoomScale:MA_MIN_ZOOM_RATE];
+
+		[_imageView setTag:ZOOM_VIEW_TAG];
+
 		[[AsyncImageLoader sharedLoader] cancelLoadingImagesForTarget:_imageView];
 		[self addSubview:_imageView];
 		
-		[self addSingleTapGestureRecognizer];
-    }
+		[self addTapGestureRecognizer];
+	}
     return self;
 }
 
@@ -39,27 +55,68 @@
     // Drawing code
 }
 */
+
+- (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView {
+    return [self viewWithTag:ZOOM_VIEW_TAG];
+}
+
+- (void)scrollViewDidEndZooming:(UIScrollView *)scrollView withView:(UIView *)view atScale:(float)scale {
+//    [scrollView setZoomScale:scale+0.01 animated:NO];
+    [scrollView setZoomScale:scale animated:NO];
+}
+
 -(void)loadImageFrom:(NSString*)imgPath
 {
 	[_imageView setImageByString:imgPath];
 }
-
--(void) initScrollableImageView
+-(void)setPreloadedImages:(UIImage*)img
 {
+//	_imageView.image = img;
 }
+
 
 -(void)imageIsReadyNotify
-{
-	NSLog(@"%@",@"image is ready");
+{	
+	/*
+	 CGFloat ratio = _imageView.image.size.width/_imageView.image.size.height;
+	CGFloat imgScrRatio;
+	//CGRect imageFrame;		
+	CGRect screenFrame = [[UIScreen mainScreen] bounds];
+
+	if (ratio>1) {
+		imgScrRatio = _imageView.image.size.width/screenFrame.size.width;
+	}
+	else{	
+		imgScrRatio = _imageView.image.size.height/screenFrame.size.height;
+	}	
+	
+	_imageViewFrame = CGRectMake(0, screenFrame.size.height/2 - _imageView.image.size.height/imgScrRatio/2, screenFrame.size.width, _imageView.image.size.height/imgScrRatio);
+
+//	NSLog(@"New image frame is %@ ",NSStringFromCGRect(_imageViewFrame));
+
+	_imageView.frame = _imageViewFrame;
+	*/
+
 }
 
-
--(void)addSingleTapGestureRecognizer
+-(void)addTapGestureRecognizer
 {
+	UITapGestureRecognizer *doubleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleDoubleTap:)];
+	doubleTap.numberOfTapsRequired = 2;
+	[self setUserInteractionEnabled:YES];
+    [self addGestureRecognizer:doubleTap];
+
+	
     UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleSingleTap:)];
 	singleTap.numberOfTapsRequired = 1;
 	[self setUserInteractionEnabled:YES];
     [self addGestureRecognizer:singleTap];
+	[singleTap requireGestureRecognizerToFail:doubleTap];
+	
+	NSLog(@"ScrollView frame size is %@",NSStringFromCGRect(self.frame));
+	NSLog(@"ScrollView content size is %@",NSStringFromCGSize(self.contentSize));
+
+
 }
 
 - (void)handleSingleTap:(UIGestureRecognizer *)gestureRecognizer {
@@ -67,41 +124,44 @@
 	[_scaleImageViewDelegate toggleZoom:view];
 }
 
+- (void)handleDoubleTap:(UIGestureRecognizer *)gestureRecognizer {
+	NSLog(@"zoomScale is %f", [self zoomScale]);
+	CGSize newContentSize;
+	CGRect zoomRect;
+	CGRect newImageFrame;
+	if ([self zoomScale] > MA_MIN_ZOOM_RATE) {
+		zoomRect = [self zoomRectForScale:MA_MIN_ZOOM_RATE withCenter:[gestureRecognizer locationInView:gestureRecognizer.view]];
+		newContentSize = CGSizeMake(self.frame.size.width, self.frame.size.height);
+		newImageFrame = _imageViewFrame;
+	}
+	else
+	{
+		zoomRect = [self zoomRectForScale:MA_MAX_ZOOM_RATE withCenter:[gestureRecognizer locationInView:gestureRecognizer.view]];
+		newContentSize = CGSizeMake(self.frame.size.width*3, self.frame.size.height*3);
+		newImageFrame = CGRectMake(0, 0, _imageViewFrame.size.width, _imageViewFrame.size.height);
 
-/*
- - (void)handleDoubleTap:(UIGestureRecognizer *)gestureRecognizer {
- // double tap zooms in
- float newScale = [_scrollView zoomScale] * ZOOM_STEP;
- CGRect zoomRect = [self zoomRectForScale:newScale withCenter:[gestureRecognizer locationInView:gestureRecognizer.view]];
- [_scrollView zoomToRect:zoomRect animated:YES];
- }
- 
- - (void)handleTwoFingerTap:(UIGestureRecognizer *)gestureRecognizer {
- // two-finger tap zooms out
- float newScale = [_scrollView zoomScale] / ZOOM_STEP;
- CGRect zoomRect = [self zoomRectForScale:newScale withCenter:[gestureRecognizer locationInView:gestureRecognizer.view]];
- [_scrollView zoomToRect:zoomRect animated:YES];
- }
- */
+	}
+//	_imageView.frame = newImageFrame;
+	[self zoomToRect:zoomRect animated:YES];
+	//self.contentSize = newContentSize;
+	
+	NSLog(@"zoomRect to %@ ",NSStringFromCGRect(zoomRect));
+	NSLog(@"ScrollView frame size is %@",NSStringFromCGRect(self.frame));
+	NSLog(@"ScrollView content size is %@",NSStringFromCGSize(self.contentSize));
 
-- (CGRect)zoomRectForScale:(float)scale withCenter:(CGPoint)center {
-    
+	
+}
+
+- (CGRect)zoomRectForScale:(float)scale withCenter:(CGPoint)center 
+{
     CGRect zoomRect;
+    zoomRect.size.height = [self.superview frame].size.height / scale;
+    zoomRect.size.width  = [self.superview frame].size.width  / scale;
     
-    // the zoom rect is in the content view's coordinates. 
-    //    At a zoom scale of 1.0, it would be the size of the imageScrollView's bounds.
-    //    As the zoom scale decreases, so more content is visible, the size of the rect grows.
-    zoomRect.size.height = [self frame].size.height / scale;
-    zoomRect.size.width  = [self frame].size.width  / scale;
-    
-    // choose an origin so as to get the right center.
-    zoomRect.origin.x    = center.x - (zoomRect.size.width  / 2.0);
-    zoomRect.origin.y    = center.y - (zoomRect.size.height / 2.0);
+    zoomRect.origin.x    = center.x - (zoomRect.size.width  / scale);
+    zoomRect.origin.y    = center.y - (zoomRect.size.height / scale);
     
     return zoomRect;
 }
-
-
-
 
 @end

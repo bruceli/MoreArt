@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "AsyncImageView.h"
+
 @protocol MaScaleImageViewDelegate
 -(void)toggleZoom:()view;
 @end 
@@ -15,9 +16,12 @@
 @interface MaScaleImageView : UIScrollView <UIScrollViewDelegate, AsyncImageViewDelegate>
 {
 	AsyncImageView* _imageView;
+	CGRect _imageViewFrame;
 }
 
 -(void)loadImageFrom:(NSString*)imgPath;
+-(void)setPreloadedImages:(UIImage*)img;
+
 @property (nonatomic, weak) id <MaScaleImageViewDelegate> _scaleImageViewDelegate; 
 
 
