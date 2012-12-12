@@ -37,7 +37,6 @@
 		596F88C2160EF91A0036E2CC /* b.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 596F88C0160EF91A0036E2CC /* b.jpeg */; };
 		598365F615E5E55900E4E885 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 598365F415E5E55900E4E885 /* Localizable.strings */; };
 		5983661115E6866900E4E885 /* MaBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5983661015E6866800E4E885 /* MaBaseViewController.m */; };
-		5983661715E688C600E4E885 /* MaTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5983661615E688C600E4E885 /* MaTableView.m */; };
 		5983661A15E68A3200E4E885 /* MaDouWoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5983661915E68A3200E4E885 /* MaDouWoView.m */; };
 		5983661D15E68A5100E4E885 /* MaDouSpaceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5983661C15E68A5100E4E885 /* MaDouSpaceView.m */; };
 		5983662015E68A7200E4E885 /* MaArt029View.m in Sources */ = {isa = PBXBuildFile; fileRef = 5983661F15E68A7100E4E885 /* MaArt029View.m */; };
@@ -58,6 +57,7 @@
 		59D0B501164A3784009CE214 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59D0B500164A3784009CE214 /* MobileCoreServices.framework */; };
 		59D0B521164A3C13009CE214 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59D0B520164A3C13009CE214 /* MapKit.framework */; };
 		59D213C2160DA634000968E5 /* AsyncImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 59D213C1160DA634000968E5 /* AsyncImageView.m */; };
+		59E6A82F16787DEB001F32F3 /* MaTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 59E6A82E16787DEB001F32F3 /* MaTableView.m */; };
 		59EFD3EF1629294700E1FA9F /* MaPlainView.m in Sources */ = {isa = PBXBuildFile; fileRef = 59EFD3EE1629294700E1FA9F /* MaPlainView.m */; };
 		59FE0DA216537CD400190994 /* css.plist in Resources */ = {isa = PBXBuildFile; fileRef = 59FE0DA116537CD400190994 /* css.plist */; };
 /* End PBXBuildFile section */
@@ -196,8 +196,6 @@
 		598365F515E5E55900E4E885 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		5983660F15E6866800E4E885 /* MaBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MaBaseViewController.h; path = src/MaBaseViewController.h; sourceTree = "<group>"; };
 		5983661015E6866800E4E885 /* MaBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MaBaseViewController.m; path = src/MaBaseViewController.m; sourceTree = "<group>"; };
-		5983661515E688C600E4E885 /* MaTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MaTableView.h; path = src/MaTableView.h; sourceTree = "<group>"; };
-		5983661615E688C600E4E885 /* MaTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MaTableView.m; path = src/MaTableView.m; sourceTree = "<group>"; };
 		5983661815E68A3200E4E885 /* MaDouWoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MaDouWoView.h; path = src/MaDouWoView.h; sourceTree = "<group>"; };
 		5983661915E68A3200E4E885 /* MaDouWoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MaDouWoView.m; path = src/MaDouWoView.m; sourceTree = "<group>"; };
 		5983661B15E68A5100E4E885 /* MaDouSpaceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MaDouSpaceView.h; path = src/MaDouSpaceView.h; sourceTree = "<group>"; };
@@ -230,6 +228,8 @@
 		59D0B520164A3C13009CE214 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		59D213C0160DA634000968E5 /* AsyncImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AsyncImageView.h; path = src/3rd/AsyncImageView/AsyncImageView.h; sourceTree = "<group>"; };
 		59D213C1160DA634000968E5 /* AsyncImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AsyncImageView.m; path = src/3rd/AsyncImageView/AsyncImageView.m; sourceTree = "<group>"; };
+		59E6A82D16787DEB001F32F3 /* MaTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MaTableView.h; path = src/MaTableView.h; sourceTree = "<group>"; };
+		59E6A82E16787DEB001F32F3 /* MaTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MaTableView.m; path = src/MaTableView.m; sourceTree = "<group>"; };
 		59EFD3ED1629294700E1FA9F /* MaPlainView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MaPlainView.h; path = src/MaPlainView.h; sourceTree = "<group>"; };
 		59EFD3EE1629294700E1FA9F /* MaPlainView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MaPlainView.m; path = src/MaPlainView.m; sourceTree = "<group>"; };
 		59FE0DA116537CD400190994 /* css.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = css.plist; sourceTree = "<group>"; };
@@ -455,9 +455,9 @@
 				59A5BC4315E8975B00E67D54 /* CoverFlow */,
 				5983660F15E6866800E4E885 /* MaBaseViewController.h */,
 				5983661015E6866800E4E885 /* MaBaseViewController.m */,
-				5983661515E688C600E4E885 /* MaTableView.h */,
-				5983661615E688C600E4E885 /* MaTableView.m */,
 				59EFD3ED1629294700E1FA9F /* MaPlainView.h */,
+				59E6A82D16787DEB001F32F3 /* MaTableView.h */,
+				59E6A82E16787DEB001F32F3 /* MaTableView.m */,
 				59EFD3EE1629294700E1FA9F /* MaPlainView.m */,
 				59CE005D16689B3200E171EB /* MaScaleImageView.h */,
 				59CE005E16689B3300E171EB /* MaScaleImageView.m */,
@@ -741,7 +741,6 @@
 				591FCD2915CFBEF6004FE480 /* PPRevealSideViewController.m in Sources */,
 				591FCD5215CFC1FC004FE480 /* MaSettingViewController.m in Sources */,
 				5983661115E6866900E4E885 /* MaBaseViewController.m in Sources */,
-				5983661715E688C600E4E885 /* MaTableView.m in Sources */,
 				5983661A15E68A3200E4E885 /* MaDouWoView.m in Sources */,
 				5983661D15E68A5100E4E885 /* MaDouSpaceView.m in Sources */,
 				5983662015E68A7200E4E885 /* MaArt029View.m in Sources */,
@@ -758,6 +757,7 @@
 				59EFD3EF1629294700E1FA9F /* MaPlainView.m in Sources */,
 				59237266164B8B8900FF5A97 /* MaImageArrayView.m in Sources */,
 				59CE005F16689B3300E171EB /* MaScaleImageView.m in Sources */,
+				59E6A82F16787DEB001F32F3 /* MaTableView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

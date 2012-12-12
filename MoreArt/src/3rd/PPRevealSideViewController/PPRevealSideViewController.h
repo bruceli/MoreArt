@@ -154,6 +154,7 @@ If you want to pop a new center controller, then do the following :
     PPRevealSideDirection   _currentPanDirection;
     PPRevealSideDirection   _disabledPanGestureDirection;
     CGFloat                 _currentVelocity;
+    CGFloat                 _oldStatusBarHeight;
     
     BOOL                    _animationInProgress;
     BOOL                    _shouldNotCloseWhenPushingSameDirection;
@@ -327,6 +328,35 @@ If you want to pop a new center controller, then do the following :
  @see popViewControllerWithNewCenterController:animated:
  */
 - (void) popViewControllerAnimated:(BOOL)animated;
+
+/**
+ Open completely the side
+ @param direction The direction to open the side completely
+ @param animated Animated or not
+ */
+- (void) openCompletelySide:(PPRevealSideDirection)direction animated:(BOOL)animated;
+
+/**
+ Open completely the current side semi opened
+ @param animated Animated or not
+ @see openCompletelySide:animated:
+ */
+- (void) openCompletelyAnimated:(BOOL)animated;
+
+/**
+ Replace the side view with an offset after it was opened completely. For example, if you hit a search bar, then you will open completely. 
+ If the user cancel, you probably want to replace the like it was before, to complete the cancel stuff.
+ @param offset The offset
+ @param animated Animated or not
+ */
+- (void) replaceAfterOpenedCompletelyWithOffset:(CGFloat)offset animated:(BOOL)animated;
+
+/**
+ Replace the side view with default offset.
+ @param animated Animated or not
+ @see replaceAfterOpenedCompletelyWithOffset:animated:
+ */
+ - (void) replaceAfterOpenedCompletelyAnimated:(BOOL)animated;
 
 
 /**---------------------------------------------------------------------------------------

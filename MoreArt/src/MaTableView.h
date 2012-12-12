@@ -14,13 +14,8 @@
 {
     MaDouViewType _douViewType;
 	BOOL _reloading;
-    
-	MaScrollImageViewController* _scrollImageViewController;
-
 }
 
 @property (nonatomic) MaDouViewType   douViewType;
-
-@property (nonatomic, retain ) MaScrollImageViewController* scrollImageViewController;
 
 @end
