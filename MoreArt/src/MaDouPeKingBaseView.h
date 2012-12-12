@@ -6,8 +6,11 @@
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import "MaTableView.h"
+#import "MaPlainView.h"
 
-@interface MaDouPeKingBaseView : MaTableView
+@interface MaDouPeKingBaseView : MaPlainView
+{
+	UIScrollView* _scrollView;
 
+}
 @end

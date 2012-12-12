@@ -676,7 +676,7 @@ NSString *const AsyncImageErrorKey = @"error";
             theURL = [NSURL fileURLWithPath:theFilePathString];
         }
     }
-
+	_imgURL = theURL;
     [self setImageURL:theURL];
 }
 

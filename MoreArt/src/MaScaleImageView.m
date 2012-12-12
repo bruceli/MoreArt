@@ -14,7 +14,7 @@
 
 
 @implementation MaScaleImageView
-@synthesize _scaleImageViewDelegate;
+@synthesize scaleImageViewDelegate;
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -75,28 +75,8 @@
 }
 
 
--(void)imageIsReadyNotify
+-(void)imageIsReadyNotify:(UIView*)view
 {	
-	/*
-	 CGFloat ratio = _imageView.image.size.width/_imageView.image.size.height;
-	CGFloat imgScrRatio;
-	//CGRect imageFrame;		
-	CGRect screenFrame = [[UIScreen mainScreen] bounds];
-
-	if (ratio>1) {
-		imgScrRatio = _imageView.image.size.width/screenFrame.size.width;
-	}
-	else{	
-		imgScrRatio = _imageView.image.size.height/screenFrame.size.height;
-	}	
-	
-	_imageViewFrame = CGRectMake(0, screenFrame.size.height/2 - _imageView.image.size.height/imgScrRatio/2, screenFrame.size.width, _imageView.image.size.height/imgScrRatio);
-
-//	NSLog(@"New image frame is %@ ",NSStringFromCGRect(_imageViewFrame));
-
-	_imageView.frame = _imageViewFrame;
-	*/
-
 }
 
 -(void)addTapGestureRecognizer
@@ -113,15 +93,15 @@
     [self addGestureRecognizer:singleTap];
 	[singleTap requireGestureRecognizerToFail:doubleTap];
 	
-	NSLog(@"ScrollView frame size is %@",NSStringFromCGRect(self.frame));
-	NSLog(@"ScrollView content size is %@",NSStringFromCGSize(self.contentSize));
+//	NSLog(@"ScrollView frame size is %@",NSStringFromCGRect(self.frame));
+//	NSLog(@"ScrollView content size is %@",NSStringFromCGSize(self.contentSize));
 
 
 }
 
 - (void)handleSingleTap:(UIGestureRecognizer *)gestureRecognizer {
 	UIView* view = gestureRecognizer.view;	
-	[_scaleImageViewDelegate toggleZoom:view];
+	[scaleImageViewDelegate toggleZoom:view];
 }
 
 - (void)handleDoubleTap:(UIGestureRecognizer *)gestureRecognizer {

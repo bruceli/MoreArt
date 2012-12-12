@@ -8,7 +8,6 @@
 
 #import "MaDetailViewController.h"
 #import "MoreArtAppDelegate.h"
-#import "MaDetailImageViewController.h"
 
 #define kMA_PARAGRPH_MARK
 
@@ -61,10 +60,14 @@
     
     [self fillContents];
     [self adjustViewSize];
+	
+	/*
     [[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:@"UIDeviceOrientationDidChangeNotification" object:nil];
-	
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(orientationChanged:) name:@"UIDeviceOrientationDidChangeNotification" object:nil];
+	[[UIDevice currentDevice] endGeneratingDeviceOrientationNotifications];
+*/
+
 }
 
 
@@ -397,7 +400,7 @@
 //		NSLog(@"screenRect frame is ,%@", NSStringFromCGRect(screenRect));
 		// prepair scrollableImage Animation
 		_scaleImageView = [[MaScaleImageView alloc] initWithFrame:frame];
-		_scaleImageView._scaleImageViewDelegate = self;
+		_scaleImageView.scaleImageViewDelegate = self;
 //		_scaleImageView.frame = frame;
 		[UIView animateWithDuration:0.2 animations:^{ _scaleImageView.frame = screenRect; }];
 		[self setImageForScrollableImageView:((AsyncImageView*)sender)];

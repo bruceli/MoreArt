@@ -7,7 +7,6 @@
 //
 
 #import "MoreArtAppDelegate.h"
-#import "MaRootViewController.h"
 #import "MaDefine.h"
 #import "AsyncImageView.h"
 
@@ -52,11 +51,7 @@
 
     _baseViewController.view = _douWoView;
 	_art029View.delegate = _baseViewController ;
-    _douPeikingView.delegate = _baseViewController ;
-    _moLangPhotoView.delegate = _baseViewController;
     _art029View.dataSource = _baseViewController ;
-    _douPeikingView.dataSource = _baseViewController ;
-    _moLangPhotoView.dataSource = _baseViewController;
 
     _revealSideViewController = [[PPRevealSideViewController alloc] initWithRootViewController:theController ];
     _revealSideViewController.delegate = self;
@@ -117,5 +112,10 @@
 {
 }
 */
+
+- (PPRevealSideDirection)pprevealSideViewController:(PPRevealSideViewController*)controller directionsAllowedForPanningOnView:(UIView*)view {
+		// allow left slide only...
+    return PPRevealSideDirectionLeft ;
+}
 
 @end

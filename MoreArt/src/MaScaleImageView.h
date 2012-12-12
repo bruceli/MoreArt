@@ -22,7 +22,7 @@
 -(void)loadImageFrom:(NSString*)imgPath;
 -(void)setPreloadedImages:(UIImage*)img;
 
-@property (nonatomic, weak) id <MaScaleImageViewDelegate> _scaleImageViewDelegate; 
+@property (nonatomic, weak) id <MaScaleImageViewDelegate> scaleImageViewDelegate; 
 
 
 @end

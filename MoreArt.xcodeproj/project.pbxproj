@@ -13,7 +13,6 @@
 		591FCCD815CFBD31004FE480 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 591FCCD715CFBD31004FE480 /* CoreGraphics.framework */; };
 		591FCCDE15CFBD31004FE480 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 591FCCDC15CFBD31004FE480 /* InfoPlist.strings */; };
 		591FCCE015CFBD32004FE480 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 591FCCDF15CFBD31004FE480 /* main.m */; };
-		591FCD0115CFBD9E004FE480 /* MaRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 591FCCF715CFBD9E004FE480 /* MaRootViewController.m */; };
 		591FCD2615CFBE3E004FE480 /* MoreArtAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 591FCD2515CFBE3E004FE480 /* MoreArtAppDelegate.m */; };
 		591FCD2915CFBEF6004FE480 /* PPRevealSideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 591FCD2815CFBEF6004FE480 /* PPRevealSideViewController.m */; };
 		591FCD5215CFC1FC004FE480 /* MaSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 591FCD5115CFC1FC004FE480 /* MaSettingViewController.m */; };
@@ -36,7 +35,6 @@
 		596F8873160ECD810036E2CC /* EGORefreshTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 596F8870160ECD810036E2CC /* EGORefreshTableHeaderView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		596F88C1160EF91A0036E2CC /* a.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 596F88BF160EF91A0036E2CC /* a.jpeg */; };
 		596F88C2160EF91A0036E2CC /* b.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 596F88C0160EF91A0036E2CC /* b.jpeg */; };
-		597E4E43165C8E72005E8FD7 /* MaDetailImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 597E4E42165C8E72005E8FD7 /* MaDetailImageViewController.m */; };
 		598365F615E5E55900E4E885 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 598365F415E5E55900E4E885 /* Localizable.strings */; };
 		5983661115E6866900E4E885 /* MaBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5983661015E6866800E4E885 /* MaBaseViewController.m */; };
 		5983661715E688C600E4E885 /* MaTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5983661615E688C600E4E885 /* MaTableView.m */; };
@@ -161,8 +159,6 @@
 		591FCCDD15CFBD31004FE480 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		591FCCDF15CFBD31004FE480 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		591FCCE115CFBD32004FE480 /* MoreArt-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MoreArt-Prefix.pch"; sourceTree = "<group>"; };
-		591FCCF615CFBD9E004FE480 /* MaRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MaRootViewController.h; path = src/MaRootViewController.h; sourceTree = "<group>"; };
-		591FCCF715CFBD9E004FE480 /* MaRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MaRootViewController.m; path = src/MaRootViewController.m; sourceTree = "<group>"; };
 		591FCD2415CFBE3E004FE480 /* MoreArtAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MoreArtAppDelegate.h; path = src/MoreArtAppDelegate.h; sourceTree = "<group>"; };
 		591FCD2515CFBE3E004FE480 /* MoreArtAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MoreArtAppDelegate.m; path = src/MoreArtAppDelegate.m; sourceTree = "<group>"; };
 		591FCD2715CFBEF5004FE480 /* PPRevealSideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PPRevealSideViewController.h; path = src/3rd/PPRevealSideViewController/PPRevealSideViewController.h; sourceTree = "<group>"; };
@@ -196,8 +192,6 @@
 		5972C57A165DE6F500E7B145 /* MaScrollImageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = MaScrollImageView.m; path = src/MaScrollImageView.m; sourceTree = "<group>"; };
 		5972C57B165DE6F500E7B145 /* MaScrollImageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MaScrollImageViewController.h; path = src/MaScrollImageViewController.h; sourceTree = "<group>"; };
 		5972C57C165DE6F500E7B145 /* MaScrollImageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = MaScrollImageViewController.m; path = src/MaScrollImageViewController.m; sourceTree = "<group>"; };
-		597E4E41165C8E72005E8FD7 /* MaDetailImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MaDetailImageViewController.h; path = src/MaDetailImageViewController.h; sourceTree = "<group>"; };
-		597E4E42165C8E72005E8FD7 /* MaDetailImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MaDetailImageViewController.m; path = src/MaDetailImageViewController.m; sourceTree = "<group>"; };
 		598365D315E5E1E300E4E885 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		598365F515E5E55900E4E885 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		5983660F15E6866800E4E885 /* MaBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MaBaseViewController.h; path = src/MaBaseViewController.h; sourceTree = "<group>"; };
@@ -335,8 +329,6 @@
 				597E4E90165CD1CF005E8FD7 /* MaBase */,
 				59CA53C115CFC593006FC431 /* MaDefine.h */,
 				591FCD2A15CFBF02004FE480 /* 3rd */,
-				591FCCF615CFBD9E004FE480 /* MaRootViewController.h */,
-				591FCCF715CFBD9E004FE480 /* MaRootViewController.m */,
 				591FCD2415CFBE3E004FE480 /* MoreArtAppDelegate.h */,
 				591FCD2515CFBE3E004FE480 /* MoreArtAppDelegate.m */,
 				598365FF15E5E89500E4E885 /* DouWo */,
@@ -461,8 +453,6 @@
 				59BA500E15E855E300E14A4E /* DataSource */,
 				59175FFB15F30AD20098729B /* MaEZCell */,
 				59A5BC4315E8975B00E67D54 /* CoverFlow */,
-				597E4E41165C8E72005E8FD7 /* MaDetailImageViewController.h */,
-				597E4E42165C8E72005E8FD7 /* MaDetailImageViewController.m */,
 				5983660F15E6866800E4E885 /* MaBaseViewController.h */,
 				5983661015E6866800E4E885 /* MaBaseViewController.m */,
 				5983661515E688C600E4E885 /* MaTableView.h */,
@@ -747,7 +737,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				591FCCE015CFBD32004FE480 /* main.m in Sources */,
-				591FCD0115CFBD9E004FE480 /* MaRootViewController.m in Sources */,
 				591FCD2615CFBE3E004FE480 /* MoreArtAppDelegate.m in Sources */,
 				591FCD2915CFBEF6004FE480 /* PPRevealSideViewController.m in Sources */,
 				591FCD5215CFC1FC004FE480 /* MaSettingViewController.m in Sources */,
@@ -768,7 +757,6 @@
 				596F8873160ECD810036E2CC /* EGORefreshTableHeaderView.m in Sources */,
 				59EFD3EF1629294700E1FA9F /* MaPlainView.m in Sources */,
 				59237266164B8B8900FF5A97 /* MaImageArrayView.m in Sources */,
-				597E4E43165C8E72005E8FD7 /* MaDetailImageViewController.m in Sources */,
 				59CE005F16689B3300E171EB /* MaScaleImageView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

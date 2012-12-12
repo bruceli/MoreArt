@@ -6,6 +6,12 @@
 	<array>
 		<dict>
 			<key>imageName</key>
+			<string>douwoA</string>
+			<key>artDiscription</key>
+			<string>天气现象主要源于不同地方的温度差异。从大的尺度来看，接近赤道的地区单位面积接收到的太阳能总的来说比其他地区大。</string>
+		</dict>
+		<dict>
+			<key>imageName</key>
 			<string>douwoB</string>
 			<key>artDiscription</key>
 			<string>天气现象主要源于不同地方的温度差异。从大的尺度来看，接近赤道的地区单位面积接收到的太阳能总的来说比其他地区大。</string>
@@ -1366,6 +1372,87 @@
 					<string></string>
 				</dict>
 			</array>
+		</dict>
+	</array>
+	<key>douSpace</key>
+	<array>
+		<dict>
+			<key>imageName</key>
+			<string>douwoB</string>
+			<key>artDiscription</key>
+			<string>天气现象主要源于不同地方的温度差异。从大的尺度来看，接近赤道的地区单位面积接收到的太阳能总的来说比其他地区大。</string>
+		</dict>
+		<dict>
+			<key>imageName</key>
+			<string>douwoC</string>
+			<key>artDiscription</key>
+			<string>天氣密度（溫度和濕度）是由一個地方和另一個之間的差異 。這些差異可能是由於從熱帶太陽的角度在任何特定地點，由不同緯度。</string>
+		</dict>
+		<dict>
+			<key>imageName</key>
+			<string>douwoD</string>
+			<key>artDiscription</key>
+			<string>極地和熱帶空氣之間的強烈的溫度反差引起的噴流 。在天氣系統中緯度地區，如溫帶氣旋，造成噴流流的不穩定性 。</string>
+		</dict>
+		<dict>
+			<key>imageName</key>
+			<string>douwoE</string>
+			<key>artDiscription</key>
+			<string>表面溫度反過來的差異造成的壓力差。天氣預報是科學和應用技術，預測國家未來某個時間和位置的大氣。</string>
+		</dict>
+	</array>
+	<key>peikingBase</key>
+	<array>
+		<dict>
+			<key>imageName</key>
+			<string>douwoB</string>
+			<key>artDiscription</key>
+			<string>天气现象主要源于不同地方的温度差异。从大的尺度来看，接近赤道的地区单位面积接收到的太阳能总的来说比其他地区大。</string>
+		</dict>
+		<dict>
+			<key>imageName</key>
+			<string>douwoC</string>
+			<key>artDiscription</key>
+			<string>天氣密度（溫度和濕度）是由一個地方和另一個之間的差異 。這些差異可能是由於從熱帶太陽的角度在任何特定地點，由不同緯度。</string>
+		</dict>
+		<dict>
+			<key>imageName</key>
+			<string>douwoD</string>
+			<key>artDiscription</key>
+			<string>極地和熱帶空氣之間的強烈的溫度反差引起的噴流 。在天氣系統中緯度地區，如溫帶氣旋，造成噴流流的不穩定性 。</string>
+		</dict>
+		<dict>
+			<key>imageName</key>
+			<string>douwoE</string>
+			<key>artDiscription</key>
+			<string>表面溫度反過來的差異造成的壓力差。天氣預報是科學和應用技術，預測國家未來某個時間和位置的大氣。</string>
+		</dict>
+	</array>
+	<key>moPhoto</key>
+	<array>
+		<dict>
+			<key>imageName</key>
+			<string>douwoB</string>
+			<key>artDiscription</key>
+			<string>天气现象主要源于不同地方的温度差异。从大的尺度来看，接近赤道的地区单位面积接收到的太阳能总的来说比其他地区大。</string>
+		</dict>
+		<dict>
+			<key>imageName</key>
+			<string>douwoC</string>
+			<key>artDiscription</key>
+			<string>天氣密度（溫度和濕度）是由一個地方和另一個之間的差異 。這些差異可能是由於從熱帶太陽的角度在任何特定地點，由不同緯度。</string>
+		</dict>
+		<dict>
+			<key>imageName</key>
+			<string>douwoD</string>
+			<key>artDiscription</key>
+			<string>極地和熱帶空氣之間的強烈的溫度反差引起的噴流 。在天氣系統中緯度地區，如溫帶氣旋，造成噴流流的不穩定性 。</string>
+		</dict>
+		<dict>
+			<key>imageName</key>
+			<string>douwoE</string>
+			<key>artDiscription</key>
+			<string>表面溫度反過來的差異造成的壓力差。天氣預報是科學和應用技術，預測國家未來某個時間和位置的大氣。</string>
 		</dict>
 	</array>
 	<key>enumArray</key>

@@ -47,21 +47,17 @@
 
     self.view = app.douWoView;
     
-    [[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
+	
+	[[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:@"UIDeviceOrientationDidChangeNotification" object:nil];
-
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(orientationChanged:) name:@"UIDeviceOrientationDidChangeNotification" object:nil];
-    
 	
-	UIImageView* imgView = [[UIImageView alloc] initWithFrame:CGRectMake(0,0, 50, 44)];
-	imgView.image = [UIImage imageNamed:@"button_slider_1"];
-	UIBarButtonItem* buttom = [[UIBarButtonItem alloc] initWithCustomView:imgView];
-//	UIBarButtonItem* buttom = [[UIBarButtonItem alloc ]initWithImage:[UIImage imageNamed:@"button_slider_1"] style:UIBarButtonItemStylePlain target:self action:@selector(slideSettingViewController)];
-	
-	buttom.width = 20;
-	self.navigationItem.leftBarButtonItem = buttom;
-	//self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemStop target:self action:@selector(slideSettingViewController)];
-	
+	UIButton* buttomView = [[UIButton alloc] initWithFrame:CGRectMake(0,0, 50, 44)];
+	[buttomView setImage:[UIImage imageNamed:@"button_slider_1"] forState:UIControlStateNormal];
+	[buttomView addTarget:self action:@selector(slideSettingViewController) forControlEvents:UIControlEventTouchDown];
+	UIBarButtonItem* buttom = [[UIBarButtonItem alloc] initWithCustomView:buttomView];
+
+	self.navigationItem.leftBarButtonItem = buttom;	
 }
 
 -(void)updateDataSourceBy:(MaDouViewType)type
@@ -160,12 +156,20 @@
     [self.navigationController pushViewController: viewController animated:YES];
 }
 
+-(BOOL) shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation
+{
+	return NO;
+}
+
 
 - (void) orientationChanged:(id)object
 {
 	UIInterfaceOrientation interfaceOrientation = [[object object] orientation];
     MoreArtAppDelegate* app = (MoreArtAppDelegate *)[[UIApplication sharedApplication] delegate];
-
+	
+	
+	
+/*
 	if (interfaceOrientation == UIInterfaceOrientationPortrait ||interfaceOrientation ==  UIInterfaceOrientationPortraitUpsideDown)
 	{
         if (currentView)
@@ -185,80 +189,10 @@
         self.view = app.coverFlowView;
         self.navigationController.navigationBarHidden = YES;
 	}
-}
-
--(void)addSingleTapGestureRecognizerTo:(UIView*)view
-{
-    UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleSingleTap:)];
-	singleTap.numberOfTapsRequired = 1;
-	[view setUserInteractionEnabled:YES];
-    [view addGestureRecognizer:singleTap];
-}
-
-- (void)handleSingleTap:(UIGestureRecognizer *)gestureRecognizer {
-	UIView* view = gestureRecognizer.view;	
-	[self toggleZoom:view];
+ */
 }
 
 
--(void)initScrollableImageView:(UIImage*)image
-{
-	[self addSingleTapGestureRecognizerTo:_scrollView];
 
-}
-
--(void) toggleZoom:(UIView*) sender 
-{
-	if (proxyView)
-	{					// zoomout
-		CGRect frame =
-		[proxyView.superview convertRect:sender.frame fromView:sender.window];
-		sender.frame = frame;
-		
-		CGRect proxyViewFrame = proxyView.frame;
-		
-		[proxyView.superview addSubview:_hiddenView];
-		[proxyView removeFromSuperview];
-		[_scrollView removeFromSuperview];
-		proxyView = nil;
-		_hiddenView = nil;
-		[UIView animateWithDuration:0.3 animations:^{ sender.frame = proxyViewFrame; }];
-		[[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationFade];
-		[self.navigationController setNavigationBarHidden:NO animated:YES];
-/*
-		[UIView animateWithDuration:0.3 animations:
-					^{ sender.frame = proxyViewFrame;} 
-				completion:
-					^(BOOL finished){
-						[[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationFade];
-						[self.navigationController setNavigationBarHidden:NO animated:YES];
-					}
-		 ];
-	*/
-	}
-	else
-	{					// zoom in
-		proxyView = [[UIView alloc] initWithFrame:sender.frame];
-		proxyView.hidden = YES;
-		_hiddenView = (AsyncImageView*)sender;
-		proxyView.autoresizingMask = sender.autoresizingMask;
-		[sender.superview addSubview:proxyView];
-		
-		CGRect frame = [sender.window convertRect:sender.frame fromView:proxyView.superview];
-		//[sender.window addSubview:sender];
-		[self initScrollableImageView:((AsyncImageView*)sender).image];
-		[sender.window addSubview:_scrollView];
-		_scrollView.frame = frame;
-/*
- CGRect frame = [sender.window convertRect:sender.frame fromView:proxyView.superview];
- [sender.window addSubview:sender];
- sender.frame = frame;
-*/
-		[self.navigationController setNavigationBarHidden:YES animated:YES];
-		[[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationFade];
-
-//		[UIView animateWithDuration:0.2 animations:^{ sender.frame = sender.window.bounds;}];
-	}
-}
 
 @end

@@ -8,13 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "MaDefine.h"
-#import "EGORefreshTableHeaderView.h"
 #import "MaScrollImageViewController.h"
 
-@interface MaTableView : UITableView <EGORefreshTableHeaderDelegate>
+@interface MaTableView : UITableView 
 {
     MaDouViewType _douViewType;
-    EGORefreshTableHeaderView *_refreshHeaderView;
 	BOOL _reloading;
     
 	MaScrollImageViewController* _scrollImageViewController;

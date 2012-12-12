@@ -10,13 +10,12 @@
 @class MaDataSource;
 #import "MaPlainView.h"
 
-@interface MaBaseViewController : UIViewController <UITableViewDataSource,UITableViewDelegate,MaViewPlainDelegate,UIScrollViewDelegate>
+@interface MaBaseViewController : UIViewController <UITableViewDataSource,UITableViewDelegate,UIScrollViewDelegate>
 {
     id currentView;
     
     MaDataSource* _dataSourceMgr;
 	UIScrollView* _scrollView;
-	AsyncImageView* _hiddenView;
 	UIView *proxyView;
     
 }
