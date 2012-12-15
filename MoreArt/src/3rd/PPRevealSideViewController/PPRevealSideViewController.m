@@ -1401,7 +1401,7 @@
 }
 
 #pragma mark - Orientation stuff
-
+/*
 - (void) willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
     [super willAnimateRotationToInterfaceOrientation:toInterfaceOrientation duration:duration];
     
@@ -1455,6 +1455,7 @@
             [controller didRotateFromInterfaceOrientation:fromInterfaceOrientation];
     }
 }
+*/
 
 - (BOOL) shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation {
     return [_rootViewController shouldAutorotateToInterfaceOrientation:toInterfaceOrientation];
@@ -1559,6 +1560,10 @@ static char revealSideInsetKey;
     else
         inset = self.superview.revealSideInset;
     return inset;
+}
+
+- (BOOL)shouldAutorotate {
+	return NO;
 }
 
 @end

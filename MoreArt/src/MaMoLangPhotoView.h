@@ -10,7 +10,6 @@
 
 @interface MaMoLangPhotoView : MaPlainView
 {
-	UIScrollView* _scrollView;
 
 }
 @end

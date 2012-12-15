@@ -19,17 +19,44 @@
 
 
 @implementation MaPlainView
+@synthesize imageViewArray = _imageViewArray;
 
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self) {	
+		
+		CGRect bounds = [ [ UIScreen mainScreen ] applicationFrame ];
+		CGRect frame = CGRectMake(0, 0, bounds.size.width, bounds.size.height - MA_TOOLBAR_HEIGHT);
+		_scrollView = [[UIScrollView alloc ] initWithFrame:frame ];
+		_scrollView.alwaysBounceVertical=YES;
+		_scrollView.showsVerticalScrollIndicator = NO;
+		_scrollView.showsHorizontalScrollIndicator = NO;
+		_scrollView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"setting_bkg.png"]];
+		
+		[self addSubview:_scrollView ];		
+		[self reloadViewsByType:_douViewType];
+		
     }
     return self;
 }
 
--(void)setupViewsFromArray:(NSArray*)itemArray to:(UIScrollView*)scrollView
+-(void)reloadViewsByType:(MaDouViewType)type
+{
+	MoreArtAppDelegate* app = (MoreArtAppDelegate *)[[UIApplication sharedApplication] delegate];
+	NSArray* itemArray = app.dataSourceMgr.dataSource;
+	[app.dataSourceMgr updateDataSourceArrayByViewType:_douViewType];
+	
+	[[_scrollView subviews] makeObjectsPerformSelector:@selector(removeFromSuperview)];
+
+	[self setupViewsFromArray:itemArray];
+
+}
+
+-(void)setupViewsFromArray:(NSArray*)itemArray
 { 
+	_imageViewArray = [[NSMutableArray alloc] init];
+	
 	MoreArtAppDelegate* app = (MoreArtAppDelegate *)[[UIApplication sharedApplication] delegate];
 	NSDictionary* imgDict = app.dataSourceMgr.imageIndexDict;
 	
@@ -45,16 +72,20 @@
 		[self fillText:string to:textView];
 		
 		CGSize textViewSize = [textView.contentView suggestedFrameSizeToFitEntireStringConstraintedToWidth:300];
-		[scrollView addSubview:textView];
+		[_scrollView addSubview:textView];
 		y_Location = textViewSize.height + y_Location +16;
 		
 		AsyncImageView* imgView = [self createImgViewBy:CGRectMake(10, y_Location, 300, 200)]; 
 		[imgView setImageByString:path];
-		[scrollView addSubview:imgView];
+		[_scrollView addSubview:imgView];
+		
+		NSMutableDictionary* dict = [NSMutableDictionary dictionaryWithObjects:[NSArray arrayWithObjects:imgView,path,nil] forKeys:[NSArray arrayWithObjects:@"imageView",@"imagePath",nil] ];
+		[_imageViewArray addObject:dict];
+		
 		y_Location = imgView.frame.size.height + y_Location +20;		
 	}
 	
-	scrollView.contentSize = CGSizeMake(320, y_Location); 
+	_scrollView.contentSize = CGSizeMake(320, y_Location); 
 }
 
 
@@ -140,6 +171,8 @@
 	singleTap.numberOfTapsRequired = 1;
 	[view setUserInteractionEnabled:YES];
     [view addGestureRecognizer:singleTap];
+	
+//	NSLog(@"addGestureRecognizerTo: %@", [view description]);
 }
 
 -(void)adjustViewSize:(CGSize)size
@@ -169,6 +202,8 @@
 
 
 - (void)handleSingleTap:(UIGestureRecognizer *)gestureRecognizer {
+//	NSLog(@"handleSingleTap From: %@", [gestureRecognizer.view description]);
+
 	UIView* view = gestureRecognizer.view;	
 	[self toggleZoom:view];
 }
@@ -179,8 +214,8 @@
 	{					
 		// zoomout
 		CGRect frame = [sender.window convertRect:_hiddenView.frame fromView:_hiddenView.superview];
-		NSLog(@"end frame is ,%@", NSStringFromCGRect(frame));
-		[[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationSlide];
+//		NSLog(@"end frame is ,%@", NSStringFromCGRect(frame));
+		[[UIApplication sharedApplication] setStatusBarStyle:_barStyle animated:YES];		
 		[UIView animateWithDuration:0.3 animations:
 		 ^{ sender.frame = frame; sender.alpha = 0.0;} 
 						 completion:
@@ -189,9 +224,14 @@
 			 _hiddenView = nil;
 			 _scaleImageView = nil;
 		 }];
+
+		NSLog(@"self frame is ,%@", NSStringFromCGRect(self.frame));
+
+		
 	}
 	else
-	{					// zoom in		
+	{					// zoom in	
+		_barStyle = [[UIApplication sharedApplication] statusBarStyle];
 		_hiddenView = (AsyncImageView*)sender;
 		CGRect frame = [sender.window convertRect:sender.frame fromView:sender.superview];
 		//		NSLog(@"Sender frame is ,%@", NSStringFromCGRect(frame));
@@ -205,20 +245,31 @@
 		[UIView animateWithDuration:0.2 animations:^{ _scaleImageView.frame = screenRect; }];
 		[self setImageForScrollableImageView:((AsyncImageView*)sender)];
 		[sender.window addSubview:_scaleImageView];
-		
+		[[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleBlackTranslucent animated:YES];		
+
 		//		[self.navigationController setNavigationBarHidden:YES animated:YES];
-		[[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationSlide];
+//		[[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationSlide];
 		
 	}
 }
 
 -(void) setImageForScrollableImageView:(AsyncImageView*)imageView
 {
-	NSURL* imgURL = imageView.imgURL; 
-	[_scaleImageView loadImageFrom:[imgURL absoluteString]];
+	
+//	NSInteger index = [_imageViewArray indexOfObject:imageView];
+	//		NSMutableDictionary* dict = [NSMutableDictionary dictionaryWithObjects:[NSArray arrayWithObjects:imgView,path,nil] forKeys:[NSArray arrayWithObjects:@"imageView",@"path",nil] ];
+	NSString* imgURL;
+	for (NSDictionary* dict in _imageViewArray)
+	{
+		if (imageView == [dict objectForKey:@"imageView"])
+		{
+			imgURL = [dict objectForKey:@"imagePath"];
+			break;
+		}
+	}
+	
+	[_scaleImageView loadImageFrom:imgURL];
 }
-
-
 
 /*
 // Only override drawRect: if you perform custom drawing.

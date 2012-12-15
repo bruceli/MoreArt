@@ -10,7 +10,6 @@
 
 @interface MaDouPeKingBaseView : MaPlainView
 {
-	UIScrollView* _scrollView;
 
 }
 @end

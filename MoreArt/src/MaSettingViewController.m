@@ -176,18 +176,22 @@
     else
         itemArray = [moreArray objectAtIndex:indexPath.row];
     
-    if ([app.baseViewController.view isKindOfClass:[UITableView class]]) {
-        [((MaTableView*)app.baseViewController.view).scrollImageViewController stopScrolling];
-    }
     
     app.baseViewController.view = [itemArray objectAtIndex:MA_MENU_CONTROLLER];
-    app.baseViewController.navigationItem.title = [itemArray objectAtIndex:MA_MENU_TITLE];
+	
+	if ([app.baseViewController.view isKindOfClass:[MaPlainView class]]) 
+	{ 
+		[((MaPlainView*)app.baseViewController.view) reloadViewsByType:indexPath.row];
+	}
+    
+	app.baseViewController.navigationItem.title = [itemArray objectAtIndex:MA_MENU_TITLE];
     
     
 //    if ([[itemArray objectAtIndex:MA_MENU_CONTROLLER] isKindOfClass:[MaTableView class]]) {
 
 	// update Data source
 	[app.baseViewController updateDataSourceBy:indexPath.row];	
+	
 	[self.revealSideViewController popViewControllerAnimated:YES];
 }
 

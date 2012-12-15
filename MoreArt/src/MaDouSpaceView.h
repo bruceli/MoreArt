@@ -10,7 +10,6 @@
 
 @interface MaDouSpaceView : MaPlainView
 {
-	UIScrollView* _scrollView;
 
 }
 

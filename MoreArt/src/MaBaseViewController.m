@@ -161,15 +161,22 @@
 	return NO;
 }
 
+-(NSUInteger)supportedInterfaceOrientations{
+    return UIInterfaceOrientationMaskPortrait; // etc
+}
+
+- (BOOL)shouldAutorotate {	
+	return NO;
+}
 
 - (void) orientationChanged:(id)object
 {
+	
+	NSLog(@"%@",@"OrientationChanged");
+	
 	UIInterfaceOrientation interfaceOrientation = [[object object] orientation];
     MoreArtAppDelegate* app = (MoreArtAppDelegate *)[[UIApplication sharedApplication] delegate];
-	
-	
-	
-/*
+
 	if (interfaceOrientation == UIInterfaceOrientationPortrait ||interfaceOrientation ==  UIInterfaceOrientationPortraitUpsideDown)
 	{
         if (currentView)
@@ -186,10 +193,17 @@
 //            NSLog(@"%@", @"==== landScape Mode");
             currentView = self.view;
         }
+		if ([app.baseViewController.view isKindOfClass:[MaPlainView class]]) {
+			NSArray* imageArray = ((MaPlainView*)app.baseViewController.view).imageViewArray ;
+			[app.coverFlowView loadCoverFlowImageBy: imageArray];
+		}
+
+		
         self.view = app.coverFlowView;
         self.navigationController.navigationBarHidden = YES;
 	}
- */
+
+	
 }
 
 

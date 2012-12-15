@@ -11,7 +11,6 @@
 
 @interface MaDouWoView : MaPlainView 
 {
-	UIScrollView* _scrollView;
 
 }
 
