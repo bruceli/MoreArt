@@ -65,7 +65,7 @@
 	
 	for(NSDictionary* dict in itemArray)
 	{
-		NSString* path = [imgDict objectForKey:[dict objectForKey:@"imageName"]];
+		NSString* imgName = [dict objectForKey:@"imageName"];
 		NSString* text = [dict objectForKey:@"artDiscription"];
 		
 		DTAttributedTextView* textView = [self createTextViewBy:CGRectMake(10, y_Location, 300, 100)]; 
@@ -73,17 +73,25 @@
 		[self fillText:string to:textView];
 		
 		CGSize textViewSize = [textView.contentView suggestedFrameSizeToFitEntireStringConstraintedToWidth:300];
+		if (textView.frame.size.height < textViewSize.height ) {
+			textView.frame = CGRectMake(textView.frame.origin.x, textView.frame.origin.y, textView.frame.size.width, textViewSize.height+10);
+		}
 		[_scrollView addSubview:textView];
 		y_Location = textViewSize.height + y_Location +16;
 		
-		AsyncImageView* imgView = [self createImgViewBy:CGRectMake(10, y_Location, 300, 200)]; 
-		[imgView setImageByString:path];
-		[_scrollView addSubview:imgView];
-		
-		NSMutableDictionary* dict = [NSMutableDictionary dictionaryWithObjects:[NSArray arrayWithObjects:imgView,path,nil] forKeys:[NSArray arrayWithObjects:@"imageView",@"imagePath",nil] ];
-		[_imageViewArray addObject:dict];
-		
-		y_Location = imgView.frame.size.height + y_Location +20;		
+		if ([imgName length]>0) {
+			NSString* path = [imgDict objectForKey:imgName];
+
+			AsyncImageView* imgView = [self createImgViewBy:CGRectMake(10, y_Location, 300, 200)]; 
+			[imgView setImageByString:path];
+			[_scrollView addSubview:imgView];
+
+			NSMutableDictionary* dict = [NSMutableDictionary dictionaryWithObjects:[NSArray arrayWithObjects:imgView,path,nil] forKeys:[NSArray arrayWithObjects:@"imageView",@"imagePath",nil] ];
+			[_imageViewArray addObject:dict];
+
+			y_Location = imgView.frame.size.height + y_Location +20;	
+		}
+
 	}
 	
 	_scrollView.contentSize = CGSizeMake(320, y_Location); 
