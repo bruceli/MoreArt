@@ -21,7 +21,7 @@
 
 -(void)loadImageFrom:(NSString*)imgPath;
 -(void)setPreloadedImages:(UIImage*)img;
-
+-(void)changeRotation;
 @property (nonatomic, weak) id <MaScaleImageViewDelegate> scaleImageViewDelegate; 
 
 

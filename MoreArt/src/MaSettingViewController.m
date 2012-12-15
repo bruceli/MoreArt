@@ -182,13 +182,19 @@
 	if ([app.baseViewController.view isKindOfClass:[MaPlainView class]]) 
 	{ 
 		[((MaPlainView*)app.baseViewController.view) reloadViewsByType:indexPath.row];
+		[[NSNotificationCenter defaultCenter] removeObserver:app.art029View  name:@"UIDeviceOrientationDidChangeNotification" object:nil];
+		[[NSNotificationCenter defaultCenter] addObserver:app.baseViewController selector:@selector(orientationChanged:) name:@"UIDeviceOrientationDidChangeNotification" object:nil];
+
+
 	}
     
 	app.baseViewController.navigationItem.title = [itemArray objectAtIndex:MA_MENU_TITLE];
     
     
-//    if ([[itemArray objectAtIndex:MA_MENU_CONTROLLER] isKindOfClass:[MaTableView class]]) {
+    if ([[itemArray objectAtIndex:MA_MENU_CONTROLLER] isKindOfClass:[MaTableView class]]) {
+		[[NSNotificationCenter defaultCenter] removeObserver:app.baseViewController  name:@"UIDeviceOrientationDidChangeNotification" object:nil];
 
+	}
 	// update Data source
 	[app.baseViewController updateDataSourceBy:indexPath.row];	
 	

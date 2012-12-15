@@ -20,6 +20,7 @@
 
 @implementation MaPlainView
 @synthesize imageViewArray = _imageViewArray;
+@synthesize scaleImageView = _scaleImageView;
 
 - (id)initWithFrame:(CGRect)frame
 {

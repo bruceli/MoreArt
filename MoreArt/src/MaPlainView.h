@@ -31,6 +31,7 @@
 
 @property (nonatomic, weak) id <MaViewPlainDelegate> delegate; //define MaViewPlainDelegate as delegate
 @property (nonatomic, retain) NSMutableArray* imageViewArray;
+@property (nonatomic, readonly) MaScaleImageView* scaleImageView;
 
 -(void)reloadViewsByType:(MaDouViewType)type;
 @end

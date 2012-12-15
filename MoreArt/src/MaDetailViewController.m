@@ -35,7 +35,6 @@
     CGRect bounds = [ [ UIScreen mainScreen ] applicationFrame ];
     _scrollView = [[UIScrollView alloc ] initWithFrame:bounds ];
     _scrollView.alwaysBounceVertical=YES;
-    
 	
     self.view = _scrollView;
     _scrollView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"setting_bkg.png"]];
@@ -61,12 +60,12 @@
     [self fillContents];
     [self adjustViewSize];
 	
-	/*
+	
     [[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:@"UIDeviceOrientationDidChangeNotification" object:nil];
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(orientationChanged:) name:@"UIDeviceOrientationDidChangeNotification" object:nil];
 	[[UIDevice currentDevice] endGeneratingDeviceOrientationNotifications];
-*/
+
 
 }
 
@@ -119,7 +118,7 @@
             if (scale>1)
             {
                 NSMutableString* retinaImageName = [NSMutableString stringWithString:imagePrefix];
-                [retinaImageName appendString:@"@2x"];
+//                [retinaImageName appendString:@"@2x"];
                 imgPath = [imgDict objectForKey:retinaImageName];
             }
             else
@@ -214,7 +213,7 @@
             if (scale>1)
             {
                 NSMutableString* retinaImageName = [NSMutableString stringWithString:imagePrefix];
-                [retinaImageName appendString:@"@2x"];
+//                [retinaImageName appendString:@"@2x"];
                 imgPath = [imgDict objectForKey:retinaImageName];
             }
             else
@@ -234,6 +233,9 @@
 
 - (void) orientationChanged:(id)object
 {
+	
+	NSLog(@"%@",@"Base View OrientationChanged");
+
 	UIInterfaceOrientation interfaceOrientation = [[object object] orientation];
     MoreArtAppDelegate* app = (MoreArtAppDelegate *)[[UIApplication sharedApplication] delegate];
     
@@ -349,7 +351,7 @@
 		if (scale>1)
 		{
 			NSMutableString* retinaImageName = [NSMutableString stringWithString:imagePrefix];
-			[retinaImageName appendString:@"@2x"];
+//			[retinaImageName appendString:@"@2x"];
 			imgPath = [imgDict objectForKey:retinaImageName];
 		}
 		else

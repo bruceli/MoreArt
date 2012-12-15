@@ -144,4 +144,10 @@
     return zoomRect;
 }
 
+-(void)changeRotation
+{
+
+
+}
+
 @end
