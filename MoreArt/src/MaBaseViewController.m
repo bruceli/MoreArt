@@ -165,11 +165,11 @@
     return UIInterfaceOrientationMaskPortrait; // etc
 }
 
-/*
+
 - (BOOL)shouldAutorotate {	
 	return NO;
 }
-*/
+
 
 - (void) orientationChanged:(id)object
 {
@@ -179,11 +179,12 @@
 	UIInterfaceOrientation interfaceOrientation = [[object object] orientation];
     MoreArtAppDelegate* app = (MoreArtAppDelegate *)[[UIApplication sharedApplication] delegate];
 
-	if (interfaceOrientation == UIInterfaceOrientationPortrait ||interfaceOrientation ==  UIInterfaceOrientationPortraitUpsideDown)
+	if (interfaceOrientation == UIInterfaceOrientationPortrait)
 	{
         if (currentView)
         {
             self.view = currentView;
+			currentView = nil;
             self.navigationController.navigationBarHidden = NO;
 //            NSLog(@"%@", @"==== portrait");
         }
@@ -191,10 +192,8 @@
 	}
 	else if(interfaceOrientation == UIDeviceOrientationLandscapeRight|| interfaceOrientation == UIDeviceOrientationLandscapeLeft)
 	{
- /*       if (((MaPlainView*)app.baseViewController.view).scaleImageView != nil) {
-			NSLog(@"%@", @"is ScaleImageView");
-		}
-	*/	
+		//if (((MaPlainView*)app.baseViewController.view).scaleImageView != nil) {
+			//NSLog(@"%@", @"is ScaleImageView");}
 		
 		
 		if (app.coverFlowView != self.view) {
