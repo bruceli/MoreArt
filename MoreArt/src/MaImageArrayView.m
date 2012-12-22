@@ -43,7 +43,7 @@
         }
         
         self.contentSize = CGSizeMake((MA_IMAGE_ARRAY_CELL_SIZE + MA_IMAGE_ARRAY_CELL_GAP)*MA_IMAGE_ARRAY_MINIMUM_CELL_COUNT, MA_IMAGE_ARRAY_CELL_SIZE);
-        self.backgroundColor = [UIColor orangeColor];
+        self.backgroundColor = [UIColor clearColor];
         self.showsHorizontalScrollIndicator = NO;
         
         
@@ -112,7 +112,7 @@
     imgView.userInteractionEnabled = YES;
     [imgView addGestureRecognizer:myTapGesture];
     
-    imgView.backgroundColor = [UIColor colorWithRed:(random()%100)/(float)100 green:(random()%100)/(float)100 blue:(random()%100)/(float)100 alpha:1];
+    imgView.backgroundColor = [UIColor darkGrayColor];
     return imgView;
 }
 
