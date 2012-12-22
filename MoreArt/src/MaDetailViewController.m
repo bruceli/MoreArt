@@ -8,6 +8,7 @@
 
 #import "MaDetailViewController.h"
 #import "MoreArtAppDelegate.h"
+#import "MaImageGalleryViewController.h"
 
 #define kMA_PARAGRPH_MARK
 
@@ -31,7 +32,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+	_imgArray = [[NSMutableArray alloc] init];
+
     CGRect bounds = [ [ UIScreen mainScreen ] applicationFrame ];
     _scrollView = [[UIScrollView alloc ] initWithFrame:bounds ];
     _scrollView.alwaysBounceVertical=YES;
@@ -57,6 +59,7 @@
     _textView.backgroundColor = [UIColor clearColor];
 	[self.view addSubview:_textView];
     
+	[self prepareImageArray];
     [self fillContents];
     [self adjustViewSize];
 	
@@ -192,7 +195,7 @@
 }
 
 
--(void)prepareCoverFlowImage
+-(void)prepareImageArray
 {
     MoreArtAppDelegate* app = (MoreArtAppDelegate *)[[UIApplication sharedApplication] delegate];
     // Load data from MGR
@@ -201,34 +204,22 @@
 	NSString* imgPath;
 
     // Fill IMG
-    CGFloat scale = [[UIScreen mainScreen] scale];
+//    CGFloat scale = [[UIScreen mainScreen] scale];
 
     // Fill imageArray;
     NSArray* array = [dict objectForKey:@"imageArray"];
-    NSMutableArray* imgArray = [[NSMutableArray alloc] init];
     // Use square image form pic server
     for (NSDictionary* dict in array) {
         NSString* imagePrefix = [dict objectForKey:@"imageName"];
-        if ([imagePrefix length]>0) {
-            if (scale>1)
-            {
                 NSMutableString* retinaImageName = [NSMutableString stringWithString:imagePrefix];
-//                [retinaImageName appendString:@"@2x"];
                 imgPath = [imgDict objectForKey:retinaImageName];
-            }
-            else
-                imgPath = [imgDict objectForKey:imagePrefix];
-        }
         NSMutableDictionary* imgDict = [NSMutableDictionary dictionaryWithDictionary:dict];
         
         if([imgPath length]>0)
             [imgDict setObject:imgPath forKey:@"imagePath"];
         
-        [imgArray addObject:imgDict];
-    }
-
-	[app.coverFlowView loadCoverFlowImageBy :imgArray ];
-	
+        [_imgArray addObject:imgDict];
+    }	
 }
 
 - (void) orientationChanged:(id)object
@@ -255,9 +246,9 @@
             //            NSLog(@"%@", @"==== landScape Mode");
             _currentView = self.view;
         }
-        
-        [self prepareCoverFlowImage];
-        self.view = app.coverFlowView;
+		
+		[app.coverFlowView loadCoverFlowImageBy :_imgArray ];
+		self.view = app.coverFlowView;
         self.navigationController.navigationBarHidden = YES;
         
         
@@ -333,89 +324,14 @@
     return resultString;
 }
 
--(void) setImageForScrollableImageView:(AsyncImageView*)imageView
-{
-	// Get orignal image path.
-	CGFloat scale = [[UIScreen mainScreen] scale];
-	MoreArtAppDelegate* app = (MoreArtAppDelegate *)[[UIApplication sharedApplication] delegate];
-    // Load data from MGR
-    NSDictionary* dict = [app.dataSourceMgr.dataSource objectAtIndex: _indexPath.row];
-    NSDictionary* imgDict = app.dataSourceMgr.imageIndexDict;
-    NSArray* array = [dict objectForKey:@"imageArray"];
-	
-	NSDictionary* itemDict = [array objectAtIndex:[_imageGroupView.imageViewArray indexOfObject:imageView]];
-	
-	NSString* imgPath;
-	NSString* imagePrefix = [itemDict objectForKey:@"imageName"];
-	if ([imagePrefix length]>0) {
-		if (scale>1)
-		{
-			NSMutableString* retinaImageName = [NSMutableString stringWithString:imagePrefix];
-//			[retinaImageName appendString:@"@2x"];
-			imgPath = [imgDict objectForKey:retinaImageName];
-		}
-		else
-			imgPath = [imgDict objectForKey:imagePrefix];
-	}
-	
-	[_scaleImageView loadImageFrom:imgPath];
-}
-
-/*
-- (void)handleSingleTap:(UIGestureRecognizer *)gestureRecognizer {
-	UIView* view = gestureRecognizer.view;	
-	[self toggleZoom:view];
-}
-*/
-
--(void)initScaleImageView
-{
-//	_scaleImageView.delegate = self;
-
-
-}
-
 -(void) toggleZoom:(UIView*) sender 
 {
-	if (_hiddenView)
-	{					
-		// zoomout
-		CGRect frame = [sender.window convertRect:_hiddenView.frame fromView:_hiddenView.superview];
-//		NSLog(@"end frame is ,%@", NSStringFromCGRect(frame));
-		[[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationSlide];
-		[UIView animateWithDuration:0.3 animations:
-		 ^{ sender.frame = frame; sender.alpha = 0.0;} 
-						 completion:
-		 ^(BOOL finished){
-			 [_scaleImageView removeFromSuperview];
-			 _hiddenView = nil;
-			 _scaleImageView = nil;
-		 }];
-	}
-	else
-	{					// zoom in		
-		_hiddenView = (AsyncImageView*)sender;
-		CGRect frame = [sender.window convertRect:sender.frame fromView:sender.superview];
-//		NSLog(@"Sender frame is ,%@", NSStringFromCGRect(frame));
+	MoreArtAppDelegate* app = (MoreArtAppDelegate *)[[UIApplication sharedApplication] delegate];
 
-		CGRect screenRect = [[UIScreen mainScreen] bounds];
-//		NSLog(@"screenRect frame is ,%@", NSStringFromCGRect(screenRect));
-		// prepair scrollableImage Animation
-		_scaleImageView = [[MaScaleImageView alloc] initWithFrame:frame];
-		_scaleImageView.scaleImageViewDelegate = self;
-//		_scaleImageView.frame = frame;
-		[UIView animateWithDuration:0.2 animations:^{ _scaleImageView.frame = screenRect; }];
-		[self setImageForScrollableImageView:((AsyncImageView*)sender)];
-		[sender.window addSubview:_scaleImageView];
-
-//		[self.navigationController setNavigationBarHidden:YES animated:YES];
-		[[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationSlide];
-
-	}
+	MaImageGalleryViewController* galleryViewController = [[MaImageGalleryViewController alloc] initWithPhotoSource:_imgArray ];
+//	galleryViewController.startingIndex = i;
+	[app.baseViewController.navigationController pushViewController:galleryViewController animated:YES];
+	
 }
-
-
-
-
 
 @end

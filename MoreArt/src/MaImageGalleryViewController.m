@@ -104,6 +104,13 @@
 	[self reloadGallery];
 }
 
+-(void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+	[_container removeObserver:self forKeyPath:@"frame"];
+}
+
+
 -(void)reloadGallery
 {
     _currentIndex = _startingIndex;	
@@ -141,11 +148,12 @@
 		NSString* name = [dict objectForKey:@"imageName"];
 
 		NSString* path = [imgDict objectForKey:name];
-		[photoView.imageView setImageByString:path];
-		
-		[_scroller addSubview:photoView];
-		[_photoViews addObject:photoView];
-//		[photoView release];
+		if ([path length] >0) {
+			[photoView.imageView setImageByString:path];
+			
+			[_scroller addSubview:photoView];
+			[_photoViews addObject:photoView];
+		}
 	}
 }
 

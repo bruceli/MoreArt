@@ -21,7 +21,6 @@
 
 @implementation MaPlainView
 @synthesize imageViewArray = _imageViewArray;
-@synthesize scaleImageView = _scaleImageView;
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -236,68 +235,6 @@
 
 }
 
--(void) toggleZoom:(UIView*) sender 
-{
-	if (_hiddenView)
-	{					
-		// zoomout
-		CGRect frame = [sender.window convertRect:_hiddenView.frame fromView:_hiddenView.superview];
-//		NSLog(@"end frame is ,%@", NSStringFromCGRect(frame));
-		[[UIApplication sharedApplication] setStatusBarStyle:_barStyle animated:YES];		
-		[UIView animateWithDuration:0.3 animations:
-		 ^{ sender.frame = frame; sender.alpha = 0.0;} 
-						 completion:
-		 ^(BOOL finished){
-			 [_scaleImageView removeFromSuperview];
-			 _hiddenView = nil;
-			 _scaleImageView = nil;
-		 }];
-
-		NSLog(@"self frame is ,%@", NSStringFromCGRect(self.frame));
-
-		
-	}
-	else
-	{					// zoom in	
-		_barStyle = [[UIApplication sharedApplication] statusBarStyle];
-		_hiddenView = (AsyncImageView*)sender;
-		CGRect frame = [sender.window convertRect:sender.frame fromView:sender.superview];
-		//		NSLog(@"Sender frame is ,%@", NSStringFromCGRect(frame));
-		
-		CGRect screenRect = [[UIScreen mainScreen] bounds];
-		//		NSLog(@"screenRect frame is ,%@", NSStringFromCGRect(screenRect));
-		// prepair scrollableImage Animation
-		_scaleImageView = [[MaScaleImageView alloc] initWithFrame:frame];
-		_scaleImageView.scaleImageViewDelegate = self;
-		//		_scaleImageView.frame = frame;
-		[UIView animateWithDuration:0.2 animations:^{ _scaleImageView.frame = screenRect; }];
-		[self setImageForScrollableImageView:((AsyncImageView*)sender)];
-		[sender.window addSubview:_scaleImageView];
-		[[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleBlackTranslucent animated:YES];		
-
-		//		[self.navigationController setNavigationBarHidden:YES animated:YES];
-//		[[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationSlide];
-		
-	}
-}
-
--(void) setImageForScrollableImageView:(AsyncImageView*)imageView
-{
-	
-//	NSInteger index = [_imageViewArray indexOfObject:imageView];
-	//		NSMutableDictionary* dict = [NSMutableDictionary dictionaryWithObjects:[NSArray arrayWithObjects:imgView,path,nil] forKeys:[NSArray arrayWithObjects:@"imageView",@"path",nil] ];
-	NSString* imgURL;
-	for (NSDictionary* dict in _imageViewArray)
-	{
-		if (imageView == [dict objectForKey:@"imageView"])
-		{
-			imgURL = [dict objectForKey:@"imagePath"];
-			break;
-		}
-	}
-	
-	[_scaleImageView loadImageFrom:imgURL];
-}
 
 /*
 // Only override drawRect: if you perform custom drawing.

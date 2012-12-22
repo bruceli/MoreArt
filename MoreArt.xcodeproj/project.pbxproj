@@ -51,7 +51,6 @@
 		59ABA4FD1642697C0060983A /* libDTCoreText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 59ABA49C164262B70060983A /* libDTCoreText.a */; };
 		59BA500D15E855DD00E14A4E /* MaDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 59BA500C15E855DC00E14A4E /* MaDataSource.m */; };
 		59C889001655F06600C0A13A /* imageIndex.plist in Resources */ = {isa = PBXBuildFile; fileRef = 59C888FF1655F06600C0A13A /* imageIndex.plist */; };
-		59CE005F16689B3300E171EB /* MaScaleImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 59CE005E16689B3300E171EB /* MaScaleImageView.m */; };
 		59D0B4FB164A372A009CE214 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59D0B4FA164A3729009CE214 /* ImageIO.framework */; };
 		59D0B4FD164A373A009CE214 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 59D0B4FC164A373A009CE214 /* libxml2.dylib */; };
 		59D0B501164A3784009CE214 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59D0B500164A3784009CE214 /* MobileCoreServices.framework */; };
@@ -221,8 +220,6 @@
 		59BA500C15E855DC00E14A4E /* MaDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MaDataSource.m; path = src/MaDataSource.m; sourceTree = "<group>"; };
 		59C888FF1655F06600C0A13A /* imageIndex.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = imageIndex.plist; sourceTree = "<group>"; };
 		59CA53C115CFC593006FC431 /* MaDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MaDefine.h; path = src/MaDefine.h; sourceTree = "<group>"; };
-		59CE005D16689B3200E171EB /* MaScaleImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MaScaleImageView.h; path = src/MaScaleImageView.h; sourceTree = "<group>"; };
-		59CE005E16689B3300E171EB /* MaScaleImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MaScaleImageView.m; path = src/MaScaleImageView.m; sourceTree = "<group>"; };
 		59D0B4FA164A3729009CE214 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		59D0B4FC164A373A009CE214 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		59D0B4FE164A376C009CE214 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -469,8 +466,6 @@
 				59E6A82E16787DEB001F32F3 /* MaTableView.m */,
 				59EFD3ED1629294700E1FA9F /* MaPlainView.h */,
 				59EFD3EE1629294700E1FA9F /* MaPlainView.m */,
-				59CE005D16689B3200E171EB /* MaScaleImageView.h */,
-				59CE005E16689B3300E171EB /* MaScaleImageView.m */,
 			);
 			name = MaBase;
 			sourceTree = "<group>";
@@ -766,7 +761,6 @@
 				596F8873160ECD810036E2CC /* EGORefreshTableHeaderView.m in Sources */,
 				59EFD3EF1629294700E1FA9F /* MaPlainView.m in Sources */,
 				59237266164B8B8900FF5A97 /* MaImageArrayView.m in Sources */,
-				59CE005F16689B3300E171EB /* MaScaleImageView.m in Sources */,
 				59E6A82F16787DEB001F32F3 /* MaTableView.m in Sources */,
 				59ED6B811682C8B5009EAD8E /* MaImageGalleryViewController.m in Sources */,
 				59ED6B871682DC11009EAD8E /* MaImageGalleryPhotoView.m in Sources */,

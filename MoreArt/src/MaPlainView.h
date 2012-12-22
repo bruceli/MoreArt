@@ -9,7 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "MaDefine.h"
 #import "AsyncImageView.h"
-#import "MaScaleImageView.h"
 
 
 @class MaPlainView; 
@@ -17,13 +16,12 @@
 - (void) toggleZoom: (UIView *) sender; 
 @end 
 
-@interface MaPlainView : UIView <DTAttributedTextContentViewDelegate,AsyncImageViewDelegate,MaScaleImageViewDelegate> 
+@interface MaPlainView : UIView <DTAttributedTextContentViewDelegate,AsyncImageViewDelegate> 
 {
     MaDouViewType _douViewType;
 	UIScrollView* _scrollView;
 
 	AsyncImageView* _hiddenView;
-	MaScaleImageView* _scaleImageView;
 	
 	NSMutableArray* _imageViewArray;
 	UIStatusBarStyle _barStyle;
@@ -31,7 +29,6 @@
 
 @property (nonatomic, weak) id <MaViewPlainDelegate> delegate; //define MaViewPlainDelegate as delegate
 @property (nonatomic, retain) NSMutableArray* imageViewArray;
-@property (nonatomic, readonly) MaScaleImageView* scaleImageView;
 
 -(void)reloadViewsByType:(MaDouViewType)type;
 @end

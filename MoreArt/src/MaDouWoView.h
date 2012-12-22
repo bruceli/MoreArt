@@ -7,7 +7,6 @@
 //
 
 #import "MaPlainView.h"
-#import "MaScaleImageView.h"
 
 @interface MaDouWoView : MaPlainView 
 {
