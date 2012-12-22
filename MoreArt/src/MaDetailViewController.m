@@ -9,6 +9,7 @@
 #import "MaDetailViewController.h"
 #import "MoreArtAppDelegate.h"
 #import "MaImageGalleryViewController.h"
+#import "UIBarButtonItem+StyledButton.h"
 
 #define kMA_PARAGRPH_MARK
 
@@ -64,6 +65,9 @@
     [self adjustViewSize];
 	
 	
+	self.navigationItem.rightBarButtonItem = [UIBarButtonItem styledBackBarButtonItemWithTarget:self selector:@selector(dismissViewController)];
+
+	
     [[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:@"UIDeviceOrientationDidChangeNotification" object:nil];
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(orientationChanged:) name:@"UIDeviceOrientationDidChangeNotification" object:nil];
@@ -72,7 +76,11 @@
 
 }
 
+-(void) dismissViewController
+{
+    [self.navigationController popViewControllerAnimated:YES];
 
+}
 
 - (void)viewDidUnload
 {
@@ -84,6 +92,8 @@
 {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
+
+
 
 -(void) fillContents
 {

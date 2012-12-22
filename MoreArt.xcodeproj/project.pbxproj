@@ -50,6 +50,9 @@
 		59A9586F16045E7E00669275 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 59A9586E16045E7E00669275 /* Default-568h@2x.png */; };
 		59ABA4FD1642697C0060983A /* libDTCoreText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 59ABA49C164262B70060983A /* libDTCoreText.a */; };
 		59BA500D15E855DD00E14A4E /* MaDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 59BA500C15E855DC00E14A4E /* MaDataSource.m */; };
+		59BD59401685CF96008FC076 /* UIBarButtonItem+StyledButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 59BD593F1685CF96008FC076 /* UIBarButtonItem+StyledButton.m */; };
+		59BD59431685D0DA008FC076 /* button_back.png in Resources */ = {isa = PBXBuildFile; fileRef = 59BD59411685D0DA008FC076 /* button_back.png */; };
+		59BD59441685D0DA008FC076 /* button_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 59BD59421685D0DA008FC076 /* button_back@2x.png */; };
 		59C889001655F06600C0A13A /* imageIndex.plist in Resources */ = {isa = PBXBuildFile; fileRef = 59C888FF1655F06600C0A13A /* imageIndex.plist */; };
 		59D0B4FB164A372A009CE214 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59D0B4FA164A3729009CE214 /* ImageIO.framework */; };
 		59D0B4FD164A373A009CE214 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 59D0B4FC164A373A009CE214 /* libxml2.dylib */; };
@@ -218,6 +221,10 @@
 		59ABA483164262B70060983A /* DTCoreText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DTCoreText.xcodeproj; path = src/3rd/DTCoreText/DTCoreText.xcodeproj; sourceTree = "<group>"; };
 		59BA500B15E855DC00E14A4E /* MaDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MaDataSource.h; path = src/MaDataSource.h; sourceTree = "<group>"; };
 		59BA500C15E855DC00E14A4E /* MaDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MaDataSource.m; path = src/MaDataSource.m; sourceTree = "<group>"; };
+		59BD593E1685CF96008FC076 /* UIBarButtonItem+StyledButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIBarButtonItem+StyledButton.h"; path = "src/UIBarButtonItem+StyledButton.h"; sourceTree = "<group>"; };
+		59BD593F1685CF96008FC076 /* UIBarButtonItem+StyledButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIBarButtonItem+StyledButton.m"; path = "src/UIBarButtonItem+StyledButton.m"; sourceTree = "<group>"; };
+		59BD59411685D0DA008FC076 /* button_back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = button_back.png; path = Resources/button_back.png; sourceTree = "<group>"; };
+		59BD59421685D0DA008FC076 /* button_back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "button_back@2x.png"; path = "Resources/button_back@2x.png"; sourceTree = "<group>"; };
 		59C888FF1655F06600C0A13A /* imageIndex.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = imageIndex.plist; sourceTree = "<group>"; };
 		59CA53C115CFC593006FC431 /* MaDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MaDefine.h; path = src/MaDefine.h; sourceTree = "<group>"; };
 		59D0B4FA164A3729009CE214 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
@@ -366,6 +373,8 @@
 		591FCD0515CFBDA8004FE480 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				59BD59411685D0DA008FC076 /* button_back.png */,
+				59BD59421685D0DA008FC076 /* button_back@2x.png */,
 				592E6EE116731A5F00D8CD17 /* button_slider_1.png */,
 				592E6EE216731A5F00D8CD17 /* button_slider_1@2x.png */,
 				598365F415E5E55900E4E885 /* Localizable.strings */,
@@ -461,6 +470,8 @@
 				59175FFB15F30AD20098729B /* MaEZCell */,
 				59A5BC4315E8975B00E67D54 /* CoverFlow */,
 				5983660F15E6866800E4E885 /* MaBaseViewController.h */,
+				59BD593E1685CF96008FC076 /* UIBarButtonItem+StyledButton.h */,
+				59BD593F1685CF96008FC076 /* UIBarButtonItem+StyledButton.m */,
 				5983661015E6866800E4E885 /* MaBaseViewController.m */,
 				59E6A82D16787DEB001F32F3 /* MaTableView.h */,
 				59E6A82E16787DEB001F32F3 /* MaTableView.m */,
@@ -731,6 +742,8 @@
 				59C889001655F06600C0A13A /* imageIndex.plist in Resources */,
 				592E6EE316731A5F00D8CD17 /* button_slider_1.png in Resources */,
 				592E6EE416731A5F00D8CD17 /* button_slider_1@2x.png in Resources */,
+				59BD59431685D0DA008FC076 /* button_back.png in Resources */,
+				59BD59441685D0DA008FC076 /* button_back@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -764,6 +777,7 @@
 				59E6A82F16787DEB001F32F3 /* MaTableView.m in Sources */,
 				59ED6B811682C8B5009EAD8E /* MaImageGalleryViewController.m in Sources */,
 				59ED6B871682DC11009EAD8E /* MaImageGalleryPhotoView.m in Sources */,
+				59BD59401685CF96008FC076 /* UIBarButtonItem+StyledButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
