@@ -53,6 +53,8 @@
 		59BD59401685CF96008FC076 /* UIBarButtonItem+StyledButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 59BD593F1685CF96008FC076 /* UIBarButtonItem+StyledButton.m */; };
 		59BD59431685D0DA008FC076 /* button_back.png in Resources */ = {isa = PBXBuildFile; fileRef = 59BD59411685D0DA008FC076 /* button_back.png */; };
 		59BD59441685D0DA008FC076 /* button_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 59BD59421685D0DA008FC076 /* button_back@2x.png */; };
+		59BD59471685DE6F008FC076 /* backButtom.png in Resources */ = {isa = PBXBuildFile; fileRef = 59BD59451685DE6F008FC076 /* backButtom.png */; };
+		59BD594A1685E093008FC076 /* backButtom@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 59BD59491685E092008FC076 /* backButtom@2x.png */; };
 		59C889001655F06600C0A13A /* imageIndex.plist in Resources */ = {isa = PBXBuildFile; fileRef = 59C888FF1655F06600C0A13A /* imageIndex.plist */; };
 		59D0B4FB164A372A009CE214 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59D0B4FA164A3729009CE214 /* ImageIO.framework */; };
 		59D0B4FD164A373A009CE214 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 59D0B4FC164A373A009CE214 /* libxml2.dylib */; };
@@ -225,6 +227,8 @@
 		59BD593F1685CF96008FC076 /* UIBarButtonItem+StyledButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIBarButtonItem+StyledButton.m"; path = "src/UIBarButtonItem+StyledButton.m"; sourceTree = "<group>"; };
 		59BD59411685D0DA008FC076 /* button_back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = button_back.png; path = Resources/button_back.png; sourceTree = "<group>"; };
 		59BD59421685D0DA008FC076 /* button_back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "button_back@2x.png"; path = "Resources/button_back@2x.png"; sourceTree = "<group>"; };
+		59BD59451685DE6F008FC076 /* backButtom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = backButtom.png; path = Resources/backButtom.png; sourceTree = "<group>"; };
+		59BD59491685E092008FC076 /* backButtom@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "backButtom@2x.png"; path = "Resources/backButtom@2x.png"; sourceTree = "<group>"; };
 		59C888FF1655F06600C0A13A /* imageIndex.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = imageIndex.plist; sourceTree = "<group>"; };
 		59CA53C115CFC593006FC431 /* MaDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MaDefine.h; path = src/MaDefine.h; sourceTree = "<group>"; };
 		59D0B4FA164A3729009CE214 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
@@ -373,6 +377,8 @@
 		591FCD0515CFBDA8004FE480 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				59BD59451685DE6F008FC076 /* backButtom.png */,
+				59BD59491685E092008FC076 /* backButtom@2x.png */,
 				59BD59411685D0DA008FC076 /* button_back.png */,
 				59BD59421685D0DA008FC076 /* button_back@2x.png */,
 				592E6EE116731A5F00D8CD17 /* button_slider_1.png */,
@@ -744,6 +750,8 @@
 				592E6EE416731A5F00D8CD17 /* button_slider_1@2x.png in Resources */,
 				59BD59431685D0DA008FC076 /* button_back.png in Resources */,
 				59BD59441685D0DA008FC076 /* button_back@2x.png in Resources */,
+				59BD59471685DE6F008FC076 /* backButtom.png in Resources */,
+				59BD594A1685E093008FC076 /* backButtom@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

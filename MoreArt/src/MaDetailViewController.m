@@ -65,7 +65,7 @@
     [self adjustViewSize];
 	
 	
-	self.navigationItem.rightBarButtonItem = [UIBarButtonItem styledBackBarButtonItemWithTarget:self selector:@selector(dismissViewController)];
+	self.navigationItem.leftBarButtonItem = [UIBarButtonItem styledBackBarImgButtonItemWithTarget:self selector:@selector(dismissViewController)];
 
 	
     [[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];

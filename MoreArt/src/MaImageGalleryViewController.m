@@ -10,6 +10,7 @@
 #import "MaDefine.h"
 #import "MaImageGalleryPhotoView.h"
 #import "MoreArtAppDelegate.h"
+#import "UIBarButtonItem+StyledButton.h"
 
 @interface MaImageGalleryViewController ()
 
@@ -101,8 +102,18 @@
 //	[_toolbar addSubview:_captionContainer];
 	[_captionContainer addSubview:_caption];
 	
+	self.navigationItem.leftBarButtonItem = [UIBarButtonItem styledBackBarImgButtonItemWithTarget:self selector:@selector(dismissViewController)];
+
+	
 	[self reloadGallery];
 }
+
+-(void) dismissViewController
+{
+    [self.navigationController popViewControllerAnimated:YES];
+	
+}
+
 
 -(void)viewWillDisappear:(BOOL)animated
 {

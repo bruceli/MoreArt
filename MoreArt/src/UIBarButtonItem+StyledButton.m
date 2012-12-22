@@ -12,6 +12,22 @@
 
 @implementation UIBarButtonItem (StyledButton)
 
++ (UIBarButtonItem *)styledBackBarImgButtonItemWithTarget:(id)target selector:(SEL)selector;
+{
+	UIImage *image = [UIImage imageNamed:@"backButtom"];
+	image = [image stretchableImageWithLeftCapWidth:20.0f topCapHeight:20.0f];
+	
+//	NSString *title = NSLocalizedString(@"Back", nil);
+	
+//	CGSize imgSize = image.size;
+	
+	UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(0.0f, 0.0f, image.size.width, image.size.height)];
+	[button addTarget:target action:selector forControlEvents:UIControlEventTouchUpInside];
+	[button setBackgroundImage:image forState:UIControlStateNormal];
+
+	return [[UIBarButtonItem alloc] initWithCustomView:button];
+}
+
 + (UIBarButtonItem *)styledBackBarButtonItemWithTarget:(id)target selector:(SEL)selector;
 {
 	UIImage *image = [UIImage imageNamed:@"button_back"];
@@ -25,9 +41,13 @@
 	
 	CGSize textSize = [title sizeWithFont:font];
 	CGFloat margin = (button.frame.size.height - textSize.height) / 2;
-	CGFloat marginRight = 7.0f;
-	CGFloat marginLeft = button.frame.size.width - textSize.width - marginRight;
-	[button setTitleEdgeInsets:UIEdgeInsetsMake(margin, marginLeft, margin, marginRight)]; 
+	CGFloat marginRightLeft = (button.frame.size.width - textSize.width)/2;
+	
+	
+	
+	//CGFloat marginLeft = button.frame.size.width - textSize.width - marginRight;
+	//(CGFloat top, CGFloat left, CGFloat bottom, CGFloat right)
+	[button setTitleEdgeInsets:UIEdgeInsetsMake(margin, marginRightLeft+3, margin, marginRightLeft-5)]; 
 	[button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];   
 	
 	return [[UIBarButtonItem alloc] initWithCustomView:button];
@@ -69,10 +89,12 @@
 
 + (UIButton *)styledButtonWithBackgroundImage:(UIImage *)image font:(UIFont *)font title:(NSString *)title target:(id)target selector:(SEL)selector
 {
+
+	CGSize imgSize = image.size;
 	CGSize textSize = [title sizeWithFont:font];
-	CGSize buttonSize = CGSizeMake(textSize.width + 20.0f, image.size.width);
+//	CGSize buttonSize = CGSizeMake(textSize.width + 25.0f, image.size.height+2.0f);
 	
-	UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(0.0f, 0.0f, buttonSize.width, buttonSize.height)];
+	UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(0.0f, 0.0f, imgSize.width, imgSize.height)];
 	[button addTarget:target action:selector forControlEvents:UIControlEventTouchUpInside];
 	[button setBackgroundImage:image forState:UIControlStateNormal];
 	[button setTitle:title forState:UIControlStateNormal];
