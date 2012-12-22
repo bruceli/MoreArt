@@ -33,7 +33,7 @@
 		_scrollView.alwaysBounceVertical=YES;
 		_scrollView.showsVerticalScrollIndicator = NO;
 		_scrollView.showsHorizontalScrollIndicator = NO;
-		_scrollView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"setting_bkg.png"]];
+		_scrollView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"setting_bkg"]];
 		
 		[self addSubview:_scrollView ];		
 		[self reloadViewsByType:_douViewType];

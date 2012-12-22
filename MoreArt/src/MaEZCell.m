@@ -85,7 +85,7 @@
     [_imgView setImageByString:_imgName];
 
     
-    self.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"setting_bkg.png"]];
+    self.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"setting_bkg"]];
     _titleLabel.backgroundColor = [UIColor clearColor];
     _detailLabel.backgroundColor = [UIColor clearColor];
     _imgView.backgroundColor = [UIColor grayColor];
