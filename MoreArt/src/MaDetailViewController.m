@@ -328,8 +328,10 @@
 {
 	MoreArtAppDelegate* app = (MoreArtAppDelegate *)[[UIApplication sharedApplication] delegate];
 
+	NSInteger index = [_imageGroupView.imageViewArray indexOfObject:sender];
+	
 	MaImageGalleryViewController* galleryViewController = [[MaImageGalleryViewController alloc] initWithPhotoSource:_imgArray ];
-//	galleryViewController.startingIndex = i;
+	galleryViewController.startingIndex = index;
 	[app.baseViewController.navigationController pushViewController:galleryViewController animated:YES];
 	
 }

@@ -223,16 +223,18 @@
 		}
 	}
 	
-//	[self toggleZoom:view];
 	NSArray* itemArray = app.dataSourceMgr.dataSource;
-
-
-	MaImageGalleryViewController* galleryViewController = [[MaImageGalleryViewController alloc] initWithPhotoSource:itemArray ];
+	NSMutableArray* imageSourceArray = [[NSMutableArray alloc]init];
+	for (NSDictionary* dict in itemArray) {
+		NSString* path = [dict objectForKey:@"imageName"];
+		if ([path length]>0) {
+			[imageSourceArray addObject:dict];
+		}
+	}
+	
+	MaImageGalleryViewController* galleryViewController = [[MaImageGalleryViewController alloc] initWithPhotoSource:imageSourceArray ];
 	galleryViewController.startingIndex = i;
 	[app.baseViewController.navigationController pushViewController:galleryViewController animated:YES];
-	
-
-
 }
 
 
