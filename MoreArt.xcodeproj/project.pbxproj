@@ -58,6 +58,8 @@
 		59D0B521164A3C13009CE214 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59D0B520164A3C13009CE214 /* MapKit.framework */; };
 		59D213C2160DA634000968E5 /* AsyncImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 59D213C1160DA634000968E5 /* AsyncImageView.m */; };
 		59E6A82F16787DEB001F32F3 /* MaTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 59E6A82E16787DEB001F32F3 /* MaTableView.m */; };
+		59ED6B811682C8B5009EAD8E /* MaImageGalleryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59ED6B801682C8B5009EAD8E /* MaImageGalleryViewController.m */; };
+		59ED6B871682DC11009EAD8E /* MaImageGalleryPhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 59ED6B861682DC11009EAD8E /* MaImageGalleryPhotoView.m */; };
 		59EFD3EF1629294700E1FA9F /* MaPlainView.m in Sources */ = {isa = PBXBuildFile; fileRef = 59EFD3EE1629294700E1FA9F /* MaPlainView.m */; };
 		59FE0DA216537CD400190994 /* css.plist in Resources */ = {isa = PBXBuildFile; fileRef = 59FE0DA116537CD400190994 /* css.plist */; };
 /* End PBXBuildFile section */
@@ -230,6 +232,10 @@
 		59D213C1160DA634000968E5 /* AsyncImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AsyncImageView.m; path = src/3rd/AsyncImageView/AsyncImageView.m; sourceTree = "<group>"; };
 		59E6A82D16787DEB001F32F3 /* MaTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MaTableView.h; path = src/MaTableView.h; sourceTree = "<group>"; };
 		59E6A82E16787DEB001F32F3 /* MaTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MaTableView.m; path = src/MaTableView.m; sourceTree = "<group>"; };
+		59ED6B7F1682C8B5009EAD8E /* MaImageGalleryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MaImageGalleryViewController.h; path = src/MaImageGalleryViewController.h; sourceTree = "<group>"; };
+		59ED6B801682C8B5009EAD8E /* MaImageGalleryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MaImageGalleryViewController.m; path = src/MaImageGalleryViewController.m; sourceTree = "<group>"; };
+		59ED6B851682DC11009EAD8E /* MaImageGalleryPhotoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MaImageGalleryPhotoView.h; path = src/MaImageGalleryPhotoView.h; sourceTree = "<group>"; };
+		59ED6B861682DC11009EAD8E /* MaImageGalleryPhotoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MaImageGalleryPhotoView.m; path = src/MaImageGalleryPhotoView.m; sourceTree = "<group>"; };
 		59EFD3ED1629294700E1FA9F /* MaPlainView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MaPlainView.h; path = src/MaPlainView.h; sourceTree = "<group>"; };
 		59EFD3EE1629294700E1FA9F /* MaPlainView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MaPlainView.m; path = src/MaPlainView.m; sourceTree = "<group>"; };
 		59FE0DA116537CD400190994 /* css.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = css.plist; sourceTree = "<group>"; };
@@ -326,6 +332,10 @@
 		591FCCD915CFBD31004FE480 /* MoreArt */ = {
 			isa = PBXGroup;
 			children = (
+				59ED6B7F1682C8B5009EAD8E /* MaImageGalleryViewController.h */,
+				59ED6B801682C8B5009EAD8E /* MaImageGalleryViewController.m */,
+				59ED6B851682DC11009EAD8E /* MaImageGalleryPhotoView.h */,
+				59ED6B861682DC11009EAD8E /* MaImageGalleryPhotoView.m */,
 				597E4E90165CD1CF005E8FD7 /* MaBase */,
 				59CA53C115CFC593006FC431 /* MaDefine.h */,
 				591FCD2A15CFBF02004FE480 /* 3rd */,
@@ -758,6 +768,8 @@
 				59237266164B8B8900FF5A97 /* MaImageArrayView.m in Sources */,
 				59CE005F16689B3300E171EB /* MaScaleImageView.m in Sources */,
 				59E6A82F16787DEB001F32F3 /* MaTableView.m in Sources */,
+				59ED6B811682C8B5009EAD8E /* MaImageGalleryViewController.m in Sources */,
+				59ED6B871682DC11009EAD8E /* MaImageGalleryPhotoView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

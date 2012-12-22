@@ -10,6 +10,7 @@
 #import "MaPlainView.h"
 #import "AsyncImageView.h"
 #import "MoreArtAppDelegate.h"
+#import "MaImageGalleryViewController.h"
 
 
 @interface MaPlainView ()
@@ -212,9 +213,27 @@
 
 - (void)handleSingleTap:(UIGestureRecognizer *)gestureRecognizer {
 //	NSLog(@"handleSingleTap From: %@", [gestureRecognizer.view description]);
+	MoreArtAppDelegate* app = (MoreArtAppDelegate *)[[UIApplication sharedApplication] delegate];
 
-	UIView* view = gestureRecognizer.view;	
-	[self toggleZoom:view];
+	AsyncImageView* view = (AsyncImageView*)gestureRecognizer.view;	
+	int i = 0;
+	for (; i< [_imageViewArray count]; i++) {
+		AsyncImageView* theView =[ [_imageViewArray objectAtIndex:i] objectForKey:@"imageView"];
+		if (theView  == view ) {
+			break;
+		}
+	}
+	
+//	[self toggleZoom:view];
+	NSArray* itemArray = app.dataSourceMgr.dataSource;
+
+
+	MaImageGalleryViewController* galleryViewController = [[MaImageGalleryViewController alloc] initWithPhotoSource:itemArray ];
+	galleryViewController.startingIndex = i;
+	[app.baseViewController.navigationController pushViewController:galleryViewController animated:YES];
+	
+
+
 }
 
 -(void) toggleZoom:(UIView*) sender 
