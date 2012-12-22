@@ -370,4 +370,44 @@
 
 
 
+#pragma mark - UIScrollView Methods
+
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+	_isScrolling = YES;
+}
+
+
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
+{
+	if( !decelerate )
+	{
+		[self scrollingHasEnded];
+	}
+}
+
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
+{
+	[self scrollingHasEnded];
+}
+
+
+- (void)scrollingHasEnded {
+	
+	_isScrolling = NO;
+	
+	NSUInteger newIndex = floor( _scroller.contentOffset.x / _scroller.frame.size.width );
+	
+	// don't proceed if the user has been scrolling, but didn't really go anywhere.
+	if( newIndex == _currentIndex )
+		return;
+		
+	_currentIndex = newIndex;
+	[self updateCaption];
+	[self updateTitle];
+}
+
+
 @end

@@ -77,14 +77,14 @@
 
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
-    NSString *sectionTitle =  @"Title";
+//    NSString *sectionTitle =  @"Title";
     
     // Create label with section title
     UILabel *label = [[UILabel alloc] init];
     label.frame = CGRectMake(5, 0, 284, 23);
     label.textColor = [UIColor whiteColor];
     label.font = [UIFont fontWithName:@"STHeitiTC-Medium" size:17];
-    label.text = sectionTitle;
+//    label.text = sectionTitle;
     label.backgroundColor = [UIColor clearColor];
     
     // Create header view and add label as a subview
