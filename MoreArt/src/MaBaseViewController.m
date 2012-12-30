@@ -174,7 +174,7 @@
 - (void) orientationChanged:(id)object
 {
 	
-	NSLog(@"%@",@"Base View OrientationChanged");
+//	NSLog(@"%@",@"Base View OrientationChanged");
 	
 	UIInterfaceOrientation interfaceOrientation = [[object object] orientation];
     MoreArtAppDelegate* app = (MoreArtAppDelegate *)[[UIApplication sharedApplication] delegate];

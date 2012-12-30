@@ -21,7 +21,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         self.autoresizingMask = UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleHeight;
-        NSLog(@"%@", @"Layout coverFlow View");
+//        NSLog(@"%@", @"Layout coverFlow View");
         covers = [[NSMutableArray alloc] init ];
 		
         self.backgroundColor = [UIColor whiteColor];

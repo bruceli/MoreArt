@@ -47,6 +47,7 @@
     MaBaseViewController* _baseViewController;
     PPRevealSideViewController* _revealSideViewController;
 }
+-(void)startAnimationCounting;
 
 @property (strong, nonatomic) UIWindow *window;
 @property (nonatomic, retain) MaDouWoView* douWoView;

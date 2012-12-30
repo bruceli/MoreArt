@@ -9,6 +9,8 @@
 #import "MoreArtAppDelegate.h"
 #import "MaDefine.h"
 #import "AsyncImageView.h"
+#import "MaStartPageController.h"
+
 
 @implementation MoreArtAppDelegate
 
@@ -21,8 +23,7 @@
 @synthesize aboutView = _aboutView;
 @synthesize coverFlowView = _coverFlowView;
 @synthesize dataSourceMgr = _dataSourceMgr;
-
-@synthesize crossFadeView = _crossFadeView;
+//@synthesize crossFadeView = _crossFadeView;
 
 @synthesize baseViewController = _baseViewController;
 @synthesize revealSideViewController = _revealSideViewController;
@@ -30,14 +31,14 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-     
+
     _dataSourceMgr = [[MaDataSource alloc] init];
-	[AsyncImageLoader sharedLoader];
+	[AsyncImageLoader sharedLoader];	
+	
+    MaStartPageController* controller =[[MaStartPageController alloc]init];
+	self.window.rootViewController = controller;
 
     _baseViewController = [[MaBaseViewController alloc] init];
-    UINavigationController* theController = [[UINavigationController alloc] initWithRootViewController:_baseViewController];
-    UINavigationBar* navBar = theController.navigationBar;
-    [navBar setBackgroundImage:[UIImage imageNamed: @"BarBackground"] forBarMetrics:UIBarMetricsDefault];
 
     CGRect frame = _baseViewController.view.frame;
     _douWoView = [[MaDouWoView alloc] initWithFrame:frame];
@@ -47,30 +48,61 @@
     _moLangPhotoView =  [[MaMoLangPhotoView alloc] initWithFrame:frame];
     _aboutView =  [[MaAboutView alloc] initWithFrame:frame];
     _coverFlowView = [[MaCoverFlowView alloc] initWithFrame:frame];
-    _crossFadeView = [[MaCrossFadeView alloc] initWithFrame:frame];
-
+//    _crossFadeView = [[MaCrossFadeView alloc] initWithFrame:frame];
     _baseViewController.view = _douWoView;
 	_art029View.delegate = _baseViewController ;
     _art029View.dataSource = _baseViewController ;
+	NSLog(@"%@",@"All Controllers are ready");
 
-    _revealSideViewController = [[PPRevealSideViewController alloc] initWithRootViewController:theController ];
-    _revealSideViewController.delegate = self;
-
-    
-    MaSettingViewController *slideView= [[MaSettingViewController alloc] init];
-    [_revealSideViewController preloadViewController:slideView
-                                                 forSide:PPRevealSideDirectionLeft
-                                              withOffset:SETTINGVIEW_OFFSET];
-
-    self.window.rootViewController = _revealSideViewController;
-    
+//    self.window.rootViewController = _revealSideViewController;
 //    MoreArtAppDelegate* app = (MoreArtAppDelegate *)[[UIApplication sharedApplication] delegate];
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleBlackOpaque animated:YES];
     [self.window makeKeyAndVisible];
-    
-    
+	
     return YES;
 }
+
+-(void)startAnimationCounting
+{
+	[self performSelector:@selector(TheAnimation) withObject:nil afterDelay:3.0f];
+	NSLog(@"%@",@"transform will start in ... 3s");
+
+}
+- (void)TheAnimation{
+	[[UIApplication sharedApplication] setStatusBarHidden:NO
+											withAnimation:UIStatusBarAnimationFade];
+
+    UINavigationController* theController = [[UINavigationController alloc] initWithRootViewController:_baseViewController];
+    UINavigationBar* navBar = theController.navigationBar;
+    [navBar setBackgroundImage:[UIImage imageNamed: @"BarBackground"] forBarMetrics:UIBarMetricsDefault];
+
+	_revealSideViewController = [[PPRevealSideViewController alloc] initWithRootViewController:theController ];
+    _revealSideViewController.delegate = self;
+    
+    MaSettingViewController *slideView= [[MaSettingViewController alloc] init];
+    [_revealSideViewController preloadViewController:slideView
+											 forSide:PPRevealSideDirectionLeft
+										  withOffset:SETTINGVIEW_OFFSET];
+
+	
+    //self.window.rootViewController = _revealSideViewController;
+	[UIView transitionFromView:self.window.rootViewController.view
+						toView:_revealSideViewController.view
+					  duration:1.0f
+					   options:UIViewAnimationOptionTransitionCurlUp
+					completion:^(BOOL finished){
+						self.window.rootViewController = _revealSideViewController;
+					}];
+	
+//	NSLog(@"%@",@"ChangeRootController");
+}
+
+- (void)ToUpSide {
+    
+//	[self moveToUpSide];
+    
+}
+
 
 - (void)applicationWillResignActive:(UIApplication *)application
 {

@@ -45,10 +45,12 @@
 		5983664C15E6978900E4E885 /* setting_header_section.png in Resources */ = {isa = PBXBuildFile; fileRef = 5983664A15E6978900E4E885 /* setting_header_section.png */; };
 		5983664D15E6978900E4E885 /* setting_header_section@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5983664B15E6978900E4E885 /* setting_header_section@2x.png */; };
 		5983665015E699D000E4E885 /* MaAboutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5983664F15E699D000E4E885 /* MaAboutView.m */; };
+		599F39D3168DE53E006397CB /* MaStartPageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 599F39D2168DE53E006397CB /* MaStartPageController.m */; };
 		59A5BC3F15E893C200E67D54 /* activityDataSource.plist in Resources */ = {isa = PBXBuildFile; fileRef = 59A5BC3E15E893C200E67D54 /* activityDataSource.plist */; };
 		59A5BC4215E8975600E67D54 /* MaCoverFlowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 59A5BC4115E8975600E67D54 /* MaCoverFlowView.m */; };
 		59A9586F16045E7E00669275 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 59A9586E16045E7E00669275 /* Default-568h@2x.png */; };
 		59ABA4FD1642697C0060983A /* libDTCoreText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 59ABA49C164262B70060983A /* libDTCoreText.a */; };
+		59B04B0E1689E0460055FB68 /* subViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59B04B0D1689E0460055FB68 /* subViewController.m */; };
 		59BA500D15E855DD00E14A4E /* MaDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 59BA500C15E855DC00E14A4E /* MaDataSource.m */; };
 		59BD59401685CF96008FC076 /* UIBarButtonItem+StyledButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 59BD593F1685CF96008FC076 /* UIBarButtonItem+StyledButton.m */; };
 		59BD59431685D0DA008FC076 /* button_back.png in Resources */ = {isa = PBXBuildFile; fileRef = 59BD59411685D0DA008FC076 /* button_back.png */; };
@@ -61,6 +63,7 @@
 		59D0B501164A3784009CE214 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59D0B500164A3784009CE214 /* MobileCoreServices.framework */; };
 		59D0B521164A3C13009CE214 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59D0B520164A3C13009CE214 /* MapKit.framework */; };
 		59D213C2160DA634000968E5 /* AsyncImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 59D213C1160DA634000968E5 /* AsyncImageView.m */; };
+		59E4094F168D5EF1008C770D /* launchIMG in Resources */ = {isa = PBXBuildFile; fileRef = 59E4094E168D5EF1008C770D /* launchIMG */; };
 		59E6A82F16787DEB001F32F3 /* MaTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 59E6A82E16787DEB001F32F3 /* MaTableView.m */; };
 		59ED6B811682C8B5009EAD8E /* MaImageGalleryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59ED6B801682C8B5009EAD8E /* MaImageGalleryViewController.m */; };
 		59ED6B871682DC11009EAD8E /* MaImageGalleryPhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 59ED6B861682DC11009EAD8E /* MaImageGalleryPhotoView.m */; };
@@ -151,10 +154,6 @@
 /* Begin PBXFileReference section */
 		2607A91A160EE90E00B45451 /* magicappViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = magicappViewController.h; sourceTree = "<group>"; };
 		2607A91B160EE90E00B45451 /* magicappViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = magicappViewController.m; sourceTree = "<group>"; };
-		2607A91C160EE90E00B45451 /* subView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = subView.h; sourceTree = "<group>"; };
-		2607A91D160EE90E00B45451 /* subView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = subView.m; sourceTree = "<group>"; };
-		2607A91E160EE90E00B45451 /* subViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = subViewController.h; sourceTree = "<group>"; };
-		2607A91F160EE90E00B45451 /* subViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = subViewController.m; sourceTree = "<group>"; };
 		5917601315F32BAC0098729B /* MaCrossFadeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MaCrossFadeView.h; path = src/MaCrossFadeView.h; sourceTree = "<group>"; };
 		5917601415F32BAD0098729B /* MaCrossFadeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MaCrossFadeView.m; path = src/MaCrossFadeView.m; sourceTree = "<group>"; };
 		591FCCCF15CFBD31004FE480 /* MoreArt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoreArt.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -216,11 +215,15 @@
 		5983664B15E6978900E4E885 /* setting_header_section@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "setting_header_section@2x.png"; path = "Resources/setting_header_section@2x.png"; sourceTree = "<group>"; };
 		5983664E15E699D000E4E885 /* MaAboutView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MaAboutView.h; path = src/MaAboutView.h; sourceTree = "<group>"; };
 		5983664F15E699D000E4E885 /* MaAboutView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MaAboutView.m; path = src/MaAboutView.m; sourceTree = "<group>"; };
+		599F39D1168DE53E006397CB /* MaStartPageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MaStartPageController.h; path = Resources/MaStartPageController.h; sourceTree = "<group>"; };
+		599F39D2168DE53E006397CB /* MaStartPageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MaStartPageController.m; path = Resources/MaStartPageController.m; sourceTree = "<group>"; };
 		59A5BC3E15E893C200E67D54 /* activityDataSource.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = activityDataSource.plist; path = Resources/activityDataSource.plist; sourceTree = "<group>"; };
 		59A5BC4015E8975600E67D54 /* MaCoverFlowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MaCoverFlowView.h; path = src/MaCoverFlowView.h; sourceTree = "<group>"; };
 		59A5BC4115E8975600E67D54 /* MaCoverFlowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MaCoverFlowView.m; path = src/MaCoverFlowView.m; sourceTree = "<group>"; };
 		59A9586E16045E7E00669275 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "Resources/Default-568h@2x.png"; sourceTree = "<group>"; };
 		59ABA483164262B70060983A /* DTCoreText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DTCoreText.xcodeproj; path = src/3rd/DTCoreText/DTCoreText.xcodeproj; sourceTree = "<group>"; };
+		59B04B0C1689E0460055FB68 /* subViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = subViewController.h; path = src/subViewController.h; sourceTree = "<group>"; };
+		59B04B0D1689E0460055FB68 /* subViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = subViewController.m; path = src/subViewController.m; sourceTree = "<group>"; };
 		59BA500B15E855DC00E14A4E /* MaDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MaDataSource.h; path = src/MaDataSource.h; sourceTree = "<group>"; };
 		59BA500C15E855DC00E14A4E /* MaDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MaDataSource.m; path = src/MaDataSource.m; sourceTree = "<group>"; };
 		59BD593E1685CF96008FC076 /* UIBarButtonItem+StyledButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIBarButtonItem+StyledButton.h"; path = "src/UIBarButtonItem+StyledButton.h"; sourceTree = "<group>"; };
@@ -238,6 +241,7 @@
 		59D0B520164A3C13009CE214 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		59D213C0160DA634000968E5 /* AsyncImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AsyncImageView.h; path = src/3rd/AsyncImageView/AsyncImageView.h; sourceTree = "<group>"; };
 		59D213C1160DA634000968E5 /* AsyncImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AsyncImageView.m; path = src/3rd/AsyncImageView/AsyncImageView.m; sourceTree = "<group>"; };
+		59E4094E168D5EF1008C770D /* launchIMG */ = {isa = PBXFileReference; lastKnownFileType = folder; name = launchIMG; path = ../../../Desktop/TEST/launchIMG; sourceTree = "<group>"; };
 		59E6A82D16787DEB001F32F3 /* MaTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MaTableView.h; path = src/MaTableView.h; sourceTree = "<group>"; };
 		59E6A82E16787DEB001F32F3 /* MaTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MaTableView.m; path = src/MaTableView.m; sourceTree = "<group>"; };
 		59ED6B7F1682C8B5009EAD8E /* MaImageGalleryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MaImageGalleryViewController.h; path = src/MaImageGalleryViewController.h; sourceTree = "<group>"; };
@@ -277,10 +281,6 @@
 				2607A924160EE9A400B45451 /* Resources */,
 				2607A91A160EE90E00B45451 /* magicappViewController.h */,
 				2607A91B160EE90E00B45451 /* magicappViewController.m */,
-				2607A91C160EE90E00B45451 /* subView.h */,
-				2607A91D160EE90E00B45451 /* subView.m */,
-				2607A91E160EE90E00B45451 /* subViewController.h */,
-				2607A91F160EE90E00B45451 /* subViewController.m */,
 			);
 			name = Start;
 			sourceTree = "<group>";
@@ -340,10 +340,6 @@
 		591FCCD915CFBD31004FE480 /* MoreArt */ = {
 			isa = PBXGroup;
 			children = (
-				59ED6B7F1682C8B5009EAD8E /* MaImageGalleryViewController.h */,
-				59ED6B801682C8B5009EAD8E /* MaImageGalleryViewController.m */,
-				59ED6B851682DC11009EAD8E /* MaImageGalleryPhotoView.h */,
-				59ED6B861682DC11009EAD8E /* MaImageGalleryPhotoView.m */,
 				597E4E90165CD1CF005E8FD7 /* MaBase */,
 				59CA53C115CFC593006FC431 /* MaDefine.h */,
 				591FCD2A15CFBF02004FE480 /* 3rd */,
@@ -377,6 +373,7 @@
 		591FCD0515CFBDA8004FE480 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				59E4094E168D5EF1008C770D /* launchIMG */,
 				59BD59451685DE6F008FC076 /* backButtom.png */,
 				59BD59491685E092008FC076 /* backButtom@2x.png */,
 				59BD59411685D0DA008FC076 /* button_back.png */,
@@ -472,6 +469,8 @@
 		597E4E90165CD1CF005E8FD7 /* MaBase */ = {
 			isa = PBXGroup;
 			children = (
+				59B04B071689DEF50055FB68 /* StartPage */,
+				59B04B061689DEE10055FB68 /* ImageGallery */,
 				59BA500E15E855E300E14A4E /* DataSource */,
 				59175FFB15F30AD20098729B /* MaEZCell */,
 				59A5BC4315E8975B00E67D54 /* CoverFlow */,
@@ -583,6 +582,28 @@
 				59ABA483164262B70060983A /* DTCoreText.xcodeproj */,
 			);
 			name = DTCoreText;
+			sourceTree = "<group>";
+		};
+		59B04B061689DEE10055FB68 /* ImageGallery */ = {
+			isa = PBXGroup;
+			children = (
+				59ED6B7F1682C8B5009EAD8E /* MaImageGalleryViewController.h */,
+				59ED6B801682C8B5009EAD8E /* MaImageGalleryViewController.m */,
+				59ED6B851682DC11009EAD8E /* MaImageGalleryPhotoView.h */,
+				59ED6B861682DC11009EAD8E /* MaImageGalleryPhotoView.m */,
+			);
+			name = ImageGallery;
+			sourceTree = "<group>";
+		};
+		59B04B071689DEF50055FB68 /* StartPage */ = {
+			isa = PBXGroup;
+			children = (
+				59B04B0C1689E0460055FB68 /* subViewController.h */,
+				59B04B0D1689E0460055FB68 /* subViewController.m */,
+				599F39D1168DE53E006397CB /* MaStartPageController.h */,
+				599F39D2168DE53E006397CB /* MaStartPageController.m */,
+			);
+			name = StartPage;
 			sourceTree = "<group>";
 		};
 		59BA500E15E855E300E14A4E /* DataSource */ = {
@@ -752,6 +773,7 @@
 				59BD59441685D0DA008FC076 /* button_back@2x.png in Resources */,
 				59BD59471685DE6F008FC076 /* backButtom.png in Resources */,
 				59BD594A1685E093008FC076 /* backButtom@2x.png in Resources */,
+				59E4094F168D5EF1008C770D /* launchIMG in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -786,6 +808,8 @@
 				59ED6B811682C8B5009EAD8E /* MaImageGalleryViewController.m in Sources */,
 				59ED6B871682DC11009EAD8E /* MaImageGalleryPhotoView.m in Sources */,
 				59BD59401685CF96008FC076 /* UIBarButtonItem+StyledButton.m in Sources */,
+				59B04B0E1689E0460055FB68 /* subViewController.m in Sources */,
+				599F39D3168DE53E006397CB /* MaStartPageController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -893,10 +917,7 @@
 				GCC_PREFIX_HEADER = "MoreArt/MoreArt-Prefix.pch";
 				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/MoreArt/src/3rd/TapkuLibrary/TapkuLibrary\"";
 				INFOPLIST_FILE = "MoreArt/MoreArt-Info.plist";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/../../../Library/Developer/Xcode/DerivedData/MoreArt-dpqyiukxyudlxgchwrflycjuprzz/Build/Products/Debug-iphoneos\"",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-all_load",
@@ -918,10 +939,7 @@
 				GCC_PREFIX_HEADER = "MoreArt/MoreArt-Prefix.pch";
 				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/MoreArt/src/3rd/TapkuLibrary/TapkuLibrary\"";
 				INFOPLIST_FILE = "MoreArt/MoreArt-Info.plist";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/../../../Library/Developer/Xcode/DerivedData/MoreArt-dpqyiukxyudlxgchwrflycjuprzz/Build/Products/Debug-iphoneos\"",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-all_load",

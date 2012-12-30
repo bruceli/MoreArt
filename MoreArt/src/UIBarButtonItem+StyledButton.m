@@ -91,7 +91,7 @@
 {
 
 	CGSize imgSize = image.size;
-	CGSize textSize = [title sizeWithFont:font];
+//	CGSize textSize = [title sizeWithFont:font];
 //	CGSize buttonSize = CGSizeMake(textSize.width + 25.0f, image.size.height+2.0f);
 	
 	UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(0.0f, 0.0f, imgSize.width, imgSize.height)];

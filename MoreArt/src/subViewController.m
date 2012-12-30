@@ -7,6 +7,7 @@
 //
 
 #import "subViewController.h"
+#import "MaDefine.h"
 
 @interface subViewController ()
 {
@@ -28,7 +29,18 @@
 
 -(void)setupImage: (int) index
 {
-    CGRect frame = CGRectMake(0,0,79,90);
+	int heightSize;
+	if ([[UIScreen mainScreen] bounds].size.height > 480) {
+		heightSize = [[UIScreen mainScreen] bounds].size.height / MA_START_PAGE_ROWXL;
+	}
+	else
+	{
+		heightSize = [[UIScreen mainScreen] bounds].size.height / MA_START_PAGE_ROW;
+	}
+	
+	int widthSize = [[UIScreen mainScreen] bounds].size.width / MA_START_PAGE_COL;
+	
+    CGRect frame = CGRectMake(0,0,widthSize,heightSize);
     
     imageView = [[UIImageView alloc] initWithFrame:frame];
     image = [UIImage imageNamed:_imageName];
@@ -40,9 +52,14 @@
     imageView.contentMode = UIViewContentModeScaleToFill;
     
     NSTimer *timer;
-    double time = index / 5.0 + 2.5;
-    NSLog(@"index is %d", index);
-    NSLog(@"time is %f", time);
+	NSInteger min = 10; 
+	NSInteger max = 100;
+	
+	double randNum = (arc4random() % (max - min) + min) ; 
+	double time = randNum/100.0f + 1.5f ;
+//	NSString *num = [NSString stringWithFormat:@"%f", time]; //Make the number into a string.
+//	NSLog(@"randNum is %@", num);
+
     timer = [NSTimer scheduledTimerWithTimeInterval: time
                                              target: self
                                            selector: @selector(flip:)
@@ -64,7 +81,7 @@
     
     first = !first;
     [UIView transitionWithView:imageView
-                      duration:0.5
+                      duration:0.3
                        options:UIViewAnimationOptionTransitionFlipFromBottom
                     animations:^{ imageView.image = nextImage; }
                     completion:NULL];

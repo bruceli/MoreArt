@@ -21,7 +21,7 @@
     
     if (self) {
         NSLog(@"%@", @"Init DataSourceMgr");
-        NSLog(@"%@", @"/");
+    //    NSLog(@"%@", @"/");
 
         NSString* path = [[NSBundle mainBundle] pathForResource:@"activityDataSource" ofType:@"plist"];
         //    NSLog(@"Datasource Location... %@", path);
@@ -40,7 +40,7 @@
 -(void)updateDataSourceArrayByViewType:(MaDouViewType)type
 {
     [_dataSource removeAllObjects];
-    NSLog(@"%@", @"UpdateSiteArray");
+//    NSLog(@"%@", @"UpdateSiteArray");
     
     /*
      Get Array Name from enumArray type;
