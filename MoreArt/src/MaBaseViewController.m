@@ -12,7 +12,7 @@
 #import "MoreArtAppDelegate.h"
 #import "MaDetailViewController.h"
 #import "MaEZCell.h"
-
+#import "MaImageGalleryViewController.h"
 
 @interface MaBaseViewController ()
 
@@ -161,8 +161,24 @@
 	return YES;
 }
 
--(NSUInteger)supportedInterfaceOrientations{
-    return UIInterfaceOrientationMaskPortrait; // etc
+-(NSInteger)supportedOrientations{
+	NSInteger supportType;
+	if ([self.view isKindOfClass:[MaPlainView class]]) {
+		supportType =  UIInterfaceOrientationMaskPortrait | UIInterfaceOrientationMaskLandscape;
+	}
+	else if ([self.view isKindOfClass:[MaTableView class]]) {
+		supportType =  UIInterfaceOrientationMaskPortrait; 
+		if ([[self.navigationController topViewController] isKindOfClass:[MaDetailViewController class]] ||  [[self.navigationController topViewController] isKindOfClass:[MaImageGalleryViewController class]]) {
+			supportType =  UIInterfaceOrientationMaskPortrait | UIInterfaceOrientationMaskLandscape;
+		}
+	}
+	else
+	{
+		supportType =  UIInterfaceOrientationMaskPortrait | UIInterfaceOrientationMaskLandscape;
+	}
+	
+	
+	return supportType;
 }
 
 

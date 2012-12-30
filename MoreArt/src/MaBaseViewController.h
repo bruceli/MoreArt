@@ -21,6 +21,6 @@
 }
 
 -(void)updateDataSourceBy:(MaDouViewType)type;
-
+-(NSInteger)supportedOrientations;
 
 @end

@@ -9,6 +9,8 @@
 #import "PPRevealSideViewController.h"
 #import <QuartzCore/QuartzCore.h>
 #import <objc/runtime.h>
+#import "MoreArtAppDelegate.h"
+
 
 @interface PPRevealSideViewController (Private)
 - (void) setRootViewController:(UIViewController *)controller replaceToOrigin:(BOOL)replace;
@@ -1503,6 +1505,19 @@
 #if !PP_ARC_ENABLED
     [super dealloc];
 #endif
+}
+
+-(NSUInteger)supportedInterfaceOrientations{
+	NSUInteger value;
+	if (_wasClosed) {
+		value =  UIInterfaceOrientationMaskPortrait;
+	}
+	else
+	{
+		MoreArtAppDelegate* app = (MoreArtAppDelegate *)[[UIApplication sharedApplication] delegate];
+		value = [app.baseViewController supportedOrientations];
+	}
+	return value;
 }
 
 @end

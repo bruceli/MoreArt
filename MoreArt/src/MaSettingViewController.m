@@ -28,9 +28,10 @@
 {
     [super viewDidLoad];
 	[self.tableView setSeparatorColor:[UIColor lightGrayColor]];
-
+	[self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
+	self.tableView.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
 //    self.tableView.backgroundColor = [UIColor darkGrayColor];
-    self.tableView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"setting_bkg"]];
+    self.tableView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"setting_bkg1"]];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -77,7 +78,7 @@
 //    NSString *sectionTitle =  @"Title";
     
     // Create label with section title
-    UILabel *label = [[UILabel alloc] init];
+/*	UILabel *label = [[UILabel alloc] init];
     label.frame = CGRectMake(5, 0, 284, 23);
     label.textColor = [UIColor whiteColor];
     label.font = [UIFont fontWithName:@"STHeitiTC-Medium" size:17];
@@ -86,11 +87,19 @@
     
     // Create header view and add label as a subview
     //    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 100)];
+ */
     UIImageView* view = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"setting_header_section"]];
-    [view addSubview:label];
+//    [view addSubview:label];
     
     return view;
 }
+
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+	return 60.0f;
+}
+
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
@@ -120,7 +129,7 @@
     
     cell.textLabel.text = [itemArray objectAtIndex:MA_MENU_TITLE];
     cell.textLabel.textColor = [UIColor whiteColor];
-    cell.textLabel.font = [UIFont fontWithName:@"STHeitiSC-Medium" size:16];
+    cell.textLabel.font = [UIFont fontWithName:@"STHeitiSC-Medium" size:18];
     return cell;
 }
 
@@ -198,6 +207,22 @@
 	[app.baseViewController updateDataSourceBy:indexPath.row];	
 	
 	[self.revealSideViewController popViewControllerAnimated:YES];
+}
+
+-(void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
+{
+	CGRect bounds = [[UIScreen mainScreen] bounds];
+//	+ (void)animateWithDuration:(NSTimeInterval)duration animations:(void (^)(void))animations NS_AVAILABLE_IOS(4_0); // delay = 0.0, options = 0, completion = NULL
+		
+	CGRect frame;
+	if(UIInterfaceOrientationIsPortrait(toInterfaceOrientation))
+		frame = CGRectMake(bounds.origin.x, bounds.origin.y, bounds.size.height, bounds.size.width);
+	if(UIInterfaceOrientationIsLandscape(toInterfaceOrientation)){
+		CGFloat newHeight = bounds.size.width;
+		CGFloat newWidth = bounds.size.width + bounds.size.height - bounds.size.width;
+		frame = CGRectMake(bounds.origin.x, bounds.origin.y, newWidth, newHeight);
+	}
+	[UIView animateWithDuration:duration animations:^{ self.tableView.frame = frame; }];	
 }
 
 @end

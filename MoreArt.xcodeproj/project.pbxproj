@@ -50,11 +50,11 @@
 		59A5BC4215E8975600E67D54 /* MaCoverFlowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 59A5BC4115E8975600E67D54 /* MaCoverFlowView.m */; };
 		59A9586F16045E7E00669275 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 59A9586E16045E7E00669275 /* Default-568h@2x.png */; };
 		59ABA4FD1642697C0060983A /* libDTCoreText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 59ABA49C164262B70060983A /* libDTCoreText.a */; };
+		59AEF0CA16901560002B2AC8 /* setting_bkg1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 59AEF0C916901560002B2AC8 /* setting_bkg1@2x.png */; };
+		59AEF0CC16901626002B2AC8 /* setting_bkg1.png in Resources */ = {isa = PBXBuildFile; fileRef = 59AEF0CB16901626002B2AC8 /* setting_bkg1.png */; };
 		59B04B0E1689E0460055FB68 /* subViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59B04B0D1689E0460055FB68 /* subViewController.m */; };
 		59BA500D15E855DD00E14A4E /* MaDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 59BA500C15E855DC00E14A4E /* MaDataSource.m */; };
 		59BD59401685CF96008FC076 /* UIBarButtonItem+StyledButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 59BD593F1685CF96008FC076 /* UIBarButtonItem+StyledButton.m */; };
-		59BD59431685D0DA008FC076 /* button_back.png in Resources */ = {isa = PBXBuildFile; fileRef = 59BD59411685D0DA008FC076 /* button_back.png */; };
-		59BD59441685D0DA008FC076 /* button_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 59BD59421685D0DA008FC076 /* button_back@2x.png */; };
 		59BD59471685DE6F008FC076 /* backButtom.png in Resources */ = {isa = PBXBuildFile; fileRef = 59BD59451685DE6F008FC076 /* backButtom.png */; };
 		59BD594A1685E093008FC076 /* backButtom@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 59BD59491685E092008FC076 /* backButtom@2x.png */; };
 		59C889001655F06600C0A13A /* imageIndex.plist in Resources */ = {isa = PBXBuildFile; fileRef = 59C888FF1655F06600C0A13A /* imageIndex.plist */; };
@@ -222,14 +222,14 @@
 		59A5BC4115E8975600E67D54 /* MaCoverFlowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MaCoverFlowView.m; path = src/MaCoverFlowView.m; sourceTree = "<group>"; };
 		59A9586E16045E7E00669275 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "Resources/Default-568h@2x.png"; sourceTree = "<group>"; };
 		59ABA483164262B70060983A /* DTCoreText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DTCoreText.xcodeproj; path = src/3rd/DTCoreText/DTCoreText.xcodeproj; sourceTree = "<group>"; };
+		59AEF0C916901560002B2AC8 /* setting_bkg1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "setting_bkg1@2x.png"; path = "Resources/setting_bkg1@2x.png"; sourceTree = "<group>"; };
+		59AEF0CB16901626002B2AC8 /* setting_bkg1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = setting_bkg1.png; path = Resources/setting_bkg1.png; sourceTree = "<group>"; };
 		59B04B0C1689E0460055FB68 /* subViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = subViewController.h; path = src/subViewController.h; sourceTree = "<group>"; };
 		59B04B0D1689E0460055FB68 /* subViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = subViewController.m; path = src/subViewController.m; sourceTree = "<group>"; };
 		59BA500B15E855DC00E14A4E /* MaDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MaDataSource.h; path = src/MaDataSource.h; sourceTree = "<group>"; };
 		59BA500C15E855DC00E14A4E /* MaDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MaDataSource.m; path = src/MaDataSource.m; sourceTree = "<group>"; };
 		59BD593E1685CF96008FC076 /* UIBarButtonItem+StyledButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIBarButtonItem+StyledButton.h"; path = "src/UIBarButtonItem+StyledButton.h"; sourceTree = "<group>"; };
 		59BD593F1685CF96008FC076 /* UIBarButtonItem+StyledButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIBarButtonItem+StyledButton.m"; path = "src/UIBarButtonItem+StyledButton.m"; sourceTree = "<group>"; };
-		59BD59411685D0DA008FC076 /* button_back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = button_back.png; path = Resources/button_back.png; sourceTree = "<group>"; };
-		59BD59421685D0DA008FC076 /* button_back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "button_back@2x.png"; path = "Resources/button_back@2x.png"; sourceTree = "<group>"; };
 		59BD59451685DE6F008FC076 /* backButtom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = backButtom.png; path = Resources/backButtom.png; sourceTree = "<group>"; };
 		59BD59491685E092008FC076 /* backButtom@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "backButtom@2x.png"; path = "Resources/backButtom@2x.png"; sourceTree = "<group>"; };
 		59C888FF1655F06600C0A13A /* imageIndex.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = imageIndex.plist; sourceTree = "<group>"; };
@@ -376,8 +376,6 @@
 				59E4094E168D5EF1008C770D /* launchIMG */,
 				59BD59451685DE6F008FC076 /* backButtom.png */,
 				59BD59491685E092008FC076 /* backButtom@2x.png */,
-				59BD59411685D0DA008FC076 /* button_back.png */,
-				59BD59421685D0DA008FC076 /* button_back@2x.png */,
 				592E6EE116731A5F00D8CD17 /* button_slider_1.png */,
 				592E6EE216731A5F00D8CD17 /* button_slider_1@2x.png */,
 				598365F415E5E55900E4E885 /* Localizable.strings */,
@@ -390,6 +388,8 @@
 				5939083A15E0C0C400A09C51 /* BarBackground@2x.png */,
 				5939084315E0C0C400A09C51 /* setting_bkg.png */,
 				5939084415E0C0C400A09C51 /* setting_bkg@2x.png */,
+				59AEF0CB16901626002B2AC8 /* setting_bkg1.png */,
+				59AEF0C916901560002B2AC8 /* setting_bkg1@2x.png */,
 				5939084715E0C0C400A09C51 /* tabBarBackground.png */,
 				5939084815E0C0C400A09C51 /* tabBarBackground@2x.png */,
 			);
@@ -474,9 +474,9 @@
 				59BA500E15E855E300E14A4E /* DataSource */,
 				59175FFB15F30AD20098729B /* MaEZCell */,
 				59A5BC4315E8975B00E67D54 /* CoverFlow */,
-				5983660F15E6866800E4E885 /* MaBaseViewController.h */,
 				59BD593E1685CF96008FC076 /* UIBarButtonItem+StyledButton.h */,
 				59BD593F1685CF96008FC076 /* UIBarButtonItem+StyledButton.m */,
+				5983660F15E6866800E4E885 /* MaBaseViewController.h */,
 				5983661015E6866800E4E885 /* MaBaseViewController.m */,
 				59E6A82D16787DEB001F32F3 /* MaTableView.h */,
 				59E6A82E16787DEB001F32F3 /* MaTableView.m */,
@@ -769,11 +769,11 @@
 				59C889001655F06600C0A13A /* imageIndex.plist in Resources */,
 				592E6EE316731A5F00D8CD17 /* button_slider_1.png in Resources */,
 				592E6EE416731A5F00D8CD17 /* button_slider_1@2x.png in Resources */,
-				59BD59431685D0DA008FC076 /* button_back.png in Resources */,
-				59BD59441685D0DA008FC076 /* button_back@2x.png in Resources */,
 				59BD59471685DE6F008FC076 /* backButtom.png in Resources */,
 				59BD594A1685E093008FC076 /* backButtom@2x.png in Resources */,
 				59E4094F168D5EF1008C770D /* launchIMG in Resources */,
+				59AEF0CA16901560002B2AC8 /* setting_bkg1@2x.png in Resources */,
+				59AEF0CC16901626002B2AC8 /* setting_bkg1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

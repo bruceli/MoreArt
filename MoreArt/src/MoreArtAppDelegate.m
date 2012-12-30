@@ -78,6 +78,7 @@
 
 	_revealSideViewController = [[PPRevealSideViewController alloc] initWithRootViewController:theController ];
     _revealSideViewController.delegate = self;
+	_revealSideViewController.options = _revealSideViewController.options | PPRevealSideOptionsKeepOffsetOnRotation; 
     
     MaSettingViewController *slideView= [[MaSettingViewController alloc] init];
     [_revealSideViewController preloadViewController:slideView
@@ -147,7 +148,7 @@
 
 - (PPRevealSideDirection)pprevealSideViewController:(PPRevealSideViewController*)controller directionsAllowedForPanningOnView:(UIView*)view {
 		// allow left slide only...
-    return PPRevealSideDirectionLeft ;
+    return PPRevealSideDirectionTop ;
 }
 
 @end
