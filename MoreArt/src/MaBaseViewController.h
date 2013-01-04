@@ -18,9 +18,11 @@
 	UIScrollView* _scrollView;
 	UIView *proxyView;
     
+	BOOL _settingViewStatus;
 }
 
 -(void)updateDataSourceBy:(MaDouViewType)type;
 -(NSInteger)supportedOrientations;
+@property (nonatomic) BOOL settingViewStatus;
 
 @end

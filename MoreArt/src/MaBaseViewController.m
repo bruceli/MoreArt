@@ -19,6 +19,7 @@
 @end
 
 @implementation MaBaseViewController
+@synthesize settingViewStatus = _settingViewStatus;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -27,6 +28,7 @@
         MoreArtAppDelegate* app = (MoreArtAppDelegate *)[[UIApplication sharedApplication] delegate];
 
         _dataSourceMgr = app.dataSourceMgr;
+		_settingViewStatus = NO;
     }
     return self;
 }
@@ -81,10 +83,9 @@
 
 -(void)slideSettingViewController
 {
-    MaSettingViewController *c = [[MaSettingViewController alloc] init];
     MoreArtAppDelegate* app = (MoreArtAppDelegate *)[[UIApplication sharedApplication] delegate];
     
-    [app.revealSideViewController pushViewController:c onDirection:PPRevealSideDirectionLeft withOffset:SETTINGVIEW_OFFSET animated:YES];
+    [app.revealSideViewController pushViewController:app.settingView onDirection:PPRevealSideDirectionLeft withOffset:SETTINGVIEW_OFFSET animated:YES];
 }
 
 
@@ -163,21 +164,27 @@
 
 -(NSInteger)supportedOrientations{
 	NSInteger supportType;
-	if ([self.view isKindOfClass:[MaPlainView class]]) {
-		supportType =  UIInterfaceOrientationMaskPortrait | UIInterfaceOrientationMaskLandscape;
+	if (_settingViewStatus)	// setting view is open disable, Portrait Only
+	{
+		supportType =  UIInterfaceOrientationMaskPortrait;
 	}
-	else if ([self.view isKindOfClass:[MaTableView class]]) {
-		supportType =  UIInterfaceOrientationMaskPortrait; 
-		if ([[self.navigationController topViewController] isKindOfClass:[MaDetailViewController class]] ||  [[self.navigationController topViewController] isKindOfClass:[MaImageGalleryViewController class]]) {
+	else	// setting view is closed, check other view 
+	{
+		if ([self.view isKindOfClass:[MaPlainView class]]) {
 			supportType =  UIInterfaceOrientationMaskPortrait | UIInterfaceOrientationMaskLandscape;
 		}
+		else if ([self.view isKindOfClass:[MaTableView class]]) {
+			supportType =  UIInterfaceOrientationMaskPortrait; 
+			if ([[self.navigationController topViewController] isKindOfClass:[MaDetailViewController class]] ||  [[self.navigationController topViewController] isKindOfClass:[MaImageGalleryViewController class]]) {
+				supportType =  UIInterfaceOrientationMaskPortrait | UIInterfaceOrientationMaskLandscape;
+			}
+		}
+		else
+		{
+			supportType =  UIInterfaceOrientationMaskPortrait | UIInterfaceOrientationMaskLandscape;
+		}
+		
 	}
-	else
-	{
-		supportType =  UIInterfaceOrientationMaskPortrait | UIInterfaceOrientationMaskLandscape;
-	}
-	
-	
 	return supportType;
 }
 
@@ -189,7 +196,9 @@
 
 - (void) orientationChanged:(id)object
 {
-	
+	if (_settingViewStatus) {
+		return;
+	}
 //	NSLog(@"%@",@"Base View OrientationChanged");
 	
 	UIInterfaceOrientation interfaceOrientation = [[object object] orientation];
@@ -221,7 +230,6 @@
 			NSArray* imageArray = ((MaPlainView*)app.baseViewController.view).imageViewArray ;
 			[app.coverFlowView loadCoverFlowImageBy: imageArray];
 		}
-
 		
         self.view = app.coverFlowView;
         self.navigationController.navigationBarHidden = YES;

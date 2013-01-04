@@ -20,7 +20,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
-        _douViewType = DOU_TYPE_DOU_SPACE;
+        // _douViewType = DOU_TYPE_DOU_SPACE; // FOR PEIKINGBASE
     }
 	
     return self;

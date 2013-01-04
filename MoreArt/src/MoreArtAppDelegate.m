@@ -23,7 +23,7 @@
 @synthesize aboutView = _aboutView;
 @synthesize coverFlowView = _coverFlowView;
 @synthesize dataSourceMgr = _dataSourceMgr;
-//@synthesize crossFadeView = _crossFadeView;
+@synthesize settingView = _settingView;
 
 @synthesize baseViewController = _baseViewController;
 @synthesize revealSideViewController = _revealSideViewController;
@@ -80,8 +80,8 @@
     _revealSideViewController.delegate = self;
 	_revealSideViewController.options = _revealSideViewController.options | PPRevealSideOptionsKeepOffsetOnRotation; 
     
-    MaSettingViewController *slideView= [[MaSettingViewController alloc] init];
-    [_revealSideViewController preloadViewController:slideView
+    _settingView= [[MaSettingViewController alloc] init];
+    [_revealSideViewController preloadViewController:_settingView
 											 forSide:PPRevealSideDirectionLeft
 										  withOffset:SETTINGVIEW_OFFSET];
 
@@ -151,4 +151,13 @@
     return PPRevealSideDirectionTop ;
 }
 
+- (void) pprevealSideViewController:(PPRevealSideViewController *)controller willPopToController:(UIViewController *)centerController
+{
+	self.baseViewController.settingViewStatus = NO;
+}
+
+- (void) pprevealSideViewController:(PPRevealSideViewController *)controller willPushController:(UIViewController *)pushedController
+{
+	self.baseViewController.settingViewStatus = YES;
+}
 @end

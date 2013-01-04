@@ -39,13 +39,13 @@
 
     
     NSArray* itemArray1 = [[NSArray alloc] initWithObjects:NSLocalizedString(@"douWo_Nav_Title",nil), app.douWoView, nil];
-    NSArray* itemArray2 = [[NSArray alloc] initWithObjects:NSLocalizedString(@"douSpace_Nav_Title",nil), app.douSpaceView, nil];
+//    NSArray* itemArray2 = [[NSArray alloc] initWithObjects:NSLocalizedString(@"douSpace_Nav_Title",nil), app.douSpaceView, nil];
 //   FOR PEIKINGBASE  NSArray* itemArray3 = [[NSArray alloc] initWithObjects:NSLocalizedString(@"douBasePeking_Nav_Title",nil), app.douPeikingView, nil];
 	
     NSArray* itemArray4 = [[NSArray alloc] initWithObjects:NSLocalizedString(@"moLangPhotography_Nav_Title",nil), app.moLangPhotoView, nil];
     NSArray* itemArray5 = [[NSArray alloc] initWithObjects:NSLocalizedString(@"art029_Nav_Title",nil), app.art029View, nil];
     
-    menuArray = [[NSMutableArray alloc] initWithObjects: itemArray1, itemArray2, /*itemArray3, FOR PEIKINGBASE */ itemArray4, itemArray5,nil];
+    menuArray = [[NSMutableArray alloc] initWithObjects: itemArray1,  /* itemArray2,itemArray3, FOR PEIKINGBASE */ itemArray4, itemArray5,nil];
     
     NSArray* itemArray6 = [[NSArray alloc] initWithObjects:NSLocalizedString(@"about_Nav_Title",nil), app.aboutView, nil];
     moreArray = [[NSMutableArray alloc] initWithObjects:itemArray6 , nil];
@@ -208,7 +208,7 @@
 	
 	[self.revealSideViewController popViewControllerAnimated:YES];
 }
-
+/*
 -(void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
 {
 	CGRect bounds = [[UIScreen mainScreen] bounds];
@@ -224,5 +224,6 @@
 	}
 	[UIView animateWithDuration:duration animations:^{ self.tableView.frame = frame; }];	
 }
+ */
 
 @end

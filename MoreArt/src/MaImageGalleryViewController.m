@@ -263,20 +263,16 @@
 
 - (void)updateTitle
 {
-	[self setTitle:[NSString stringWithFormat:@"%i of %i", _currentIndex+1, [_photoSource count]]];
+	[self setTitle:[NSString stringWithFormat:@"%i / %i", _currentIndex+1, [_photoSource count]]];
 }
 
 -(void)layoutViews
 {
 	[self positionInnerContainer];
 	[self positionScroller];
-//	[self resizeThumbView];
-//	[self positionToolbar];
 	[self updateScrollSize];
 	[self updateCaption];
 	[self resizeImageViewsWithRect:_scroller.frame];
-//	[self layoutButtons];
-//	[self arrangeThumbs];
 	[self moveScrollerToCurrentIndexWithAnimation:NO];
 }
 

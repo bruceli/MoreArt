@@ -63,7 +63,7 @@
 		59D0B501164A3784009CE214 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59D0B500164A3784009CE214 /* MobileCoreServices.framework */; };
 		59D0B521164A3C13009CE214 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59D0B520164A3C13009CE214 /* MapKit.framework */; };
 		59D213C2160DA634000968E5 /* AsyncImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 59D213C1160DA634000968E5 /* AsyncImageView.m */; };
-		59E4094F168D5EF1008C770D /* launchIMG in Resources */ = {isa = PBXBuildFile; fileRef = 59E4094E168D5EF1008C770D /* launchIMG */; };
+		59E0FD5A169683CD005A44E4 /* launchIMG in Resources */ = {isa = PBXBuildFile; fileRef = 59E0FD59169683CD005A44E4 /* launchIMG */; };
 		59E6A82F16787DEB001F32F3 /* MaTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 59E6A82E16787DEB001F32F3 /* MaTableView.m */; };
 		59ED6B811682C8B5009EAD8E /* MaImageGalleryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59ED6B801682C8B5009EAD8E /* MaImageGalleryViewController.m */; };
 		59ED6B871682DC11009EAD8E /* MaImageGalleryPhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 59ED6B861682DC11009EAD8E /* MaImageGalleryPhotoView.m */; };
@@ -241,7 +241,7 @@
 		59D0B520164A3C13009CE214 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		59D213C0160DA634000968E5 /* AsyncImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AsyncImageView.h; path = src/3rd/AsyncImageView/AsyncImageView.h; sourceTree = "<group>"; };
 		59D213C1160DA634000968E5 /* AsyncImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AsyncImageView.m; path = src/3rd/AsyncImageView/AsyncImageView.m; sourceTree = "<group>"; };
-		59E4094E168D5EF1008C770D /* launchIMG */ = {isa = PBXFileReference; lastKnownFileType = folder; name = launchIMG; path = ../../../Desktop/TEST/launchIMG; sourceTree = "<group>"; };
+		59E0FD59169683CD005A44E4 /* launchIMG */ = {isa = PBXFileReference; lastKnownFileType = folder; name = launchIMG; path = Resources/launchIMG; sourceTree = "<group>"; };
 		59E6A82D16787DEB001F32F3 /* MaTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MaTableView.h; path = src/MaTableView.h; sourceTree = "<group>"; };
 		59E6A82E16787DEB001F32F3 /* MaTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MaTableView.m; path = src/MaTableView.m; sourceTree = "<group>"; };
 		59ED6B7F1682C8B5009EAD8E /* MaImageGalleryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MaImageGalleryViewController.h; path = src/MaImageGalleryViewController.h; sourceTree = "<group>"; };
@@ -373,7 +373,7 @@
 		591FCD0515CFBDA8004FE480 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				59E4094E168D5EF1008C770D /* launchIMG */,
+				59E0FD59169683CD005A44E4 /* launchIMG */,
 				59BD59451685DE6F008FC076 /* backButtom.png */,
 				59BD59491685E092008FC076 /* backButtom@2x.png */,
 				592E6EE116731A5F00D8CD17 /* button_slider_1.png */,
@@ -771,9 +771,9 @@
 				592E6EE416731A5F00D8CD17 /* button_slider_1@2x.png in Resources */,
 				59BD59471685DE6F008FC076 /* backButtom.png in Resources */,
 				59BD594A1685E093008FC076 /* backButtom@2x.png in Resources */,
-				59E4094F168D5EF1008C770D /* launchIMG in Resources */,
 				59AEF0CA16901560002B2AC8 /* setting_bkg1@2x.png in Resources */,
 				59AEF0CC16901626002B2AC8 /* setting_bkg1.png in Resources */,
+				59E0FD5A169683CD005A44E4 /* launchIMG in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

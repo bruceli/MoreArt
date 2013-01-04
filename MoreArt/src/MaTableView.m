@@ -18,7 +18,7 @@
     self = [super initWithFrame:frame];
     if (self) {
     //    _douViewType = 0;
-        self.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"setting_bkg"]];
+        self.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"setting_bkg1"]];
 		[self setSeparatorColor:[UIColor lightGrayColor]];
 
     }

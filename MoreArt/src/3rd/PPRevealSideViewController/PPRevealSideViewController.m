@@ -1508,15 +1508,8 @@
 }
 
 -(NSUInteger)supportedInterfaceOrientations{
-	NSUInteger value;
-	if (_wasClosed) {
-		value =  UIInterfaceOrientationMaskPortrait;
-	}
-	else
-	{
-		MoreArtAppDelegate* app = (MoreArtAppDelegate *)[[UIApplication sharedApplication] delegate];
-		value = [app.baseViewController supportedOrientations];
-	}
+	MoreArtAppDelegate* app = (MoreArtAppDelegate *)[[UIApplication sharedApplication] delegate];
+	NSUInteger value = [app.baseViewController supportedOrientations];
 	return value;
 }
 

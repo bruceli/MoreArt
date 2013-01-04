@@ -40,7 +40,7 @@
     _scrollView.alwaysBounceVertical=YES;
 	
     self.view = _scrollView;
-    _scrollView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"setting_bkg"]];
+    _scrollView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"setting_bkg1"]];
     
     _headerImageView = [[AsyncImageView alloc] initWithFrame:CGRectMake(0,0, 320, 190)];
     _headerImageView.contentMode = UIViewContentModeScaleAspectFill;

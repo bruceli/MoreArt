@@ -46,6 +46,8 @@
     
     MaBaseViewController* _baseViewController;
     PPRevealSideViewController* _revealSideViewController;
+	
+	MaSettingViewController *_settingView;
 }
 -(void)startAnimationCounting;
 
@@ -57,7 +59,9 @@
 @property (nonatomic, retain) MaMoLangPhotoView*   moLangPhotoView;
 @property (nonatomic, retain) MaAboutView*   aboutView;
 @property (nonatomic, retain) MaCoverFlowView*   coverFlowView;
-@property (nonatomic, retain) MaCrossFadeView*   crossFadeView;
+@property (nonatomic, retain) MaSettingViewController *settingView;
+
+//@property (nonatomic, retain) MaCrossFadeView*   crossFadeView;
 
 @property (nonatomic, retain) MaDataSource*   dataSourceMgr;
 
