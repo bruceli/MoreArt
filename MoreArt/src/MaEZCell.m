@@ -98,7 +98,6 @@
     _detailLabel.font = [UIFont fontWithName:@"STHeitiTC-Light" size:12];
     _detailLabel.textColor = [UIColor whiteColor];
     _detailLabel.numberOfLines = 0;
-    
 }
 
 

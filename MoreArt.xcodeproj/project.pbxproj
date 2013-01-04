@@ -64,6 +64,8 @@
 		59D0B521164A3C13009CE214 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59D0B520164A3C13009CE214 /* MapKit.framework */; };
 		59D213C2160DA634000968E5 /* AsyncImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 59D213C1160DA634000968E5 /* AsyncImageView.m */; };
 		59E0FD5A169683CD005A44E4 /* launchIMG in Resources */ = {isa = PBXBuildFile; fileRef = 59E0FD59169683CD005A44E4 /* launchIMG */; };
+		59E0FD5D1696BEDC005A44E4 /* setting_seperator.png in Resources */ = {isa = PBXBuildFile; fileRef = 59E0FD5B1696BEDB005A44E4 /* setting_seperator.png */; };
+		59E0FD5E1696BEDC005A44E4 /* setting_seperator@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 59E0FD5C1696BEDC005A44E4 /* setting_seperator@2x.png */; };
 		59E6A82F16787DEB001F32F3 /* MaTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 59E6A82E16787DEB001F32F3 /* MaTableView.m */; };
 		59ED6B811682C8B5009EAD8E /* MaImageGalleryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59ED6B801682C8B5009EAD8E /* MaImageGalleryViewController.m */; };
 		59ED6B871682DC11009EAD8E /* MaImageGalleryPhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 59ED6B861682DC11009EAD8E /* MaImageGalleryPhotoView.m */; };
@@ -242,6 +244,8 @@
 		59D213C0160DA634000968E5 /* AsyncImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AsyncImageView.h; path = src/3rd/AsyncImageView/AsyncImageView.h; sourceTree = "<group>"; };
 		59D213C1160DA634000968E5 /* AsyncImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AsyncImageView.m; path = src/3rd/AsyncImageView/AsyncImageView.m; sourceTree = "<group>"; };
 		59E0FD59169683CD005A44E4 /* launchIMG */ = {isa = PBXFileReference; lastKnownFileType = folder; name = launchIMG; path = Resources/launchIMG; sourceTree = "<group>"; };
+		59E0FD5B1696BEDB005A44E4 /* setting_seperator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = setting_seperator.png; path = Resources/setting_seperator.png; sourceTree = "<group>"; };
+		59E0FD5C1696BEDC005A44E4 /* setting_seperator@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "setting_seperator@2x.png"; path = "Resources/setting_seperator@2x.png"; sourceTree = "<group>"; };
 		59E6A82D16787DEB001F32F3 /* MaTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MaTableView.h; path = src/MaTableView.h; sourceTree = "<group>"; };
 		59E6A82E16787DEB001F32F3 /* MaTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MaTableView.m; path = src/MaTableView.m; sourceTree = "<group>"; };
 		59ED6B7F1682C8B5009EAD8E /* MaImageGalleryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MaImageGalleryViewController.h; path = src/MaImageGalleryViewController.h; sourceTree = "<group>"; };
@@ -392,6 +396,8 @@
 				59AEF0C916901560002B2AC8 /* setting_bkg1@2x.png */,
 				5939084715E0C0C400A09C51 /* tabBarBackground.png */,
 				5939084815E0C0C400A09C51 /* tabBarBackground@2x.png */,
+				59E0FD5B1696BEDB005A44E4 /* setting_seperator.png */,
+				59E0FD5C1696BEDC005A44E4 /* setting_seperator@2x.png */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -774,6 +780,8 @@
 				59AEF0CA16901560002B2AC8 /* setting_bkg1@2x.png in Resources */,
 				59AEF0CC16901626002B2AC8 /* setting_bkg1.png in Resources */,
 				59E0FD5A169683CD005A44E4 /* launchIMG in Resources */,
+				59E0FD5D1696BEDC005A44E4 /* setting_seperator.png in Resources */,
+				59E0FD5E1696BEDC005A44E4 /* setting_seperator@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

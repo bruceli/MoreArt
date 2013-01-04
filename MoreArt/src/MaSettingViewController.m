@@ -130,6 +130,11 @@
     cell.textLabel.text = [itemArray objectAtIndex:MA_MENU_TITLE];
     cell.textLabel.textColor = [UIColor whiteColor];
     cell.textLabel.font = [UIFont fontWithName:@"STHeitiSC-Medium" size:18];
+	
+	UIImageView* customSeperator=[[UIImageView alloc]initWithFrame:CGRectMake(0, 60, 320, 2)];
+	customSeperator.image = [UIImage imageNamed:@"setting_seperator"];
+	[cell addSubview:customSeperator];  
+
     return cell;
 }
 
