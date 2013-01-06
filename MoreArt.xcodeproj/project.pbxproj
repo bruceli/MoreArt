@@ -50,6 +50,8 @@
 		59A9586F16045E7E00669275 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 59A9586E16045E7E00669275 /* Default-568h@2x.png */; };
 		59ABA4FD1642697C0060983A /* libDTCoreText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 59ABA49C164262B70060983A /* libDTCoreText.a */; };
 		59AE4C4A169920BD007D7C99 /* MaStartPageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59AE4C49169920BD007D7C99 /* MaStartPageController.m */; };
+		59AE4C4C16992201007D7C99 /* douicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 59AE4C4B16992201007D7C99 /* douicon.png */; };
+		59AE4C4E16992209007D7C99 /* douIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 59AE4C4D16992209007D7C99 /* douIcon@2x.png */; };
 		59AEF0CA16901560002B2AC8 /* setting_bkg1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 59AEF0C916901560002B2AC8 /* setting_bkg1@2x.png */; };
 		59AEF0CC16901626002B2AC8 /* setting_bkg1.png in Resources */ = {isa = PBXBuildFile; fileRef = 59AEF0CB16901626002B2AC8 /* setting_bkg1.png */; };
 		59B04B0E1689E0460055FB68 /* subViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59B04B0D1689E0460055FB68 /* subViewController.m */; };
@@ -224,6 +226,8 @@
 		59ABA483164262B70060983A /* DTCoreText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DTCoreText.xcodeproj; path = src/3rd/DTCoreText/DTCoreText.xcodeproj; sourceTree = "<group>"; };
 		59AE4C48169920BD007D7C99 /* MaStartPageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MaStartPageController.h; path = src/MaStartPageController.h; sourceTree = "<group>"; };
 		59AE4C49169920BD007D7C99 /* MaStartPageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MaStartPageController.m; path = src/MaStartPageController.m; sourceTree = "<group>"; };
+		59AE4C4B16992201007D7C99 /* douicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = douicon.png; sourceTree = "<group>"; };
+		59AE4C4D16992209007D7C99 /* douIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "douIcon@2x.png"; sourceTree = "<group>"; };
 		59AEF0C916901560002B2AC8 /* setting_bkg1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "setting_bkg1@2x.png"; path = "Resources/setting_bkg1@2x.png"; sourceTree = "<group>"; };
 		59AEF0CB16901626002B2AC8 /* setting_bkg1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = setting_bkg1.png; path = Resources/setting_bkg1.png; sourceTree = "<group>"; };
 		59B04B0C1689E0460055FB68 /* subViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = subViewController.h; path = src/subViewController.h; sourceTree = "<group>"; };
@@ -310,6 +314,8 @@
 		591FCCC415CFBD31004FE480 = {
 			isa = PBXGroup;
 			children = (
+				59AE4C4D16992209007D7C99 /* douIcon@2x.png */,
+				59AE4C4B16992201007D7C99 /* douicon.png */,
 				591FCCD915CFBD31004FE480 /* MoreArt */,
 				591FCCD215CFBD31004FE480 /* Frameworks */,
 				591FCCD015CFBD31004FE480 /* Products */,
@@ -782,6 +788,8 @@
 				59E0FD5A169683CD005A44E4 /* launchIMG in Resources */,
 				59E0FD5D1696BEDC005A44E4 /* setting_seperator.png in Resources */,
 				59E0FD5E1696BEDC005A44E4 /* setting_seperator@2x.png in Resources */,
+				59AE4C4C16992201007D7C99 /* douicon.png in Resources */,
+				59AE4C4E16992209007D7C99 /* douIcon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
