@@ -45,11 +45,11 @@
 		5983664C15E6978900E4E885 /* setting_header_section.png in Resources */ = {isa = PBXBuildFile; fileRef = 5983664A15E6978900E4E885 /* setting_header_section.png */; };
 		5983664D15E6978900E4E885 /* setting_header_section@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5983664B15E6978900E4E885 /* setting_header_section@2x.png */; };
 		5983665015E699D000E4E885 /* MaAboutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5983664F15E699D000E4E885 /* MaAboutView.m */; };
-		599F39D3168DE53E006397CB /* MaStartPageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 599F39D2168DE53E006397CB /* MaStartPageController.m */; };
 		59A5BC3F15E893C200E67D54 /* activityDataSource.plist in Resources */ = {isa = PBXBuildFile; fileRef = 59A5BC3E15E893C200E67D54 /* activityDataSource.plist */; };
 		59A5BC4215E8975600E67D54 /* MaCoverFlowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 59A5BC4115E8975600E67D54 /* MaCoverFlowView.m */; };
 		59A9586F16045E7E00669275 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 59A9586E16045E7E00669275 /* Default-568h@2x.png */; };
 		59ABA4FD1642697C0060983A /* libDTCoreText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 59ABA49C164262B70060983A /* libDTCoreText.a */; };
+		59AE4C4A169920BD007D7C99 /* MaStartPageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59AE4C49169920BD007D7C99 /* MaStartPageController.m */; };
 		59AEF0CA16901560002B2AC8 /* setting_bkg1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 59AEF0C916901560002B2AC8 /* setting_bkg1@2x.png */; };
 		59AEF0CC16901626002B2AC8 /* setting_bkg1.png in Resources */ = {isa = PBXBuildFile; fileRef = 59AEF0CB16901626002B2AC8 /* setting_bkg1.png */; };
 		59B04B0E1689E0460055FB68 /* subViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59B04B0D1689E0460055FB68 /* subViewController.m */; };
@@ -217,13 +217,13 @@
 		5983664B15E6978900E4E885 /* setting_header_section@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "setting_header_section@2x.png"; path = "Resources/setting_header_section@2x.png"; sourceTree = "<group>"; };
 		5983664E15E699D000E4E885 /* MaAboutView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MaAboutView.h; path = src/MaAboutView.h; sourceTree = "<group>"; };
 		5983664F15E699D000E4E885 /* MaAboutView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MaAboutView.m; path = src/MaAboutView.m; sourceTree = "<group>"; };
-		599F39D1168DE53E006397CB /* MaStartPageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MaStartPageController.h; path = Resources/MaStartPageController.h; sourceTree = "<group>"; };
-		599F39D2168DE53E006397CB /* MaStartPageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MaStartPageController.m; path = Resources/MaStartPageController.m; sourceTree = "<group>"; };
 		59A5BC3E15E893C200E67D54 /* activityDataSource.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = activityDataSource.plist; path = Resources/activityDataSource.plist; sourceTree = "<group>"; };
 		59A5BC4015E8975600E67D54 /* MaCoverFlowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MaCoverFlowView.h; path = src/MaCoverFlowView.h; sourceTree = "<group>"; };
 		59A5BC4115E8975600E67D54 /* MaCoverFlowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MaCoverFlowView.m; path = src/MaCoverFlowView.m; sourceTree = "<group>"; };
 		59A9586E16045E7E00669275 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "Resources/Default-568h@2x.png"; sourceTree = "<group>"; };
 		59ABA483164262B70060983A /* DTCoreText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DTCoreText.xcodeproj; path = src/3rd/DTCoreText/DTCoreText.xcodeproj; sourceTree = "<group>"; };
+		59AE4C48169920BD007D7C99 /* MaStartPageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MaStartPageController.h; path = src/MaStartPageController.h; sourceTree = "<group>"; };
+		59AE4C49169920BD007D7C99 /* MaStartPageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MaStartPageController.m; path = src/MaStartPageController.m; sourceTree = "<group>"; };
 		59AEF0C916901560002B2AC8 /* setting_bkg1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "setting_bkg1@2x.png"; path = "Resources/setting_bkg1@2x.png"; sourceTree = "<group>"; };
 		59AEF0CB16901626002B2AC8 /* setting_bkg1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = setting_bkg1.png; path = Resources/setting_bkg1.png; sourceTree = "<group>"; };
 		59B04B0C1689E0460055FB68 /* subViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = subViewController.h; path = src/subViewController.h; sourceTree = "<group>"; };
@@ -604,10 +604,10 @@
 		59B04B071689DEF50055FB68 /* StartPage */ = {
 			isa = PBXGroup;
 			children = (
+				59AE4C48169920BD007D7C99 /* MaStartPageController.h */,
+				59AE4C49169920BD007D7C99 /* MaStartPageController.m */,
 				59B04B0C1689E0460055FB68 /* subViewController.h */,
 				59B04B0D1689E0460055FB68 /* subViewController.m */,
-				599F39D1168DE53E006397CB /* MaStartPageController.h */,
-				599F39D2168DE53E006397CB /* MaStartPageController.m */,
 			);
 			name = StartPage;
 			sourceTree = "<group>";
@@ -817,7 +817,7 @@
 				59ED6B871682DC11009EAD8E /* MaImageGalleryPhotoView.m in Sources */,
 				59BD59401685CF96008FC076 /* UIBarButtonItem+StyledButton.m in Sources */,
 				59B04B0E1689E0460055FB68 /* subViewController.m in Sources */,
-				599F39D3168DE53E006397CB /* MaStartPageController.m in Sources */,
+				59AE4C4A169920BD007D7C99 /* MaStartPageController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

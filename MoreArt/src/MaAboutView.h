@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MaAboutView : UIView
+@interface MaAboutView : UIView<DTAttributedTextContentViewDelegate>
 
 @end
