@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		26BA331316992AD00075F21D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 598365F415E5E55900E4E885 /* Localizable.strings */; };
 		5917601515F32BAD0098729B /* MaCrossFadeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5917601415F32BAD0098729B /* MaCrossFadeView.m */; };
 		591FCCD415CFBD31004FE480 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 591FCCD315CFBD31004FE480 /* UIKit.framework */; };
 		591FCCD615CFBD31004FE480 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 591FCCD515CFBD31004FE480 /* Foundation.framework */; };
@@ -35,7 +36,6 @@
 		596F8873160ECD810036E2CC /* EGORefreshTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 596F8870160ECD810036E2CC /* EGORefreshTableHeaderView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		596F88C1160EF91A0036E2CC /* a.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 596F88BF160EF91A0036E2CC /* a.jpeg */; };
 		596F88C2160EF91A0036E2CC /* b.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 596F88C0160EF91A0036E2CC /* b.jpeg */; };
-		598365F615E5E55900E4E885 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 598365F415E5E55900E4E885 /* Localizable.strings */; };
 		5983661115E6866900E4E885 /* MaBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5983661015E6866800E4E885 /* MaBaseViewController.m */; };
 		5983661A15E68A3200E4E885 /* MaDouWoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5983661915E68A3200E4E885 /* MaDouWoView.m */; };
 		5983661D15E68A5100E4E885 /* MaDouSpaceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5983661C15E68A5100E4E885 /* MaDouSpaceView.m */; };
@@ -158,6 +158,7 @@
 /* Begin PBXFileReference section */
 		2607A91A160EE90E00B45451 /* magicappViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = magicappViewController.h; sourceTree = "<group>"; };
 		2607A91B160EE90E00B45451 /* magicappViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = magicappViewController.m; sourceTree = "<group>"; };
+		26BA331216992AD00075F21D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		5917601315F32BAC0098729B /* MaCrossFadeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MaCrossFadeView.h; path = src/MaCrossFadeView.h; sourceTree = "<group>"; };
 		5917601415F32BAD0098729B /* MaCrossFadeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MaCrossFadeView.m; path = src/MaCrossFadeView.m; sourceTree = "<group>"; };
 		591FCCCF15CFBD31004FE480 /* MoreArt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoreArt.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -383,12 +384,12 @@
 		591FCD0515CFBDA8004FE480 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				598365F415E5E55900E4E885 /* Localizable.strings */,
 				59E0FD59169683CD005A44E4 /* launchIMG */,
 				59BD59451685DE6F008FC076 /* backButtom.png */,
 				59BD59491685E092008FC076 /* backButtom@2x.png */,
 				592E6EE116731A5F00D8CD17 /* button_slider_1.png */,
 				592E6EE216731A5F00D8CD17 /* button_slider_1@2x.png */,
-				598365F415E5E55900E4E885 /* Localizable.strings */,
 				59A9586E16045E7E00669275 /* Default-568h@2x.png */,
 				5983664A15E6978900E4E885 /* setting_header_section.png */,
 				5983664B15E6978900E4E885 /* setting_header_section@2x.png */,
@@ -768,11 +769,11 @@
 				5939085415E0C0C400A09C51 /* setting_bkg@2x.png in Resources */,
 				5939085715E0C0C400A09C51 /* tabBarBackground.png in Resources */,
 				5939085815E0C0C400A09C51 /* tabBarBackground@2x.png in Resources */,
-				598365F615E5E55900E4E885 /* Localizable.strings in Resources */,
 				5983664C15E6978900E4E885 /* setting_header_section.png in Resources */,
 				5983664D15E6978900E4E885 /* setting_header_section@2x.png in Resources */,
 				59A5BC3F15E893C200E67D54 /* activityDataSource.plist in Resources */,
 				5961501415F2648300C93978 /* cellAccessory.png in Resources */,
+				26BA331316992AD00075F21D /* Localizable.strings in Resources */,
 				5961501515F2648300C93978 /* cellAccessory@2x.png in Resources */,
 				59A9586F16045E7E00669275 /* Default-568h@2x.png in Resources */,
 				596F88C1160EF91A0036E2CC /* a.jpeg in Resources */,
@@ -858,6 +859,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				598365F515E5E55900E4E885 /* zh-Hans */,
+				26BA331216992AD00075F21D /* en */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
