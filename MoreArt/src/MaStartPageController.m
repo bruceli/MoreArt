@@ -36,7 +36,7 @@
         for (int x = 0; x < columns; ++x) {
             UIView *subview = [self.subviews objectAtIndex:index++];
             subview.frame = CGRectMake(x * widthSize, y * heightSize, widthSize, heightSize);
-			NSLog(@"SubView frame is %@",NSStringFromCGRect(subview.frame));
+		//	NSLog(@"SubView frame is %@",NSStringFromCGRect(subview.frame));
         }
     }
 }
@@ -99,7 +99,7 @@
 		[backsideName appendString:backsideNOString];
 		[backsideName appendString:@".png"];
 
-		NSLog(@"File named %@",backsideName);
+		//NSLog(@"File named %@",backsideName);
 		subController.imageName = fileName;
 		subController.secondImageName = backsideName;
 		[subController setupImage: i];
