@@ -634,9 +634,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		591FCCCE15CFBD31004FE480 /* MoreArt */ = {
+		591FCCCE15CFBD31004FE480 /* DOU空间 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 591FCCED15CFBD32004FE480 /* Build configuration list for PBXNativeTarget "MoreArt" */;
+			buildConfigurationList = 591FCCED15CFBD32004FE480 /* Build configuration list for PBXNativeTarget "DOU空间" */;
 			buildPhases = (
 				591FCCCB15CFBD31004FE480 /* Sources */,
 				591FCCCC15CFBD31004FE480 /* Frameworks */,
@@ -648,7 +648,7 @@
 				59ABA4FC1642695A0060983A /* PBXTargetDependency */,
 				59235C0815E0C3DA003C4708 /* PBXTargetDependency */,
 			);
-			name = MoreArt;
+			name = "DOU空间";
 			productName = MoreArt;
 			productReference = 591FCCCF15CFBD31004FE480 /* MoreArt.app */;
 			productType = "com.apple.product-type.application";
@@ -686,7 +686,7 @@
 			);
 			projectRoot = "";
 			targets = (
-				591FCCCE15CFBD31004FE480 /* MoreArt */,
+				591FCCCE15CFBD31004FE480 /* DOU空间 */,
 			);
 		};
 /* End PBXProject section */
@@ -980,7 +980,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		591FCCED15CFBD32004FE480 /* Build configuration list for PBXNativeTarget "MoreArt" */ = {
+		591FCCED15CFBD32004FE480 /* Build configuration list for PBXNativeTarget "DOU空间" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				591FCCEE15CFBD32004FE480 /* Debug */,
