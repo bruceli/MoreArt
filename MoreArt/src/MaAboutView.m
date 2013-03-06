@@ -18,9 +18,8 @@
 //		CGRect bounds = [ [ UIScreen mainScreen ] applicationFrame ];
 //		CGRect frame = CGRectMake(0, 0, bounds.size.width, bounds.size.height - MA_TOOLBAR_HEIGHT);
 		self.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"setting_bkg1"]];
-		DTAttributedTextView* textView = [[DTAttributedTextView alloc] initWithFrame:CGRectMake(10, 100, 300, 100)];
+		DTAttributedTextView* textView = [[DTAttributedTextView alloc] initWithFrame:CGRectMake(20, 15, 290, 330)];
 		textView.textDelegate = self;
-		textView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
 		textView.backgroundColor = [UIColor clearColor];
 		
 		NSString* string = [self encodeingText:NSLocalizedString(@"about_String",nil)];

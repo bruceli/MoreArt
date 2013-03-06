@@ -62,7 +62,7 @@
     _imgView.contentMode = UIViewContentModeScaleAspectFill;
     _imgView.clipsToBounds = YES;
     _imgView.crossfadeImages = NO;
-    _imgView.showActivityIndicator = YES;
+    _imgView.showProgressBar = YES;
     
     [[AsyncImageLoader sharedLoader] cancelLoadingImagesForTarget:_imgView];
     

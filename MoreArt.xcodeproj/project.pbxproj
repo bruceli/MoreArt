@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		26BA331316992AD00075F21D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 598365F415E5E55900E4E885 /* Localizable.strings */; };
+		5903FBAA16E7086E00B8D056 /* MCProgressBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5903FBA516E7086D00B8D056 /* MCProgressBarView.m */; };
+		5903FBAB16E7086E00B8D056 /* progress-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 5903FBA616E7086D00B8D056 /* progress-bg.png */; };
+		5903FBAC16E7086E00B8D056 /* progress-bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5903FBA716E7086E00B8D056 /* progress-bg@2x.png */; };
+		5903FBAD16E7086E00B8D056 /* progress-fg.png in Resources */ = {isa = PBXBuildFile; fileRef = 5903FBA816E7086E00B8D056 /* progress-fg.png */; };
+		5903FBAE16E7086E00B8D056 /* progress-fg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5903FBA916E7086E00B8D056 /* progress-fg@2x.png */; };
 		5917601515F32BAD0098729B /* MaCrossFadeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5917601415F32BAD0098729B /* MaCrossFadeView.m */; };
 		591FCCD415CFBD31004FE480 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 591FCCD315CFBD31004FE480 /* UIKit.framework */; };
 		591FCCD615CFBD31004FE480 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 591FCCD515CFBD31004FE480 /* Foundation.framework */; };
@@ -159,6 +164,12 @@
 		2607A91A160EE90E00B45451 /* magicappViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = magicappViewController.h; sourceTree = "<group>"; };
 		2607A91B160EE90E00B45451 /* magicappViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = magicappViewController.m; sourceTree = "<group>"; };
 		26BA331216992AD00075F21D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		5903FBA416E7086D00B8D056 /* MCProgressBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MCProgressBarView.h; path = src/3rd/AsyncImageView/MCProgressBarView.h; sourceTree = "<group>"; };
+		5903FBA516E7086D00B8D056 /* MCProgressBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MCProgressBarView.m; path = src/3rd/AsyncImageView/MCProgressBarView.m; sourceTree = "<group>"; };
+		5903FBA616E7086D00B8D056 /* progress-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "progress-bg.png"; path = "src/3rd/AsyncImageView/progress-bg.png"; sourceTree = "<group>"; };
+		5903FBA716E7086E00B8D056 /* progress-bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "progress-bg@2x.png"; path = "src/3rd/AsyncImageView/progress-bg@2x.png"; sourceTree = "<group>"; };
+		5903FBA816E7086E00B8D056 /* progress-fg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "progress-fg.png"; path = "src/3rd/AsyncImageView/progress-fg.png"; sourceTree = "<group>"; };
+		5903FBA916E7086E00B8D056 /* progress-fg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "progress-fg@2x.png"; path = "src/3rd/AsyncImageView/progress-fg@2x.png"; sourceTree = "<group>"; };
 		5917601315F32BAC0098729B /* MaCrossFadeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MaCrossFadeView.h; path = src/MaCrossFadeView.h; sourceTree = "<group>"; };
 		5917601415F32BAD0098729B /* MaCrossFadeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MaCrossFadeView.m; path = src/MaCrossFadeView.m; sourceTree = "<group>"; };
 		591FCCCF15CFBD31004FE480 /* MoreArt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoreArt.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -450,6 +461,12 @@
 		596F886D160ECD460036E2CC /* AsyncImageView */ = {
 			isa = PBXGroup;
 			children = (
+				5903FBA416E7086D00B8D056 /* MCProgressBarView.h */,
+				5903FBA516E7086D00B8D056 /* MCProgressBarView.m */,
+				5903FBA616E7086D00B8D056 /* progress-bg.png */,
+				5903FBA716E7086E00B8D056 /* progress-bg@2x.png */,
+				5903FBA816E7086E00B8D056 /* progress-fg.png */,
+				5903FBA916E7086E00B8D056 /* progress-fg@2x.png */,
 				59D213C0160DA634000968E5 /* AsyncImageView.h */,
 				59D213C1160DA634000968E5 /* AsyncImageView.m */,
 			);
@@ -660,7 +677,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = Ma;
-				LastUpgradeCheck = 0440;
+				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = MagicApp;
 			};
 			buildConfigurationList = 591FCCC915CFBD31004FE480 /* Build configuration list for PBXProject "MoreArt" */;
@@ -791,6 +808,10 @@
 				59E0FD5E1696BEDC005A44E4 /* setting_seperator@2x.png in Resources */,
 				59AE4C4C16992201007D7C99 /* douicon.png in Resources */,
 				59AE4C4E16992209007D7C99 /* douIcon@2x.png in Resources */,
+				5903FBAB16E7086E00B8D056 /* progress-bg.png in Resources */,
+				5903FBAC16E7086E00B8D056 /* progress-bg@2x.png in Resources */,
+				5903FBAD16E7086E00B8D056 /* progress-fg.png in Resources */,
+				5903FBAE16E7086E00B8D056 /* progress-fg@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -827,6 +848,7 @@
 				59BD59401685CF96008FC076 /* UIBarButtonItem+StyledButton.m in Sources */,
 				59B04B0E1689E0460055FB68 /* subViewController.m in Sources */,
 				59AE4C4A169920BD007D7C99 /* MaStartPageController.m in Sources */,
+				5903FBAA16E7086E00B8D056 /* MCProgressBarView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -874,8 +896,11 @@
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Li Qiang (U7WQT9B7CX)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -892,7 +917,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_LDFLAGS = "-ObjC";
-				PROVISIONING_PROFILE = "78E35EF6-226A-4D7C-A78F-DBF0E4B85EF1";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/MoreArt/src/3rd/DTCoreText/Core/Externals/DTFoundation/Core/Source\"";
 			};
@@ -905,8 +930,11 @@
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Li Qiang (U7WQT9B7CX)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -917,7 +945,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				OTHER_LDFLAGS = "-ObjC";
-				PROVISIONING_PROFILE = "78E35EF6-226A-4D7C-A78F-DBF0E4B85EF1";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/MoreArt/src/3rd/DTCoreText/Core/Externals/DTFoundation/Core/Source\"";
 				VALIDATE_PRODUCT = YES;
@@ -927,6 +955,7 @@
 		591FCCEE15CFBD32004FE480 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -941,6 +970,7 @@
 					"-all_load",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/MoreArt/src/3rd/DTCoreText/Core/Source\" \"$(SRCROOT)/MoreArt/src/3rd/DTCoreText/Core/Externals/DTFoundation/Core/Source\" \"$(SRCROOT)/MoreArt/src/3rd/DTCoreText/Core/Externals/DTFoundation/Core\"";
 				WRAPPER_EXTENSION = app;
 			};
@@ -949,6 +979,8 @@
 		591FCCEF15CFBD32004FE480 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: Li Qiang (U7WQT9B7CX)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -963,6 +995,8 @@
 					"-all_load",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "D10E0E8B-4C84-4F89-B5F5-01CEFDE6B1EE";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/MoreArt/src/3rd/DTCoreText/Core/Source\" \"$(SRCROOT)/MoreArt/src/3rd/DTCoreText/Core/Externals/DTFoundation/Core/Source\" \"$(SRCROOT)/MoreArt/src/3rd/DTCoreText/Core/Externals/DTFoundation/Core\"";
 				WRAPPER_EXTENSION = app;
 			};

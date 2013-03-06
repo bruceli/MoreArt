@@ -33,7 +33,7 @@
 		// create the image view
 		_imageView = [[AsyncImageView alloc] initWithFrame:CGRectMake(0, 0, frame.size.width, frame.size.height)];
 		_imageView.backgroundColor = [UIColor clearColor];
-
+		_imageView.showProgressBar = YES;
 		_imageView.delegate = self;
 		_imageView.contentMode = UIViewContentModeScaleAspectFit;
 		[self addSubview:_imageView];

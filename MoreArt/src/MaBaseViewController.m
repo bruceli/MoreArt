@@ -201,7 +201,7 @@
 	}
 //	NSLog(@"%@",@"Base View OrientationChanged");
 	
-	UIInterfaceOrientation interfaceOrientation = [[object object] orientation];
+	UIDeviceOrientation interfaceOrientation = [[object object] orientation];
     MoreArtAppDelegate* app = (MoreArtAppDelegate *)[[UIApplication sharedApplication] delegate];
 
 	if (interfaceOrientation == UIInterfaceOrientationPortrait)

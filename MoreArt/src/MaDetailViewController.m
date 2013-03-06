@@ -45,7 +45,7 @@
     _headerImageView = [[AsyncImageView alloc] initWithFrame:CGRectMake(0,0, 320, 190)];
     _headerImageView.contentMode = UIViewContentModeScaleAspectFill;
     _headerImageView.clipsToBounds = YES;
-    _headerImageView.showActivityIndicator = YES;
+    _headerImageView.showProgressBar = YES;
     [[AsyncImageLoader sharedLoader] cancelLoadingImagesForTarget:_headerImageView];
     [self.view addSubview:_headerImageView];
     
@@ -237,7 +237,7 @@
 	
 //	NSLog(@"%@",@"Base View OrientationChanged");
 
-	UIInterfaceOrientation interfaceOrientation = [[object object] orientation];
+	UIDeviceOrientation interfaceOrientation = [[object object] orientation];
     MoreArtAppDelegate* app = (MoreArtAppDelegate *)[[UIApplication sharedApplication] delegate];
     
 	if (interfaceOrientation == UIInterfaceOrientationPortrait ||interfaceOrientation ==  UIInterfaceOrientationPortraitUpsideDown)

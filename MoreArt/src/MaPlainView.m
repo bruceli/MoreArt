@@ -166,6 +166,8 @@
     AsyncImageView* imgView = [[AsyncImageView alloc] initWithFrame:frame];
 	imgView.contentMode = UIViewContentModeScaleAspectFit;
 	imgView.delegate = self;
+	imgView.showProgressBar = YES;
+
 	
     [self addGestureRecognizerTo:imgView];
 	

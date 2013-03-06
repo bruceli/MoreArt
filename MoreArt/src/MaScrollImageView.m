@@ -42,6 +42,8 @@
         
         NSDictionary* dict = [_imageArray objectAtIndex:_imageCount];
         AsyncImageView* imgView = [[AsyncImageView alloc] initWithFrame:frame];
+		imgView.showProgressBar = YES;
+
         [imgView setImageByString:[dict objectForKey:@"imageName"]];
         NSLog(@"%@", [dict objectForKey:@"imageName"]);
 

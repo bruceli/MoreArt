@@ -105,9 +105,11 @@
 -(AsyncImageView*)createImgViewBy:(CGRect)frame
 {
     AsyncImageView* imgView = [[AsyncImageView alloc] initWithFrame:frame];
+	imgView.showProgressBar = YES;
+
     [imgView.layer setBorderColor: [[UIColor whiteColor] CGColor]];
     [imgView.layer setBorderWidth: 1.0];
-    
+
     UITapGestureRecognizer *myTapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(gestureTapEvent:)];
     imgView.userInteractionEnabled = YES;
     [imgView addGestureRecognizer:myTapGesture];

@@ -32,12 +32,15 @@
 //
 
 #import "AsyncImageView.h"
+#import "MCProgressBarView.h"
+
 #import <objc/message.h>
 
 
 NSString *const AsyncImageLoadDidFinish = @"AsyncImageLoadDidFinish";
 NSString *const AsyncImageLoadDidFail = @"AsyncImageLoadDidFail";
 NSString *const AsyncImageTargetReleased = @"AsyncImageTargetReleased";
+NSString *const AsyncImageUpdateProgressBar = @"AsyncImageUpdateProgressBar";
 
 NSString *const AsyncImageImageKey = @"image";
 NSString *const AsyncImageURLKey = @"URL";
@@ -56,6 +59,7 @@ NSString *const AsyncImageErrorKey = @"error";
 @property (nonatomic, assign) SEL failure;
 @property (nonatomic, readonly, getter = isLoading) BOOL loading;
 @property (nonatomic, readonly) BOOL cancelled;
+@property (nonatomic) float expectedBytes; 
 
 - (AsyncImageConnection *)initWithURL:(NSURL *)URL
                                 cache:(NSCache *)cache
@@ -81,7 +85,7 @@ NSString *const AsyncImageErrorKey = @"error";
 @synthesize failure = _failure;
 @synthesize loading = _loading;
 @synthesize cancelled = _cancelled;
-
+@synthesize expectedBytes = _expectedBytes;
 - (AsyncImageConnection *)initWithURL:(NSURL *)URL
                                 cache:(NSCache *)cache
 							   target:(id)target
@@ -128,6 +132,15 @@ NSString *const AsyncImageErrorKey = @"error";
                                                                 _URL, AsyncImageURLKey,
                                                                 error, AsyncImageErrorKey,
                                                                 nil]];
+}
+
+-(void)setProgressValue:(NSNumber*)value
+{
+	NSMutableDictionary* dict = [NSMutableDictionary dictionaryWithObjectsAndKeys:value,@"value",nil];	
+	[[NSNotificationCenter defaultCenter] postNotificationName:AsyncImageUpdateProgressBar
+														object:_target
+													  userInfo:[[dict copy] autorelease]];
+//	NSLog(@"AsyncImageConnection set progress bar %f",[value floatValue]);
 }
 
 - (void)cacheImage:(UIImage *)image
@@ -208,6 +221,15 @@ NSString *const AsyncImageErrorKey = @"error";
 
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response
 {
+	NSHTTPURLResponse *r = (NSHTTPURLResponse*) response;
+	NSDictionary *headers = [r allHeaderFields];
+	if (headers){
+		if ([headers objectForKey: @"Content-Length"]) {
+		//	NSLog(@"Content-Length: %@", [headers objectForKey: @"Content-Length"]);
+			_expectedBytes = [[headers objectForKey: @"Content-Length"] floatValue];
+		}
+	}
+	
     self.data = [NSMutableData data];
 }
 
@@ -215,13 +237,23 @@ NSString *const AsyncImageErrorKey = @"error";
 {
     //add data
     [_data appendData:data];
+	float receivedLen = [_data length];
+	float percentValue = 0.0;
+	if (_expectedBytes > 0) {
+		percentValue = receivedLen/_expectedBytes;
+	}
+	
+	NSNumber* value = [NSNumber numberWithFloat:percentValue];
+	[self performSelectorOnMainThread:@selector(setProgressValue:) withObject:value waitUntilDone:NO];
+	
 }
-
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection
 {
     [self performSelectorInBackground:@selector(processDataInBackground:) withObject:_data];
     self.connection = nil;
     self.data = nil;
+//	[MoreCafeAppDelegate decreaseNetworkActivityIndicator];
+
 }
 
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
@@ -623,26 +655,34 @@ NSString *const AsyncImageErrorKey = @"error";
 
 @interface AsyncImageView ()
 
-@property (nonatomic, strong) UIActivityIndicatorView *activityView;
+//@property (nonatomic, strong) UIActivityIndicatorView *progressBarView;
+@property (nonatomic, strong) MCProgressBarView *progressBarView;
 
 @end
 
 
 @implementation AsyncImageView
 
-@synthesize showActivityIndicator = _showActivityIndicator;
+@synthesize showProgressBar = _showProgressBar;
 @synthesize activityIndicatorStyle = _activityIndicatorStyle;
 @synthesize crossfadeImages = _crossfadeImages;
 @synthesize crossfadeDuration = _crossfadeDuration;
-@synthesize activityView = _activityView;
+@synthesize progressBarView = _progressBarView;
 @synthesize delegate;
 
 - (void)setUp
 {
-	_showActivityIndicator = (self.image == nil);
+//	_showProgressBar = (self.image == nil);
+	_showProgressBar = NO;
 	_activityIndicatorStyle = UIActivityIndicatorViewStyleGray;
     _crossfadeImages = YES;
 	_crossfadeDuration = 0.4;
+
+	[[NSNotificationCenter defaultCenter] addObserver:self
+											 selector:@selector(updateProgressbarValue:)
+												 name:AsyncImageUpdateProgressBar
+											   object:nil];
+
 }
 
 - (id)initWithFrame:(CGRect)frame
@@ -682,25 +722,41 @@ NSString *const AsyncImageErrorKey = @"error";
 - (void)setImageURL:(NSURL *)imageURL
 {
     super.imageURL = imageURL;
-    if (_showActivityIndicator && !self.image)
+    if (_showProgressBar && !self.image)
     {
-        if (_activityView == nil)
+        if (_progressBarView == nil)
         {
-            _activityView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:_activityIndicatorStyle];
-            _activityView.hidesWhenStopped = YES;
-            _activityView.center = CGPointMake(self.bounds.size.width / 2.0f, self.bounds.size.height / 2.0f);
-            _activityView.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleBottomMargin;
-            [self addSubview:_activityView];
+//            _progressBarView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:_activityIndicatorStyle];
+//            _progressBarView.hidesWhenStopped = YES;
+			UIImage * backgroundImage = [[UIImage imageNamed:@"progress-bg"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 10, 0, 10)];
+			UIImage * foregroundImage = [[UIImage imageNamed:@"progress-fg"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 10, 0, 10)];
+
+			CGRect frame = CGRectMake(self.frame.origin.x, self.frame.origin.y, self.frame.size.width-40, 20);
+			_progressBarView = [[MCProgressBarView alloc] initWithFrame:frame backgroundImage:backgroundImage foregroundImage:foregroundImage];
+			_progressBarView.progress = 0.0;
+
+			_progressBarView.backgroundColor = [UIColor clearColor];
+            _progressBarView.center = CGPointMake(self.bounds.size.width / 2.0f, self.bounds.size.height / 2.0f);
+            _progressBarView.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleBottomMargin;
+            [self addSubview:_progressBarView];
         }
-        [_activityView startAnimating];
+//        [_progressBarView startAnimating];
     }
 }
+
+-(void)updateProgressbarValue:(NSNotification *)notification
+{
+//	_progressBarView.progress = value;
+	NSNumber* value = [notification.userInfo objectForKey:@"value"];
+	_progressBarView.progress = value.floatValue;
+}
+
 
 - (void)setActivityIndicatorStyle:(UIActivityIndicatorViewStyle)style
 {
 	_activityIndicatorStyle = style;
-	[_activityView removeFromSuperview];
-	self.activityView = nil;
+	[_progressBarView removeFromSuperview];
+	self.progressBarView = nil;
 }
 
 - (void)setImage:(UIImage *)image
@@ -722,13 +778,16 @@ NSString *const AsyncImageErrorKey = @"error";
 		[delegate imageIsReadyNotify:self];
 	}
 	
-    [_activityView stopAnimating];
+	[_progressBarView removeFromSuperview];
+//    [_progressBarView stopAnimating];
+
 }
 
 - (void)dealloc
 {
     [[AsyncImageLoader sharedLoader] cancelLoadingURL:self.imageURL target:self];
-	[_activityView release];
+	[[NSNotificationCenter defaultCenter] removeObserver:self];
+	[_progressBarView release];
     [super ah_dealloc];
 }
 
