@@ -172,7 +172,7 @@
 		5903FBA916E7086E00B8D056 /* progress-fg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "progress-fg@2x.png"; path = "src/3rd/AsyncImageView/progress-fg@2x.png"; sourceTree = "<group>"; };
 		5917601315F32BAC0098729B /* MaCrossFadeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MaCrossFadeView.h; path = src/MaCrossFadeView.h; sourceTree = "<group>"; };
 		5917601415F32BAD0098729B /* MaCrossFadeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MaCrossFadeView.m; path = src/MaCrossFadeView.m; sourceTree = "<group>"; };
-		591FCCCF15CFBD31004FE480 /* MoreArt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoreArt.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		591FCCCF15CFBD31004FE480 /* DOU空间.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DOU空间.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		591FCCD315CFBD31004FE480 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		591FCCD515CFBD31004FE480 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		591FCCD715CFBD31004FE480 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -337,7 +337,7 @@
 		591FCCD015CFBD31004FE480 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				591FCCCF15CFBD31004FE480 /* MoreArt.app */,
+				591FCCCF15CFBD31004FE480 /* DOU空间.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -667,7 +667,7 @@
 			);
 			name = "DOU空间";
 			productName = MoreArt;
-			productReference = 591FCCCF15CFBD31004FE480 /* MoreArt.app */;
+			productReference = 591FCCCF15CFBD31004FE480 /* DOU空间.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
